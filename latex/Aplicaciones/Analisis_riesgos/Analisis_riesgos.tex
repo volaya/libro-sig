@@ -1,0 +1,586 @@
+\chapter{Análisis y gestión de riesgos}
+\label{Analisis_riesgos}
+
+
+
+\bigskip
+
+\begin{intro}
+El análisis de riesgos es una tarea habitual de un SIG, ya que dichos riesgos, bien sean naturales o artificiales, incluyen una componente geográfica que puede ser modelizada.
+
+El alcance de este tipo de modelos es muy amplio, y abarca desde el análisis de riesgo de incendios hasta los riesgos de inundación o corrimiento de tierras, pasando por otros como riesgos vulcanológicos o contaminación de aguas. 
+
+En este capítulo trataremos algunos de ellos, detallando por igual la forma en que un SIG permite estudiarlos y las técnicas que se emplean para ello. 
+\end{intro}
+
+\section{Introduccion}
+
+Dentro de los distintos tipos de análisis geográficos, aquellos enfocados a la prevención y estudio de riesgos han jugado siempre un importante papel. Esto es así debido a que, en su mayoría, se encuentran relacionados con fenómenos en los cuales la posición geográfica o la disposición espacial de sus elementos es de gran importancia. Con la aparición de los SIG este tipo de análisis han pasado a desarrollarse en mayor medida, ya que la modelización de los distintos procesos, de vital importancia, puede realizarse con mayor detalle y precisión debido a la capacidad de cálculo que aporta el entorno informático en que se lleva a cabo.
+
+En este capítulo trataremos algunos de los análisis más habituales relacionados con la existencia de riesgos, la mayoría de ellos de origen natural. En todos ellos, el trabajo de análisis puede dividirse en dos grupos fundamentales: prevención y modelización. Estos, a su vez, no representan bloques disjuntos ya que, por ejemplo, la prevención puede apoyarse en la modelización para lograr sus resultados.
+
+La prevención tiene como principal objetivo el análisis genérico de los fenómenos de riesgo sobre una zona dada, buscando la localización de zonas con mayores riesgos, o estableciendo clasificaciones en función de una escala de riesgos previamente definida. 
+
+La modelización, por su parte, busca reproducir el comportamiento de un evento o proceso dado, el cual representa el elemento causante de riesgo. Una avenida o un incendio son ejemplos de estos procesos. Aunque el SIG aporta la base para el análisis geográfico de estos procesos y para estudiar características espaciales de los mismos (por ejemplo, su dinámica y movimiento), es necesario recurrir a disciplinas adicionales para lograr un modelo válido. Los conceptos y modelos existentes en campos como la hidráulica o la termodinámica se trasladan a un ámbito geográfico y unidos al SIG permiten obtener a su vez resultados geográficos tales como mapas de riesgo o de superficies afectadas. En la medida de lo posible, veremos también los conceptos más básicos de estos modelos no espaciales, añadiendo referencias adicionales para el lector interesado que desee profundizar en las ideas base.
+
+En primer lugar, trataremos tres tipos de riesgos muy relacionados entre sí: riesgos de tipo meteorológico (sequías, huracanes, etc.), riesgos de naturaleza hidrológica (inundaciones, avenidas, aludes, etc.), y riesgos relativos al terreno, tales como desplazamientos en masa. Existe una clara vinculación entre estas tres clases de riesgos, ya que todas ellas tienen relación con dos elementos fundamentales: el clima y el terreno. En función de la existencia o no de predominancia por parte de una de estas variables, encontramos uno u otro de los bloques anteriores.
+
+En el caso del análisis meteorológico la variable clima es la fundamental, aunque condicionada directamente por el terreno. Lo contrario sucede en el caso de procesos como los desplazamientos en masa, los cuales fundamentalmente dependen de la configuración del terreno, aunque el clima juega también un papel importante, pues condiciona, entre otros factores, la humedad del terreno, de gran importancia para que tengan lugar o no estos procesos.
+
+Por su parte, el análisis de riesgos hidrológicos depende fuertemente de ambas variables, pues el desarrollo de eventos de riesgo tales como avenidas viene unido a las características del clima, aunque el desarrollo posterior de tales avenidas y la existencia de riesgo causado por estas dependen de la configuración del terreno. Ambos factores deben estudiarse en profundidad para poder desarrollar modelos útiles al respecto.
+
+Otro tipo de fenómenos de riesgo que veremos en este capítulo son los relacionados con incendios. El análisis de estos riesgos requiere la utilización de gran numero de capas de variables geográficas, con lo que el SIG se demuestra como una herramienta de enorme utilidad de cara a poder llevar a cabo un análisis de mayor alcance.
+
+En conjunto, a lo largo de este capítulo veremos numerosos ejemplos de cómo el SIG constituye un útil básico para tareas de planificación o protección civil, entre otras. Los resultados de los análisis de riesgos pueden ser utilizados además como base para otros análisis tales como los estudios de viabilidad y localización óptima que veremos más dentro de esta parte, o bien para combinarse con otras variables tal y como vimos en el capítulo \ref{Estadistica_avanzada}
+
+Asimismo, veremos cómo un SIG puede ser una herramienta útil no solo para prevenir una situación de riesgo o para modelizar un determinado fenómeno, sino también como elemento para la gestión de estos riesgos. Un SIG permite coordinar los equipos encargados de trabajar directamente en las zonas que se ven afectadas por un incendio o una inundación, o localizar el foco de un fuego con rapidez para enviar efectivos de forma inmediata. Estas tareas, aunque no implican un análisis del fenómeno en sí, representan una muy importante parcela de aplicación de los SIG.
+
+\section{Riesgos climatológicos}
+
+El clima es un componente importante de muchos análisis, y su estudio es fundamental para tener un adecuado conocimiento de gran número de fenómenos. Los análisis relativos a riesgos hidrológicos que veremos más adelante no pueden entenderse sin la influencia del clima, y sucede de igual modo para los riesgos relacionados con incendios. Mientras que en el primer caso es necesario conocer las características de la precipitación, en el segundo las variables tales como la humedad ambiental o la temperatura condicionan el inicio y desarrollo del fuego.
+
+El clima como tal es responsable directo de gran número de fenómenos dañinos tales como sequías, precipitaciones torrenciales o tornados. Estudiar el riesgo de que tales fenómenos tengan lugar implica estudiar el comportamiento del clima, un tipo particular de análisis que resulta además de interés para muchas otras aplicaciones en otros ámbitos de estudio.
+
+A lo largo de esta sección veremos las ideas fundamentales del análisis climatológico y el papel que los SIG juegan en él, sin especial aplicación al análisis de los riesgos. Como se ha dicho, estos conceptos serán de utilidad para otras aplicaciones, y en apartados sucesivos recurriremos a ellos al estudiar la utilización del SIG en otros campos donde el clima sea una variable relevante.
+
+El uso de un SIG o de una herramienta con capacidades SIG para la gestión de datos climatológicos o meteorológicos no es algo nuevo, y una buena parte de los elementos que son habituales en el mundo SIG y que hemos visto a lo largo de los anteriores capítulos del libro, derivan del ámbito del análisis climático. Así sucede, por ejemplo, con la teledetección, ya que una buena parte de los primeros satélites eran satélites de observación meteorológica. De hecho, los datos procedentes de estos satélites deben resultarnos familiares, pues aparecen como cartografía de apoyo en las previsiones meteorológicas que podemos ver cada día en televisión.
+
+De acuerdo con su enfoque, el trabajo con elementos climáticos lo podemos dividir en dos bloques principales:
+
+\begin{itemize}
+	\item Trabajo con variables climáticas o meteorológicas para un instante dado, o valores medios o extremos para un periodo definido. Modelización cartográfica del clima.
+	\item Modelización dinámica del clima.
+\end{itemize}
+
+La principal diferencia entre ellos reside en el papel que la variable tiempo juega en ambos análisis, ya que ello condiciona en gran medida la utilidad que el SIG puede tener para su desarrollo.
+
+En el primer caso, se trata de trabajar con variables tales como la temperatura o la precipitación media, creando capas continuas de estas variables. Son procesos con un carácter estático, puesto que parten de valores relativos a un instante o periodo dado de tiempo y ofrecen resultados también relativos a dicho momento. Los métodos de interpolación que vimos en el capítulo \ref{Creacion_capas_raster} constituyen herramientas básicas en este tipo de operaciones.\index{Interpolación}
+
+En el segundo caso, el análisis tiene un carácter dinámico, y conlleva un estudio de la información climatológica en el que el tiempo es una variable fundamental. Este es el tipo de análisis en el que se fundamentan los algoritmos que permiten predecir si lloverá o hará sol dentro de unos pocos días o, en otra escala de tiempo, prever los efectos del cambio climático en las próximas décadas.
+
+\subsection{Modelización cartográfica del clima}
+
+El trabajo con variables climáticas dentro de un SIG implica principalmente la creación de cartografía climática y la preparación de capas en formatos adecuados para su empleo en los diversos análisis en que estas variables se utilizan. La modelización cartográfica del clima es una tarea en la que los SIG resultan fundamentales, aportando mediante sus herramientas una serie de importantes capacidades que permiten un mejor aprovechamiento de la información climatológica
+
+En particular, la creación de capas ráster a partir de capas vectoriales mediantes métodos de interpolación o regresión es una de las tareas fundamentales en este campo. Esto es así debido a que este tipo de variables se recogen de forma puntual, mientras que de cara a su utilización en procesos de análisis dentro de un SIG resulta mucho más adecuado emplearlas en formato ráster.
+
+Existen en la actualidad metodologías que permiten obtener variables climatológicas registradas de forma no puntual. El radar meteorológico, por ejemplo, genera imágenes que, para un instante dado, informan de la intensidad de precipitación en cada píxel. No obstante, la fuentes de tipo puntual siguen siendo primordiales en este campo, y su utilización resulta fundamental en la gran mayoría de casos.
+
+Aunque las variables climáticas tienen una importante variable temporal (en cada punto de observación no se dispone de un único valor de la variable, sino de una serie temporal), la modelización cartográfica del clima no hace un uso directo de esa componente temporal. En su lugar, se suelen emplear resultados únicos obtenidos a partir del estudio estadístico de esas series. Este análisis estadístico no se realiza dentro del SIG, ya que no se trata de una capacidad que estos implementen. En su lugar, se emplean aplicaciones externas, cuyos resultados posteriormente se ponen en un contexto espacial (asociando cada valor a la coordenada del punto en el que se ha obtenido la serie) y pueden de este modo ser tomados como valores de partida para un análisis SIG.
+
+La existencia de esa componente temporal es también una de las razones por la que las fuentes tales como la teledetección no pueden suplir por completo a los métodos tradicionales de recogida de datos climatológicos. Para que la realización de esos análisis estadísticos arroje valores representativos, se ha de trabajar con series suficientemente largas. Los métodos más recientes no pueden aportar series que cubran el rango temporal necesario, y en caso de poder hacerlo, se tiene un volumen de datos muy elevado. La teledetección resulta de mayor utilidad para la obtención de capas adicionales que puedan emplearse en los procesos de interpolación o regresión, como veremos seguidamente.
+
+Un ejemplo para ilustrar lo anterior es la creación de una capa de temperatura media. El dato de partida para este proceso lo constituyen los valores recogidos en las distintas estaciones de la red meteorológica. Para cada una de estas estaciones se tendrán unas coordenadas y una serie de valores que constituirán la serie temporal asociada a dicha coordenada.
+
+Estas series temporales se analizan mediante procedimientos estadísticos diversos, los cuales no serán detallados aquí. El resultado de estos procedimientos serán valores individuales, tales como, por ejemplo, la temperatura media anual o la media correspondiente a un mes dado. Desde el punto de vista del SIG, esto da como resultado una capa con entidades puntuales, a cada una de las cuales se asocian uno o varios datos. Por simplicidad, asumiremos que ese dato es único, en particular la temperatura media anual.
+
+A partir exclusivamente de esta capa, pueden emplearse métodos de interpolación como los que vimos en la sección \ref{Interpolacion} para obtener una capa ráster de temperatura media. Esta capa ya es adecuada para su análisis y puede emplearse como cartografía base para el análisis de riesgos relacionados con la temperatura, así como para otros estudios como, por ejemplo, los relativos a la modelización de la presencia o ausencia de especies, los cuales veremos en el capítulo \ref{Ecologia}.
+
+El empleo de estos métodos de interpolación únicamente con los valores de la variable a interpolar es, sin embargo, poco preciso si se tiene en cuenta que hay un gran número de otras variables que tiene una influencia notable en el comportamiento de la temperatura media. Aquellos métodos que permiten la incorporación de variables de apoyo, tales como el kriging universal o la regresión múltiple, son más adecuados para la creación de una capa ráster de una variable en la cual dichas variables de apoyo juegan un papel importante, tal y como es el caso de la temperatura. \index{Kriging}\index{Regresión}
+
+Para el caso particular de la temperatura, y en general para la interpolación de variables meteorológicas, las variables independientes de interés pertenecen a uno de los dos grupos siguientes:
+
+\begin{itemize}
+	\item Variables geográficas. La variable por excelencia de este grupo es la altitud, que condiciona la totalidad de valores climatológicos. De igual modo, la latitud desempeña un papel fundamental y es otra variable de apoyo empleada muy frecuentemente. Junto con estas, encontramos todas las variables derivadas del análisis morfométrico que vimos en el capítulo \ref{Geomorfometria}, como pueden ser la orientación o la insolación. \index{Orientación}\index{Insolación}
+	
+	Algunas otras variables geográficas pueden recoger la influencia de distintos elementos y requerir análisis más elaborados. En zonas costeras, la distancia al mar debe considerarse, y puede utilizarse una mera distancia euclídea o bien realizar un análisis de costes que modelice más exactamente el efecto conjunto de orografía y distancia a la costa  \cite{Ninyerola2000IJC}.
+
+\item Variables no geográficas. El tipo de vegetación o la temperatura del agua son algunas de las variables de este grupo que tienen influencia sobre las variables climatológicas. La teledetección es en este caso una fuente de datos de primer orden, ya que permite obtener las capas correspondientes a estos predictores. El uso de índices de vegetación es habitual en este sentido.
+\end{itemize}
+
+El empleo conjunto de todas estas variables produce resultados más precisos, al incorporar un mayor número de elementos relevantes al proceso de interpolación. Técnicas tales como el Análisis de Componentes Principales (capítulo \ref{Estadistica_avanzada}) pueden emplearse para seleccionar las variables más representativas de entre todas las anteriores, simplificando así el proceso de interpolación sin prescindir de información de relevancia.
+
+Del mismo modo que estas técnicas se emplean para la obtención de cartografía de temperaturas, otras variables climatológicas son también susceptibles de ser tratadas mediante procedimientos similares. De especial relevancia es el caso de la precipitación, una variable que tiene un papel primordial en el análisis de riesgos hidrológicos, el cual trataremos en una próxima sección de este capítulo. La creación del denominado Modelo Digital de Precipitaciones (MDP) es un paso previo necesaria para las operaciones a realizar en este tipo de análisis, y se lleva a cabo aplicando las ideas anteriores sobre interpolación de variables climatológicas. \index{Modelo Digital de Precipitaciones}
+
+
+\subsection{Modelización dinámica del clima}
+
+La idea fundamental de la modelización dinámica del clima es obtener el estado de las principales variables climatológicas (presión, humedad, temperatura, etc.) para un instante dado, a partir de datos conocidos para instantes anteriores y estudiando la evolución del sistema mediante modelos que describen su funcionamiento.
+
+El clima deriva de los movimientos de las masas de aire y su circulación, siendo estos los que definen las características y evolución de dicho clima. La interacción entre las masas de aire, regidas por las leyes fundamentales de la física de gases, son las que dan lugar a todos los elementos del clima tales como vientos o meteoros. Estudiando estas interacciones, pueden plantearse modelos que permitan simular la evolución del sistema global a partir de una situación conocida. En un ejemplo sencillo, podemos, por ejemplo, calcular la velocidad del viento en un punto a lo largo de un periodo dado.
+
+Estos modelos se conocen como Modelos de Circulación Global (GCM\footnote{Global Circulation Models}) y son habitualmente muy complejos, pues requieren el análisis simultáneo de muchas variables y la realización de un número elevado de operaciones. La aplicación de estos modelos requiere asimismo grandes volúmenes de datos, necesarios debido a la propia complejidad de los planteamientos.
+
+El desarrollo de sistemas basados en diferencias finitas\footnote{El método de diferencias finitas es un método numérico para la resolución de ecuaciones diferenciales. El lector interesado puede consultar la Web \cite{webDifFinitas} para obtener más información desde un enfoque puramente matemático del tema.}, en los cuales se establecen unidades fundamentales con características propias que las definen y se plantean sistemas de ecuaciones que expresan las relaciones entre estas unidades, es una metodología habitual para abordar el desarrollo de un GCM\footnote{Este tipo de planteamientos son anteriores en muchos años a la aparición de los SIG e incluso a la de los ordenadores. Lewis Fry Richardson, un matemático y físico británico, publicó un sistema de esta índole en 1922, aunque la aplicación práctica del mismo era, como cabe esperar, casi nula debido a la inviabilidad de realizar los cálculos necesarios para solucionarlo.}.
+
+Al contrario que los análisis que veíamos en el punto anterior, los SIG no son herramientas especialmente adecuadas para llevar a cabo la modelización del clima. El factor principal que influye en esta mala disposición es la multidimensionalidad tanto de los datos como de los procesos modelizados. 
+
+Si bien un esquema en diferencias finitas es similar funcionalmente a un modelo ráster de representación de datos (las celdas o pixeles serían las unidades fundamentales), este modelo se emplea en un SIG para almacenar datos planos (bidimensionales). Esto resulta insuficiente para modelizar el comportamiento de la atmósfera, ya que la dimensión vertical es tan importante o más que las dimensiones horizontales. Los movimientos de las masas de aire se producen tanto en horizontal como en vertical, y las diferencias de presión o temperatura entre puntos situados uno por encima del otro no pueden ignorarse como condiciones de un modelo climático.
+
+Así, la unidad base sobre la que se articula un GCM es una unidad volumétrica y no una unidad plana como las que constituyen una capa ráster. Se necesita, por tanto, una malla tridimensional en lugar de una malla bidimensional, lo cual resulta más difícil de integrar en los esquemas habituales de almacenamiento y manejo de datos que implementan los SIG.
+
+Junto con esto, la componente temporal del modelo es también de primordial importancia, pues se trata de estudiar la evolución del clima (la evolución de esa malla tridimensional de unidades fundamentales) a lo largo del tiempo. Este manejo de la variable temporal sabemos ya que no es una de las capacidades más fuertes con las que cuentan los SIG, y plantea ciertas dificultades. En conjunto, la modelización dinámica del clima plantea unos requerimientos funcionales que distan bastante de lo que un SIG puede ofrecer en la actualidad. 
+
+El SIG puede, sin embargo, ser de gran ayuda para tomar los datos de un GCM y prepararlos para un empleo concreto a nivel regional. A partir del modelo tridimensional del GCM en un instante dado y tomando un <<corte>> de este, obtenemos una capa bidimensional. A ese nivel regional, no obstante, se requieren datos con una resolución mucho mayor que la que los resultados de un Modelo de Circulación Global proporciona, siendo estos de menor resolución \cite{Storch1993JClim}. Por su propio carácter global, así como por la inherente complejidad de los planteamientos, estos modelos trabajan con resoluciones horizontales que pueden ser del orden de los 500 metros, siendo necesaria una adaptación de los datos para poder aplicarlos en un contexto práctico tal como los análisis de riesgo de incendios o inundación que veremos más adelante en este mismo capítulo.
+
+En general, cualquier tipo de aplicación para la que se requieran datos climáticos va a exigir un nivel de detalle mayor que aquel con el que se trabaja en un GCM. La modificación de los resultados derivados de este para obtener datos que puedan ser aplicados en los contextos de análisis habituales es, por tanto, un proceso habitual, y se conoce genéricamente como \emph{downscaling}. Por su importancia, existen abundantes desarrollos al respecto, cada uno de ellos con distintos fundamentos teóricos.
+
+La forma más sencilla de obtener una capa con mayor resolución es utilizando un mero remuestreo. Conocemos del capítulo \ref{Algebra_de_mapas} algunos métodos de remuestreo, los cuales pueden utilizarse para esta tarea. Esta forma de proceder, sin embargo, no es rigurosa, y aunque las capas resultantes puedan tener un menor tamaño de celda, presentan una precisión geográfica que no es real. Haciendo una similitud con la cartografía clásica, este remuestreo es equivalente a ampliar un mapa impreso y asumir que mantiene la misma precisión a pesar del cambio de escala.
+
+Para utilizar la información de la capa obtenida del GCM y lograr una capa con información más detallada al respecto es necesario añadir información adicional de variables relacionadas. Las capas acerca de una variable climatológica concreta, obtenidas según las ideas descritas en el punto anterior, pueden emplearse para esta tarea. Se combinan así los resultados de una modelización dinámica y capas estáticas preparadas dentro de un SIG.
+
+Para el lector interesado, un software con carácter didáctico destinado a mostrar los fundamentos básicos de los Modelos de Circulación General es \emph{EdGCM}, que puede descargarse de forma gratuita en la dirección Web \cite{EdGCM}
+
+
+\section{Riesgos hidrológicos}
+
+El análisis de riesgos hidrológicos representa un tipo de análisis en el que la componente espacial resulta de especial importancia, y por tanto existen numerosos puntos en su desarrollo en los que la utilización de SIG supone un aumento notable de las posibilidades.
+
+El más habitual de los análisis de esta clase es la delimitación de zonas de inundación, estimando las zonas limítrofes a los cauces que se verán afectadas en caso de avenidas y la forma en que se producirá dicha afección. Este análisis incorpora tanto conceptos hidrológicos como hidráulicos, y lo veremos con detalle en esta sección. Los fundamentos e ideas que desarrollaremos pueden emplearse de igual modo para otros estudios en los que la modelización hidrológica juegue un papel importante, y serán explicados ampliamente a lo largo de las próximas páginas. 
+
+Los análisis de riesgos relativos a aludes, menos habituales aunque también importantes, los veremos por igual en esta misma sección, así como los que derivan de la contaminación de aguas y el desplazamiento de contaminantes.
+
+\subsection{Delimitación de zonas de inundación}
+
+La delimitación de zonas de inundación puede dividirse en las siguientes etapas:
+
+\begin{itemize}
+\item Cálculo o estimación de las variables meteorológicas. Aplicando los conceptos ya vistos en una sección anterior, así como las formulaciones estadísticas correspondientes, deben obtenerse los valores de variables tales como la precipitación máxima para un periodo de retorno dado.
+\item Aplicación de modelos hidrológicos para modelizar el comportamiento de esas precipitaciones sobre la cuenca, la conversión de estas en escorrentía neta y otros procesos hidrológicos fundamentales. Valores tales como el caudal punta esperable para un periodo de retorno concreto, o elementos como el hidrograma de tormenta para un evento máximo constituyen los resultados principales de esta etapa.
+\item Aplicación de modelos hidráulicos para el cálculo de calados y perfiles de las zonas inundadas en los eventos modelizados en la anterior etapa.
+\end{itemize}
+
+\subsubsection{Estimación de variables meteorológicas}
+
+Respecto al primer paso, todo lo visto antes para el estudio de variables climatológicas resulta aplicable en este caso. La variable básica en el estudio de fenómenos hidrológicos, la precipitación, se puede tratar de la forma que ya vimos, o bien pueden tratarse de igual modo otros parámetros de los cuales esta puede derivarse, empleando las capacidades del SIG para estudiar su distribución espacial.
+
+Por ejemplo, una formulación estadística habitual para la estimación de precipitaciones máximas es la distribución de Gumbel \cite{Gumbel1942BAMS}, cuya función de densidad de probabilidad es:
+
+\begin{equation}
+f(x) = \frac{1}{\beta} e^{\frac{x - \mu}{\beta}} e^{-e^{\frac{x - \mu}{\beta}}}
+\end{equation}
+
+Los parámetros $\beta$ y $\mu$ se obtienen a partir de la media y la desviación típica, calculados en base a los valores recogidos en estaciones meteorológicas. Estos pueden ponderarse para luego ser aplicados en la fórmula anterior, o bien puede aplicarse esa misma ponderación una vez se han calculados los valores de $f(x)$. 
+
+El concepto de Modelo Digital de Precipitaciones resulta fundamental para estos análisis, del mismo modo que lo es el Modelo Digital del Terreno, elemento base tanto del análisis hidrológico como del análisis hidráulico.
+
+\subsubsection{Aplicación de modelos hidrólogicos}
+
+Respecto a la modelización hidrológica, veremos a continuación algunas de las ideas fundamentales, haciendo especial énfasis en la contribución que el uso de SIG aporta en este terreno. Se trata, no obstante, de un área especialmente amplia de la que solo se recogerán algunos ejemplos representativos. Información mucho más detallada al respecto puede encontrarse en \cite{Olaya2004}.
+
+Los elementos y procesos que han de analizarse dentro de un modelo hidrológico genérico son fundamentalmente los siguientes:
+
+\begin{itemize}
+\item Precipitación
+\item Infiltración
+\item Escorrentía
+\item Pérdidas (evapotranspiración, intercepción, etc.)
+\end{itemize}
+
+Puesto que la aplicación que estudiamos en este capítulo es al análisis de riesgos, los modelos con los que trabajaremos son los que se conocen como modelos \emph{de evento}. En estos, los fenómenos estudiados son de corta duración, y las perdidas por evapotranspiración o intercepción, así como las aportaciones por deshielo, no tienen influencia significativa en el resultado. Por ello, los elementos más importantes son la precipitación (de la que ya hemos hablado), la escorrentía y la infiltración.   Estos dos últimos son fenómenos interrelacionados, siendo la escorrentía la componente básica en la que debemos centrar nuestro análisis, pues es esa escorrentía la que habrá de generar el elemento de riesgo que estudiamos. Veamos cómo los procesos y conceptos de los SIG que conocemos nos sirven para su análisis.
+
+El proceso de conversión de precipitación en escorrentía depende de numerosos factores, entre los cuales cabe destacar la vegetación existente, las características del suelo y el estado de humedad existente en dicho suelo en el momento de producirse la precipitación. Estos factores pueden recogerse en capas independientes y luego emplearse para evaluar en conjunto la magnitud de escorrentía que se generará a partir de una precipitación dada.
+
+Para obtener las anteriores capas, pueden utilizarse capas que contengan directamente la información necesaria, o bien estimar el comportamiento de los distintos factores en función de capas adicionales. En el primer caso, y por ejemplo para las variables de suelo, se necesitarían varias capas para contener una  serie de valores tales como el contenido de materia orgánica o el porcentaje de arcillas, entre otros. Estos pueden obtenerse mediante la realización de calicatas (datos puntuales), y la creación posterior de capas ráster mediante métodos de interpolación. \index{Interpolación}
+
+Esta forma de proceder, no obstante, es menos adecuada, y resulta más efectivo acudir a cartografía adicional que guarde alguna relación con las variables buscadas. Las capas de partida más importantes para esta tarea son el MDE y las imágenes (aéreas o de satélite), cuya clasificación puede aportar información relevante al respecto.
+
+En el caso de la vegetación, la clasificación puede proporcionarnos una capa de distintas clases de cobertura de suelo, a cada uno de los cuales puede asignarse un comportamiento distinto en lo que a la generación de escorrentías respecta. Esta descripción de la variable vegetación es de tipo cualitativa, y suficiente para algunos modelos. 
+
+Otros modelos, sin embargo, requieren descripciones cuantitativas y valores concretos de un parámetro referido a la propia vegetación, tales como por ejemplo la Fracción de Cabida Cubierta (FCC) ocupada. En este caso, las imágenes pueden emplearse para tratar de estimar dicha FCC a partir de otros parámetros auxiliares tales como el NDVI, o el Índice de Área Foliar (LAI\footnote{\emph{Leaf Area Index}}). 
+
+El LAI puede relacionarse con el NDVI según ecuaciones existentes para las distintas especies arbóreas \cite{Biftu2001JH}, debiendo combinarse así los valores cuantitativos del NDVI y los datos cualitativos que nos indican qué especie encontramos en cada zona.
+
+En lo que al suelo respecta, sus distintas propiedades pueden estimarse a partir de la configuración del terreno, ya que este condiciona fuertemente el desarrollo y evolución del suelo. \cite{Moore1993SSSAJ} establece una relación entre parámetros morfométricos como la pendiente o el índice topográfico de humedad, y variables del suelo como el contenido en materia orgánica o arena. El tipo de suelo, por su parte, puede obtenerse a partir de los valores de altitud, pendiente, orientación o curvatura \cite{Thomas1999Geoderma}. En \cite{McBratney2003Geoderma} pueden encontrarse más referencias al respecto.
+
+Por último, las condiciones de humedad precedente van a condicionar la capacidad de infiltración del suelo y, por tanto, la magnitud de la escorrentía generada. Esta humedad precedente puede conocerse analizando los eventos de precipitación previos, aunque depende también en gran medida de la morfología del terreno. El índice de humedad topográfica que ya conocemos (véase capítulo \ref{Geomorfometria}) ha sido precisamente desarrollado para recoger esta idea.
+
+Este índice forma parte del modelo TOPMODEL \cite{Beven1979HS}, un modelo ampliamente estudiado y desarrollado, en el cual la generación de escorrentía depende del valor de dicho índice. Sólo aquellas celdas que superan un valor umbral generan escorrentía en cada intervalo analizado. El valor umbral es variable a lo largo del periodo que se analiza, con lo que el área que aporta escorrentía también varía (Figura \ref{Fig:Variacion_area_TOPMODEL}).
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=.6\textwidth]{Analisis_riesgos/Variacion_area_TOPMODEL.png}
+\caption{\small Variación del área contribuyente (en negro) a medida que se modifica el umbral de saturación en función del índice topográfico.}
+\label{Fig:Variacion_area_TOPMODEL}
+\end{figure}
+
+Se han propuesto modificaciones del índice de humedad topográfica encaminadas a modelizar de forma más realista el proceso, incorporando otras variables que también influyen en el mismo, principalmente otros parámetros morfométricos. En esta línea encontramos, por ejemplo, el \emph{índice topográfico de humedad relativa} propuesto por \cite{Parker1982PG} o el índice elaborado por \cite{Fall2000RB}, en el que incorporan también la posición orográfica de la celda. El uso de estas, no obstante, es reducido.
+
+La figura \ref{Fig:Esquema_MDT_modelos_hidro} muestra la relación existente entre los elementos anteriores y la forma en que estos se emplean para conformar el conjunto de entradas necesarias para la aplicación de los modelos hidrológicos puramente dichos, que veremos a continuación. Aunque no se han tratado extensamente en este capítulo, se han incluido también procesos como los relacionados con la evapotranspiración potencial, que tal y como se mencionó no son significativos al evaluar un modelo de eventos, con objeto de aportar una visión más global de la relación existente.
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=.7\textwidth]{Analisis_riesgos/Esquema_MDT_modelos_hidro.png}
+\caption{\small Esquema de la utilización e incorporación de Modelos Digitales del Terreno y otros datos de partida en los diferentes elementos que forman parte de un proceso de modelización hidrológica genérico.}
+\label{Fig:Esquema_MDT_modelos_hidro}
+\end{figure}
+
+Tanto en el análisis de las variables de partida que acabamos de ver (variables meteorológicas, vegetación, suelo, etc.) como en la propia modelización hidrológica, es importante tener en cuenta el hecho de que en este caso se trabaja sobre una unidad (la cuenca vertiente) delimitada espacialmente, y que los valores que interesan son los relativos a esta cuenca, pues es ella la que va a aportar el caudal que va a generar la situación de riesgo que pretendemos analizar.
+
+Este hecho nos introduce una importante consideración acerca de los modelos que vamos a plantear, y que tiene especial relevancia en el contexto de un SIG y de los datos que en él manejamos. Dentro de las distintas clasificaciones de modelos hidrológicos que pueden realizarse, tiene particular interés en este caso la que divide estos en modelos \emph{agregados} y modelos \emph{distribuidos}, y la diferencia fundamental entre ellos radica en la forma en que consideran esa unidad fundamental de trabajo que es la cuenca. Es en esta clasificación donde la influencia del SIG y del trabajo en un entorno informatizado más se hace notar.
+
+Los modelos agregados son aquellos que consideran la cuenca como una entidad indivisible, y caracterizan esta mediante valores únicos. Por ejemplo, la cuenca tendrá una superficie, un valor medio de precipitación, de altura, un coeficiente único que relaciona esa precipitación con la escorrentía efectiva, etc., y será con estos con los que se obtengan resultados tales como el caudal estimado en el punto de cierre de dicha cuenca.
+
+Estos modelos agregados representan la forma clásica de la modelización hidrológica, y con anterioridad a la aparición de los ordenadores eran la única opción aplicable en la práctica, dada su mayor sencillez y menores requerimientos de cálculo.
+
+Para establecer una caracterización de la cuenca mediante valores únicos, se han empleado tradicionalmente formulaciones que permitían ponderar los distintos valores en el interior de la cuenca, o estimar de algún modo valores medios. Una de ellas es la basada en los conocidos polígonos de Thiessen (Figura \ref{Fig:Ponderacion_Thiessen}). En función del área que cada polígono tenga dentro de la cuenca, se le asigna un peso al punto central del mismo, y de esta forma se puede tener un valor final como suma ponderada de una serie de valores puntuales, tal y como ocurre por ejemplo en el caso de contar con valores de precipitación en una serie de estaciones meteorológicas cercanas a la cuenca.
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=.3\textwidth]{Analisis_riesgos/Ponderacion_Thiessen.png}
+\caption{\small Ponderación de estaciones en función de polígonos de Thiessen. El peso asignado a cada una de ellas se establece en relación con el área de su polígono correspondiente situada dentro de la cuenca.}
+\label{Fig:Ponderacion_Thiessen}
+\end{figure}
+
+Los datos con los que trabajamos en un SIG nos ofrecen, no obstante, mejores posibilidades. Veíamos en el manejo de variables meteorológicas cómo los métodos de interpolación tenían una gran importancia, ya que  disponer de capas en formato ráster implicaba unas mayores ventajas. En los restantes procesos, también la mayoría de capas a emplear, con el MDE a la cabeza, se encuentran en formato ráster. Este MDE es, de hecho, el que nos permitirá la delineación de la cuenca vertiente, en virtud de lo que ya vimos en el capítulo \ref{Geomorfometria}.\index{Interpolación}
+
+El hecho de trabajar mayoritariamente con capas ráster hace que esa estimación de valores únicos para caracterizar una cuenca pueda realizarse de un modo distinto, por ejemplo como valor medio de todas las celdas de la cuenca (suma de sus valores dividida entre el número de celdas que pertenecen a la cuenca). A pesar de que, a la hora de la modelización hidrológica, la cuenca sigue siendo una unidad, en el cálculo de sus parámetros definitorios se considera como compuesta de muchas subunidades regulares, correspondientes estas a las celdas en que las capas ráster de partida se encuentran divididas.
+
+Un paso más allá en esta línea es el que da lugar a los modelos distribuidos, y que consiste en considerar cada una de esas subunidades como un elemento autónomo pero conectado a los demás, en el cual se aplican de idéntica forma todas las formulaciones del modelo hidrológico. En lugar de estudiarse el comportamiento global de la cuenca, se estudia el comportamiento individual de cada elemento unitario y la relación de este con los demás, teniéndose así un modelo más detallado y preciso. Esto es así debido a que cada una de las celdas, al poseer distintas características, tendrá un comportamiento hidrológico diferente, circunstancia que no puede recogerse si se emplea un modelo agregado.
+
+Este tipo de modelos, además, permiten no solo aprovechar mejor la estructura en malla regular de las capas ráster con las que se trabaja, sino también una mayor integración con procesos tales como la propia delineación de la cuenca a partir del MDT, basada a su vez en el cálculo de direcciones de flujo en las distintas celdas. Es decir, la celda se convierte en el elemento fundamental del modelo (Figura \ref{Fig:Celda_modelo_distribuido}).
+
+\begin{figure}[!hbt]   
+\centering
+\includegraphics[width=.4\textwidth]{Analisis_riesgos/Celda_modelo_distribuido.png}
+\caption{\small Caracterización de cada celda como una unidad independiente desde el punto de vista de sus características físicas. La base para el desarrollo de modelos distribuidos reside fuertemente en esta consideración (Adaptado de \cite{Wigmosta1999WRR})}
+\label{Fig:Celda_modelo_distribuido}
+\end{figure}
+
+Cada celda constituye un elemento en equilibrio desde el punto de vista hidrológico, incorporando los bloques básicos del proceso hidrológico que se mencionaron anteriormente (Figura \ref{Fig:Balance_hidrico_celda}).
+
+\begin{figure}[!hbt]   
+\centering
+\includegraphics[width=.4\textwidth]{Analisis_riesgos/Balance_hidrico_celda.png}
+\caption{\small Cada celda es un elemento en equilibrio en el que tienen lugar distintos procesos de entrada y salida.}
+\label{Fig:Balance_hidrico_celda}
+\end{figure}
+
+Empleando el concepto de volumen de control \cite{Chow1988McGraw}, tres son las formas principales de tratar el conjunto de celdas de una cuenca para lograr los valores finales del modelo correspondientes a esta\cite{Asante2000PhD}:
+
+\begin{itemize}
+	\item Metodologías basadas en unidades hidrográficas. La cuenca se define como un conjunto de subunidades con significado hidrográfico y una serie de elementos que los relacionan ---uniones, bifurcaciones, etc.---. Cada una de estas subunidades constituye el volumen de control, y los flujos se transmiten entre los volúmenes de control de acuerdo con las relaciones anteriormente mencionadas. Es, como se aprecia, un enfoque más cercano a los modelos agregados.
+	\item Metodologías basadas en transmisión celda a celda. Fundamentadas en el análisis del balance hidrológico en cada celda y las de su entorno inmediato. Se analiza cada celda según el esquema mostrado en la figura \ref{Fig:Balance_hidrico_celda}.
+	\item Metodologías de tipo \emph{source--to--sink}. En estos métodos, cada elemento en que se divide la cuenca se relaciona exclusivamente con la salida de la misma, siendo por tanto el volumen de control la ruta de flujo entre dicho elemento y el punto de cierre. A lo largo de este volumen de control, pueden considerarse diferentes regímenes de flujo.\index{Source--to--sink}
+\end{itemize}
+
+Mediante la aplicación de formulaciones de algunos de los tipos anteriores, puede modelizarse la respuesta de la cuenca ante un evento dado. Dicho evento se divide en una serie de intervalos, cada uno de los cuales es estudiado. De acuerdo con alguna de las ideas anteriores, se analiza el movimiento del agua desde la celda sobre la que se produce escorrentía en el intervalo hasta el momento en que esta llega al punto de salida de la cuenca.
+
+Los modelos que consideran unidades hidrográficas pueden entenderse como modelos agregados que se aplican sobre subunidades, combinándose luego los resultados de todos ellos. El empleo del SIG facilita la división en subcuencas y el cálculo de los valores que definen a cada una de ellas. Una vez aplicada la formulación agregada que se elija sobre cada unidad y con los parámetros característicos de esta, estos se unen para obtener la respuesta de la cuenca en su conjunto.
+
+Los modelos de tipo \emph{source--to--sink} se asemejan a las ideas que vimos en la sección \ref{Delimitacion_cuencas} cuando tratamos la creación de una capa de tiempos de salida. Conociendo la escorrentía que se produce en una celda en un intervalo, y el momento exacto que ese intervalo representa, podemos saber el momento en que dicha escorrentía alcanza la salida de la cuenca, sin más que emplear el tiempo de salida correspondiente a dicha celda. Acumulando los distintos volúmenes de escorrentía del conjunto de celdas en el conjunto de todos los intervalos que componen el evento estudiado, tendremos el hidrograma correspondiente a este.
+
+Los modelos de transmisión celda a celda son los más complejos, y su aplicación es especialmente interesante en el caso de modelos físicos, planteándose para cada celda un conjunto de ecuaciones que definen el conjunto de procesos hidrológicos que tienen lugar en ella. Estas ecuaciones dependen de los valores generados en otras celdas con las que exista relación hidrológica directa, por lo que el cálculo no puede hacerse independientemente para cada celda. Por esta razón, son asimismo modelos complejos desde el punto de vista algorítmico y computacional. 
+
+Existen muchos modelos de este tipo desarrollados, aunque una gran parte de ellos con carácter experimental. El uso de formulaciones de base física en ocasiones limita la aplicación práctica de estos modelos, ya que estos presentan unas exigencias muy elevadas en lo que a datos de entrada se refiere. 
+
+\subsubsection{Aplicación de modelos hidráulicos}
+
+Una vez obtenidos los resultados de la modelización hidrológica, el SIG sigue siendo de utilidad para estudiar cómo esos caudales van a comportarse sobre el terreno. Puesto que la variable principal que condiciona este comportamiento es el propio terreno y el SIG es una herramienta muy válida para analizar este último, lo es también para modelizar las zonas inundables correspondientes a un evento dado.
+
+Tres son los elementos base que se requieren para la modelización hidráulica:
+
+\begin{itemize}
+	\item Elementos geométricos que definen las secciones por las que el flujo se desplaza
+	\item Parámetros que definen el comportamiento hidrológico de los canales de flujo (rugosidad, etc.)
+	\item Características de los flujos.
+\end{itemize}
+
+La descripción de la geometría de las secciones se puede obtener a partir del análisis del MDE correspondiente a la zona estudiada. Al igual que sucede con otros análisis relativos al terreno, el modelo de datos ráster es mucho más ventajoso, aunque las redes de triángulos irregulares (TIN) suponen una alternativa también válida. 
+
+En ambos casos, no obstante, es de interés reseñar que se requiere una descripción del terreno más detallada que la que es necesaria para el estudio hidrológico. En términos de tamaños de celda si se trabaja con un MDE ráster, es lógico pensar que una sección de un cauce no puede obtenerse con precisión a partir de una capa de elevaciones con tamaño de celda de, por ejemplo, 30 metros, ya que esta dimensión es excesiva si la comparamos con la dimensión del objeto que estudiamos. Este tamaño de celda es, sin embargo, adecuado para el estudio hidrológico de una cuenca de tamaño medio.
+
+Los parámetros tales como la rugosidad del canal pueden manejarse dentro del SIG del mismo modo que variables de otra índole, y las funcionalidades básicas del análisis espacial nos servirán para asociar los valores correspondientes de dichas variables a las distintas secciones que obtengamos. El uso combinado del MDE y las capas adicionales con este tipo de parámetros permite al SIG producir una definición completa de los elementos hidráulicos.
+
+Por último, los flujos a estudiar vienen caracterizados por los resultados de la modelización hidrológica, y pueden ser tanto flujos estacionarios (se tiene únicamente un valor de caudal que se asume constante a lo largo del tiempo), o bien flujos variables (definidos por un hidrograma).
+
+Con estos elementos, una primera aproximación a la delimitación de zonas de inundación se puede obtener mediante algunas de las ideas vistas en la sección \ref{Zonas_influencia_dimension_variable}. Calculando zonas de influencia de dimensión variable, cuya dimensión depende del calado, se tiene un primer resultado cartográfico.
+
+Con similares parámetros de partida, es posible plantear modelos más elaborados, generalmente basados en formulaciones físicas y conceptos clásicos de la hidráulica. Si bien en este terreno los conceptos no son novedosos (se trata de un campo clásico con formulaciones bien establecidas), la introducción de los ordenadores supuso una verdadera revolución en este ámbito, ya que la aplicación práctica de los mismos requiere abundantes cálculos. Con la presencia de un SIG, los resultados de estos cálculos pueden además plasmarse sobre el terreno y visualizarse, ampliando el carácter puramente numérico que tienen en las aplicaciones de modelización hidráulica.
+
+Detalles sobre los fundamentos de uno de estos modelos pueden encontrarse en \cite{Brunner2008HEC}.
+
+
+\subsubsection{\emph{Software}}
+
+En general, el conjunto de herramientas necesarias para llevar a cabo todas las operaciones descritas en esta sección no se encuentra implementado de forma completa en un SIG. Las funcionalidades básicas que permiten trabajar con las capas de partida, en la mayoría de los casos sencillas operaciones del álgebra de mapas, sí se encuentran dentro de la práctica totalidad de los SIG (al menos en aquellos con un cierto soporte para datos ráster). Las formulaciones relativas al análisis hidrológico y, especialmente, el análisis hidráulico, se encuentran,  no obstante, mucho más desarrolladas en aplicaciones externas sin componente SIG. Lo habitual en esta situación es alimentar estas aplicaciones con datos procedentes del SIG, no siendo posible llevar a cabo dentro de dicho SIG también los procesos de modelización.
+
+Algunos modelos hidrológicos no excesivamente complejos tales como el ya citado TOPMODEL se encuentran implementados en ciertos SIG \footnote{Por ejemplo, de entre los SIG libres que se detallan en el anexo \ref{Panorama_actual}, SAGA y GRASS lo implementan}, o bien existen interfaces para emplear estos modelos desde el propio SIG. El modelo SWAT (Soil And Water Assesment Tool) \cite{Arnold1998JAWRA} es otro de los modelos que podemos encontrar implementados en un SIG \cite{webSWAT}.
+
+La utilización de los resultados de estos modelos para alimentar los procesos de modelización hidráulica no se realiza, sin embargo, dentro de un SIG. El empleo de los resultados hidrológicos tales como hidrogramas de tormenta se ha de llevar a cabo en aplicaciones de modelización hidráulica diseñadas a tal efecto, generalmente sin componente SIG alguna. 
+
+En el SIG podemos igualmente calcular las secciones transversales del cauce, el otro elemento junto con los caudales necesario para ejecutar el modelo hidráulico. No obstante, y aunque el SIG nos proporciona la herramienta para definir las secciones y calcular los caudales, el proceso en sí de modelización hidráulica a partir de estos elementos no aparece incorporado junto con otras herramientas habituales de un SIG. Por una parte, se trata de un proceso complejo. Por otra, el proceso no incorpora explícitamente una importante componente espacial, por lo que su implementación no requiere la presencia de un SIG sobre el que apoyarse.
+
+Asimismo, y aunque el MDE ya hemos visto que automatiza en gran medida la definición de las secciones transversales, estas pueden ser definidas con mayor cantidad de detalles que los que el propio MDE es capaz de ofrecer. Mientras que algunos modelos hidráulicos pueden requerir solo un mero perfil de la sección, otros pueden incorporar componentes tales como la presencia de puentes, conducciones cerradas u otros elementos adicionales que alteran el comportamiento hidráulico. 
+
+Mientras que el SIG es el elemento ideal para analizar el MDE, no lo es tanto para definir o editar estas secciones más complejas, y el manejo de elementos tridimensionales como por ejemplo los antedichos puentes aún no es habitual dentro de los SIG. A medida que estos estén preparados para una gestión flexible y adecuada de elementos verdaderamente tridimensionales (frente a datos 2,5D como el propio MDE), es probable que puedan aparecer soluciones que permitan una mayor integración con los procesos de modelización hidráulica o, al menos, con la definición de las secciones más allá de lo que el MDE puede ofrecer. 
+
+Otra de las razones por las que la integración de la modelización hidráulica no es completa en la actualidad es la dificultad ya mencionada que por el momento presentan los SIG para el manejo de la variable tiempo. Si se prescinde de esta, pueden aplicarse modelos hidráulicos suponiendo un instante concreto o bien asumiendo que las variables de entrada son constantes (esto quiere decir, por ejemplo, que el flujo sería estacionario). Si se desea trabajar con variables que varíen a lo largo del tiempo, las debilidades del SIG se hacen patentes en este terreno, y el manejo tanto de las entradas como de los resultados no resulta tan óptimo.
+
+Una vez que se tienen los resultados de la modelización hidráulica, obtenidos mediante una aplicación externa, estos pueden ahora sí incorporarse al SIG para lograr una mejor visualización de los mismos (con las restricciones comentadas anteriormente para el caso de incluir variaciones temporales), así como para llevar a cabo con ellos nuevos análisis (cálculo de superficies inundadas, grado de afección de esas inundaciones a construcciones y otros elementos, etc.). 
+
+Algunas aplicaciones actuales para modelización hidráulica incorporan ya abundantes elementos SIG, de forma que pueden trabajar con capas de datos tanto ráster como vectoriales, y posteriormente pueden representar los resultados creando mapas a partir de ellos, incorporando asimismo las funciones habituales de representación de un SIG.  En algunos casos, incluso los modelos hidrológicos se encuentran también incorporados, o bien se presentan interfaces que facilitan su uso desde la propia aplicación.
+
+Estas aplicaciones incorporan además otras capacidades adicionales como por ejemplo la creación de animaciones en las que puede observarse la evolución de las zonas inundadas, superando así en parte la ya citada carencia de un SIG estándar para el manejo de componentes temporales.
+
+A pesar de todo ello, las capacidades SIG de estos programas no son tan versátiles como las de un SIG genérico, y el uso de los mismos queda muy restringido al propio estudio de procesos hidrológicos e hidráulicos. 
+
+
+En resumen, se trata de un proceso en el que han de emplearse por regla general varias aplicaciones de forma coordinada, no existiendo en la actualidad  un SIG que incorporé todas las herramientas necesarias para efectuar todo el proceso de forma autónoma y con el mismo nivel de detalle. La preparación de los datos y la ejecución de un modelo hidrológico puede llevarse a cabo en un SIG, ya que existen algunas soluciones integradas al respecto. La modelización hidráulica, no obstante, es habitual efectuarla de forma aislada, al no existir elementos para llevarla a cabo dentro de un SIG, debido principalmente a la menor necesidad de manejar una componente espacial en este tipo de análisis.
+
+\subsection{Aludes}
+
+Junto con la utilidad que ya hemos visto para la estimación y predicción de los riesgos asociados a caudales líquidos, los SIG son una herramienta igualmente valiosa para la predicción de aludes. El análisis de las condiciones del terreno y el manto nivoso mediante las distintas capacidades de un SIG  puede utilizarse para crear la cartografía de riesgos correspondiente.
+
+En la creación de esta cartografía distinguimos dos tareas principales:
+
+\begin{itemize}
+	\item Creación de cartografía de riesgo de aludes. Estas capas indican la probabilidad de que en un punto dado se inicie una avalancha, es decir, que se dé un desplazamiento del manto de nieve.
+	\item Creación de cartografía de riesgo de alcance. A partir de los puntos en los que existen un probabilidad elevada de inicio de avalanchas, se modeliza el desplazamiento del alud hacia las zonas bajas, estudiando qué áreas pueden verse afectadas directamente por él.
+\end{itemize}
+
+La creación de capas que representen el riesgo de inicio de aludes se realiza principalmente combinando distintos índices que cuantifican la influencia de los principales factores, aplicando los conceptos de combinación de capas y evaluación multicriterio que ya vimos en el apartado \ref{Evaluacion_multicriterio}. Estos factores son principalmente los derivados del terreno y del clima, con diferente importancia relativa según el lugar.
+
+Entre los parámetros derivados del terreno encontramos como factor principal la pendiente \cite{McClung1993Avalanche}. Otros parámetros relevantes son la orientación (esta condiciona la forma en que el viento afecta a la capa de nieve) y la forma del terreno. Este último parámetro puede tomarse de algunas de las clasificaciones que vimos en el apartado \ref{Caracterizacion_terreno}, así como utilizando la información sobre curvaturas.
+
+En el caso de la pendiente, valores bajos indican zonas de poco riesgo, ya que las fuerzas que se dan en ellas no son suficientes para iniciar el desplazamiento. De igual modo, valores muy altos de pendiente tampoco se relacionan con riesgos altos, ya que la propia pendiente impide que se acumulen grandes cantidades de nieve. Existiendo poca nieve, esta tiene menor probabilidad de iniciar un alud.
+Así, existe un rango central de máximo riesgo, donde la pendiente es suficientemente elevada y las cantidades de nieve también tienen una entidad considerable y suficiente como para dar lugar a un alud.
+
+El establecimiento de los umbrales que separan estas zonas y la asignación de valores de índice de riesgo correspondientes puede hacerse mediante el análisis histórico de avalanchas registradas en la zona, una práctica habitual en este tipo de estudios. En general, el intervalo entre 30 y 50 grados de pendiente es considerada habitualmente como intervalo de riesgo.
+
+A la hora de trabajar con estos parámetros derivados del terreno, es de gran importancia emplear Modelos Digitales de Elevaciones con una resolución elevada, ya que el propio proceso que estudiamos requiere de tales datos de partida. Una resolución de 25 metros, habitual y adecuada para, por ejemplo, el análisis hidrológico, resulta también válida para estudiar el riesgo de aludes, pero solo en zonas de pendiente moderada y cuando el relieve sea más o menos uniforme. En áreas abruptas y de relieve variado, tales como por ejemplo las canales de pendiente elevada, es necesario trabajar con datos de mayor resolución. Puesto que este tipo de relieves concentran gran parte de las avalanchas que se producen, resulta por tanto imprescindible trabajar con un MDE de resolución mayor que esos 25 metros.
+
+Otro parámetro relacionado con el terreno que debe considerarse por su gran importancia es la cobertura vegetal, en particular la de tipo arbóreo. La presencia de vegetación aumenta la rugosidad del terreno, favoreciendo la buena sujeción de la nieve, lo cual resulta especialmente importante cuando el manto de nieve no es muy grueso. Las formas habituales de obtener este tipo de datos, tales como la clasificación de imágenes, son en este caso aplicables de igual modo que en otros ámbitos.
+
+La presencia de vegetación puede ser también un indicador de los eventos registrados con anterioridad, teniendo así una utilidad similar a la del registro histórico de estos. Si en un área encontramos arbolado, esto indica que no se han producido grandes avalanchas en zonas aguas arriba de ese área de arbolado, ya que estas arrasan las masas arbóreas a su paso. Este dato puede emplearse para desarrollar un nuevo índice que asocie valores de riesgo menores a las áreas aguas arriba de las zonas arbolada y mayores a las restantes. Los métodos de análisis hidrológico que vimos en la sección \ref{Analisis_hidrologico} pueden emplearse para la delimitación de esas zonas aguas arriba a partir de las zonas de arbolado.
+
+Los parámetros climáticos más importantes son la radiación solar y el viento. La precipitación en forma de nieve es, lógicamente, un factor clave. No obstante, su relevancia está en relación con el patrón de precipitación que se dé en la zona de estudio. Si este patrón es regular en la extensión de dicha zona (por ejemplo, a lo largo de todo un valle), se presentarán valores muy similares de precipitación, y a la hora de combinar todas las variables implicadas esta apenas aporta diferencias. El índice que puede asociarse a la nieve caída en cada punto de la zona de estudio va a tener valores muy parecidos en todos ellos, por lo que no resulta de interés a la hora de crear cartografía que permita localizar las zonas más proclives a la ocurrencia de aludes. En otras ocasiones, sin embargo, el patrón puede dar lugar a nevadas muy localizadas, en cuyo caso este parámetro sí va a resultar relevante.
+
+Combinando todos los parámetros anteriores se obtiene la cartografía de riesgos, gracias a la cual pueden localizarse las zonas con mayor probabilidad de que en ellas se inicie un alud.
+
+El otro tipo de análisis a realizar es la modelización de la trayectoria de los posibles aludes, para de este modo estimar la afección que estos pueden tener sobre las zonas situadas en dicha trayectoria. Esta modelización se realiza mediante modelos de simulación numérica, los cuales no se encuentran implementados en el SIG, sino como aplicaciones independientes. El SIG es, no obstante, de utilidad una vez más para la preparación de los datos de partida con que alimentar esos modelos, ya que gran parte de los parámetros de entrada que requieren son de tipo espacial y se elaboran de forma más eficaz en el entorno de trabajo de un SIG. Estos parámetros son principalmente de tres tipos \cite{webGruberAvalanche}:
+
+\begin{itemize}
+	\item Parámetros relativos a la ruta potencial del alud
+	\item Condiciones iniciales. A partir del mapa de riesgos se extraen los valores que definen las condiciones en las zonas con mayor riesgo de inicio de un alud, tales como la superficie que ocupan o su longitud máxima.
+	\item Parámetros de fricción. Los modelos de simulación de avalanchas emplean generalmente dos componentes para modelizar estas: una componente de fricción \emph{seca} y una componente de fricción \emph{viscosa} o \emph{turbulenta}. La primera se corresponde con el rozamiento directo de la masa de nieve, y es proporcional a la fuerza normal de esta según un coeficiente $\mu$. La segunda es relativa al propio desplazamiento de la masa y depende de factores tales como el confinamiento de la nieve en la trayectoria del desplazamiento, estando este en función de la propia topografía. La curvatura horizontal (perpendicular a la línea de máxima pendiente, según vimos en el apartado \ref{Curvaturas}) es un parámetro muy adecuado para cuantificar dicho confinamiento.
+\end{itemize}
+
+Todos estos parámetros puede derivarse de capas fundamentales como el MDE, con lo que el SIG es la herramienta básico para el desarrollo de las primeras etapas en la modelización de avalanchas. Del mismo modo que sucedía con la delimitación de zonas de inundación, una vez que se obtienen los resultados de las simulaciones, estos pueden incorporarse a un SIG para visualizarlos en combinación con las capas originales o en representaciones tridimensionales más intuitivas, mostrándolos así en un contexto espacial más rico que favorece su correcta interpretación y aprovechamiento.
+
+\subsection{Contaminación de aguas}
+
+La contaminación de aguas puede modelizarse mediante un SIG haciendo uso de los procesos que vimos en el apartado \ref{Analisis_hidrologico} relativos al análisis hidrológico, en particular mediante todo lo relacionado con las direcciones de flujo. Del mismo modo que, dado un punto sobre el terreno, podemos conocer la ruta que seguirá el agua hacia aguas abajo, podemos calcular el patrón de dispersión de un contaminante. 
+
+Si este contaminante alcanza una red fluvial, y puesto que conocemos los volúmenes en esta a partir del análisis hidrológico tal y como acabamos de ver en un apartado anterior, es posible analizar la concentración de este a lo largo de los distintos tramos fluviales, pudiendo de este modo modelizar no solo su movimiento sino también otros parámetros a lo largo de su recorrido.
+
+Una vez más, las limitadas capacidades de análisis multidimensional de los SIG limitan este tipo de análisis a los flujos superficiales, siendo más complejo modelizar los flujos subterraneos hacia los que también se produce dispersión de contaminantes por percolación y posterior flujo subsuperficial.
+
+Limitándonos al flujo superficial, es importante reseñar la gran importancia que en este caso tiene la elección correcta de un modelo de asignación de direcciones de flujo. El modelo D8, el más popular para otro tipo de análisis hidrológicos como ya vimos, y que pese a su simpleza resulta suficiente para esto, es claramente insuficiente en este caso, ya que la modelización unidimensional del flujo no aporta una visión realista del proceso. Desde una celda en la que se conoce la presencia de un contaminante, éste puede teóricamente desplazarse hacia todas las celdas circundantes de menor altura, no solo a aquella que define la línea de máxima pendiente, por lo que modelos como el MFD, que pueden modelizar este hecho, resultando mucho más adecuados.
+
+Si queremos conocer hacia qué zonas es posible que se desplace el contaminante, una técnica usada habitualmente (en especial si sólo disponemos en nuestro SIG del modelo D8, es sustituir el problema de flujo hacia aguas abajo por uno de flujo desde aguas arriba. Para ello <<invierte>> el MDE y se calcula desde el punto en cuestión el área aguas arriba de este en el MDE invertido. Crear ese MDT invertido se lleva a cabo mediante la expresión
+
+\begin{equation}
+h' = \mathrm{max} - h + \mathrm{min}
+\end{equation}
+
+
+\noindent siendo $h$ la elevación original, $h'$ la elevación en el MDE invertido, max el máximo de elevación del MDE original y min el mínimo.
+
+Un ejemplo de esto se muestra en la figura \ref{Fig:MDEInvertido}.
+
+\begin{figure}[!hbt]   
+\centering
+\includegraphics[width=.8\textwidth]{Analisis_riesgos/MDEInvertido.png}
+\caption{\small Inversión del MDE para calcular el área alcanzable aguas abajo como área aguas arriba en el MDE invertido. El círculo señala el punto de inicio del movimiento, que en el cálculo se emplea como punto de cierre de la zona aguas arriba.}
+\label{Fig:MDEInvertido}
+\end{figure}
+
+Esta técnica se puede emplear también para cualquier elemento del que queramos conocer su trayectoria hacia aguas abajo, como en el caso que hemos tratado anteriormente de aludes, o el de desplazamientos en masa que veremos seguidamente.
+
+
+\section{Desplazamientos en masa}
+
+Otro importante análisis de riesgos es el relacionado con los movimientos en masa. Estos se producen principalmente por la propia configuración del terreno, que en ciertos puntos puede ser inestable y dar lugar a este tipo de desplazamientos masivos. Junto con el factor preponderante del terreno, otras variables puede resultar determinantes para desencadenar este tipo de procesos, actuando como detonantes, o bien impidiendo que se desarrollen y teniendo un papel estabilizador. De estas variables, las más importante son las características propias del suelo y su composición, y la humedad de dicho suelo.
+
+El planteamiento y la situación resultan en cierto modo similares a lo que veíamos anteriormente para el caso de aludes, con un desplazamiento en este caso del propio terreno en lugar de la capa de nieve.
+
+Todas estas variables pueden recogerse en capas de datos, una vez más siendo estas de tipo ráster generalmente. Las formulaciones que combinan estos elementos pueden implementarse en un SIG para el cálculo de nuevas capas que indiquen el riesgo de que se produzcan tales desplazamientos en cada una de las celdas. Los resultados de este tipo de análisis son principalmente de tipo cualitativo, clasificando las distintas zonas del terreno en grupos de riesgo.
+
+El uso exclusivo de la pendiente es una primera opción que, a rasgos generales, puede indicar el condicionamiento que este parámetro ---no el único implicado, aunque quizás el más importante--- plantea de cara a la estabilidad del terreno representado por las distintas celdas. El valor de $35\degree$, denominado habitualmente <<ángulo de reposo>>, es empleado con frecuencia para establecer una división sencilla entre las celdas de pendiente mayor que dicho valor ---con riesgo de deslizamiento--- o menores ---sin riego---. Una sencilla reclasificación de una capa de pendientes nos da así una primera aproximación a una capa de riesgo de desplazamientos en masa.
+
+Si introducimos otras variables además de la pendiente, podemos obtener resultados más refinados. \cite{Pack1999SINMAP} propone en su modelo SINMAP un índice de estabilidad basado en la teoría de \emph{pendiente infinita} \cite{Hammond1992USDA} ---también conocida como de \emph{talud infinito}---, la cual define un factor de seguridad como la relación entre las fuerzas gravitatorias ---desestabilizantes--- y las de cohesión ---estabilizantes---.
+
+\begin{figure}[!hbt]      
+\centering
+\includegraphics[width=.8\textwidth]{Analisis_riesgos/SINMAP.png}
+\caption{\small Valores de índice de estabilidad en el modelo SINMAP en función de área y pendiente (adaptado de \cite{Pack1999SINMAP}).}
+\label{Fig:SINMAP}
+\end{figure}
+
+
+Introduciendo la influencia de la humedad, estimada esta en función de la topografía, se tiene un índice de estabilidad (IE) fundamentalmente basado en la pendiente y el área acumulada, La gráfica mostrada en la figura \ref{Fig:SINMAP} refleja un esquema de los posibles valores de este índice que se obtienen en función de los parámetros anteriores. Con los valores del índice obtenidos se tienen seis grupos fundamentales, tal y como se reseña en el cuadro \ref{Tabla:SINMAP}.
+
+\begin{table}[!hbt]
+	\begin{center}
+		\begin{tabular}{cp{8cm}} \toprule
+			\textbf{IE} & \textbf{Estado}  \\ \midrule
+			IE$>$1,5 & Zona estable \\ 
+			1,54$>$IE$>$1,25 & Zona moderadamente estable \\ 
+			1,25$>$IE$>$15 & Zona casi estable. A partir de este punto se pueden producir deslizamientos en masa. \\ 
+			1$>$IE$>$0,5 & Zona inestable. Menos del 50\% probabilidad de que se produzca deslizamiento en función de los valores de parámetros considerados. \\ 
+			0,5$>$IE$>$0 & Zona inestable. Menos del 50\% probabilidad de que se produzca deslizamiento \\ 		
+			0$>$IE & Zona incondicionalmente inestable\\ \bottomrule
+		\end{tabular}
+	\end{center}
+	\caption{Clases de estabilidad según el modelo SINMAP \cite{Pack1999SINMAP}}
+	\label{Tabla:SINMAP}	
+\end{table}
+
+\section{Incendios}
+
+Una de las áreas donde los SIG han jugado un papel fundamental es en el análisis de riesgos derivados de incendios. Al igual que en el caso de la modelización hidrológica o hidráulica, los modelos de propagación del fuego que resultan básicos para este tipo de análisis existían con anterioridad a la aparición de los SIG, y han sido aplicados en la práctica sin el uso de Sistemas de Información Geográfica e incluso sin el concurso de medios informáticos. No obstante, son modelos que requieren de gran cantidad de cálculos, y cuya utilidad real surge una vez que se aplican en un entorno informatizado.
+
+Mas aún, estos análisis tienen una componente espacial de gran importancia y sin esta se pierde gran parte del sentido que la aplicación de los modelos de propagación de fuego puede tener para el estudio de riesgos. Esto es así debido a que los resultados que se buscan son de carácter espacial y pretenden obtener no el resultado numérico que sale del modelo, sino el patrón espacial que puede obtenerse a partir de este. En otras palabras, el resultado que se busca es la respuesta a una pregunta del tipo <<¿si se original un fuego en un punto A, cuánto tiempo tardará en propagarse hasta el punto B?>>, o bien <<¿qué área habrá quemado el fuego tras un periodo dado de tiempo X y cómo se distribuirá la superficie quemada?>>.
+
+En este contexto, los SIG son el elemento que transforma los resultados de la modelización en resultados espaciales con mucho más significado y relevancia a la hora de estudiar los riesgos derivados de los incendios que se modelizan.
+
+Veamos primero algunos detalles sobre la modelización de incendios en un SIG, para después analizar cómo esta modelización puede aplicarse a la evaluación de riesgos.
+
+\subsection{Modelización de incendios}
+
+En general, cualquier modelo de propagación de fuego es susceptible de ser incorporado a un entorno SIG. Aunque distintos en cuanto a sus requerimientos y fundamentos base, todos ellos van a estimar para unas condiciones dadas las variables que definen el frente de llama, como son su velocidad, altura, intensidad, etc. A efectos del SIG, el parámetro más importante es la velocidad, ya que es la que condiciona la propagación en sí del fuego y la que va a dar lugar al patrón espacial del incendio. 
+
+Un modelo de propagación muy conocido y empleado es BEHAVE \cite{Rothemel1972USDA}, el cual permite calcular la velocidad de propagación, así como la intensidad del fuego. La velocidad obtenida es un valor único, que expresa la velocidad máxima a la que el fuego avanza en las condiciones especificadas.
+
+La propagación del fuego, sin embargo, no se realiza igual en todas las direcciones, y es necesario para llevar ese modelo al SIG el poder conocer la forma en la que se desplaza en todas las direcciones. Para ello es necesario asumir algún comportamiento dado o una forma geométrica base en la que se produzca tal desplazamiento a partir de un foco puntual. Una forma que se asume con frecuencia para la propagación del fuego es la elíptica, resultante de aplicar el denominado \emph{principio de Huygens}\footnote{Este principio toma su nombre del matemático holandés del siglo XII, que estudió la propagación de la luz en términos similares a como se concibe según este enfoque la propagación del fuego} al avance del frente de llama \cite{Richards1990NumMeth}\footnote{Un análisis matemático más extenso puede encontrarse asimismo en \cite{Glasa2007JAMSI}}. 
+
+De este modo, se tiene una velocidad máxima en la dirección del eje mayor de la elipse y, aplicando las propiedades geométricas básicas de esta, puede obtenerse la velocidad en cualesquiera otras direcciones. Esto permite la aplicación de modelos de coste tales como los que vimos en el capítulo \ref{Costes}, ya que para cada celda se tiene una velocidad máxima (del cual puede calcularse un coste en términos de tiempo), una dirección de propagación máxima (que es también una dirección de coste mínimo), y una forma de relacionar la velocidad en la dirección de máxima propagación con la velocidad en otras direcciones (que viene dada por las propiedades de la elipse). Es, por tanto, un análisis de costes de tipo anisotrópico, ya que la velocidad de propagación no es igual en todas direcciones, como hemos visto.
+
+Este cálculo permite obtener una superficie de coste acumulado que indica el tiempo que tarda el fuego en alcanzar cada celda. Los puntos de inicio del fuego se emplean como puntos de destino del modelo de coste, aunque la forma de proceder es la misma que si fueran realmente puntos de destino en lugar de puntos de partida.
+
+En la figura \ref{Fig:Modelizacion_fuego} puede verse un mapa de tiempo de ignición para un incendio con dos focos inicial. Las curvas de nivel obtenidas a partir de la capa que contiene esos valores de tiempo representan los frentes de llama correspondientes a intervalos regulares en la evolución del incendio, y pueden calcularse con las formulaciones que vimos en la sección \ref{Isolineas}.
+
+\begin{figure}[!hbt]      
+\centering
+\includegraphics[width=.6\textwidth]{Analisis_riesgos/Modelizacion_fuego.png}
+\caption{\small Tiempo de ignición a partir de dos focos iniciales. Las zonas en blanco representan áreas de las que no se dispone de información acerca de su modelo de combustible, o bien son incombustibles (embalses, zonas asfaltadas, etc.).}
+\label{Fig:Modelizacion_fuego}
+\end{figure}
+
+En lugar de aplicar un modelo de costes, otra forma distinta de plantear la propagación del fuego por las distintas celdas de la malla ráster es utilizando ideas basadas en autómatas celulares. Un autómata celular es un modelo matemático en el cual tanto el espacio como el tiempo son discretos, y los distintos elementos del sistema pueden tomar valores de un conjunto finito de estos. El comportamiento dinámico de este sistema se modeliza a lo largo de los distintos instantes mediante reglas sencillas que permiten conocer el valor de un elemento en un instante $t$ a partir de su valor en el instante $t-1$ y la interacción con otros elementos.
+
+En el caso más extendido, se considera un autómata celular bidimensional en el cual los elementos del sistema son celdas de una malla regular y la interacción se produce con las celdas situadas en la vecindad de cada una de ellas. Este esquema es fácil ver que se corresponde con las ideas del álgebra de mapas para capas ráster, por lo que existe una gran similitud formal. Esto favorece la implementación de modelos basados en los conceptos de los autómatas celulares para llevar a cabo diversos tipos de simulaciones y modelizaciones dentro de un SIG\footnote{Los campos de aplicación de los autómatas celulares son muy variados, en especial para el estudio de procesos de tipo dinámico como puede por ejemplo la evolución de los usos de suelo en una zona dada. Aunque veremos dentro de esta misma parte algunos otros ejemplos de aplicaciones en las que se emplearán autómatas celulares, no trataremos en profundidad los conceptos fundamentales de estos, los cuales pueden encontrarse por ejemplo en \cite{Wolfram1983Alamos}. Sobre la aplicación de autómatas celulares al análisis de riesgos naturales, una interesante referencia es \cite{Malamud2000CSE}}. Los relativos a la propagación de fuego son algunos de los más desarrollados y estudiados.
+
+Un planteamiento muy simple para aplicar los autómatas celulares a la propagación del fuego es el siguiente: 
+
+\begin{itemize}
+	\item Una celda puede estar en tres estados distintos, a saber:
+	
+	\begin{enumerate}
+		\item No puede arder (no tiene vegetación o esta ya ha ardido)
+		\item Puede arder
+		\item Está ardiendo
+	\end{enumerate}
+
+	\item Las reglas que rigen el paso de un estado a otro son las siguientes:
+		
+	\begin{itemize}
+		\item Una celda ardiendo en el instante $t$ se convierte en una celda que no puede arder en el instante $t+1$
+		\item Una celda que puede arder en el instante $t$ se convierte en una celda ardiendo en el instante $t+1$ si tiene alrededor suyo alguna otra celda ardiendo en el instante $t$
+	\end{itemize}
+	
+\end{itemize}
+
+En la página Web \cite{appletFuego} puede encontrarse un sencillo simulador que implementa las ideas anteriores.
+
+Este modelo, es, como puede verse, extremadamente sencillo, y no tiene en cuenta todas las variables que intervienen en el proceso ni tampoco la naturaleza física del mismo, sino que tan solo define un esquema para analizar la evolución de este. Sobre esta base, no obstante, pueden añadirse ideas más detalladas e incorporar las variables y los resultados de los modelos de propagación de fuego para definir las reglas del sistema de forma que reflejen más fielmente la realidad del avance del fuego entre celdas, así como los procesos físicos que tiene lugar. En el modelo propuesto, el fuego se propaga de una celda a otra simplemente si existe vecindad. Puede incorporarse una probabilidad de propagación (en el modelo anterior es siempre igual a 1) para cada celda, de forma que esta refleje la influencia de los distintos factores tales como el tipo de combustible, la humedad, etc. De este modo, el modelo será más fiel a la realidad. Para el lector interesado, descripciones más detalladas de simulaciones de incendios basadas en autómatas celulares pueden encontrarse en \cite{Hernandez2007AES} y \cite{Karafyllidis1997Eco}.
+
+Con independencia del modelo concreto de propagación que se aplique o del planteamiento que se utilice para extraer el patrón espacial que sigue el fuego, las ideas anteriores nos permiten estudiar un evento concreto. Disponiendo de unas capas que recogen las variables fundamentales que condicionan el comportamiento del fuego(pendiente, humedad de los combustibles, tipo de combustibles, velocidad y dirección del viento, etc.) y de uno o varios focos de inicio, mediante la modelización podemos anticipar el efecto que dicho evento tendrá y así extraer parámetros importantes que permitan la planificación de acciones para mitigar dicho efecto. De acuerdo con el patrón espacial del incendio podemos, por ejemplo, saber hacia qué zonas se desplazará con mayor rapidez el fuego, y de este modo actuar en consecuencia a la hora de tomar decisiones relativas a las labores de extinción.
+
+Este análisis puede llevarse a cabo para un incendio que ya se ha iniciado, de forma que se obtenga una predicción de las zonas que se verán afectadas sin necesidad de esperar a que el propio incendio las alcance. Además de las capas ya mencionadas con las variables que afectan al comportamiento del fuego, pueden incorporarse a la modelización otros elementos también influyentes como, por ejemplo, aquellos derivados de la actuación humana sobre este. De esta forma, la modelización permite analizar el resultado que tendría una acción dada (colocar un retén en un punto dado, provocar un contrafuego) y, como consecuencia de ello, optimizar las tareas de lucha.
+
+Igualmente, este tipo de modelización puede emplearse para el estudio de incendios que ya se han producido, con objeto de analizar las acciones desarrolladas o la influencia que el haber desarrollado otras acciones distintas podría haber tenido en la evolución del fuego, así como para tratar de deducir puntos de inicio posibles en base a la superficie quemada que ya se conoce.
+
+\subsection{Análisis de riesgo}
+
+Pese a ser un proceso dinámico, la modelización es de utilidad también para el análisis preventivo, es decir, sin necesidad de que este se base en un evento concreto que ya se está produciendo. En su lugar, se incorporan elementos probabilísticos que van a permitir estimar la potencial peligrosidad de un incendio sobre un punto dado, lo cual servirá como ayuda a la hora de planificar las tareas de vigilancia y prevención, para evitar en la medida de lo posible que se desencadenen incendios o, al menos, que aquellos que se produzcan sean los menos graves posibles.
+
+Para entender esto debemos comenzar estudiando el concepto de probabilidad de ignición y, sobre todo, ver cómo el SIG es una herramienta valiosa para su cálculo. Prescindiendo por el momento de la modelización, es lógico pensar que todos los puntos de una determinada zona no van a presentar la misma probabilidad de que se produzca en ellos un incendio. Una zona que se encuentre cubierta por vegetación seca es más fácil que se incendie que una en la que existe un pasto húmedo, y ambas se incendiarán con más probabilidad que una en la que no existe vegetación alguna. La orientación del punto en concreto también resulta relevante en este sentido, ya que condicionará la humedad, así como la insolación recibida.
+
+Asimismo, y además de las características propias de un punto tales como su vegetación o su orientación, existen elementos que modifican la probabilidad de aparición de un incendio en cada punto. Una carretera, por ejemplo, tiene un impacto notable, ya que un conductor puede lanzar una colilla encendida y provocar un incendio en las proximidades de la vía. Los puntos más alejados de la carretera no se van a ver afectados de igual modo que aquellos situados en sus inmediaciones, existiendo una distinta influencia y una variación diferente de la probabilidad de ignición.
+
+Este tipo de elementos lineales (lineas férreas o tendidos eléctricos tienen un efecto similar) pueden tratarse mediante los conceptos vistos en el capítulo \ref{Costes}, bien sea mediante la creación de áreas de influencia (dentro de la zona de influencia la probabilidad de ignición relacionada con el elemento en cuestión tiene un valor dado en función de sus características, y fuera un valor distinto, normalmente nulo), o bien, de forma más precisa, graduando la influencia en función de la distancia.
+
+Otros tipos de información que pueden añadirse son los registros históricos de la zona estudiada, que servirán para estimar, en base a los datos de que se dispone, en qué lugares resulta más habitual que se produzcan incendios.
+
+Con esto, se tendrán una serie de capas del tipo <<probabilidad de ignición según la vegetación>>, <<probabilidad según la topografía>>, <<probabilidad según la cercanía a vías de comunicación>>, y similares. Todas ellas en conjunto pueden combinarse para obtener una capa que nos indique la probabilidad global de que se inicie un incendio en los distintos puntos de un área de estudio.
+
+Esta probabilidad, no obstante, solo tiene en cuenta las características \emph{per se} de cada localización, y no las de los puntos situados alrededor de estas, también de importancia. Por ejemplo, en la capa de probabilidad de ignición anterior una celda puede tener una probabilidad de ignición baja. Esto quiere decir que es poco probable que se inicie un fuego en dicha celda, pero no implica que no pueda ser alcanzada fácilmente por un fuego iniciado en otro punto. Si dicha celda está rodeada de otras con alta probabilidad de ignición, el fuego podrá propagarse desde estas, con lo que, en realidad, la probabilidad de ignición de la celda deberá ser considerada como alta.
+
+Puesto que es necesario conocer la propagación de fuego entre celdas para ampliar la idea de probabilidad de ignición (puede ser que esta propagación no se dé o sea muy lenta), es necesario recurrir a los modelos que ya hemos visto con anterioridad, de forma que el cálculo de la probabilidad de ignición no es ya un proceso estático de combinación de capas, sino que incluye igualmente una parte de simulación dinámica.
+
+Este proceso puede realizarse de diversas formas, siendo una de las más habituales la basada en simulaciones de Monte Carlo. Su aplicación puede esquematizarse en los siguientes pasos:
+
+\begin{itemize}
+	\item Se genera un numero $n$ de incendios. Cada uno de ellos tendrá unas coordenadas dentro de la zona de estudio y una probabilidad $P$ asociada ($0\<P\<1$), ambas creadas aleatoriamente.
+	\item Para cada uno de estos incendios se compara su probabilidad con la probabilidad de ignición del punto. En caso de ser menor esta primera, se supone que el incendio no se produce. En caso de ser superior, se supone que el incendio sí se desarrolla, y se modeliza como tal para una duración  $t$ arbitraria establecida de antemano. Esta duración puede establecerse en función de la duración media de los incendios en la zona de estudio, o cualquier otro valor estadístico que se considere oportuno.
+	\item Para cada celda, se cuenta el número de veces que ha sido alcanzada por alguno de los incendios simulados. El cociente entre este valor y el numero total de incendios simulados ($n$) valor indica una nueva probabilidad de ignición, en este caso relativa a las características del entorno como medio propagador del fuego.
+	\item La probabilidad anterior puede combinarse con la probabilidad inicial para obtener una nueva capa de probabilidad en la que ya se consideran todos los factores implicados.
+\end{itemize}
+
+La figura \ref{Fig:Incendio_MonteCarlo} muestra la una capa de probabilidad de ignición como la obtenida en el tercer punto del proceso anterior.
+
+\begin{figure}[!hbt]      
+\centering
+\includegraphics[width=.6\textwidth]{Analisis_riesgos/Incendio_MonteCarlo.png}
+\caption{\small Probabilidad de ignición en función de la propagación de fuego desde celdas vecinas, a partir de simulaciones de Monte Carlo.}
+\label{Fig:Incendio_MonteCarlo}
+\end{figure}
+
+
+Los resultados de la simulación aportan más información que la anterior. Para cada uno de los incendios simulados se tendrá una superficie quemada distinta (la superficie que el incendio quema en el tiempo $t$ establecido). Este valor $t$ es un indicador del daño potencial que producirá un incendio iniciado en un punto concreto. La cuantificación de ese daño puede hacerse más precisa si se asignan distintos pesos a las diferentes celdas en función de su interés, y en lugar de simplemente contar el número de celdas quemadas por cada incendio se ponderan estas según dichos pesos.
+
+Disponiendo de la anterior capa de daño potencial y la de probabilidad de ocurrencia de incendio (el riesgo de incendio propiamente dicho), es sencillo plantear combinaciones sencillas para priorizar las acciones y los medios de los que se dispone para la protección contra incendios. Por ejemplo, si una zona tiene una alta probabilidad pero la ocurrencia de un incendio no supone apenas daño alguno, no tiene interés destinar medios a su protección. Por el contrario, sí lo tiene el proteger una zona con menor probabilidad en la cual, de producirse un incendio, el daño que ocasionaría sería elevado.
+
+La figura \ref{Fig:Esquema_riesgo_incendio} muestra un esquema de los proceso desarrollados en este apartado.
+
+\begin{figure}[!hbt]      
+\centering
+\includegraphics[width=.5\textwidth]{Analisis_riesgos/Esquema_riesgo_incendio.pdf}
+\caption{\small Esquema funcional del análisis de riesgo de incendios.}
+\label{Fig:Esquema_riesgo_incendio}
+\end{figure}
+
+\subsection{Apoyo en tareas relacionadas con riesgo de incendios}
+
+La gestión de incendios y sus riesgos asociados incluye otra serie de tareas además de las anteriores, siendo el SIG de gran utilidad para la mayor parte de ellas.
+
+Como hemos visto, el estudio de riesgos combinado con la modelización nos permite obtener resultados en base a los cuales pueden establecerse prioridades de asignación, Esto constituye una ayuda para decidir, por ejemplo, en qué zonas resulta de interés centrar las labores de vigilancia. Situar los elementos necesarios para llevar a cabo esta labor no es, sin embargo, una labor inmediata, y optimizar su localización es una tarea de análisis espacial que un SIG puede desarrollar de forma inmejorable.
+
+Las formulaciones que vimos en el capítulo \ref{Geomorfometria} relativas a visibilidad sirven para emplazar torres de vigilancia de la forma más adecuada, garantizando que el área que puede vigilarse desde estas sea la mayor posible. De igual modo, estos análisis permiten garantizar que el emplazamiento de una de tales torres cubre una zona de especial relevancia, o cualquier otra cuestión similar.
+
+El trabajo de detección y gestión de incendios se ve también ayudado por el SIG. Una vez localizado el incendio desde varias torres, la posición exacta de este puede calcularse por triangulación, un procedimiento sencillo que se lleva a cabo de forma rápida en un SIG. 
+
+Aunque más novedosas e implementadas por el momento en menor medida, otras tecnologías de tipo SIG pueden adaptarse para su uso por parte de los técnicos encargados de las labores de vigilancia y control de operativos, así como por los propios equipos que trabajan en campo. Las tecnologías Web facilitan la comunicación entre todos los profesionales implicados en la lucha contra incendios, y si estas tecnologías incorporan elementos SIG multiplican su utilidad para todos ellos.  En \cite{Domez2008Girona} puede encontrarse una interesante propuesta tecnológica al respecto.
+
+Por su parte, los SIG montados sobre dispositivos móviles pueden aumentar las posibilidades de trabajo y coordinación, ampliando el nivel de conocimiento del que las cuadrillas de extinción disponen en cada momento acerca del incendio.
+
+En el nivel de control, la gestión de los efectivos que trabajan en las labores de extinción puede hacerse también desde un SIG, trabajándose en tiempo real con las distintas variables tales como la extensión del incendio o el emplazamiento de los equipos en campo. 
+
+En relación con la situación de los equipos, tecnologías relacionadas con los SIG como los Sistemas de Posicionamiento Global permiten un rápido avance hasta las zonas de actuación, facilitando la localización de estas. Si estos equipos están conectados a su vez con un elemento central que los gestione, y este incorpora funcionalidades SIG, se tiene un sistema completo para el control de las tareas de extinción, el cual a su vez permite análisis adicionales en tiempo real. El resultado es una gestión más eficaz e integrada, en la cual el SIG juega un papel central.
+
+Una tecnología de gran importancia tanto para la detección como para el seguimiento de incendios es la teledetección. Los productos de la teledetección tienen una aplicación directa en ambas tareas, y existen análisis particulares que pueden emplearse tanto para localizar puntos en los que se inicie un incendio (y a partir de ello, proceder a organizar las respectivas labores de combate), o seguir el avance de este.
+
+Los fundamentos principales del uso de imágenes de satélite para detección de incendios residen en el análisis de la información que estas pueden ofrecer acerca de la temperatura del terreno. Especialmente relevante para esta tarea es la banda del infrarrojo térmico, pues las emisiones debidas a la temperatura del cuerpo se presentan en la longitud de onda correspondiente a dicha banda. Este planteamiento ha sido desarrollado abundantemente\cite{Chuvieco1990PEARS, Ellyett1974RSE}, y su aplicación ha demostrado la gran utilidad de las imágenes de satélite para estas tareas. El uso de la banda del infrarrojo medio también es otra posibilidad \cite{Robinson1991IJRS}, aunque menos habitual.
+
+Aunque puede utilizarse cualquier sensor cuyos productos incluyan una banda en la zona del infrarrojo térmico, es particularmente popular el uso del sensor AVHRR, cuya banda 3 (3,55--3,93$\mu$m) es adecuada para este tipo de análisis.
+
+La clasificación de los píxeles en función de la temperatura extraída de la banda del infrarrojo térmico arroja, no obstante, falsos positivos en muchos casos, e indica como píxeles incendiados algunos que no lo son. Para filtrar los resultados, pueden aplicarse formulaciones adicionales como el análisis de los píxeles vecinos tanto en la propia banda del infrarrojo térmico como en otras.
+
+\section{Resumen}
+
+El análisis de riesgos representa una importante área de aplicación de las tecnologías SIG.
+
+Uno de los análisis fundamentales es el de riesgos climatológicos, el cual aplica las herramientas de análisis y modelización climatológica. Estas pueden aportar información sobre la situación climática en un instante concreto (modelización cartográfica del clima), o bien sobre el comportamiento del clima a lo largo de un periodo dado (modelización dinámica del tiempo).
+
+Los resultados de este análisis son el punto de partida para otros, muy especialmente los relacionados con la hidrología, tales como inundaciones o aludes. En ambos casos, el SIG representa una herramienta de gran utilidad para la preparación de las variables necesarias para el análisis, y en la actualidad se integra con aplicaciones externas que son las encargadas de llevar a cabo los procesos de modelización correspondientes. Los resultados de esta modelización (áreas de inundación, áreas potencialmente afectadas por avalanchas, etc.) pueden posteriormente ser visualizados y analizados dentro de un SIG.
+
+Otros riesgos tales como los desplazamientos en masa se pueden estudiar y cartografiar exclusivamente con el uso de un SIG, ya que dependen en su mayoría del propio terreno, siendo un SIG una excelente herramienta para el análisis de Modelos Digitales de Elevaciones y la extracción de parámetros derivados.
+
+Por último, hemos visto en este capítulo cómo puede modelizarse el comportamiento de un incendio con un Sistema de Información Geográfica. Empleando los fundamentos de esa modelización, se obtienen variables derivadas tales como cartografía de riesgos de incendio. 
+
+Las tecnologías SIG son también relevantes en el campo de la lucha directa contra incendios, no ya mediante esos procesos de modelización y análisis, sino como herramienta soporte para las tareas relacionadas con la extinción y gestión de equipos de combate.
+
+%\bibliographystyle{unsrt}
+%\bibliography{../../Libro_SIG}

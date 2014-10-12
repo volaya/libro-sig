@@ -1,0 +1,70 @@
+
+body { font:1em/1.625em "lucida grande","lucida sans unicode", sans-serif; background-color:#FFFEF0;  
+font-size-adjust:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+background: #f9f9f8;
+}
+
+p { padding:0 0  1em 0; color:#111; font-weight:300;}
+
+ul,ol{padding-left: 40px;}
+
+h1,h2{ font-weight:normal; color: #333; font-family:Georgia, serif; }
+h3,h4,h5,h6 { font-weight: normal; color: #333; font-family:Georgia, serif; }
+
+hr {border-top: dotted 2px;}
+
+h1 { font-size: 3.125em; margin-bottom: 0.765em; line-height: 1; }
+h2 { font-size: 1.9em;  margin-bottom: 0.855em; margin-top: 1em;}
+h3 { font-size: 1.6em;  margin-bottom: 0.956em; margin-top: 1em;}
+h4 { font-size: 1.4em;  margin-bottom: 1.161em; margin-top: 1em;}
+h5,h6 { font-size: 1.313em;  margin-bottom: 1.238em; margin-top: 1em;}
+
+
+h1.title {
+	font: 200 6em 'Tangerine', Helvetica, Sans-serif;
+	color: #333;
+}
+h3.title {
+	font: 200 3.5em 'Tangerine', Helvetica, Sans-serif;
+	color: #333;
+}
+dl { margin: 0 0 1.625em 0; }
+dl dt { font-weight: bold; }
+dl dd { margin-left: 1.625em; }
+
+a { color:#005AF2; text-decoration:none; }
+a:hover { text-decoration: underline; }
+
+table { margin-bottom:1.625em; border-collapse: collapse; border: 1px solid black; margin-left:auto; margin-right:auto}
+th { font-weight:bold; border: 1px solid black }
+tr,th,td { margin:0; padding:0 1.625em 0 1em; height:26px; border: 1px solid black}
+tfoot { font-style: italic; }
+figcaption { text-align:center; font-style: italic; }
+
+pre, code { margin: 1.625em 0; white-space: pre; }
+pre, code, tt { font: 1.225em monospace; line-height: 1.5; } 
+hr { margin-bottom:1.625em; }
+
+img{  
+  display: block;
+  vertical-align: top;
+  margin-bottom: 1cm;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.main {margin:0 auto;  width:750px;}
+
+#toindex {
+    position: fixed;
+    top: 0px; 
+    left: 10px;
+    background-color:#FFFEF0   
+}
+
+
+

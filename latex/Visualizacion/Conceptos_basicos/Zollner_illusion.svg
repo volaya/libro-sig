@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="482.88235"
+   height="343.47058"
+   version="1.0"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="Zollner_illusion.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata39">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="749"
+     inkscape:window-width="1360"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="1.1333333"
+     inkscape:cx="98.823529"
+     inkscape:cy="170"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 170 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="480 : 170 : 1"
+       inkscape:persp3d-origin="240 : 113.33333 : 1"
+       id="perspective41" />
+    <g
+       id="ln0"
+       style="fill:#ff0000;stroke:#000000;stroke-width:9">
+      <polyline
+         points="0,0 0,144"
+         id="polyline7"
+         style="stroke-width:12" />
+      <polyline
+         points="-23,0 23,0"
+         id="polyline9" />
+      <polyline
+         points="-23,24 23,24"
+         id="polyline11" />
+      <polyline
+         points="-23,48 23,48"
+         id="polyline13" />
+      <polyline
+         points="-23,72 23,72"
+         id="polyline15" />
+      <polyline
+         points="-23,96 23,96"
+         id="polyline17" />
+      <polyline
+         points="-23,120 23,120"
+         id="polyline19" />
+      <polyline
+         points="-23,144 23,144"
+         id="polyline21" />
+    </g>
+    <use
+       xlink:href="#ln0"
+       transform="matrix(1,0,1,1,0,0)"
+       id="ln1"
+       x="0"
+       y="0"
+       width="480"
+       height="340" />
+    <use
+       xlink:href="#ln0"
+       transform="matrix(0,-1,1,1,0,0)"
+       id="ln2"
+       x="0"
+       y="0"
+       width="480"
+       height="340" />
+    <pattern
+       id="lns"
+       patternUnits="userSpaceOnUse"
+       width="144"
+       height="144"
+       patternTransform="translate(1,1.5882353)">
+      <use
+         xlink:href="#ln1"
+         id="use26" />
+      <use
+         xlink:href="#ln2"
+         transform="translate(72)"
+         id="use28" />
+      <use
+         xlink:href="#ln2"
+         transform="translate(-72)"
+         id="use30" />
+      <use
+         xlink:href="#ln1"
+         transform="translate(144)"
+         id="use32" />
+      <use
+         xlink:href="#ln1"
+         transform="translate(-144)"
+         id="use34" />
+    </pattern>
+  </defs>
+  <rect
+     height="340"
+     width="480"
+     id="rect36"
+     x="1"
+     y="1.5882354"
+     style="fill:url(#lns)" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2414"
+     width="480.88235"
+     height="341.47058"
+     x="1"
+     y="1" />
+</svg>

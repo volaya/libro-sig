@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="570.56873"
+   height="473.7652"
+   id="svg2238"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Modelos_topologia.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="true"
+   version="1.0">
+  <defs
+     id="defs2240" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4748304"
+     inkscape:cx="220.95495"
+     inkscape:cy="220.95495"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     showgrid="false"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2243">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.300812,-53.087334)">
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="20.762726"
+       y="238.27708"
+       id="text4320"><tspan
+         sodipodi:role="line"
+         id="tspan4322"
+         x="20.762726"
+         y="238.27708"
+         style="font-size:14px">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="120.88551"
+       y="63.477959"
+       id="text4324"><tspan
+         sodipodi:role="line"
+         id="tspan4326"
+         x="120.88551"
+         y="63.477959">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="236.90114"
+       y="111.35743"
+       id="text4328"><tspan
+         sodipodi:role="line"
+         id="tspan4330"
+         x="236.90114"
+         y="111.35743">3</tspan></text>
+    <path
+       style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 40.595311,228.84628 L 224.0105,242.1052 L 231.38955,107.3061"
+       id="path5307"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:#0000e2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 38.988181,228.95788 L 131.06407,69.69449 C 131.06407,69.69449 230.43924,107.21883 230.07077,107.21682 C 228.98804,107.2109 44.702461,226.10074 38.988181,228.95788 z "
+       id="path3347"
+       sodipodi:nodetypes="ccsc" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="226.58864"
+       y="260.15207"
+       id="text7247"><tspan
+         sodipodi:role="line"
+         id="tspan7249"
+         x="226.58864"
+         y="260.15207">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="69.88665"
+       y="141.14783"
+       id="text7251"><tspan
+         sodipodi:role="line"
+         id="tspan7253"
+         x="69.88665"
+         y="141.14783">a</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="183.09633"
+       y="77.772636"
+       id="text7255"><tspan
+         sodipodi:role="line"
+         id="tspan7257"
+         x="183.09633"
+         y="77.772636">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="236.53661"
+       y="180.59779"
+       id="text7259"><tspan
+         sodipodi:role="line"
+         id="tspan7261"
+         x="236.53661"
+         y="180.59779">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="117.71146"
+       y="263.20132"
+       id="text7263"><tspan
+         sodipodi:role="line"
+         id="tspan7265"
+         x="117.71146"
+         y="263.20132">d</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="147.98842"
+       y="178.81938"
+       id="text7267"><tspan
+         sodipodi:role="line"
+         id="tspan7269"
+         x="147.98842"
+         y="178.81938">e</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="23.705456"
+       y="485.08508"
+       id="text7271"><tspan
+         sodipodi:role="line"
+         id="tspan7273"
+         x="23.705456"
+         y="485.08508"
+         style="font-size:14px">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="123.82825"
+       y="310.28598"
+       id="text7275"><tspan
+         sodipodi:role="line"
+         id="tspan7277"
+         x="123.82825"
+         y="310.28598">ii</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="231.26501"
+       y="349.09283"
+       id="text7279"><tspan
+         sodipodi:role="line"
+         id="tspan7281"
+         x="231.26501"
+         y="349.09283">2</tspan></text>
+    <path
+       style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#00969c;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 43.538044,475.65431 L 226.95323,488.91323 L 231.0565,355.20606"
+       id="path7283"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:#0000e2;fill-opacity:1;fill-rule:evenodd;stroke:#c400d2;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 41.930914,475.76591 L 134.0068,316.50252 C 134.0068,316.50252 230.10618,355.11879 229.73771,355.11678 C 228.65498,355.11086 47.645198,472.90877 41.930914,475.76591 z "
+       id="path7285"
+       sodipodi:nodetypes="ccsc" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="215.67352"
+       y="504.85254"
+       id="text7287"><tspan
+         sodipodi:role="line"
+         id="tspan7289"
+         x="215.67352"
+         y="504.85254">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="77.09272"
+       y="383.33118"
+       id="text7291"><tspan
+         sodipodi:role="line"
+         id="tspan7293"
+         x="77.09272"
+         y="383.33118">a</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="233.61023"
+       y="422.57242"
+       id="text7299"><tspan
+         sodipodi:role="line"
+         id="tspan7301"
+         x="233.61023"
+         y="422.57242">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px"
+       x="145.98923"
+       y="425.69315"
+       id="text7311"><tspan
+         sodipodi:role="line"
+         id="tspan7313"
+         x="145.98923"
+         y="425.69315">b</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 42.039248,475.66249 L 230.39692,354.45843"
+       id="path8284"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g2288"
+       transform="translate(-18.985234,49.863471)">
+      <text
+         transform="scale(0.953473,1.0487974)"
+         id="text8304"
+         y="64.083786"
+         x="331.97668"
+         style="font-size:9.21173668px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:11px;font-style:italic;font-family:Bitstream Vera Sans"
+           y="64.083786"
+           x="331.97668"
+           id="tspan8306"
+           sodipodi:role="line">Segmento    Vertice 1   Vertice 2    Polig. dcha.  Polig. izda.</tspan><tspan
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           id="tspan8308"
+           y="77.833786"
+           x="331.97668"
+           sodipodi:role="line">      a                  1                2                 A             Ninguno      </tspan><tspan
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           id="tspan8310"
+           y="91.583786"
+           x="331.97668"
+           sodipodi:role="line">      b                  2                3                 A             Ninguno</tspan><tspan
+           id="tspan8312"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="105.33379"
+           x="331.97668"
+           sodipodi:role="line">      c                  3                4                 B             Ninguno</tspan><tspan
+           id="tspan8314"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="119.08379"
+           x="331.97668"
+           sodipodi:role="line">      d                  4                5                 B             Ninguno</tspan><tspan
+           id="tspan8316"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="132.83379"
+           x="331.97668"
+           sodipodi:role="line">      e                  1                3                 B                  A</tspan></text>
+      <text
+         transform="scale(0.953473,1.0487974)"
+         id="text8318"
+         y="156.9055"
+         x="333.98364"
+         style="font-size:9.21173668px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:11px;font-style:italic;font-family:Bitstream Vera Sans"
+           y="156.9055"
+           x="333.98364"
+           id="tspan8320"
+           sodipodi:role="line">Polígono    Segmentos</tspan><tspan
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           id="tspan8322"
+           y="170.6555"
+           x="333.98364"
+           sodipodi:role="line">      A             a, b, e</tspan><tspan
+           id="tspan8330"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="184.4055"
+           x="333.98364"
+           sodipodi:role="line">      B             c, d, e</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="136.52318"
+       y="130.93507"
+       id="text8332"><tspan
+         sodipodi:role="line"
+         id="tspan8334"
+         x="136.52318"
+         y="130.93507">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="191.21596"
+       y="206.92046"
+       id="text8336"><tspan
+         sodipodi:role="line"
+         id="tspan8338"
+         x="191.21596"
+         y="206.92046">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="127.45293"
+       y="383.43927"
+       id="text8349"><tspan
+         sodipodi:role="line"
+         id="tspan8351"
+         x="127.45293"
+         y="383.43927">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="180.51572"
+       y="464.43869"
+       id="text8353"><tspan
+         sodipodi:role="line"
+         id="tspan8355"
+         x="180.51572"
+         y="464.43869">B</tspan></text>
+    <g
+       id="g2301"
+       transform="translate(-40.647144,33.965868)">
+      <text
+         transform="scale(0.953473,1.0487974)"
+         id="text2221"
+         y="325.44516"
+         x="342.60641"
+         style="font-size:9.21173668px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:11px;font-style:italic;font-family:Bitstream Vera Sans"
+           y="325.44516"
+           x="342.60641"
+           id="tspan2223"
+           sodipodi:role="line">   Arco    Nodo 1    Nodo 2    Vertices    Polig. dcha.   Polig. izda.</tspan><tspan
+           id="tspan2233"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="339.19516"
+           x="342.60641"
+           sodipodi:role="line">      a            1            3              ii                 A                Ninguno</tspan><tspan
+           id="tspan2246"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="352.94516"
+           x="342.60641"
+           sodipodi:role="line">      b            1            3              -                 B                    A      </tspan><tspan
+           id="tspan2248"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="366.69516"
+           x="342.60641"
+           sodipodi:role="line">      c            1            3              iv            Ninguno             B       </tspan></text>
+      <text
+         transform="scale(0.953473,1.0487974)"
+         id="text2260"
+         y="394.88135"
+         x="352.32709"
+         style="font-size:9.21173668px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:11px;font-style:italic;font-family:Bitstream Vera Sans"
+           y="394.88135"
+           x="352.32709"
+           id="tspan2262"
+           sodipodi:role="line">Polígono    Arcos</tspan><tspan
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           id="tspan2264"
+           y="408.63135"
+           x="352.32709"
+           sodipodi:role="line">      A           a, b</tspan><tspan
+           id="tspan2266"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="422.38135"
+           x="352.32709"
+           sodipodi:role="line">      B           b, c </tspan></text>
+      <text
+         transform="scale(0.953473,1.0487974)"
+         id="text2268"
+         y="394.51251"
+         x="487.52325"
+         style="font-size:9.21173668px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:11px;font-style:italic;font-family:Bitstream Vera Sans"
+           y="394.51251"
+           x="487.52325"
+           id="tspan2270"
+           sodipodi:role="line">Nodo    Arcos</tspan><tspan
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           id="tspan2272"
+           y="408.26251"
+           x="487.52325"
+           sodipodi:role="line">   1       a, b, c</tspan><tspan
+           id="tspan2274"
+           style="font-size:11px;font-family:Bitstream Vera Sans"
+           y="422.01251"
+           x="487.52325"
+           sodipodi:role="line">   2       a, b, c </tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="39.357601"
+       y="463.47464"
+       id="text2276"><tspan
+         sodipodi:role="line"
+         id="tspan2278"
+         x="39.357601"
+         y="463.47464"
+         style="font-size:14px">i</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="234.41939"
+       y="368.18781"
+       id="text2280"><tspan
+         sodipodi:role="line"
+         id="tspan2282"
+         x="234.41939"
+         y="368.18781"
+         style="font-size:14px">iii</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="233.38367"
+       y="492.82019"
+       id="text2284"><tspan
+         sodipodi:role="line"
+         id="tspan2286"
+         x="233.38367"
+         y="492.82019">iv</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="296.82501"
+       y="77.426956"
+       id="text2316"><tspan
+         sodipodi:role="line"
+         id="tspan2318"
+         x="296.82501"
+         y="77.426956">Dual Independent Map Encoding(DIME)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="293.51984"
+       y="330.63623"
+       id="text2320"><tspan
+         sodipodi:role="line"
+         id="tspan2322"
+         x="293.51984"
+         y="330.63623">Arco-nodo</tspan></text>
+  </g>
+</svg>

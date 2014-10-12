@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="527.52838"
+   height="235.59085"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45"
+   version="1.0"
+   sodipodi:docname="Operaciones_solape.svg"
+   sodipodi:docbase="/media/USB DISK/libro_sig/LaTeX/Operaciones_geometricas"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="true">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path5228"
+         d="M 5.77,0 L -2.88,5 L -2.88,-5 L 5.77,0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="scale(0.4,0.4)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7781034"
+     inkscape:cx="263.76419"
+     inkscape:cy="117.79543"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1024"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-100.94766,-30.281051)">
+    <g
+       id="g3161"
+       transform="matrix(0.4358772,0,0,0.3500425,85.539153,56.738621)"
+       style="stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <path
+         transform="translate(0,100)"
+         d="M 208.57143 176.6479 A 85.714287 55.714287 0 1 1  37.142853,176.6479 A 85.714287 55.714287 0 1 1  208.57143 176.6479 z"
+         sodipodi:ry="55.714287"
+         sodipodi:rx="85.714287"
+         sodipodi:cy="176.6479"
+         sodipodi:cx="122.85714"
+         id="path2160"
+         style="opacity:0.50099996;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <path
+         transform="translate(85.714289,100)"
+         d="M 208.57143 176.6479 A 85.714287 55.714287 0 1 1  37.142853,176.6479 A 85.714287 55.714287 0 1 1  208.57143 176.6479 z"
+         sodipodi:ry="55.714287"
+         sodipodi:rx="85.714287"
+         sodipodi:cy="176.6479"
+         sodipodi:cx="122.85714"
+         id="path2162"
+         style="opacity:0.50099996;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.78121841;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 409.3317,34.56093 C 388.70848,34.56093 371.96885,43.299554 371.96885,54.06486 C 371.96885,64.830169 388.70848,73.568791 409.3317,73.568791 C 416.13525,73.568791 422.50995,72.615293 428.00631,70.954411 C 416.84841,67.579875 409.3317,61.276152 409.3317,54.06486 C 409.3317,46.853568 416.84841,40.549846 428.00631,37.17531 C 422.50995,35.51443 416.13525,34.56093 409.3317,34.56093 z "
+       id="path3134" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.78121841;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 409.3317,100.56582 C 388.70848,100.56582 371.96885,109.30444 371.96885,120.06975 C 371.96885,130.83506 388.70848,139.57368 409.3317,139.57368 C 416.13525,139.57368 422.50995,138.62018 428.00631,136.9593 C 416.84841,133.58476 409.3317,127.28104 409.3317,120.06975 C 409.3317,112.85846 416.84841,106.56567 428.00631,103.19114 C 422.50995,101.53026 416.13525,100.56582 409.3317,100.56582 z M 428.00631,103.19114 C 439.17078,106.56479 446.69455,112.85589 446.69455,120.06975 C 446.69455,127.28361 439.17078,133.58565 428.00631,136.9593 C 433.50537,138.62241 439.88608,139.57368 446.69455,139.57368 C 467.31777,139.57368 484.05739,130.83506 484.0574,120.06975 C 484.0574,109.30444 467.31777,100.56582 446.69455,100.56582 C 439.88608,100.56582 433.50537,101.52803 428.00631,103.19114 z "
+       id="path3138" />
+    <g
+       id="g3157"
+       transform="matrix(0.4358772,0,0,0.3500425,205.09404,20.734251)"
+       style="fill:#000000;opacity:0.85169492">
+      <path
+         transform="translate(345.71429,295.71428)"
+         d="M 208.57143 176.6479 A 85.714287 55.714287 0 1 1  37.142853,176.6479 A 85.714287 55.714287 0 1 1  208.57143 176.6479 z"
+         sodipodi:ry="55.714287"
+         sodipodi:rx="85.714287"
+         sodipodi:cy="176.6479"
+         sodipodi:cx="122.85714"
+         id="path3142"
+         style="opacity:0.50099996;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <path
+         transform="translate(431.42858,295.71428)"
+         d="M 208.57143 176.6479 A 85.714287 55.714287 0 1 1  37.142853,176.6479 A 85.714287 55.714287 0 1 1  208.57143 176.6479 z"
+         sodipodi:ry="55.714287"
+         sodipodi:rx="85.714287"
+         sodipodi:cy="176.6479"
+         sodipodi:cx="122.85714"
+         id="path3144"
+         style="opacity:0.50099996;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.78121841;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 430.51261,231.20824 C 419.34814,234.58189 411.82437,240.87299 411.82437,248.08685 C 411.82437,255.30071 419.34814,261.60275 430.51261,264.97641 C 441.67051,261.60187 449.18722,255.29814 449.18722,248.08685 C 449.18722,240.87556 441.67051,234.58278 430.51261,231.20824 z "
+       id="path4142" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.71827602px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="492.59848"
+       y="64.459999"
+       id="text4149"
+       transform="scale(1.1158908,0.8961451)"><tspan
+         sodipodi:role="line"
+         id="tspan4151"
+         x="492.59848"
+         y="64.459999">Recorte</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.71827602px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="492.59848"
+       y="137.15527"
+       id="text4153"
+       transform="scale(1.1158908,0.8961451)"><tspan
+         sodipodi:role="line"
+         id="tspan4155"
+         x="492.59848"
+         y="137.15527">Diferencia</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.71827602px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="492.73007"
+       y="209.67032"
+       id="text4157"
+       transform="scale(1.1158908,0.8961451)"><tspan
+         sodipodi:role="line"
+         id="tspan4159"
+         x="492.73007"
+         y="209.67032">Unión</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.71827602px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="492.59848"
+       y="282.41995"
+       id="text4161"
+       transform="scale(1.1158908,0.8961451)"><tspan
+         sodipodi:role="line"
+         id="tspan4163"
+         x="492.59848"
+         y="282.41995">Intersección</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.56243682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 360.76447,31.062269 L 360.76447,265.09068"
+       id="path5336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#TriangleOutM);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 229.73657,151.70531 L 338.27919,151.70531"
+       id="path2186" />
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="118.38197"
+       y="157.32928"
+       id="text4132"><tspan
+         sodipodi:role="line"
+         id="tspan4134"
+         x="118.38197"
+         y="157.32928">1                  2</tspan></text>
+  </g>
+</svg>

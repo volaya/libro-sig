@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1924.6823"
+   height="1058.579"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docbase="C:\Documents and Settings\Victor\Escritorio\LaTeX\Tecnologia\Introduccion_tecnologia"
+   sodipodi:docname="Esquema_tecnologia_SIG.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path4252"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 518.35718 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="2006.1426 : 518.35718 : 1"
+       inkscape:persp3d-origin="1003.0713 : 345.57145 : 1"
+       id="perspective44" />
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path4285"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <linearGradient
+       id="linearGradient3142">
+      <stop
+         style="stop-color:#dd8718;stop-opacity:1;"
+         offset="0"
+         id="stop3144" />
+      <stop
+         id="stop3152"
+         offset="0.47499999"
+         style="stop-color:#be0000;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#dd8718;stop-opacity:1;"
+         offset="1"
+         id="stop3146" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1222.2324"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1360"
+     inkscape:window-height="749"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     showgrid="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(942.21442,42.962984)">
+    <rect
+       style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3468"
+       width="340"
+       height="122.85714"
+       x="-855.42853"
+       y="868.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.08199978;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="-825.42859"
+       y="945.505"
+       id="text3470"><tspan
+         sodipodi:role="line"
+         id="tspan3472"
+         x="-825.42859"
+         y="945.505"
+         style="font-size:56px;stroke-width:6.08199978;stroke-miterlimit:4;stroke-dasharray:none">Servidores</tspan></text>
+    <rect
+       style="opacity:0.37179488;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5.00025988;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3474"
+       width="340"
+       height="122.85714"
+       x="-632.85712"
+       y="468.07648"
+       transform="matrix(1.4926169,0,0,0.9911956,5.43981,-483.90947)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="-866"
+       y="55.504967"
+       id="text3476"><tspan
+         sodipodi:role="line"
+         id="tspan3478"
+         x="-866"
+         y="55.504967"
+         style="font-size:56px">Clientes Web</tspan></text>
+    <g
+       id="g5047">
+      <rect
+         transform="matrix(1.14789,0,0,1.3162538,-189.78116,-851.58711)"
+         y="616.64789"
+         x="678.57141"
+         height="122.85714"
+         width="340"
+         id="rect3494"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.94796324;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text3496"
+         y="25.219322"
+         x="779.99976"
+         style="font-size:40px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.08199978;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:56px;text-align:center;text-anchor:middle;stroke-width:6.08199978;stroke-miterlimit:4;stroke-dasharray:none"
+           y="25.219322"
+           x="787.76538"
+           id="tspan3498"
+           sodipodi:role="line">Repositorios </tspan><tspan
+           id="tspan3500"
+           style="font-size:56px;text-align:center;text-anchor:middle;stroke-width:6.08199978;stroke-miterlimit:4;stroke-dasharray:none"
+           y="95.219322"
+           x="779.99976"
+           sodipodi:role="line">de datos</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6.96575832;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -685.42854,857.36638 L -685.42854,104.84505"
+       id="path2301"
+       inkscape:connector-type="polyline" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -579.72346,865.86219 L 645.51065,124.86217"
+       id="path2305"
+       inkscape:connector-type="polyline" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.2092762;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 587.21655,932.64789 L -498.35018,932.64789"
+       id="path3294"
+       inkscape:connector-type="polyline" />
+    <g
+       id="g5041"
+       transform="translate(69.356892,118)">
+      <rect
+         y="732.86383"
+         x="519.78729"
+         height="161.71118"
+         width="390.28259"
+         id="rect5027"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6.08200026;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text5031"
+         y="798.43427"
+         x="712.6864"
+         style="font-size:40px;font-style:normal;font-weight:normal;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.08199978;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           id="tspan5035"
+           style="font-size:56px;text-align:center;text-anchor:middle;stroke-width:6.08199978;stroke-miterlimit:4;stroke-dasharray:none"
+           y="798.43427"
+           x="720.45203"
+           sodipodi:role="line">Herramientas </tspan><tspan
+           id="tspan5039"
+           style="font-size:56px;text-align:center;text-anchor:middle;stroke-width:6.08199978;stroke-miterlimit:4;stroke-dasharray:none"
+           y="868.43427"
+           x="712.6864"
+           sodipodi:role="line">de escritorio</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6.83819056;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Mstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 797.21431,126.19714 L 797.21431,847.63327"
+       id="path5053"
+       inkscape:connector-type="polyline" />
+  </g>
+</svg>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1227.3223"
+   height="628.08521"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45"
+   version="1.0"
+   sodipodi:docname="Seleccion.svg"
+   sodipodi:docbase="/home/victor/Desktop/libro_sig/LaTeX/Consultas"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="true">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78362573"
+     inkscape:cx="598.5"
+     inkscape:cy="109.85543"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1024"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(235.64284,-33.719307)">
+    <rect
+       style="opacity:0.74152539;fill:#e1f809;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2466"
+       width="390.64804"
+       height="25.580692"
+       x="518.466"
+       y="483.08951" />
+    <rect
+       style="opacity:0.74152539;fill:#e1f809;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3437"
+       width="390.64804"
+       height="108.52845"
+       x="521.01819"
+       y="553.27606" />
+    <image
+       y="33.719307"
+       x="-235.64284"
+       id="image2261"
+       height="403"
+       width="1197"
+       sodipodi:absref="/home/victor/Desktop/libro_sig/LaTeX/Consultas/Seleccion.png"
+       xlink:href="Seleccion.png" />
+    <g
+       id="g2412"
+       transform="translate(-45.940299,-16.816219)">
+      <rect
+         y="473.31729"
+         x="-149.95409"
+         height="25.580692"
+         width="390.64804"
+         id="rect3262"
+         style="opacity:0.26086958;fill:#64bf4d;fill-opacity:1;stroke:#000000;stroke-width:2.57226467;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.9565056,1.0454721)"
+         id="text3264"
+         y="469.9931"
+         x="-145.90648"
+         style="font-size:16.96658134px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="469.9931"
+           x="-145.90648"
+           id="tspan3266"
+           sodipodi:role="line">Pais                  Poblacion                  Área</tspan></text>
+      <text
+         transform="scale(0.9565056,1.0454721)"
+         id="text3268"
+         y="498.48392"
+         x="-149.84288"
+         style="font-size:16.96658134px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="498.48392"
+           x="-149.84288"
+           id="tspan3270"
+           sodipodi:role="line">Birmania             43,09                   669820</tspan><tspan
+           id="tspan2400"
+           y="519.69214"
+           x="-149.84288"
+           sodipodi:role="line">China                  1275,2                 9337880</tspan><tspan
+           id="tspan2404"
+           y="540.90037"
+           x="-149.84288"
+           sodipodi:role="line">India                   894,6                   3089282</tspan><tspan
+           id="tspan2406"
+           y="562.1086"
+           x="-149.84288"
+           sodipodi:role="line">Laos                    47,22                   230556                        </tspan><tspan
+           id="tspan2388"
+           y="583.31682"
+           x="-149.84288"
+           sodipodi:role="line">Mongolia             2,22                     1559176</tspan><tspan
+           id="tspan2392"
+           y="604.52505"
+           x="-149.84288"
+           sodipodi:role="line">Nepal                  19,92                   147292</tspan><tspan
+           id="tspan2396"
+           y="625.73328"
+           x="-149.84288"
+           sodipodi:role="line">Tailandia             57,32                   515144</tspan><tspan
+           id="tspan2398"
+           y="646.9415"
+           x="-149.84288"
+           sodipodi:role="line">Vietnam              71,21                   327122 </tspan></text>
+    </g>
+    <rect
+       style="opacity:0.26086958;fill:#64bf4d;fill-opacity:1;stroke:#000000;stroke-width:2.57226467;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2428"
+       width="390.64804"
+       height="25.580692"
+       x="518.85822"
+       y="456.50107" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.96658134px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="549.38177"
+       y="482.39908"
+       id="text2434"
+       transform="scale(0.9565056,1.0454721)"><tspan
+         sodipodi:role="line"
+         id="tspan2436"
+         x="549.38177"
+         y="482.39908">Birmania             43,09                   669820</tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="503.60731"
+         id="tspan2438">China                  1275,2                 9337880</tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="524.81553"
+         id="tspan2440">India                   894,6                   3089282</tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="546.02376"
+         id="tspan2442">Laos                    47,22                   230556                        </tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="567.23199"
+         id="tspan2444">Mongolia             2,22                     1559176</tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="588.44021"
+         id="tspan2446">Nepal                  19,92                   147292</tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="609.64844"
+         id="tspan2448">Tailandia             57,32                   515144</tspan><tspan
+         sodipodi:role="line"
+         x="549.38177"
+         y="630.85667"
+         id="tspan2450">Vietnam              71,21                   327122 </tspan></text>
+    <text
+       transform="scale(0.9565056,1.0454721)"
+       id="text2193"
+       y="455.23218"
+       x="553.48804"
+       style="font-size:16.96658134px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="455.23218"
+         x="553.48804"
+         id="tspan2195"
+         sodipodi:role="line">Pais                  Poblacion                  Área</tspan></text>
+  </g>
+</svg>

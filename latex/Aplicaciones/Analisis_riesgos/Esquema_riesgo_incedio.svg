@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1311.8125"
+   height="1105.829"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   version="1.0"
+   sodipodi:docbase="G:\LaTeX2\Aplicaciones\Analisis_riesgos"
+   sodipodi:docname="Esquema_riesgo_incedio.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2222">
+      <stop
+         style="stop-color:#eded22;stop-opacity:1;"
+         offset="0"
+         id="stop2224" />
+      <stop
+         style="stop-color:#eded22;stop-opacity:0;"
+         offset="1"
+         id="stop2226" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2222"
+       id="linearGradient2228"
+       x1="371.35074"
+       y1="292.36218"
+       x2="854.20789"
+       y2="32.362183"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="350"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1024"
+     inkscape:window-height="708"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-52.36356,-55.265876)">
+    <rect
+       style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.8578347;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2160"
+       width="244.65172"
+       height="136.08029"
+       x="57.674141"
+       y="56.194794" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="135.11719"
+       y="138.55135"
+       id="text2162"><tspan
+         sodipodi:role="line"
+         id="tspan2164"
+         x="135.11719"
+         y="138.55135">MDE</tspan></text>
+    <rect
+       style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.59983325;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2166"
+       width="496.9155"
+       height="131.20122"
+       x="371.54227"
+       y="56.565796" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="410.40039"
+       y="108.65078"
+       id="text2168"><tspan
+         sodipodi:role="line"
+         x="410.40039"
+         y="108.65078"
+         id="tspan2188">Modelo de combustible,</tspan><tspan
+         sodipodi:role="line"
+         x="410.40039"
+         y="158.65078"
+         id="tspan2192">  viento, humedad...</tspan></text>
+    <g
+       id="g2202"
+       transform="translate(-5.7142899,132.14285)">
+      <path
+         transform="translate(-2.7792969,0)"
+         d="M 402.85715 385.21933 A 170 87.14286 0 1 1  62.857147,385.21933 A 170 87.14286 0 1 1  402.85715 385.21933 z"
+         sodipodi:ry="87.14286"
+         sodipodi:rx="170"
+         sodipodi:cy="385.21933"
+         sodipodi:cx="232.85715"
+         id="path2172"
+         style="opacity:0.42028988;fill:url(#linearGradient2228);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <text
+         id="text2174"
+         y="370.32675"
+         x="230.14621"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="370.32675"
+           x="235.69308"
+           id="tspan2176"
+           sodipodi:role="line">Modelo  </tspan><tspan
+           id="tspan2178"
+           y="420.32675"
+           x="230.14621"
+           sodipodi:role="line">propagacion</tspan></text>
+    </g>
+    <g
+       id="g2208"
+       transform="translate(435.65123,2.1428535)">
+      <path
+         transform="translate(492.85714,130)"
+         d="M 402.85715 385.21933 A 170 87.14286 0 1 1  62.857147,385.21933 A 170 87.14286 0 1 1  402.85715 385.21933 z"
+         sodipodi:ry="87.14286"
+         sodipodi:rx="170"
+         sodipodi:cy="385.21933"
+         sodipodi:cx="232.85715"
+         id="path2194"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <text
+         id="text2196"
+         y="500.32675"
+         x="725.78265"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="500.32675"
+           x="731.32953"
+           id="tspan2198"
+           sodipodi:role="line">Modelo  </tspan><tspan
+           id="tspan2200"
+           y="550.32675"
+           x="725.78265"
+           sodipodi:role="line">propagacion</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 187.78301,193.204 L 214.30398,428.21932"
+       id="path2230"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#rect2160"
+       inkscape:connection-end="#g2202" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 303.25478,173.60983 L 989.36552,448.46035"
+       id="path2232"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#rect2160"
+       inkscape:connection-end="#g2208" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 553.02489,189.06693 L 313.60582,428.21932"
+       id="path2234"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#rect2166"
+       inkscape:connection-end="#g2202" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 711.64481,189.06693 L 1039.2517,428.21932"
+       id="path2236"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#rect2166"
+       inkscape:connection-end="#g2208" />
+    <g
+       id="g4253"
+       transform="translate(254.4015,-5.7142856)">
+      <rect
+         y="745.4035"
+         x="-152.3638"
+         height="136.08029"
+         width="244.65172"
+         id="rect2238"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.8578347;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text2240"
+         y="798.55109"
+         x="-29.33482"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="798.55109"
+           x="-23.787945"
+           id="tspan2242"
+           sodipodi:role="line">Tiempo </tspan><tspan
+           id="tspan2244"
+           y="848.55109"
+           x="-29.33482"
+           sodipodi:role="line">de ignición</tspan></text>
+    </g>
+    <g
+       id="g4241"
+       transform="translate(168.57143,-18.337072)">
+      <rect
+         y="756.59772"
+         x="426.24557"
+         height="136.08029"
+         width="244.65172"
+         id="rect2246"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.8578347;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text2248"
+         y="809.97968"
+         x="548.66907"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="809.97968"
+           x="554.21594"
+           id="tspan2250"
+           sodipodi:role="line">Daño </tspan><tspan
+           id="tspan2252"
+           y="859.97968"
+           x="548.66907"
+           sodipodi:role="line">potencial</tspan></text>
+    </g>
+    <g
+       id="g4235"
+       transform="translate(108.57142,-64.285711)">
+      <rect
+         y="803.24805"
+         x="851.16992"
+         height="134.67691"
+         width="403.24835"
+         id="rect2254"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.37283826;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text2256"
+         y="855.69391"
+         x="1052.3253"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="855.69391"
+           x="1057.8722"
+           id="tspan2258"
+           sodipodi:role="line">Probabilidad de </tspan><tspan
+           id="tspan2260"
+           y="905.69391"
+           x="1052.3253"
+           sodipodi:role="line">ignición compuesta</tspan></text>
+    </g>
+    <rect
+       style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.37283826;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2262"
+       width="403.24835"
+       height="134.67691"
+       x="935.51868"
+       y="56.452297" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="1135.5999"
+       y="108.89817"
+       id="text2264"><tspan
+         sodipodi:role="line"
+         id="tspan2266"
+         x="1141.1467"
+         y="108.89817">Probabilidad de </tspan><tspan
+         sodipodi:role="line"
+         x="1135.5999"
+         y="158.89817"
+         id="tspan2268">ignición simple</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1155.8791,428.21932 L 1141.3603,192.31563"
+       id="path2272"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g2208"
+       inkscape:connection-end="#rect2262" />
+    <g
+       id="g4247"
+       transform="translate(351.42857,14.285714)">
+      <rect
+         y="1010.4095"
+         x="415.19028"
+         height="135.33372"
+         width="323.90518"
+         id="rect2278"
+         style="opacity:0.42028988;fill:#eded22;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.13180375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text2280"
+         y="1067.1583"
+         x="575.59991"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           id="tspan2284"
+           y="1067.1583"
+           x="581.14679"
+           sodipodi:role="line">Prioridad de </tspan><tspan
+           id="tspan2288"
+           y="1117.1583"
+           x="575.59991"
+           sodipodi:role="line">actuación</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 984.50554,1023.6293 L 1105.6006,874.82567"
+       id="path4259"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g4247"
+       inkscape:connection-end="#g4235" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1161.3655,606.50504 L 1161.3655,737.77592"
+       id="path4261"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g2208"
+       inkscape:connection-end="#g4235" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 224.36356,606.50504 L 224.36356,738.7603"
+       id="path4263"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g2202"
+       inkscape:connection-end="#g4253" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 823.17792,737.33173 L 1024.3147,606.50504"
+       id="path4265"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g4241"
+       inkscape:connection-end="#g2208" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 768.11806,875.26985 L 877.77089,1023.6293"
+       id="path4267"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g4241"
+       inkscape:connection-end="#g4247" />
+  </g>
+</svg>

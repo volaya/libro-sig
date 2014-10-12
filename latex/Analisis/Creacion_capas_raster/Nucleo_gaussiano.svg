@@ -1,0 +1,545 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" x="0" y="0" height="400" id="/home/victor/Desktop/libro_sig/Interpolacion/Nucleo_gaussiano" >
+ <rect width="600" x="0" y="0" height="400" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <rect width="600" x="0" y="0" height="400" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <rect width="480" x="89" y="59" height="280" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" >
+   <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+  </g>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="89" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-6" y="6" transform="translate(89,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >-3</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="110" x2="110" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="130" x2="130" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="150" x2="150" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="169" x2="169" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-6" y="6" transform="translate(169,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >-2</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="190" x2="190" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="210" x2="210" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="230" x2="230" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="249" x2="249" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-6" y="6" transform="translate(249,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >-1</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="270" x2="270" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="290" x2="290" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="310" x2="310" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="329" x2="329" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-4" y="6" transform="translate(329,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >0</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="350" x2="350" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="370" x2="370" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="390" x2="390" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="409" x2="409" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-4" y="6" transform="translate(409,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >1</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="430" x2="430" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="450" x2="450" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="470" x2="470" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="489" x2="489" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-4" y="6" transform="translate(489,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >2</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="510" x2="510" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="530" x2="530" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="344" x1="550" x2="550" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="349" x1="569" x2="569" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-4" y="6" transform="translate(569,360)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Adobe Times;" >3</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="339" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-4" y="5" transform="translate(61,339)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="332" y2="332" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="325" y2="325" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="318" y2="318" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="311" y2="311" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,311)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.1</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="304" y2="304" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="297" y2="297" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="290" y2="290" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="283" y2="283" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,283)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.2</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="276" y2="276" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="269" y2="269" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="262" y2="262" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="255" y2="255" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,255)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.3</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="248" y2="248" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="241" y2="241" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="234" y2="234" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="227" y2="227" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,227)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.4</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="220" y2="220" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="213" y2="213" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="206" y2="206" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="199" y2="199" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,199)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.5</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="192" y2="192" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="185" y2="185" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="178" y2="178" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="171" y2="171" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,171)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.6</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="164" y2="164" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="157" y2="157" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="150" y2="150" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="143" y2="143" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,143)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.7</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="136" y2="136" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="129" y2="129" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="122" y2="122" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="115" y2="115" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,115)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.8</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="108" y2="108" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="101" y2="101" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="94" y2="94" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="87" y2="87" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-10" y="5" transform="translate(61,87)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >0.9</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="80" y2="80" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="73" y2="73" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="66" y2="66" x1="84" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="59" y2="59" x1="79" x2="89" />
+ <g style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" >
+  <text x="-4" y="5" transform="translate(61,59)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Bitstream Vera Sans;" >1</text>
+ </g>
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="59" y2="339" x1="89" x2="89" />
+ <line style="stroke:rgb(0,0,0);stroke-width:1;fill:rgb(255,255,255);" y1="339" y2="339" x1="89" x2="569" />
+ <polyline points="169 339 172 338 175 337 178 335 181 332 185 328 188 324 191 319 194 314 198 308 201 302 204 295 207 288 211 280 214 272 217 264 220 256 223 248 227 239 230 231 233 222 236 213 240 205 243 196 246 187 249 179 253 170 256 162 259 154 262 146 265 139 269 131 272 124 275 117 278 111 282 104 285 99 288 93 291 88 295 83 298 79 301 75 304 71 307 68 311 65 314 63 317 61 320 60 324 59 327 59 330 59 333 59 337 60 340 61 343 63 346 65 350 68 353 71 356 75 359 79 362 83 366 88 369 93 372 99 375 104 379 111 382 117 385 124 388 131 392 139 395 146 398 154 401 162 404 170 408 179 411 187 414 196 417 205 421 213 424 222 427 231 430 239 434 248 437 256 440 264 443 272 446 280 450 288 453 295 456 302 459 308 463 314 466 319 469 324 472 328 476 332 479 335 482 337 485 338 489 339" style="stroke:rgb(0,0,0);stroke-width:3;fill:none;" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" >
+  <g style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(0,0,0);" />
+ </g>
+ <text x="10" y="20" style="fill:rgb(0,0,0);stroke-width:0;font-size:11;font-style:normal;font-weight:400;font-family:Adobe Times;" >Hoja de trabajo</text>
+</svg>

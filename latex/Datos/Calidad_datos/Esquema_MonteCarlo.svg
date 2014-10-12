@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1075.5714"
+   height="948.15002"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   version="1.0"
+   sodipodi:docbase="C:\Documents and Settings\Victor\Escritorio\LaTeX\Datos\Calidad_datos"
+   sodipodi:docname="Esquema_MonteCarlo.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path3191"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3185"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.52073327"
+     inkscape:cx="372.04724"
+     inkscape:cy="526.18109"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1280"
+     inkscape:window-height="744"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.214287,-26.005039)">
+    <g
+       id="g3159"
+       transform="translate(860,-160)">
+      <rect
+         y="192.36218"
+         x="62.857143"
+         height="131.42857"
+         width="142.85715"
+         id="rect2160"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="212.3622"
+         x="85.714294"
+         height="131.42857"
+         width="142.85715"
+         id="rect3134"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="232.36218"
+         x="108.57143"
+         height="131.42857"
+         width="142.85715"
+         id="rect3136"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="252.3622"
+         x="131.42856"
+         height="131.42857"
+         width="142.85715"
+         id="rect3151"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3153"
+       width="142.85715"
+       height="131.42857"
+       x="65.714287"
+       y="29.505039" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="88.571434"
+       y="106.6479"
+       id="text3155"><tspan
+         sodipodi:role="line"
+         id="tspan3157"
+         x="88.571434"
+         y="106.6479"
+         style="font-size:40px">MDE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="593.42859"
+       y="80.933609"
+       id="text3167"><tspan
+         sodipodi:role="line"
+         id="tspan3169"
+         x="599.79578"
+         y="80.933609"
+         style="font-size:40px;text-align:center;text-anchor:middle">Distribución </tspan><tspan
+         sodipodi:role="line"
+         x="593.42859"
+         y="130.93361"
+         style="font-size:40px;text-align:center;text-anchor:middle"
+         id="tspan3171">del error</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.30716181;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 727.70962,93.790754 L 890.00955,93.790754"
+       id="path3177" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.99678802;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 210.60553,93.790754 L 424.85569,93.790754"
+       id="path3379" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="1012.2857"
+       y="164.36218"
+       id="text3381"><tspan
+         sodipodi:role="line"
+         id="tspan3383"
+         x="1012.2857"
+         y="164.36218"
+         style="font-size:40px">Error</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 134.28571,158.07647 L 134.28571,375.21933 L 422.85714,375.21933"
+       id="path3385" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1066.5357,223.79076 L 1066.5357,375.21933 L 777.96428,375.21933"
+       id="path3387"
+       sodipodi:nodetypes="ccc" />
+    <g
+       id="g3389"
+       transform="translate(426.74295,97.917681)">
+      <rect
+         y="192.36218"
+         x="62.857143"
+         height="131.42857"
+         width="142.85715"
+         id="rect3391"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="212.3622"
+         x="85.714294"
+         height="131.42857"
+         width="142.85715"
+         id="rect3393"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="232.36218"
+         x="108.57143"
+         height="131.42857"
+         width="142.85715"
+         id="rect3395"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="252.3622"
+         x="131.42856"
+         height="131.42857"
+         width="142.85715"
+         id="rect3397"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="629.88098"
+       y="385.99417"
+       id="text3399"><tspan
+         sodipodi:role="line"
+         id="tspan3401"
+         x="629.88098"
+         y="385.99417"
+         style="font-size:32px;text-align:center;text-anchor:middle">MDE</tspan><tspan
+         sodipodi:role="line"
+         x="629.88098"
+         y="425.99417"
+         id="tspan3403"
+         style="font-size:32px;text-align:center;text-anchor:middle">+</tspan><tspan
+         sodipodi:role="line"
+         x="629.88098"
+         y="465.99417"
+         id="tspan3405"><tspan
+           style="font-size:32px;text-align:center;text-anchor:middle"
+           id="tspan3407">Error</tspan></tspan></text>
+    <g
+       id="g3429"
+       transform="translate(-24.964796,63.372175)">
+      <rect
+         y="597.78638"
+         x="470.19922"
+         height="212.8334"
+         width="213.19113"
+         id="rect3417"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="630.17407"
+         x="504.30981"
+         height="212.8334"
+         width="213.19113"
+         id="rect3419"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="662.56177"
+         x="538.42041"
+         height="212.8334"
+         width="213.19113"
+         id="rect3421"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="694.94946"
+         x="572.53094"
+         height="212.8334"
+         width="213.19113"
+         id="rect3423"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 579.95142,483.93297 L 579.95142,645.24397"
+       id="path3435" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.98985672px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="654.66815"
+       y="851.48572"
+       id="text3437"
+       transform="scale(1.001319,0.9986827)"><tspan
+         sodipodi:role="line"
+         id="tspan3439"
+         x="659.96876"
+         y="851.48572"
+         style="font-size:33.2995224px;text-align:center;text-anchor:middle">Parametro </tspan><tspan
+         sodipodi:role="line"
+         x="654.66815"
+         y="893.11012"
+         id="tspan3441"
+         style="font-size:33.2995224px;text-align:center;text-anchor:middle">derivado</tspan></text>
+  </g>
+</svg>

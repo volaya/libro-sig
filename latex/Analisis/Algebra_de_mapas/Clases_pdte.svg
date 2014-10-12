@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="449"
+   height="151"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="Clases_pdte.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2447"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.2603015"
+     inkscape:cx="371.58"
+     inkscape:cy="497.58978"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1360"
+     inkscape:window-height="749"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-125.5,-456.86218)">
+    <image
+       y="456.86218"
+       x="125.5"
+       id="image2449"
+       height="151"
+       width="449"
+       sodipodi:absref="C:\Users\volaya\projects\sextante\docs\LaTeX\es\LibroSIG\Procesos\Algebra_de_mapas\Clases_pdte.png"
+       xlink:href="Clases_pdte.png" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="308.36594"
+       y="504.64764"
+       id="text2453"><tspan
+         sodipodi:role="line"
+         id="tspan2455"
+         x="308.36594"
+         y="504.64764"
+         style="font-size:10px">55%</tspan><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="517.14764"
+         id="tspan2457"
+         style="font-size:10px" /><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="529.64764"
+         id="tspan2459"
+         style="font-size:10px" /><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="542.14764"
+         id="tspan2461"
+         style="font-size:10px" /><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="554.64764"
+         id="tspan2463"
+         style="font-size:10px" /><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="567.14764"
+         id="tspan2465"
+         style="font-size:10px" /><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="579.64764"
+         id="tspan2467"
+         style="font-size:10px"></tspan><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="592.14764"
+         style="font-size:10px"
+         id="tspan2479"></tspan><tspan
+         sodipodi:role="line"
+         x="308.36594"
+         y="604.64764"
+         style="font-size:10px"
+         id="tspan2481">0%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="564.52649"
+       y="563.48938"
+       id="text2469"><tspan
+         sodipodi:role="line"
+         id="tspan2471"
+         x="564.52649"
+         y="563.48938"
+         style="font-size:10px">4</tspan><tspan
+         sodipodi:role="line"
+         x="564.52649"
+         y="575.98938"
+         id="tspan2473"
+         style="font-size:10px">3</tspan><tspan
+         sodipodi:role="line"
+         x="564.52649"
+         y="588.48938"
+         id="tspan2475"
+         style="font-size:10px">2</tspan><tspan
+         sodipodi:role="line"
+         x="564.52649"
+         y="600.98938"
+         id="tspan2477"
+         style="font-size:10px">1</tspan></text>
+  </g>
+</svg>
