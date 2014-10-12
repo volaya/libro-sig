@@ -154,7 +154,7 @@ def convertFile(path):
     else:
         s = s.replace("[AUTHOR]", "")
     with open(os.path.join("html/chapters", name + ".html"), "w") as f:
-        f.write(s)
+        f.write(s.decode('iso-8859-1').encode('utf8'))
 
 
 

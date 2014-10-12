@@ -110,7 +110,7 @@ generated_toc = {
     // make the basic elements of the TOC itself, ready to fill into
 
     display_initially = "none";
-    toggle_initially = "[Mostrar índice del capítulo]";
+    toggle_initially = "[Mostrar Ã­ndice del capÃ­tulo]";
 
 
     cur_head_lvl = "h" + generate_from;
@@ -212,7 +212,7 @@ generated_toc = {
     // defined where it's called so it's easier to understand.
     return function(e) {
       d = cur_list_el.style.display;
-      a.firstChild.nodeValue = (d == 'block' ? '[Mostrar' : '[Ocultar') + ' índice del capítulo]';
+      a.firstChild.nodeValue = (d == 'block' ? '[Mostrar' : '[Ocultar') + ' Ã­ndice del capÃ­tulo]';
       a.className = (d == 'block' ? 'toggle-closed' : 'toggle-open'); 
       cur_list_el.style.display = d == 'block' ? 'none' : 'block';
       if (window.event) {
