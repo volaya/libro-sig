@@ -74,11 +74,11 @@ Todos estos ejemplos son parte de los resultados que pueden obtenerse utilizando
 Las funciones son el elemento principal del álgebra de mapas. Cuatro son los tipos principales de funciones que podemos definir, agrupadas según la forma en que toman la información necesaria para su cálculo de entre la contenida en todas las celdas de las capas de origen.
 
 \begin{itemize}
-\item Local. El valor en cada celda de la capa resultante es función únicamente de los valores en esa misma celda en las capas de partida.
-\item Focal. El valor en cada celda de la capa resultante es función del valor en dicha celda y en las situadas en un entorno definido alrededor de 
+\item \textbf{Local}. El valor en cada celda de la capa resultante es función únicamente de los valores en esa misma celda en las capas de partida.
+\item \textbf{Focal}. El valor en cada celda de la capa resultante es función del valor en dicha celda y en las situadas en un entorno definido alrededor de 
 la misma.
-\item Zonal o regional. El valor en cada celda de la capa resultante es función del valor de todas las celdas conectadas a esta que presentan un mismo valor para una de las capas de entrada (pertenecen a la misma clase que esta).
-\item Global. El valor resultante de la función es obtenido a partir de todas las celdas de la capa.
+\item \textbf{Zonal o regional}. El valor en cada celda de la capa resultante es función del valor de todas las celdas conectadas a esta que presentan un mismo valor para una de las capas de entrada (pertenecen a la misma clase que esta).
+\item \textbf{Global}. El valor resultante de la función es obtenido a partir de todas las celdas de la capa.
 \end{itemize}
 
 La combinación de distintas funciones y de enfoques variados da lugar a un enorme conjunto de operaciones de análisis basados en el álgebra de mapas así definido. Este conjunto es el que dota de toda su potencia a los SIG como herramientas de análisis del medio, y permite extraer de los datos geográficos en formato ráster toda la información que realmente contienen.
@@ -166,12 +166,12 @@ Dentro de las funciones locales sobre una única capa, podemos considerar como un
 Cuando las funciones locales se aplican a varias capas, la forma de combinar estas es muy variable. Junto a las operaciones que ya hemos visto, podemos utilizar algunas otras, y de modos igualmente variados. El conjunto de ellas lo dividimos en los siguientes grupos:
 
 \begin{itemize}
-	\item Operadores aritméticos. Para formar expresiones con las distintas
+	\item \textbf{Operadores aritméticos}. Para formar expresiones con las distintas
 capas tales como la ecuación USLE que ya conocemos.
-	\item Operadores lógicos. Pueden tomarse los valores de las capas como
+	\item \textbf{Operadores lógicos}. Pueden tomarse los valores de las capas como
 valores booleanos (1 o 0, verdadero o falso), o aplicar expresiones lógicas de
 tipo \emph{pertenece al conjunto} u operadores de comparación, entre otros.
-	\item Parámetros estadísticos. Por ejemplo, el valor mayor de entre las todas las capas. También pueden recogerse otros como el orden del valor de una capa dentro de la serie ordenada de valores en todas las capas, el código de la capa donde aparece ese valor mayor, o el numero de capas con valores iguales a uno dado. La figura \ref{Fig:Analisis_local_estadistico} muestra algunos ejemplos simples basados en estas ideas.
+	\item \textbf{Parámetros estadísticos}. Por ejemplo, el valor mayor de entre las todas las capas. También pueden recogerse otros como el orden del valor de una capa dentro de la serie ordenada de valores en todas las capas, el código de la capa donde aparece ese valor mayor, o el numero de capas con valores iguales a uno dado. La figura \ref{Fig:Analisis_local_estadistico} muestra algunos ejemplos simples basados en estas ideas.
 \end{itemize}
 
 \begin{figure}[!hbt]
@@ -331,8 +331,8 @@ Aunque menos frecuentes, pueden utilizarse ventanas de tamaño mayor, $n\times n$
 Con los valores de las celdas contenidas en la ventana de análisis pueden realizarse operaciones muy diversas, entre las que cabe citar las siguientes:
 
 \begin{itemize}
-\item Cálculo de descriptores estadísticos. Los más habituales son la media, la mediana, los valores extremos o el rango de valores. Para el caso de valores discretos, son comunes parámetros como el número de clases (número de celdas con distinto valor) dentro de la ventana de análisis.
-\item Combinaciones lineales de la forma 
+\item \textbf{Cálculo de descriptores estadísticos}. Los más habituales son la media, la mediana, los valores extremos o el rango de valores. Para el caso de valores discretos, son comunes parámetros como el número de clases (número de celdas con distinto valor) dentro de la ventana de análisis.
+\item \textbf{Combinaciones lineales}. De acuerdo con expresiones de la siguiente forma:
 
 \begin{equation}
 \label{Eq:VentanaConvolucion}
@@ -346,8 +346,8 @@ Este grupo particular de operaciones se conocen como \emph{convoluciones}, y son
 \end{center}
 
 Este conjunto de valores de $k_i$ así expresados se conoce comúnmente como \emph{núcleo} o \emph{kernel} de la convolución. Nótese que el núcleo anterior se corresponde con el cálculo de la media aritmética, pudiendo expresarse este descriptor estadístico como una combinación lineal de los valores de la ventana, a través de un núcleo.
-\item Operaciones matemáticas de forma general. No necesariamente combinaciones lineales, aplican operadores más complejos a los valores de la ventana.
-\item Clasificaciones. En función de la configuración de los valores dentro de la ventana clasifican la celda en una serie de posibles grupos, de acuerdo con unas reglas definidas. El resultado es una capa de información discreta, frente a las anteriores que producen capas continuas. Un ejemplo de esto lo encontramos la clasificación de formas de terreno, la cual veremos en el apartado \ref{Caracterizacion_terreno}, o en la asignación de direcciones de flujo según el modelo D8 (\ref{Direcciones_flujo}).\index{D8}
+\item \textbf{Operaciones matemáticas de forma general}. No necesariamente combinaciones lineales, aplican operadores más complejos a los valores de la ventana.
+\item \textbf{Clasificaciones}. En función de la configuración de los valores dentro de la ventana clasifican la celda en una serie de posibles grupos, de acuerdo con unas reglas definidas. El resultado es una capa de información discreta, frente a las anteriores que producen capas continuas. Un ejemplo de esto lo encontramos la clasificación de formas de terreno, la cual veremos en el apartado \ref{Caracterizacion_terreno}, o en la asignación de direcciones de flujo según el modelo D8 (\ref{Direcciones_flujo}).\index{D8}
 
 \end{itemize}
 
@@ -464,8 +464,8 @@ El remuestreo en realidad es una interpolación similar a la que veíamos en el ca
 Los métodos más habituales de remuestreo son los siguientes:
 
 \begin{itemize}
-	\item Por vecindad. Como ya vimos, no se trata en realidad de una interpolación como tal, pues simplemente crea la nueva malla situando nuevas celdas cuyos valores se calculan por mera vecindad, tomando el de la celda más cercana. 
-	\item Bilineal. Para una celda $(i',j')$ en la nueva malla interpolada, su valor en función de los de las $4$ celdas más cercanas a la misma en la malla original viene dado por la expresión.
+	\item \textbf{Por vecindad}. Como ya vimos, no se trata en realidad de una interpolación como tal, pues simplemente crea la nueva malla situando nuevas celdas cuyos valores se calculan por mera vecindad, tomando el de la celda más cercana. 
+	\item \textbf{Bilineal}. Para una celda $(i',j')$ en la nueva malla interpolada, su valor en función de los de las $4$ celdas más cercanas a la misma en la malla original viene dado por la expresión.
 
 \index{Bilineal}
 
@@ -484,7 +484,7 @@ x+1 & \textrm{ si } -1\leq x \leq 0 \\
 1-x & \textrm{ si } -0\leq x \leq 1 \\
 \end{array}\right.
 \end{equation}
-	\item Interpolación bicúbica. La interpolación bicúbica es un método de interpolación multivariante bidimensional que emplea un polinomio de tercer grado para cada una de las direcciones. Son necesarias $16$ celdas en lugar de las $4$ de la bilineal, lo que hace que el método sea más exigente en términos de proceso.
+	\item \textbf{Interpolación bicúbica}. La interpolación bicúbica es un método de interpolación multivariante bidimensional que emplea un polinomio de tercer grado para cada una de las direcciones. Son necesarias $16$ celdas en lugar de las $4$ de la bilineal, lo que hace que el método sea más exigente en términos de proceso.
 	Para el caso habitual de emplear como función interpolante un spline cúbico, se tiene
 \begin{equation}
 z_{(i',j')}=\sum^2_{m=-1}\sum^2_{n=-1}z_{(i+m,j+n)}R(m-a)R(-(m-b))

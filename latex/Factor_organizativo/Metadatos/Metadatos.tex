@@ -102,13 +102,13 @@ Las características de los metadatos asociados a los datos dependerán directamen
 
 \begin{itemize}
 
-\item El tipo de dato y en particular, el modelo de representación empleado. Los datos vectoriales tendrán asociados unos metadatos distintos que los correspondientes a datos ráster.
+\item \textbf{El tipo de dato} y, en particular, \textbf{el modelo de representación empleado}. Los datos vectoriales tendrán asociados unos metadatos distintos que los correspondientes a datos ráster.
 
-\item El formato en que se almacenan los datos. El tipo de fichero o base de datos condiciona la información que puede almacenarse (vimos esto en detalle en la sección \ref{Formatos_archivo}), y por tanto condiciona los metadatos. 
+\item \textbf{El formato en que se almacenan los datos}. El tipo de fichero o base de datos condiciona la información que puede almacenarse (vimos esto en detalle en la sección \ref{Formatos_archivo}), y por tanto condiciona los metadatos. 
 
-\item La organización, entidad o individuo responsable de la creación de los datos y el uso que se pretende dar a estos. Puesto que, como hemos dicho, los datos se crean para un objetivo definido, este objetivo y los intereses de quien ha creado los datos definirán el tipo y cantidad de información que se recoja en los metadatos. Datos pensados para un catálogo público tendrán asociados metadatos distintos que datos privados con acceso restringido, del mismo modo que datos pensados para un uso muy concreto presentarán unos metadatos diferentes a los que acompañarán a unos datos de uso más genérico.
+\item \textbf{La organización, entidad o individuo responsable de la creación de los datos y el uso que se pretende dar a estos}. Puesto que, como hemos dicho, los datos se crean para un objetivo definido, este objetivo y los intereses de quien ha creado los datos definirán el tipo y cantidad de información que se recoja en los metadatos. Datos pensados para un catálogo público tendrán asociados metadatos distintos que datos privados con acceso restringido, del mismo modo que datos pensados para un uso muy concreto presentarán unos metadatos diferentes a los que acompañarán a unos datos de uso más genérico.
 
-\item Elemento al que se asocian los metadatos. Como veremos en el siguiente apartado, podemos asociar metadatos a un juego de capas, una capa o una entidad aislada dentro de una capa. Esto implica diferencias en el contenido de los metadatos, pues esos elementos tienen características de distinta naturaleza.
+\item \textbf{El elemento al que se asocian los metadatos}. Como veremos en el siguiente apartado, podemos asociar metadatos a un juego de capas, una capa o una entidad aislada dentro de una capa. Esto implica diferencias en el contenido de los metadatos, pues esos elementos tienen características de distinta naturaleza.
 
 \item El estándar empleado para crear los metadatos. En el capítulo \ref{Estandares} veremos los estándares que existen para los metadatos geográficos y la forma que estos tienen, la cual define directamente su contenido.     
 
@@ -117,9 +117,9 @@ Las características de los metadatos asociados a los datos dependerán directamen
 Algunos de los elementos comunes que se incorporan a los metadatos geográficos son los siguientes:
 
 \begin{itemize}
-\item Información de identificación. Este tipo de información permite identificar de forma única un dato geográfico y distinguirlo de otros. Esta información ayuda a catalogar los datos, e incluye el nombre, palabras claves, una descripción básica o la ya mencionada extensión geográfica de los datos.
+\item \textbf{Información de identificación}. Este tipo de información permite identificar de forma única un dato geográfico y distinguirlo de otros. Esta información ayuda a catalogar los datos, e incluye el nombre, palabras claves, una descripción básica o la ya mencionada extensión geográfica de los datos.
 
-\item Información sobre la calidad de los datos. La información sobre la calidad de los datos puede incluir, entre otros elementos, aquellos relativos a la completitud de estos, los procesos que se han empleado en su creación y mantenimiento, o las operaciones de validación y verificación a las que se han sometido.
+\item \textbf{Información sobre la calidad de los datos}. La información sobre la calidad de los datos puede incluir, entre otros elementos, aquellos relativos a la completitud de estos, los procesos que se han empleado en su creación y mantenimiento, o las operaciones de validación y verificación a las que se han sometido.
 
 En relación con los procesos empleados, es importante reseñar que muchos de los algoritmos de algoritmos que ya conocemos toman algún tipo de dato geográfico como entrada y generan algún otro nuevo. Es decir, toman una o varias capas y generan nuevas capas como resultado. Para documentar la calidad de los datos resultantes se debe documentar en los metadatos la procedencia completa de estos, indicando las metodologías empleadas para su creación y todos los metadatos propios de las capas de entrada.
 
@@ -129,11 +129,11 @@ Si el MDE no se ha adquirido directamente, sino que se ha elaborado haciendo uso
 
 Con esto, puede <<rastrearse>> el origen de los datos y se dispone de una base sobre la que evaluar la calidad de estos en función de dicho origen. Tenemos así el concepto de \emph{linaje}\index{Linaje} de los datos. Esta idea es similar a la de \emph{trazabilidad}\index{trazabilidad} empleada en otros sectores como, por ejemplo, el alimentario.
 
-\item Información sobre la representación del dato espacial. Se incluyen en este grupo la precisión y exactitud de los datos, la escala de trabajo o la resolución en el caso de capas ráster. Este tipo de metadatos están también íntimamente ligados con la calidad de los datos.
+\item \textbf{Información sobre la representación del dato espacial}. Se incluyen en este grupo la precisión y exactitud de los datos, la escala de trabajo o la resolución en el caso de capas ráster. Este tipo de metadatos están también íntimamente ligados con la calidad de los datos.
 
-\item Información sobre la componente no espacial. Información relacionada con los atributos que acompañan a las capas vectoriales, o bien relativas a las variables que se recogen en capas ráster. Esto incluye explicaciones sobre el significado de los nombres de cada uno de los atributos, el rango de valores válidos para cada uno de ellos o los métodos empleados para recoger estos datos.
+\item \textbf{Información sobre la componente no espacial}. Información relacionada con los atributos que acompañan a las capas vectoriales, o bien relativas a las variables que se recogen en capas ráster. Esto incluye explicaciones sobre el significado de los nombres de cada uno de los atributos, el rango de valores válidos para cada uno de ellos o los métodos empleados para recoger estos datos.
 
-\item Información sobre la distribución. Esta información sirve para definir el acceso a los datos y las posibilidades de distribución de estos, especificando quiénes pueden acceder a ellos y quiénes no, o en qué condiciones pueden hacerlo. También puede recoger elementos como la fecha en que fueron publicados los datos o bien cuándo fueron puestos a disposición del público, de tal forma que se disponga de toda la información referente a su presencia en el marco de una IDE o una red.
+\item \textbf{Información sobre la distribución}. Esta información sirve para definir el acceso a los datos y las posibilidades de distribución de estos, especificando quiénes pueden acceder a ellos y quiénes no, o en qué condiciones pueden hacerlo. También puede recoger elementos como la fecha en que fueron publicados los datos o bien cuándo fueron puestos a disposición del público, de tal forma que se disponga de toda la información referente a su presencia en el marco de una IDE o una red.
 
 \end{itemize}
 

@@ -60,7 +60,7 @@ Según \cite{Nyerges1991CartoAndGIS}, pueden distinguirse las siguientes categorí
 \item Relativas a la variación espacial
 \end{itemize}
 
-\cite{Slater1982Heineman} cita la siguiente lista como compendió básico de las cuestiones que pueden plantearse en el análisis espacial.
+Por su part, \cite{Slater1982Heineman} cita la siguiente lista como compendió básico de las cuestiones que pueden plantearse en el análisis espacial.
 
 \begin{itemize}
  \item ¿Dónde se encuentra?
@@ -115,7 +115,7 @@ Asimismo, hay que señalar que estos grupos no forman conjuntos disjuntos, sino q
 Las siguientes son algunas de las familias principales en las que englobar los procedimientos de análisis:
 
 \begin{itemize}
-\item Consulta espacial. El tipo de análisis más simple es la consulta directa de la información que contienen los datos espaciales. Es el tipo de análisis básico que usamos cuando trabajamos con cartografía clásica, y nos proporciona información inmediata a partir de una simple observación de los datos. La propiedad fundamental que empleamos es la posición de cada elemento geográfico. \index{Consultas}
+\item \textbf{Consulta espacial}. El tipo de análisis más simple es la consulta directa de la información que contienen los datos espaciales. Es el tipo de análisis básico que usamos cuando trabajamos con cartografía clásica, y nos proporciona información inmediata a partir de una simple observación de los datos. La propiedad fundamental que empleamos es la posición de cada elemento geográfico. \index{Consultas}
 
 Este tipo de operaciones da respuestas a preguntas de tipo
 
@@ -133,13 +133,13 @@ Puesto que en la información geográfica dentro de un SIG todo elemento tiene aso
 
 Combinar este tipo de consultas con las puramente espaciales constituye un análisis sencillo pero fundamental dentro de los posibles en un SIG, y representa una de las utilidades más frecuentemente empleadas de estos en el trabajo diario.
 
-\item Análisis topológico. Las consultas hechas a las capas de datos espaciales pueden tener relación no solo con su posición sino con la relación con otros elementos de la misma capa. La existencia de topología (ver \ref{Topologia}) puede emplearse para la realización de consultas que respondan a cuestiones como, entre otras, las siguientes:\index{Topología}
+\item \textbf{Análisis topológico}. Las consultas hechas a las capas de datos espaciales pueden tener relación no solo con su posición sino con la relación con otros elementos de la misma capa. La existencia de topología (ver \ref{Topologia}) puede emplearse para la realización de consultas que respondan a cuestiones como, entre otras, las siguientes:\index{Topología}
 
 \subitem ¿Cómo llegar desde mi posición actual hasta una coordenada concreta por la red viaria existente?
 
 \subitem ¿Qué comunidades autónomas comparten límite con Madrid?
 
-\item Medición. La existencia de una referencia espacial para cada uno de los elementos con los que trabajamos en el análisis dentro de un SIG hace que podamos cuantificar otra serie de parámetros también espaciales. El más básico de estos parámetros es la distancia, que puede ser una distancia simple entre dos puntos dados o bien una distancia entre elementos complejos tales como polígonos o líneas, o combinaciones de ellos.
+\item \textbf{Medición}. La existencia de una referencia espacial para cada uno de los elementos con los que trabajamos en el análisis dentro de un SIG hace que podamos cuantificar otra serie de parámetros también espaciales. El más básico de estos parámetros es la distancia, que puede ser una distancia simple entre dos puntos dados o bien una distancia entre elementos complejos tales como polígonos o líneas, o combinaciones de ellos.
 
 Además de la distancia podemos medir otras propiedades tales como
 
@@ -161,13 +161,13 @@ Responden a preguntas muy variadas tales como
 
 \subitem ¿Tienen las distintas zonas de usos de suelo formas compactas o por el contrario son principalmente alargadas y de tipo fusiforme?
 
-\item Combinación. Uno de los procedimientos más habituales y más característicos dentro del uso de un SIG es la combinación o superposición de varias capas de información. La propia estructura de la información geográfica en capas facilita notablemente estos procedimientos y convierte a los SIG en plataformas ideales para llevar a cabo análisis donde se combina información sobre diversas variables.
+\item \textbf{Combinación}. Uno de los procedimientos más habituales y más característicos dentro del uso de un SIG es la combinación o superposición de varias capas de información. La propia estructura de la información geográfica en capas facilita notablemente estos procedimientos y convierte a los SIG en plataformas ideales para llevar a cabo análisis donde se combina información sobre diversas variables.
 
 Antes de la existencia de los SIG, la combinación de capas implicaba la utilización de mapas en soportes tales como transparencias o acetatos, una opción farragosa y muy poco apta para el análisis de las combinaciones resultantes. Dentro de un SIG, existen metodologías para integrar la información de varias capas en formas muy distintas, y las nuevas capas resultantes pueden luego analizarse con sencillez independientemente de su origen, como una capa más.
 
 La estructura de las bases de datos geográficas es idónea para integrar toda la información disponible acerca de una región geográfica concreta, y las distintas capas que forman esta se pueden combinar de forma sencilla tanto para su análisis como para su simple visualización.
 
-\item Transformaciones. Podemos englobar dentro de este grupo una amplia serie de procedimientos que modifican los elementos de entrada de diversas formas.
+\item \textbf{Transformaciones}. Podemos englobar dentro de este grupo una amplia serie de procedimientos que modifican los elementos de entrada de diversas formas.
 
 Por ejemplo, uno de los procedimientos más frecuentes dentro de un SIG es la creación de áreas de influencia. Este tipo de operaciones de análisis convierte los distintos elementos geográficos en áreas que reflejan la influencia de dicho elemento en base a parámetros tales como distancias o costes. Se tiene así una transformación geométrica, ya que la forma del objeto se transforma en una nueva que indica la zona que se ve afectada por dicho objeto.
 
@@ -189,8 +189,9 @@ Un tipo de transformación importante es la relativa a los modelos de datos, pues
 
 Por último, encontramos transformaciones basadas en los valores de las variables estudiadas. Dentro de este grupo encontramos las reclasificaciones, que en el caso de datos categóricos transforman la identificación de cada elemento en una clase dada, o los cambios de escala u otras operaciones aritméticas tales como la normalización de una variable en un rango dado, o la tipificación de una variable para asimilar su distribución de valores a la de una curva normal. Estos últimos se efectúan sobre datos de tipo continuo.
 
-\item Análisis de superficies. El análisis de superficies es uno de los más potentes de cuantos encontramos en un SIG. Desde parámetros básicos como la pendiente o la orientación hasta parámetros morfométricos muy específicos, pasando por todas las herramientas del análisis hidrológico, la batería de operaciones disponibles es muy amplia. Aunque este análisis de superficies se entiende como el de la superficie terrestre (es decir, el relieve), gran parte de estas operaciones pueden aplicarse a cualquier otra superficie, entendiendo esta en su su sentido matemático. Así, la pendiente indica una tasa de variación y puede aplicarse a capas con valores distintos de la elevación, tales como temperaturas, densidades, etc.
-\item Estadística descriptiva. Los elementos de la estadística clásica tienen sus equivalentes en los datos espaciales, y nos permiten calificar cuantitativamente los datos con los que trabajamos. Se incluyen aquí descriptores de centralidad y dispersión, de dependencia espacial o el estudio de patrones espaciales, entre otros muchos. Estos pueden a su vez usarse para el contraste de hipótesis que contengan una cierta componente espacial.
+\item \textbf{Análisis de superficies}. El análisis de superficies es uno de los más potentes de cuantos encontramos en un SIG. Desde parámetros básicos como la pendiente o la orientación hasta parámetros morfométricos muy específicos, pasando por todas las herramientas del análisis hidrológico, la batería de operaciones disponibles es muy amplia. Aunque este análisis de superficies se entiende como el de la superficie terrestre (es decir, el relieve), gran parte de estas operaciones pueden aplicarse a cualquier otra superficie, entendiendo esta en su su sentido matemático. Así, la pendiente indica una tasa de variación y puede aplicarse a capas con valores distintos de la elevación, tales como temperaturas, densidades, etc.
+
+\item \textbf{Estadística descriptiva}. Los elementos de la estadística clásica tienen sus equivalentes en los datos espaciales, y nos permiten calificar cuantitativamente los datos con los que trabajamos. Se incluyen aquí descriptores de centralidad y dispersión, de dependencia espacial o el estudio de patrones espaciales, entre otros muchos. Estos pueden a su vez usarse para el contraste de hipótesis que contengan una cierta componente espacial.
 
 Por ejemplo, estos estadísticos nos permiten dar respuesta a cuestiones del tipo
 
@@ -200,11 +201,11 @@ Por ejemplo, estos estadísticos nos permiten dar respuesta a cuestiones del tipo
 
 \subitem ¿Existe alguna dirección predominante en los movimientos de individuos de una especie o se desplazan erráticamente?
 
-\item Inferencia. Otro análisis estadístico de gran importancia en los SIG es el que permite inferir comportamientos de las distintas variables y estudiar, por ejemplo, la forma en que estas van a evolucionar a lo largo del tiempo.
+\item \textbf{Inferencia}. Otro análisis estadístico de gran importancia en los SIG es el que permite inferir comportamientos de las distintas variables y estudiar, por ejemplo, la forma en que estas van a evolucionar a lo largo del tiempo.
 
 El establecimiento de modelos de cambio y variación representa una de las herramientas más actuales en el campo de los SIG, y un campo en abundante desarrollo.
 
-\item Toma de decisiones y optimización. La realización de actividades en el medio tiene una obvia componente espacial. Son muchos los parámetros que influyen en ellas, y en función de estos dichas actividades se desarrollarán de una forma u otra. La estructura de la información geográfica en capas dentro de un SIG, favorable como ya vimos para la superposición de capas, lo es igualmente para estudiar de forma combinada los efectos de distintos factores.
+\item \textbf{Toma de decisiones y optimización}. La realización de actividades en el medio tiene una obvia componente espacial. Son muchos los parámetros que influyen en ellas, y en función de estos dichas actividades se desarrollarán de una forma u otra. La estructura de la información geográfica en capas dentro de un SIG, favorable como ya vimos para la superposición de capas, lo es igualmente para estudiar de forma combinada los efectos de distintos factores.
 
 El estudio de estos factores puede ser una herramienta clave para tomar decisiones relativas a la actividad sobre la que ejercen su influencia. Así, los procedimientos de análisis espacial nos sirven para responder a cuestiones como, por ejemplo,
 
@@ -216,7 +217,7 @@ El estudio de estos factores puede ser una herramienta clave para tomar decision
 
 Dentro de estos análisis, muchos de ellos tratan de maximizar o minimizar alguna función objetivo dependiente de los factores implicados, que pueden ser tanto variables recogidas en distintas capas como parámetros espaciales tales como distancias.
 
-\item Modelización. La creación de modelos espaciales dentro de un SIG es una tarea aún pendiente de mucho desarrollo. No obstante, existe un gran número de modelos en los más diversos campos, y la arquitectura de datos y procesos de los SIG es propicia para la implementación de otros nuevos.
+\item \textbf{Modelización}. La creación de modelos espaciales dentro de un SIG es una tarea aún pendiente de mucho desarrollo. No obstante, existe un gran número de modelos en los más diversos campos, y la arquitectura de datos y procesos de los SIG es propicia para la implementación de otros nuevos.
 
 Modelos como los de tipo hidrológico son habituales en los SIG más populares, y la estructura raster de los datos que se emplean generalmente en estos facilita en gran medida el análisis y la implementación de modelos distribuidos. Otros modelos que encuentran en los SIG una plataforma idónea para su implementación son los basados en autómatas celulares, con aplicación en muchas áreas distintas.
 

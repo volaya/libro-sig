@@ -34,7 +34,7 @@ Gran parte de los datos geográficos que se producen actualmente son en formato d
 Los datos geográficos digitales tienen una serie de ventajas frente a los analógicos (además del mero hecho de que podemos incorporarlos a nuestro SIG), y suponen, como sucede en muchos otros campos, un salto cualitativo importante. Entender las ventajas frente a los datos analógicos ayuda a comprender un poco más la importancia de los SIG y la relevancia que cobran en el manejo de los datos geográficos. Estas ventajas pueden resumirse en las siguientes:\index{Ventajas datos digitales}
 
 \begin{itemize}
- \item Sencillez de actualización. La cartografía digital es editable, y esto simplifica enormemente la introducción cambios. Si en una capa con información catastral cambia la frontera de una parcela, basta modificar esta frontera. En un mapa analógico habría que rehacer todo el mapa y volver a imprimirse. 
+ \item \textbf{Sencillez de actualización}. La cartografía digital es editable, y esto simplifica enormemente la introducción cambios. Si en una capa con información catastral cambia la frontera de una parcela, basta modificar esta frontera. En un mapa analógico habría que rehacer todo el mapa y volver a imprimirse. 
 
 Además, y gracias a la división en capas, pueden actualizarse a distintos ritmos las distintas variables, pues son independientes y pueden modificarse por separado.
 
@@ -44,10 +44,10 @@ Es asimismo muy importante el hecho de que, gracias a los sistemas que centraliz
 
 Si varias personas trabajan con cartografía impresa de una zona, cada una de ellas tendrá su propio mapa. Con la cartografía digital, todos pueden obtener la cartografía de un repositorio central, de tal modo que si la editan, están editando una única versión, y no es necesario después poner en común todas sus aportaciones para crear una nueva cartografía actualizada.
 
-\item Facilidad de distribución. Resulta más sencillo y menos costoso distribuir cartografía digital que analógica, ya que esto se puede hacer rápidamente por Internet, por ejemplo. Volviendo al ejemplo del diario, las noticias se actualizan y se ponen en Internet, de donde cada lector las descarga de inmediato. El diario impreso requiere una cadena de distribución más costosa, desde la imprenta hasta el punto de venta.
-\item Espacio de almacenamiento. Se generan actualmente ingentes volúmenes de datos que además, y gracias a que son más fáciles de actualizar, se producen con una frecuencia mucho mayor. No obstante, un soporte digital puede almacenar una enorme cantidad de estos ocupando una fracción del espacio físico. En un ordenador dotado de una buena capacidad de almacenamiento caben los contenidos de una cartoteca y los de la hemeroteca de ese diario del que hablamos. Las mismas cartoteca y hemeroteca en formato impreso requieren edificios enteros.
-\item Facilidad y precisión de análisis. Como ya veremos en la parte correspondiente, el salto cualitativo que se da en el campo del análisis es enorme. Podemos hacer con los datos geográficos digitales cosas que no eran posibles con los analógicos y, mejor aún, podemos automatizar estos análisis. Asimismo, la precisión es mayor, ya que depende únicamente de los datos y la precisión intrínseca de estos, pero no de la operación de análisis (piénsese en un mapa impreso y una serie de operarios midiendo la longitud de un río sobre él. Es probable que lleguen a resultados similares pero no idénticos. Con cartografía digital, cualquier operario, y en cualquier SIG ---suponiendo que implementan todos las mismas fórmulas--- llegaría al mismo resultado exacto).
-\item Facilidad de mantenimiento. Aunque no se introduzcan modificaciones y no se actualicen los datos, el formato digital hace más fácil su conservación. La degradación del soporte no degrada directamente el dato en sí, haciéndole perder calidad. La degradación del soporte analógico (el papel), sí que lo hace. Además, los datos digitales pueden replicarse con suma facilidad, por lo que su persistencia está garantizada en mayor medida y a un menor coste que la de los datos analógicos.
+\item \textbf{Facilidad de distribución}. Resulta más sencillo y menos costoso distribuir cartografía digital que analógica, ya que esto se puede hacer rápidamente por Internet, por ejemplo. Volviendo al ejemplo del diario, las noticias se actualizan y se ponen en Internet, de donde cada lector las descarga de inmediato. El diario impreso requiere una cadena de distribución más costosa, desde la imprenta hasta el punto de venta.
+\item \textbf{Espacio de almacenamiento}. Se generan actualmente ingentes volúmenes de datos que además, y gracias a que son más fáciles de actualizar, se producen con una frecuencia mucho mayor. No obstante, un soporte digital puede almacenar una enorme cantidad de estos ocupando una fracción del espacio físico. En un ordenador dotado de una buena capacidad de almacenamiento caben los contenidos de una cartoteca y los de la hemeroteca de ese diario del que hablamos. Las mismas cartoteca y hemeroteca en formato impreso requieren edificios enteros.
+\item \textbf{Facilidad y precisión de análisis}. Como ya veremos en la parte correspondiente, el salto cualitativo que se da en el campo del análisis es enorme. Podemos hacer con los datos geográficos digitales cosas que no eran posibles con los analógicos y, mejor aún, podemos automatizar estos análisis. Asimismo, la precisión es mayor, ya que depende únicamente de los datos y la precisión intrínseca de estos, pero no de la operación de análisis (piénsese en un mapa impreso y una serie de operarios midiendo la longitud de un río sobre él. Es probable que lleguen a resultados similares pero no idénticos. Con cartografía digital, cualquier operario, y en cualquier SIG ---suponiendo que implementan todos las mismas fórmulas--- llegaría al mismo resultado exacto).
+\item \textbf{Facilidad de mantenimiento}. Aunque no se introduzcan modificaciones y no se actualicen los datos, el formato digital hace más fácil su conservación. La degradación del soporte no degrada directamente el dato en sí, haciéndole perder calidad. La degradación del soporte analógico (el papel), sí que lo hace. Además, los datos digitales pueden replicarse con suma facilidad, por lo que su persistencia está garantizada en mayor medida y a un menor coste que la de los datos analógicos.
 \end{itemize}
 
 Así pues, disponemos para nuestro trabajo en nuestro SIG de datos analógicos y datos digitales, siendo estos últimos los que necesitamos en última instancia, y que presentan las ventajas anteriormente descritas frente a los primeros. En las siguientes secciones, veremos con detalle todos los distintos tipos de datos geográficos, tanto digitales como analógicos, la forma en que se obtienen, sus características, cómo se incorporan a un SIG, y en general todo aquello que resulte de interés para una mejor comprensión y uso posterior de los mismos. 
@@ -86,10 +86,10 @@ Las fotografías aéreas fueron el primer producto de la teledetección, pero hoy e
 \index{Teledetección!elementos}
 
 \begin{itemize}
-	\item Una fuente de radiación (A)\index{Fuente de radiación}. Puede ser de origen natural o artificial. La radiación emitida por dicha fuente llega al terreno y sufre una perturbación causada por los elementos de este, siendo esta perturbación el objeto de estudio de la teledetección. Los propios objetos pueden ser también emisores ellos mismos de radiación.
-	\item Unos objetos (B) que interaccionan con la radiación o la emiten, según lo anterior.
-	\item Una atmósfera (C) por la que se desplaza la radiación, tanto desde la fuente hasta el objeto como desde el objeto hasta el receptor. La atmósfera también interactúa con la radiación, introduciendo igualmente perturbaciones en ella.
-	\item Un receptor (D) que recoge la radiación una vez esta ha sido perturbada o emitida por los objetos. El receptor va a generar como producto final una imagen (en términos de un SIG, una capa ráster), en cuyas celdas o píxeles\index{Pixel} se va a contener un valor que indica la intensidad de la radiación. Estos valores son valores enteros que indican el nivel de dicha radiación dentro de una escala definida (habitualmente valores entre 1 y 256), y se conocen dentro del ámbito de la teledetección como \emph{Niveles Digitales}\index{Niveles Digitales}.
+	\item \textbf{Una fuente de radiación (A)}\index{Fuente de radiación}. Puede ser de origen natural o artificial. La radiación emitida por dicha fuente llega al terreno y sufre una perturbación causada por los elementos de este, siendo esta perturbación el objeto de estudio de la teledetección. Los propios objetos pueden ser también emisores ellos mismos de radiación.
+	\item \textbf{Unos objetos (B) que interaccionan con la radiación} o la emiten, según lo anterior.
+	\item \textbf{Una atmósfera (C)} por la que se desplaza la radiación, tanto desde la fuente hasta el objeto como desde el objeto hasta el receptor. La atmósfera también interactúa con la radiación, introduciendo igualmente perturbaciones en ella.
+	\item \textbf{Un receptor (D) que recoge la radiación} una vez esta ha sido perturbada o emitida por los objetos. El receptor va a generar como producto final una imagen (en términos de un SIG, una capa ráster), en cuyas celdas o píxeles\index{Pixel} se va a contener un valor que indica la intensidad de la radiación. Estos valores son valores enteros que indican el nivel de dicha radiación dentro de una escala definida (habitualmente valores entre 1 y 256), y se conocen dentro del ámbito de la teledetección como \emph{Niveles Digitales}\index{Niveles Digitales}.
 \end{itemize}
 
 A lo largo de este apartado veremos con detalle estos elementos. Para estudiar los dos primeros, estudiaremos los fundamentos físicos relativos a la radiación y a la la interacción entre esta y la materia, mientras que para el estudio del sistema receptor analizaremos los elementos de este en dos componentes por separado: sensores y plataformas. 
@@ -125,18 +125,18 @@ La radiación electromagnética puede cubrir de forma continua todo un amplio rang
 Dentro de estas regiones, son de destacar las siguientes:
 
 \begin{itemize}
-	\item Rayos $\gamma$  $<$0.03 $nm$.
-	\item Rayos X (0.03 $nm$ - 3 $nm$).
-	\item Ultravioleta (3 $nm$ - 0.3 $\mu$).
-	\item Visible (0.3 $\mu$ - 0.7 $\mu$). Se corresponde con las radiaciones que pueden ser detectadas por el ojo humano o por aparatos tales como una cámara fotográfica común. Observando la figura \ref{Fig:Espectro_electromagnetico} puede apreciarse que esta región representa una porción muy pequeña del total del espectro. Existen muchas otras regiones que no podemos <<ver>> pero que, empleando la tecnología adecuada, sí que pueden aprovecharse para crear imágenes dentro de un proceso de teledetección, siendo de gran utilidad para el estudio de numerosos procesos.
+	\item \textbf{Rayos $\gamma$}  $<$0.03 $nm$.
+	\item \textbf{Rayos X} (0.03 $nm$ - 3 $nm$).
+	\item \textbf{Ultravioleta} (3 $nm$ - 0.3 $\mu$).
+	\item \textbf{Visible} (0.3 $\mu$ - 0.7 $\mu$). Se corresponde con las radiaciones que pueden ser detectadas por el ojo humano o por aparatos tales como una cámara fotográfica común. Observando la figura \ref{Fig:Espectro_electromagnetico} puede apreciarse que esta región representa una porción muy pequeña del total del espectro. Existen muchas otras regiones que no podemos <<ver>> pero que, empleando la tecnología adecuada, sí que pueden aprovecharse para crear imágenes dentro de un proceso de teledetección, siendo de gran utilidad para el estudio de numerosos procesos.
 
 \index{Rayos!X}\index{Rayos!gamma}\index{Región!visible del espectro}\index{Región!ultravioleta}
 
 	Las distintas longitudes de onda dentro de esta región son las responsables de los distintos colores que percibimos. Así, por ejemplo, el azul se corresponde con el rango entre 0.4 $\mu$ y 0.5 $\mu$, mientras que el verde lo hace con el rango entre 0.5 $\mu$ y 0.6 $\mu$
-	\item Infrarrojo cercano (0.7 $\mu$ - 1.3 $\mu$).
-	\item Infrarrojo medio  (1.3 $\mu$ - 8 $\mu$).
-	\item Infrarrojo lejano o térmico (8 $\mu$ - 14 $\mu$). Dentro de esta región se encuentran principalmente las radiaciones emitidas por los cuerpos debido a su temperatura\footnote{Esta emisión se calcula según la denominada \emph{ley de Stefan--Boltzmann}. Puede encontrarse más al respecto en \cite{webSBoltzman}}.
-	\item Microondas (1 $mm$ - 25 $cm$).
+	\item \textbf{Infrarrojo cercano} (0.7 $\mu$ - 1.3 $\mu$).
+	\item \textbf{Infrarrojo medio}  (1.3 $\mu$ - 8 $\mu$).
+	\item \textbf{Infrarrojo lejano o térmico} (8 $\mu$ - 14 $\mu$). Dentro de esta región se encuentran principalmente las radiaciones emitidas por los cuerpos debido a su temperatura\footnote{Esta emisión se calcula según la denominada \emph{ley de Stefan--Boltzmann}. Puede encontrarse más al respecto en \cite{webSBoltzman}}.
+	\item \textbf{Microondas} (1 $mm$ - 25 $cm$).
 \end{itemize}
 
 \index{Región!infrarroja}\index{Microondas}
@@ -150,9 +150,9 @@ Como ya se dijo en el capítulo \ref{Tipos_datos}, las imágenes como capas ráster
 La radiación emitida por una fuente de radiación es alterada por la presencia de los distintos objetos, que interactúan con ella. Independientemente de su procedencia, para toda radiación se dan tres fenómenos fundamentales al alcanzar un objeto:
 
 \begin{itemize}
-	\item Absorción. El objeto toma la energía de la radiación.
-	\item Transmisión. La radiación atraviesa el objeto y continua su camino.
-	\item Reflexión. la radiación <<rebota>> en el objeto y vuelve al espacio.	
+	\item \textbf{Absorción}. El objeto toma la energía de la radiación.
+	\item \textbf{Transmisión}. La radiación atraviesa el objeto y continua su camino.
+	\item \textbf{Reflexión}. la radiación <<rebota>> en el objeto y vuelve al espacio.	
 \end{itemize}
 
 \index{Absorción}\index{Tansmisión}\index{Reflexión}
@@ -192,21 +192,21 @@ A diferencia de un avión, un satélite no puede dirigirse a voluntad (no puede pi
 Por una lado, las órbitas pueden clasificarse en función de su eje de rotación en tres tipos:
 
 \begin{itemize}
-	\item Ecuatoriales, si se sitúan en el mismo plano en el ecuador terrestre.
-	\item Polares, si se sitúan en un plano que contiene al eje de rotación terrestre.
-	\item Semipolares, si la órbita es oblicua al eje de rotación
+	\item \textbf{Ecuatoriales}, si se sitúan en el mismo plano en el ecuador terrestre.
+	\item \textbf{Polares}, si se sitúan en un plano que contiene al eje de rotación terrestre.
+	\item \textbf{Semipolares}, si la órbita es oblicua al eje de rotación
 \end{itemize}
 
-Atendiendo a la forma en que se produce el movimiento, distinguimos dos tipos:
+Con un criterio distinto, atendiendo a la forma en que se produce el movimiento, distinguimos dos tipos de órbitas para un satélite:
 
 \begin{itemize}
-	\item Geosíncronas. El satélite se sitúa sobre un punto fijo de la Tierra y su movimiento sigue al de rotación de esta. Es decir, no existe movimiento relativo entre dicho punto de la superficie terrestre y el satélite. Todas las imágenes que se toman desde el satélite tendrán así el mismo encuadre y cubrirán una extensión idéntica. La altura del satélite es fija, siendo esta de 35.786 Km, ya que esta altura hace que la velocidad del satélite se corresponda con la de rotación de la Tierra.
+	\item \textbf{Geosíncronas}. El satélite se sitúa sobre un punto fijo de la Tierra y su movimiento sigue al de rotación de esta. Es decir, no existe movimiento relativo entre dicho punto de la superficie terrestre y el satélite. Todas las imágenes que se toman desde el satélite tendrán así el mismo encuadre y cubrirán una extensión idéntica. La altura del satélite es fija, siendo esta de 35.786 Km, ya que esta altura hace que la velocidad del satélite se corresponda con la de rotación de la Tierra.
 	
 	\index{Orbita@Órbita!Geosíncrona}
 	
 	La ventaja de este tipo de satélites es que, por situarse siempre sobre un punto y siempre teniendo visión sobre una zona dada, se pueden actualizar con mucha frecuencia las imágenes. El inconveniente principal radica en el hecho de que las zonas alejadas del punto sobre el que se sitúa el satélite tendrán mala cobertura, y existirán zonas no cubiertas de las que no resultará posible obtener imágenes con los sensores montados a bordo de dicho satélite. Pese a que un sensor sobre un satélite con órbita geosíncrona cubrirá una gran porción de la superficie terrestre (debido a la elevada altura a la que ha de situarse para tener dicha órbita), no resulta posible, como es lógico, cubrir toda ella y hacerlo además en las mismas condiciones en todas las zonas.
 	
-	\item Heliosíncronas. Las órbitas heliosíncronas son generalmente polares. Mientras el satélite recorre la órbita, la Tierra efectúa su movimiento de rotación, lo cual hace que a cada vuelta de la órbita se cubran zonas distintas. De esta forma, se consigue dividir la totalidad de la superficie terrestre en bandas que se van recorriendo sucesivamente hasta que el satélite vuelve a situarse en el mismo punto inicial. Las órbitas están diseñadas de tal manera que ese regreso al punto inicial se produce a la misma hora solar exacta que en el anterior ciclo, de forma que las imágenes tomadas en un punto dado son registradas siempre a la misma hora y en condiciones similares de iluminación. Para que sea posible realizar una órbita de este tipo, el satélite debe situarse entre 300 y 1500 Km de altura.
+	\item \textbf{Heliosíncronas}. Las órbitas heliosíncronas son generalmente polares. Mientras el satélite recorre la órbita, la Tierra efectúa su movimiento de rotación, lo cual hace que a cada vuelta de la órbita se cubran zonas distintas. De esta forma, se consigue dividir la totalidad de la superficie terrestre en bandas que se van recorriendo sucesivamente hasta que el satélite vuelve a situarse en el mismo punto inicial. Las órbitas están diseñadas de tal manera que ese regreso al punto inicial se produce a la misma hora solar exacta que en el anterior ciclo, de forma que las imágenes tomadas en un punto dado son registradas siempre a la misma hora y en condiciones similares de iluminación. Para que sea posible realizar una órbita de este tipo, el satélite debe situarse entre 300 y 1500 Km de altura.
 	
 	La figura \ref{Fig:Orbita_landsat} muestra un ejemplo de la forma en que un satélite con una órbita heliosíncrona barre toda la superficie de la Tierra.
 	
@@ -277,20 +277,20 @@ Los denominados sensores \emph{de empuje} (Figura \ref{Fig:Tipos_sensores}b) eli
 Uno de los parámetros principales que definen las propiedades de un sistema de teledetección son las \emph{resoluciones}. Estas establecen el nivel de detalle de los productos que el sistema genera, determinando este en las distintas magnitudes en las que el sistema opera. Las resoluciones dependen del sensor y de la plataforma como binomio operativo, y de las características propias de ambos. Distinguimos cuatro resoluciones, a saber:
 
 \begin{itemize}
-	\item Resolución espacial. Indica la dimensión del objeto más pequeño que puede distinguirse en la imagen. En líneas generales es el equivalente al tamaño de píxel\footnote{Desde un punto de vista formal, no ha de ser necesariamente así, ya que la imagen puede tomarse originalmente con unas características y después, mediante operaciones matemáticas (veremos estas en el capítulo \ref{Algebra_de_mapas}), modificar el tamaño de píxel\index{Pixel}. Aunque este tamaño sea menor al original, los objetos de menor dimensión que podrán discernirse en esa imagen no serán iguales a ese tamaño, sino mayores.} es decir, a la dimensión real que un píxel de la imagen tiene sobre el terreno.\index{Resolución!espacial}
+	\item \textbf{Resolución espacial}. Indica la dimensión del objeto más pequeño que puede distinguirse en la imagen. En líneas generales es el equivalente al tamaño de píxel\footnote{Desde un punto de vista formal, no ha de ser necesariamente así, ya que la imagen puede tomarse originalmente con unas características y después, mediante operaciones matemáticas (veremos estas en el capítulo \ref{Algebra_de_mapas}), modificar el tamaño de píxel\index{Pixel}. Aunque este tamaño sea menor al original, los objetos de menor dimensión que podrán discernirse en esa imagen no serán iguales a ese tamaño, sino mayores.} es decir, a la dimensión real que un píxel de la imagen tiene sobre el terreno.\index{Resolución!espacial}
 	
 	La resolución espacial está en función de la capacidad resolutiva del sensor y las características de la plataforma tales como la altura a la que se sitúa. Asimismo, la resolución espacial esta relacionada con la superficie que cada imagen cubre sobre el terreno. El concepto de \emph{Campo Instantáneo de Visión}\footnote{Instantaneous Field of View (IFOV)} \index{Instantaneous Field of View (IFOV)} \index{Campo Instantáneo de Visión}indica el ángulo de visión que abarca el sensor, y se utiliza habitualmente es este sentido. El \emph{Campo Instantáneo de Visión en Tierra}\footnote{Ground Instantaneous Field of Vision (GIFOV)}\index{Ground Instantaneous Field of Vision (GIFOV)} expresa esta misma idea pero en unidades de longitud sobre el terreno, y es función del IFOV y la altura a la que se encuentre el sensor.\index{Campo Instantáneo de Visión en Tierra}
 	
 	En el diseño de la órbita de un satélite debe tenerse en cuenta el campo de visión del sensor para optimizar el ciclo de toma de imágenes, así como para evitar que las distintas franjas que este cubre queden sin solaparse y existan zonas de las que no se tomen imágenes.
 	
-	\item Resolución espectral. Todo sensor cubre una región particular del espectro y almacena esta mediante un número dado de bandas. La región del espectro abarcada y el número de bandas son los elementos que definen la resolución espectral. Esta será elevada si el número de bandas es alto, ya que cada banda cubrirá un rango de frecuencias de menor amplitud. De este modo, la información de dos frecuencias cercanas puede separarse, ya que estas serán recogidas en bandas distintas, mientras que si el número de bandas es menor pertenecerán a la misma banda y no podrá hacerse distinción alguna (la resolución será menor).\index{Resolución!espectral}
+	\item \textbf{Resolución espectral}. Todo sensor cubre una región particular del espectro y almacena esta mediante un número dado de bandas. La región del espectro abarcada y el número de bandas son los elementos que definen la resolución espectral. Esta será elevada si el número de bandas es alto, ya que cada banda cubrirá un rango de frecuencias de menor amplitud. De este modo, la información de dos frecuencias cercanas puede separarse, ya que estas serán recogidas en bandas distintas, mientras que si el número de bandas es menor pertenecerán a la misma banda y no podrá hacerse distinción alguna (la resolución será menor).\index{Resolución!espectral}
 	
 	En función del número de bandas, pueden clasificarse las imágenes y los sensores que las generan. Una imagen en blanco y negro contiene una única banda. Las imágenes en color contienen tres bandas, correspondientes a las frecuencias del rojo, el verde y el azul. Existen igualmente sensores con algunas bandas adicionales como la del infrarrojo, que en total generan un número de bandas no superior a diez. Todas estas imágenes se conocen como \emph{multiespectrales}. 
 	
 	Las imágenes \emph{superespectrales} tienen una mayor resolución espectral (bandas más estrechas), y cubren una zona del espectro más amplia, no limitándose al rango visible o el situado inmediatamente junto a este. Por ello, su número de bandas es mayor, generando imágenes con varias decenas de ellas. \index{Imágenes!superespectrales}
 	
 	Por último, las imágenes \emph{hiperespectrales} presentan más de cien bandas, lo cual permite una caracterización espectral sumamente precisa.\index{Imágenes!superespectrales}
-	\item Resolución radiométrica. Para cada una de las bandas que produce un sensor (asociada esta a una determinada región del espectro según su resolución espectral), el dato recogido, que constituye su Nivel Digital, indica la intensidad correspondiente a esa región. El nivel de detalle con el que puede medirse esa intensidad es el que define la resolución radiométrica del sensor.\index{Resolución!radiométrica}
+	\item \textbf{Resolución radiométrica}. Para cada una de las bandas que produce un sensor (asociada esta a una determinada región del espectro según su resolución espectral), el dato recogido, que constituye su Nivel Digital, indica la intensidad correspondiente a esa región. El nivel de detalle con el que puede medirse esa intensidad es el que define la resolución radiométrica del sensor.\index{Resolución!radiométrica}
 	
 	El número de Niveles Digitales\index{Niveles Digitales} distintos que pueden recogerse es la medida de la resolución espacial, y habitualmente es una potencia de dos (de la forma $2^n$). Tanto las imágenes en blanco y negro como las imágenes en color trabajan con 256 ($2^8$) niveles, ya que este es el valor más cercano al número de diferentes intensidades que el ojo humano puede diferenciar\footnote{En el ámbito del tratamiento de imágenes esto se conoce como \emph{profundidad de color}. Una mayor profundidad de color indica mayor número de colores posibles. Una pantalla normal de ordenador puede mostrar un total de 16.7 millones de colores distintos , que corresponden a las combinaciones entre los 256 posibles niveles de cada una de las tres bandas ($256 ^3 = 16,777,216$)}. No obstante, los sensores de teledetección pueden tener una mayor resolución radiométrica (hasta 1024 o 2048 niveles), que si bien no se aprecia en la representación visual, sí que supone una diferencia en el tratamiento analítico de esos Niveles Digitales.
 	En la figura \ref{Fig:Resolucion_radiometrica} puede apreciarse la diferencia entre dos imágenes, cada una de las cuales tiene una resolución radiométrica distinta.
@@ -302,7 +302,7 @@ Uno de los parámetros principales que definen las propiedades de un sistema de t
 \label{Fig:Resolucion_radiometrica} 
 \end{figure}
 
-	\item Resolución temporal. Indica el tiempo que tarda el sensor en volver a tomar una imagen de una misma zona.  Tiene sentido en el caso de sensores orbitales, que funcionan por ciclos, y tras concluir este ciclo,  vuelven a comenzar la toma de imágenes en el mismo punto. En cada ciclo, el sensor cubre toda la superficie terrestre <<barriendo>> esta en franjas sucesivas.
+	\item \textbf{Resolución temporal}. Indica el tiempo que tarda el sensor en volver a tomar una imagen de una misma zona.  Tiene sentido en el caso de sensores orbitales, que funcionan por ciclos, y tras concluir este ciclo,  vuelven a comenzar la toma de imágenes en el mismo punto. En cada ciclo, el sensor cubre toda la superficie terrestre <<barriendo>> esta en franjas sucesivas.
 	
 	La resolución temporal depende de la altura a la que se encuentra la plataforma que monta el sensor, así como la resolución espacial. Si el tamaño de las imágenes es reducido (GIFOV pequeño), las franjas son más estrechas y se requieren más para cubrir toda la superficie y volver a comenzar el ciclo, con lo que la resolución espacial será menor.
 \end{itemize}
@@ -335,23 +335,23 @@ El número de diferentes productos provenientes de la teledetección es muy elevad
 A continuación se relacionan algunos de los sistemas de teledetección principales y las características de sus productos.
 
 \begin{itemize}
-	\item LANDSAT \cite{webLandsat}. Se trata de un programa completo de adquisición de datos mediante teledetección, que ha lanzado hasta la fecha un total de siete satélites entre 1972 y 1999. Por ello, el volumen de datos recogido es enorme, y lo convierte en una de las fuentes de datos más ricas  de entre las existentes en la actualidad. \index{Landsat}
+	\item \textbf{LANDSAT} \cite{webLandsat}. Se trata de un programa completo de adquisición de datos mediante teledetección, que ha lanzado hasta la fecha un total de siete satélites entre 1972 y 1999. Por ello, el volumen de datos recogido es enorme, y lo convierte en una de las fuentes de datos más ricas  de entre las existentes en la actualidad. \index{Landsat}
 
 	El último satélite, LANDSAT 7, tiene una órbita heliosíncrona y una resolución temporal de 16 días. A bordo de él se monta el sensor ETM+\footnote{Enhanced Thematic Mapper Plus}, que permite la obtención de imágenes pancromáticas con resolución de 15 metros, e imagenes multibanda con resolución de 60 metros. El sensor recoge un total de 8 bandas, y el tamaño de la imagen es de 170 $\times$ 183 km.
 
 	Los sensores TM\footnote{Thematic Mapper} y MSS \footnote{Multispectral Scanner} se montan a bordo del satélite LANDSAT 5, todavía en funcionamiento y con una resolución temporal de 16 días. El sensor TM ofrece imágenes multibanda de 7 bandas con resolución de 30 metros, excepto en la banda del infrarrojo térmico, donde la resolución es de 120 metros. Las imágenes tienen un tamaño de 185 $\times$ 172 km.\index{TM (sensor)}\index{MSS(sensor)}
-	\item IKONOS \cite{webIkonos}. Este satélite, lanzado en 1999, monta un sensor con resolución de 1 metro para imágenes pancromáticas y 4 metros para imágenes multibanda (4 bandas). Las imágenes cubren una área de 11 $\times$ 11 km y el satélite tiene una resolución temporal de entre 3 y 5 días.\index{IKONOS}
-	\item SPOT\footnote{Satellite Pour l' Observation de la Terre} \cite{webSPOT}. Un conjunto de satélites lanzados inicialmente por la agencia espacial francesa, con especial énfasis en la recogida de información relativa a variables ambientales. De los cinco puestos en órbita, dos siguen actualmente en funcionamiento. El último de ellos, lanzado en 2002, monta el sensor HRG con capacidad de producir imágenes pancromáticas con resolución entre 2,5 y 5 metros, e imágenes multibanda con resolución de 10 metros. El periodo de revisita es de entre 1 y 4 días.
+	\item \textbf{IKONOS} \cite{webIkonos}. Este satélite, lanzado en 1999, monta un sensor con resolución de 1 metro para imágenes pancromáticas y 4 metros para imágenes multibanda (4 bandas). Las imágenes cubren una área de 11 $\times$ 11 km y el satélite tiene una resolución temporal de entre 3 y 5 días.\index{IKONOS}
+	\item \textbf{SPOT}\footnote{Satellite Pour l' Observation de la Terre} \cite{webSPOT}. Un conjunto de satélites lanzados inicialmente por la agencia espacial francesa, con especial énfasis en la recogida de información relativa a variables ambientales. De los cinco puestos en órbita, dos siguen actualmente en funcionamiento. El último de ellos, lanzado en 2002, monta el sensor HRG con capacidad de producir imágenes pancromáticas con resolución entre 2,5 y 5 metros, e imágenes multibanda con resolución de 10 metros. El periodo de revisita es de entre 1 y 4 días.
 	Es de destacar que el sensor permite inclinaciones de hasta 27\degree respecto al nadir hacia ambos lados, por lo que puede cubrir una banda más ancha y tomar imágenes fuera del área determinada en cada instante por la órbita.\index{SPOT}\index{Satellite Pour l' Observation de la Terre}
-	\item QuickBird. \cite{webQuickbird}. Ofrece imágenes en pancromático y multibanda (azul, verde, rojo e infrarrojo cercano). Las primeras tiene una resolución de 60 cm y las multibanda de 2,4 metros, aunque combinando las dos ofrece imágenes en color con 60 cm de resolución. 
+	\item \textbf{QuickBird}. \cite{webQuickbird}. Ofrece imágenes en pancromático y multibanda (azul, verde, rojo e infrarrojo cercano). Las primeras tiene una resolución de 60 cm y las multibanda de 2,4 metros, aunque combinando las dos ofrece imágenes en color con 60 cm de resolución. 
 	La órbita del satélite es heliosíncrona y la resolución temporal varía entre los 3 y 7 días. Cada imagen cubre una superficie de 16,5 $\times$ 16,5 km.\index{QuickBird}
-	\item Aqua y Terra. Dos satélites lanzados por la NASA dentro de un proyecto de ámbito internacional para la observación de la Tierra. Cada uno de ellos monta una serie de diversos sensores, que recogen información relativa al ciclo hidrológico (en el caso del Aqua) y la superficie terrestre (en el caso del Terra). Entre estos sensores cabe destacar el MODIS, a bordo de ambos, o el ASTER, a bordo del satélite Terra. ASTER \footnote{Advanced Spaceborne Thermal Emission and Reflection Radiometer} recoge información en 14 bandas distintas, con una resolución entre 15 y 90 metros, mientras que MODIS\footnote{Moderate Resolution Imaging Spectroradiometer} es un satélite de menor resolución espacial (250, 500 o 1000 metros según la banda ), 36 bandas y una resolucion temporal de 1 a 2 días. \index{Aqua}\index{Terra}\index{NASA}\index{ASTER}\index{MODIS}
+	\item \textbf{Aqua y Terra}. Dos satélites lanzados por la NASA dentro de un proyecto de ámbito internacional para la observación de la Tierra. Cada uno de ellos monta una serie de diversos sensores, que recogen información relativa al ciclo hidrológico (en el caso del Aqua) y la superficie terrestre (en el caso del Terra). Entre estos sensores cabe destacar el MODIS, a bordo de ambos, o el ASTER, a bordo del satélite Terra. ASTER \footnote{Advanced Spaceborne Thermal Emission and Reflection Radiometer} recoge información en 14 bandas distintas, con una resolución entre 15 y 90 metros, mientras que MODIS\footnote{Moderate Resolution Imaging Spectroradiometer} es un satélite de menor resolución espacial (250, 500 o 1000 metros según la banda ), 36 bandas y una resolucion temporal de 1 a 2 días. \index{Aqua}\index{Terra}\index{NASA}\index{ASTER}\index{MODIS}
 
 	Además de los datos directos de los sensores, se proporcionan de forma gratuita numerosos productos derivados, lo que lo convierte en una fuente de datos de primer orden para un gran número de aplicaciones, especialmente las relacionadas con el estudio del medio, la vegetación, etc. En la dirección Web \cite{webModisData} pueden obtenerse tanto datos originales como productos derivados.
-	\item NOAA--AVHRR\footnote{Advanced Very High Resolution Radiometer}. Se encuentra principalmente enfocado al estudio de los océanos, aunque sus datos pueden aplicarse en muchos más estudios. El sensor tiene una resolución de 1,1 km, y proporciona imágenes de 5 bandas en las regiones del infrarrojo y el visible. La resolución temporal es de medio día, produciendo una imagen nocturna y otra diurna.\index{NOAA-AVHRR}
-	\item RADARSAT. Desarrollado por la Agencia Espacial Canadiense, monta un radar de apertura sintética (SAR), y su principal propósito es el control de las variaciones ambientales y de los recursos naturales. Más información en \cite{webRADARSAT}.\index{RADATSAT}\index{Radar de Apertura Sintética}\index{SAR}
-	\item ERS--1 y ERS--2. Desarrollados por la Agencia Espacial Europea. Al igual que el anterior, ambos están pensados para la observación medioambiental, y montan tanto sensores activos como pasivos. Más información en \cite{webERS2}.\index{ERS--1}\index{ERS--2}
-	\item SRTM. La misión SRTM\footnote{Shuttle Radar Topography Mission} es un proyecto internacional de gran envergadura destinado a la creación de una cobertura de elevaciones a nivel mundial. Utilizando sensores basados en radar montados sobre una lanzadera espacial, se realizó un vuelo global de la superficie terrestre a lo largo de 11 días, recogiendo el relieve de todas las zonas situadas entre los 56 grados sur y los 60 grados norte de latitud. La resolución de los datos obtenidos es de un segundo de arco (aproximadamente 30 metros), aunque solo se encuentran disponibles para Estados Unidos, siendo de unos 90 metros en el resto de zonas. Los datos SRTM se pueden descargar gratuitamente en \cite{webSRTMDownload}. Más información sobre el proyecto puede encontrarse en \cite{webSRTM}. \index{SRTM}\index{Shuttle Radar Topographic Mission}
+	\item \textbf{NOAA--AVHRR}\footnote{Advanced Very High Resolution Radiometer}. Se encuentra principalmente enfocado al estudio de los océanos, aunque sus datos pueden aplicarse en muchos más estudios. El sensor tiene una resolución de 1,1 km, y proporciona imágenes de 5 bandas en las regiones del infrarrojo y el visible. La resolución temporal es de medio día, produciendo una imagen nocturna y otra diurna.\index{NOAA-AVHRR}
+	\item \textbf{RADARSAT}. Desarrollado por la Agencia Espacial Canadiense, monta un radar de apertura sintética (SAR), y su principal propósito es el control de las variaciones ambientales y de los recursos naturales. Más información en \cite{webRADARSAT}.\index{RADATSAT}\index{Radar de Apertura Sintética}\index{SAR}
+	\item \textbf{ERS--1 y ERS--2}. Desarrollados por la Agencia Espacial Europea. Al igual que el anterior, ambos están pensados para la observación medioambiental, y montan tanto sensores activos como pasivos. Más información en \cite{webERS2}.\index{ERS--1}\index{ERS--2}
+	\item \textbf{SRTM}. La misión SRTM\footnote{Shuttle Radar Topography Mission} es un proyecto internacional de gran envergadura destinado a la creación de una cobertura de elevaciones a nivel mundial. Utilizando sensores basados en radar montados sobre una lanzadera espacial, se realizó un vuelo global de la superficie terrestre a lo largo de 11 días, recogiendo el relieve de todas las zonas situadas entre los 56 grados sur y los 60 grados norte de latitud. La resolución de los datos obtenidos es de un segundo de arco (aproximadamente 30 metros), aunque solo se encuentran disponibles para Estados Unidos, siendo de unos 90 metros en el resto de zonas. Los datos SRTM se pueden descargar gratuitamente en \cite{webSRTMDownload}. Más información sobre el proyecto puede encontrarse en \cite{webSRTM}. \index{SRTM}\index{Shuttle Radar Topographic Mission}
 \end{itemize}
 
 \section{Cartografía impresa. Digitalización}
@@ -420,11 +420,9 @@ Se trata de una superficie plana a modo de atril, sobre la cual se sitúa el docu
 El proceso de digitalización implica los siguientes pasos \cite{Heywood1998Longman}:
 
 \begin{itemize}
-	\item Registro. La etapa fundamental del proceso, que garantiza que las coordenadas de las entidades digitalizadas sean correctas. El mapa se ha de adherir a la tableta de modo firme, normalmente con cinta adhesiva u otro medio similar, y señalar en él unos \emph{puntos de control} de coordenadas conocidas. Será en base a estos como se calcularan las restantes coordenadas de las entidades que el operario defina mediante el cursor. Habitualmente se utilizan como puntos de control las esquinas y algún punto central del mapa. Es importante que en el proceso de registro el mapa no presente dobleces o deterioros que puedan inducir errores en el cálculo de coordenadas posteriores.\index{Puntos!de control}
-	\item Digitalización de entidades puntuales.
-	\item Digitalización de entidades lineales.
-	\item Digitalización de entidades poligonales.
-	\item Asignación de atributos. A cada una de las entidades digitalizadas se le añaden sus correspondientes propiedades. Este paso no se realiza ya con la tableta digitalizadora.
+	\item \textbf{Registro}. La etapa fundamental del proceso, que garantiza que las coordenadas de las entidades digitalizadas sean correctas. El mapa se ha de adherir a la tableta de modo firme, normalmente con cinta adhesiva u otro medio similar, y señalar en él unos \emph{puntos de control} de coordenadas conocidas. Será en base a estos como se calcularan las restantes coordenadas de las entidades que el operario defina mediante el cursor. Habitualmente se utilizan como puntos de control las esquinas y algún punto central del mapa. Es importante que en el proceso de registro el mapa no presente dobleces o deterioros que puedan inducir errores en el cálculo de coordenadas posteriores.\index{Puntos!de control}
+	\item \textbf{Digitalización}. De entidades puntuales, lineales y poligonales.
+	\item \textbf{Asignación de atributos}. A cada una de las entidades digitalizadas se le añaden sus correspondientes propiedades. Este paso no se realiza ya con la tableta digitalizadora.
 	En el caso más general, estos atributos se introducen manualmente con el teclado o se toman, por ejemplo, de una base de datos. Un caso particular, no obstante, es el de la digitalización de curvas de nivel. Una vez que estas han sido digitalizadas, no es necesario asignar valores individualmente a cada una de las lineas, ya que entre ellas existe una relación que puede aprovecharse para simplificar el establecimiento de una cota correspondiente a cada una. Estableciendo la elevación de una y la dirección en que la elevación aumenta, pueden sistemáticamente asignarse elevaciones a las curvas que aparecen según se avanza en dicha dirección. Los SIG más populares presentan habitualmente herramientas que facilitan este proceso.
 \end{itemize}
 
@@ -433,8 +431,8 @@ Esta forma de digitalizar se conoce como <<cabeza abajo>> (\emph{heads--down}), 
 Se distinguen dos formas principales de registro de puntos:
 
 \begin{itemize}
-	\item Manual. El usuario debe ir marcando uno por uno todos los puntos que desee incorporar a la entidad digitalizada. Por ejemplo, para el caso de una línea, debe ir deteniendo el ratón regularmente en aquellos puntos que considere de interés, y sobre ellos pulsando los botones del cursor para indicar al sistema que ha de registrar dichos puntos.
-	\item Semiautomática. El operario simplemente desliza el cursor definiendo la forma de los entidades, y el propio sistema se encarga de almacenar puntos regularmente según un intervalo de tiempo definido. Esto permite un ahorro de tiempo considerable y una correcta densidad de puntos recogidos para cada entidad.	
+	\item \textbf{Manual}. El usuario debe ir marcando uno por uno todos los puntos que desee incorporar a la entidad digitalizada. Por ejemplo, para el caso de una línea, debe ir deteniendo el ratón regularmente en aquellos puntos que considere de interés, y sobre ellos pulsando los botones del cursor para indicar al sistema que ha de registrar dichos puntos.
+	\item \textbf{Semiautomática}. El operario simplemente desliza el cursor definiendo la forma de los entidades, y el propio sistema se encarga de almacenar puntos regularmente según un intervalo de tiempo definido. Esto permite un ahorro de tiempo considerable y una correcta densidad de puntos recogidos para cada entidad.	
 \end{itemize}
 
 Las tabletas digitalizadoras son elementos caros, motivo por el cual se tiende a favorecer en la actualidad la digitalización en pantalla, que presenta además otra serie de ventajas adicionales, como seguidamente veremos.
@@ -465,12 +463,12 @@ La digitalización en pantalla se conoce también como digitalización <<cabeza arr
 Frente a dicho trabajo con tableta digitalizadora, la digitalización en pantalla tiene las siguientes ventajas:
 
 \begin{itemize}
-	\item Menor coste. No se requiere equipo especializado de alto coste, ya que basta con un ordenador personal. 
-	\item Posibilidad de dividir el trabajo. Cuando se trabaja con un mapa sobre una tableta digitalizadora, este mapa no puede ser utilizado por otro operario. Sin embargo, el uso de una capa digital dentro de un SIG como base para la digitalización, permite que varios operarios trabajen con ella simultáneamente y se repartan el trabajo.
-	\item Posibilidad de corrección y edición precisa. Las mismas capacidades que se usan para trazar las distintas entidades puede emplearse para corregir o modificar estas una vez que estas ya han sido digitalizadas (Figura \ref{Fig:Correccion_digitalizacion}), resultando esto en un proceso de digitalización más flexible.
-	\item Posibilidad de ampliación. Para cartografías de baja calidad, puede ser difícil obtener precisión si se trabaja directamente sobre el mapa, así como si los elementos a digitalizar son pequeños, requiriéndose del operador un esfuerzo visual adicional. Las capacidades que tiene todo SIG para ampliar una imagen (\emph{zoom}) permiten superar esta dificultad y trabajar a distintas escalas según la precisión del trabajo a realizar o las características de los objetos digitalizados.
-	\item Mayor precisión. La capacidad de resolución del ojo humano es mucho menor que la resolución de las imágenes (véase más adelante el apartado \ref{Condiciones_digitalizacion}). Esto, unido a lo mencionado en el punto anterior, permite aprovechar mejor la información de la fuente original, y que los resultados obtenidos en la digitalización de esta sean más fieles a ella.
-	\item Mayor comodidad para el operario. La postura del operario es más adecuada cuando se digitaliza sobre la pantalla, permitiendo unas mejores condiciones. Esto que se traduce en menor cansancio y ello indirectamente comporta resultados más precisos.
+	\item \textbf{Menor coste}. No se requiere equipo especializado de alto coste, ya que basta con un ordenador personal. 
+	\item \textbf{Posibilidad de dividir el trabajo}. Cuando se trabaja con un mapa sobre una tableta digitalizadora, este mapa no puede ser utilizado por otro operario. Sin embargo, el uso de una capa digital dentro de un SIG como base para la digitalización, permite que varios operarios trabajen con ella simultáneamente y se repartan el trabajo.
+	\item \textbf{Posibilidad de corrección y edición precisa}. Las mismas capacidades que se usan para trazar las distintas entidades puede emplearse para corregir o modificar estas una vez que estas ya han sido digitalizadas (Figura \ref{Fig:Correccion_digitalizacion}), resultando esto en un proceso de digitalización más flexible.
+	\item \textbf{Posibilidad de ampliación}. Para cartografías de baja calidad, puede ser difícil obtener precisión si se trabaja directamente sobre el mapa, así como si los elementos a digitalizar son pequeños, requiriéndose del operador un esfuerzo visual adicional. Las capacidades que tiene todo SIG para ampliar una imagen (\emph{zoom}) permiten superar esta dificultad y trabajar a distintas escalas según la precisión del trabajo a realizar o las características de los objetos digitalizados.
+	\item \textbf{Mayor precisión}. La capacidad de resolución del ojo humano es mucho menor que la resolución de las imágenes (véase más adelante el apartado \ref{Condiciones_digitalizacion}). Esto, unido a lo mencionado en el punto anterior, permite aprovechar mejor la información de la fuente original, y que los resultados obtenidos en la digitalización de esta sean más fieles a ella.
+	\item \textbf{Mayor comodidad para el operario}. La postura del operario es más adecuada cuando se digitaliza sobre la pantalla, permitiendo unas mejores condiciones. Esto que se traduce en menor cansancio y ello indirectamente comporta resultados más precisos.
 \end{itemize}
 
 \begin{figure}[!hbt]   
@@ -504,9 +502,9 @@ Aunque existen escáneres específicamente diseñados para el trabajo con documento
 Existen tres tipos principales de escáneres:
 
 \begin{itemize}
-	\item De sobremesa (\emph{flat--bed}). Los habituales para el uso doméstico o el escaneo de imágenes de pequeño formato, aunque también existen de mayor tamaño. El documento a escanear se sitúa sobre una placa de cristal bajo la que se desplaza la cabeza con el sensor. Puede verse uno de estos escáneres en la figura \ref{Fig:Escaner_sobremesa}.\index{Flat--bed}
-	\item De tambor. El mapa se sitúa sobre un tambor que rota, mientras que la cabeza se mantiene fija. La figura \ref{Fig:Escaner_tambor} muestro uno de estos escáneres.
-	\item Alimentados. El sensor se mantiene fijo y el documento se desplaza mediante un mecanismo de arrastre, de forma similar a como avanza el papel en una impresora doméstica. Salvo que dispongan de mecanismos específicos para corregir esta circunstancia, suelen presentar importantes distorsiones geométricas causadas por un desplazamiento impreciso del papel.
+	\item \textbf{De sobremesa} (\emph{flat--bed}). Los habituales para el uso doméstico o el escaneo de imágenes de pequeño formato, aunque también existen de mayor tamaño. El documento a escanear se sitúa sobre una placa de cristal bajo la que se desplaza la cabeza con el sensor. Puede verse uno de estos escáneres en la figura \ref{Fig:Escaner_sobremesa}.\index{Flat--bed}
+	\item \textbf{De tambor}. El mapa se sitúa sobre un tambor que rota, mientras que la cabeza se mantiene fija. La figura \ref{Fig:Escaner_tambor} muestro uno de estos escáneres.
+	\item \textbf{Alimentados}. El sensor se mantiene fijo y el documento se desplaza mediante un mecanismo de arrastre, de forma similar a como avanza el papel en una impresora doméstica. Salvo que dispongan de mecanismos específicos para corregir esta circunstancia, suelen presentar importantes distorsiones geométricas causadas por un desplazamiento impreciso del papel.
 \end{itemize}
 
 \begin{figure}[!hbt]   
@@ -658,9 +656,9 @@ En realidad, los procesos de digitalización que ya hemos visto son también parte
 Todas estas operaciones se llevan a cabo con una \emph{estación fotogramétrica}, que comprende las herramientas necesarias para llevar estas a cabo (algunas, como los escáneres, ya las conocemos). En función del tipo de herramientas y técnicas distinguimos los siguientes tipos de fotogrametría, que representan a su vez la evolución de la disciplina.\index{Estación fotogramétrica}
 
 \begin{itemize}
-	\item Fotogrametría analógica. Basada en mediciones y procedimientos sobre imágenes analógicas
-	\item Fotogrametría analítica. Basada en formulaciones matemáticas y técnicas computacionales, permite obtener grandes precisiones.
-	\item Fotogrametría digital. Basada en el trabajo con imágenes digitales dentro de un entorno computerizado.
+	\item Fotogrametría \textbf{analógica}. Basada en mediciones y procedimientos sobre imágenes analógicas
+	\item Fotogrametría \textbf{analítica}. Basada en formulaciones matemáticas y técnicas computacionales, permite obtener grandes precisiones.
+	\item Fotogrametría \textbf{digital}. Basada en el trabajo con imágenes digitales dentro de un entorno computerizado.
 \end{itemize}
 
 El interés principal desde el punto de vista de los SIG es en la fotogrametría digital, ya que existe una gran relación entre estos y las aplicaciones empleadas en dicho tipo de fotogrametría. Es en esta en la que pueden englobarse los procesos de digitalización que ya hemos visto, y no en las restantes formas más antiguas de fotogrametría. En la fotogrametría digital, la estación fotogramétrica se articula sobre un ordenador en el cual se llevan a cabo los distintos procesos, no existiendo operaciones externas al mismo. Así, las imágenes se manejan dentro del ordenador y se visualizan a través de él, y la generación de nueva cartografía también se produce de forma digital.
@@ -761,9 +759,9 @@ El ejemplo más extendido de un GNSS es el Sistema de Posicionamiento Global (Glo
 El sistema GPS se divide en tres subsistemas o \emph{segmentos}:
 
 \begin{itemize}
-	\item Segmento espacial. Lo componen los satélites de la constelación GPS (un total de 27, siendo 24 de ellos operativos y 3 de reserva), con los cuales se comunican las unidades receptoras, y en función de los cuales puede triangularse la posición actual de estas.
-	\item Segmento de control. Lo forman un conjunto de estaciones terrestres que controlan el funcionamiento de los satélites, pudiendo enviar señales a estos para modificar su comportamiento.
-	\item Segmento de usuarios. Lo conforman los receptores GPS y todos los dispositivos que hacen uso de la señal de los satélites para el cálculo de posiciones.
+	\item \textbf{Segmento espacial}. Lo componen los satélites de la constelación GPS (un total de 27, siendo 24 de ellos operativos y 3 de reserva), con los cuales se comunican las unidades receptoras, y en función de los cuales puede triangularse la posición actual de estas.
+	\item \textbf{Segmento de control}. Lo forman un conjunto de estaciones terrestres que controlan el funcionamiento de los satélites, pudiendo enviar señales a estos para modificar su comportamiento.
+	\item \textbf{Segmento de usuarios}. Lo conforman los receptores GPS y todos los dispositivos que hacen uso de la señal de los satélites para el cálculo de posiciones.
 \end{itemize}
 
 \index{Segmentos!del sistema GPS}
@@ -771,8 +769,8 @@ El sistema GPS se divide en tres subsistemas o \emph{segmentos}:
 Los satélites del segmento espacial emiten una señal compleja cuyo contenido puede dividirse esencialmente en dos bloques de información:
 
 \begin{itemize}
-	\item Señales empleadas para el cálculo de distancias. Estas incluyen dos códigos: P(Precise) y C/A (Coarse/Aquisition). El segundo de ellos es el empleado habitualmente, ya que el primero se encuentra encriptado y está pensado para uso militar, mientras que el C/A esta disponible para todos los usuarios.
-	\item Mensajes de navegación. Estos informan de la posición orbital del satélite (conocida como \emph{efeméride}), y pueden asimismo contener información adicional referente al segmento espacial.
+	\item \textbf{Señales empleadas para el cálculo de distancias}. Estas incluyen dos códigos: P(Precise) y C/A (Coarse/Aquisition). El segundo de ellos es el empleado habitualmente, ya que el primero se encuentra encriptado y está pensado para uso militar, mientras que el C/A esta disponible para todos los usuarios.
+	\item \textbf{Mensajes de navegación}. Estos informan de la posición orbital del satélite (conocida como \emph{efeméride}), y pueden asimismo contener información adicional referente al segmento espacial.
 \end{itemize}
 
 \index{Efeméride}
@@ -849,9 +847,9 @@ La precisión del sistema global GPS depende del tipo de receptor GPS (o, en el l
 En función de sus características y de la forma en que operan, podemos distinguir los siguientes tipos de receptores GPS:
 
 \begin{itemize}
-	\item Receptores secuenciales. Establece conexiones secuenciales con los distintos satélites disponibles, estando conectado a uno o dos a lo sumo simultáneamente. Estos receptores son más económicos, ya que esta forma de operar requiere equipos menos complejos, aunque la precisión que se obtiene también es menor.
-	\item Receptores continuos. Disponen de más canales de radio que los anteriores y ello permite que la conexión a los satélites sea continua, sin tener que alternar entre uno y otro. La precisión que se obtiene es mayor, pero se trata de equipos más caros.
-	\item Receptores con canales multiplexados. El esquema de funcionamiento es similar al secuencial, alternando entre los distintos satélites y utilizando un único canal. No obstante, utilizan software más complejo y procesadores más potentes, de forma que esta alternancia se puede producir con una frecuencia mucho más elevada. 
+	\item \textbf{Receptores secuenciales}. Establece conexiones secuenciales con los distintos satélites disponibles, estando conectado a uno o dos a lo sumo simultáneamente. Estos receptores son más económicos, ya que esta forma de operar requiere equipos menos complejos, aunque la precisión que se obtiene también es menor.
+	\item \textbf{Receptores continuos}. Disponen de más canales de radio que los anteriores y ello permite que la conexión a los satélites sea continua, sin tener que alternar entre uno y otro. La precisión que se obtiene es mayor, pero se trata de equipos más caros.
+	\item \textbf{Receptores con canales multiplexados}. El esquema de funcionamiento es similar al secuencial, alternando entre los distintos satélites y utilizando un único canal. No obstante, utilizan software más complejo y procesadores más potentes, de forma que esta alternancia se puede producir con una frecuencia mucho más elevada. 
 \end{itemize}
 
 \index{GPS!receptores}
@@ -911,9 +909,9 @@ El número de técnicas existentes en la actualidad para realizar este tipo de med
 La diferencia principal entre estas técnicas es el tiempo necesario para la recogida de un punto. En general, un mayor tiempo equivale a una mayor precisión. Entre las técnicas habituales, cabe citar las siguientes:
 
 \begin{itemize}
-	\item Estático. En base a dos puntos de referencia (con una unidad GPS fija en cada uno de ellos), se calcula la posición de un tercero en un punto dado. Se trata del método más preciso, pero requiere tiempos de observación muy largos (superiores a una hora), lo que lo hace inadecuado para levantamientos o replanteos. Este tipo de procedimientos se emplean casi exclusivamente en trabajos geodésicos y las lineas base pueden ser de gran longitud. 
-	\item Estático rápido. Igual que el anterior, pero con tiempos menores, del orden de 5--10 minutos por punto medido.	
-	\item Cinemático. En el método cinemático los tiempos son aún menores que en el estático rápido, del orden del minuto. El fundamento de la técnica es distinto a los anteriores, ya que tras la inicialización el receptor móvil puede desplazarse con más velocidad y no es necesario que se detenga durante un periodo largo de tiempo en cada punto, pero ello exige que durante el desplazamiento tanto la unidad móvil como la fija de referencia mantengan la recepción de las señales, que han de ser de al menos cuatro satélites (preferiblemente cinco), y los mismos para ambas unidades. Si alguna de ellas pierde la conexión, se hace necesario repetir de nuevo el proceso de inicialización \cite{Remondi1988IN}.
+	\item \textbf{Estático}. En base a dos puntos de referencia (con una unidad GPS fija en cada uno de ellos), se calcula la posición de un tercero en un punto dado. Se trata del método más preciso, pero requiere tiempos de observación muy largos (superiores a una hora), lo que lo hace inadecuado para levantamientos o replanteos. Este tipo de procedimientos se emplean casi exclusivamente en trabajos geodésicos y las lineas base pueden ser de gran longitud. 
+	\item \textbf{Estático rápido}. Igual que el anterior, pero con tiempos menores, del orden de 5--10 minutos por punto medido.	
+	\item \textbf{Cinemático}. En el método cinemático los tiempos son aún menores que en el estático rápido, del orden del minuto. El fundamento de la técnica es distinto a los anteriores, ya que tras la inicialización el receptor móvil puede desplazarse con más velocidad y no es necesario que se detenga durante un periodo largo de tiempo en cada punto, pero ello exige que durante el desplazamiento tanto la unidad móvil como la fija de referencia mantengan la recepción de las señales, que han de ser de al menos cuatro satélites (preferiblemente cinco), y los mismos para ambas unidades. Si alguna de ellas pierde la conexión, se hace necesario repetir de nuevo el proceso de inicialización \cite{Remondi1988IN}.
 	
 	Existe una gran variedad de procedimientos de tipo cinemático, cuya filosofía es esencialmente la misma, pero bajo nombres distintos. Aunque pueden existir diferencias en los fundamentos teóricos, la forma de proceder es en muchos casos muy similar. Técnicas como \emph{Stop \& Go}\index{Stop \& Go} o \emph{pseudocinemático} pueden incluirse en este tipo de métodos. En general, estos y otros se engloban bajo la denominación de procedimientos cinemáticos, aunque sus características sean distintas en cada caso. 
 	
@@ -929,23 +927,23 @@ En base a los ejemplos anteriores, y para concluir esta parte, podemos dar una c
 Según el número de unidades, tenemos:
 
 \begin{itemize}
-	\item Absolutas. Se tiene un único receptor y un único operario. La posición se calcula con la información de los satélites, sin apoyo de otra unidad adicional.
-	\item Relativas. Se emplea una unidad adicional a modo de referencia. Las medidas se basan en la información de los satélites y la que aporta dicha unidad de referencia, y la posición se calcula en relación a esta en lugar de en términos absolutos. Estas operaciones alcanzan un grado de precisión mayor que las de tipo absoluto.
+	\item \textbf{Absolutas}. Se tiene un único receptor y un único operario. La posición se calcula con la información de los satélites, sin apoyo de otra unidad adicional.
+	\item \textbf{Relativas}. Se emplea una unidad adicional a modo de referencia. Las medidas se basan en la información de los satélites y la que aporta dicha unidad de referencia, y la posición se calcula en relación a esta en lugar de en términos absolutos. Estas operaciones alcanzan un grado de precisión mayor que las de tipo absoluto.
 \end{itemize}
 
 Atendiendo al movimiento del receptor encontramos:
 
 \begin{itemize}
-	\item Estáticas.
-	\item Cinemáticas.
-	\item Variantes intermedias.
+	\item \textbf{Estáticas}.
+	\item \textbf{Cinemáticas}.
+	\item \textbf{Variantes intermedias}.
 \end{itemize}
 
 Por último, en función de la obtención de datos, distinguimos:
 
 \begin{itemize}
-	\item En tiempo real. Las correcciones pertinentes se realizan en el acto, y el resultado que se visualiza en el receptor o se almacena en este ya ha sido filtrado y corregido.
-	\item Con necesidad de postproceso. Las correcciones se realizan en gabinete posteriormente, con información que el receptor no posee o no es capaz de procesar de modo inmediato durante su utilización.
+	\item \textbf{En tiempo real}. Las correcciones pertinentes se realizan en el acto, y el resultado que se visualiza en el receptor o se almacena en este ya ha sido filtrado y corregido.
+	\item \textbf{Con necesidad de postproceso}. Las correcciones se realizan en gabinete posteriormente, con información que el receptor no posee o no es capaz de procesar de modo inmediato durante su utilización.
 \end{itemize}
 
 \subsection{Integración de GPS y SIG}
@@ -1006,13 +1004,13 @@ Aunque el formato ráster es el más indicado para llevar a cabo los análisis corr
 A modo de resumen, he aquí una lista de metodologías a partir de las cuales puede obtenerse cartografía de elevaciones, gran parte de las cuales han sido tratadas con detalle antes en este mismo capítulo.
 
 \begin{itemize}
-\item GPS. Como ya sabemos, un GPS toma datos no solo de la posición que ocupa en coordenadas $x$ e $y$, sino también su elevación. La utilización de GPS permite obtener una nube de puntos de elevación, aunque si esta ha de cubrir un territorio amplio y con cierta precisión en las medidas, resulta poco idóneo el trabajar con esta tecnología, ya que es costoso en tiempo. Es más adecuada para obtener levantamientos precisos de áreas más reducidas, donde se demuestra como una herramienta sumamente eficaz.
-\item Digitalización de curvas de nivel. En ocasiones la cartografía de elevaciones ya existe, aunque no en el formato adecuado para su empleo en un SIG. Ya conocemos los métodos de digitalización de entidades, tanto manuales como automáticos, y ya sea en pantalla o en equipo especializado, y mediante ellos podemos digitalizar las curvas de nivel, obteniendo una capa de líneas con la información altitudinal que contiene un mapa topográfico habitual.\index{Digitalización!de curvas de nivel}\index{Curva!de nivel!digitalización}
-\item Estereografía. A partir de pares estereoscópicos, y con el concurso de una estación fotogramétrica digital pueden delinearse líneas o puntos de una elevación dada, digitalizando así la información altimétrica. El procedimiento es similar a la simple digitalización de curvas de nivel, solo que en este caso estas no están presentes explícitamente en las imágenes de partida, y se infieren a partir de la visualización tridimensional de las mismas.\index{Estereografía}
-\item Interferometría. La interferometría es una técnica cuyos fundamentos son en cierta medida similares a los de la estereografía, pues se basan en la información recogida de un punto concreto desde dos puntos distintos. Si en el caso de emplear simples imágenes esto permitía crear una imagen tridimensional, en el caso de la interferometría el estudio de las diferencias de fases entre las ondas recibidas en dos puntos distintos permite el cálculo de distancias. Se trata, por tanto, de un proceso automatizado, que requiere menos intervención que en el caso de la restitución fotogramétrica.\index{Interferometría}
+\item \textbf{GPS}. Como ya sabemos, un GPS toma datos no solo de la posición que ocupa en coordenadas $x$ e $y$, sino también su elevación. La utilización de GPS permite obtener una nube de puntos de elevación, aunque si esta ha de cubrir un territorio amplio y con cierta precisión en las medidas, resulta poco idóneo el trabajar con esta tecnología, ya que es costoso en tiempo. Es más adecuada para obtener levantamientos precisos de áreas más reducidas, donde se demuestra como una herramienta sumamente eficaz.
+\item \textbf{Digitalización de curvas de nivel}. En ocasiones la cartografía de elevaciones ya existe, aunque no en el formato adecuado para su empleo en un SIG. Ya conocemos los métodos de digitalización de entidades, tanto manuales como automáticos, y ya sea en pantalla o en equipo especializado, y mediante ellos podemos digitalizar las curvas de nivel, obteniendo una capa de líneas con la información altitudinal que contiene un mapa topográfico habitual.\index{Digitalización!de curvas de nivel}\index{Curva!de nivel!digitalización}
+\item \textbf{Estereografía}. A partir de pares estereoscópicos, y con el concurso de una estación fotogramétrica digital pueden delinearse líneas o puntos de una elevación dada, digitalizando así la información altimétrica. El procedimiento es similar a la simple digitalización de curvas de nivel, solo que en este caso estas no están presentes explícitamente en las imágenes de partida, y se infieren a partir de la visualización tridimensional de las mismas.\index{Estereografía}
+\item \textbf{Interferometría}. La interferometría es una técnica cuyos fundamentos son en cierta medida similares a los de la estereografía, pues se basan en la información recogida de un punto concreto desde dos puntos distintos. Si en el caso de emplear simples imágenes esto permitía crear una imagen tridimensional, en el caso de la interferometría el estudio de las diferencias de fases entre las ondas recibidas en dos puntos distintos permite el cálculo de distancias. Se trata, por tanto, de un proceso automatizado, que requiere menos intervención que en el caso de la restitución fotogramétrica.\index{Interferometría}
 
 Un uso muy habitual de esta técnica es con los denominados \emph{Radares de Apertura Sintética}\footnote{Synthetic Aperture Radar (SAR)}, utilizado por ejemplo en el caso de la misión SRTM, que reseñamos anteriormente como producto importante. La medición desde dos puntos puede hacerse con dos pasadas de satélite (caso por ejemplo del ERS) o bien en una sola si la plataforma dispone de dos receptores separados una cierta distancia (caso del SRTM). En \cite{SARInterferometry} puede encontrarse una descripción detallada de este tipo de técnicas y las etapas que comprenden.
-\item LiDAR. La técnica más avanzada en la actualidad es el uso de aparatos de altimetría basados en láser, como el LiDAR, que ya hemos visto en este mismo capítulo. El LiDAR ofrece posibilidades muy interesantes tales como la obtención de MDE y MDS (Modelo Digital de Superficie) por separado. \index{Radar de Apertura Sintética}\index{Synthetic Aperture Radar}\index{LiDAR}\index{SRTM}\index{Modelo Digital de Superficie}
+\item \textbf{LiDAR}. La técnica más avanzada en la actualidad es el uso de aparatos de altimetría basados en láser, como el LiDAR, que ya hemos visto en este mismo capítulo. El LiDAR ofrece posibilidades muy interesantes tales como la obtención de MDE y MDS (Modelo Digital de Superficie) por separado. \index{Radar de Apertura Sintética}\index{Synthetic Aperture Radar}\index{LiDAR}\index{SRTM}\index{Modelo Digital de Superficie}
 
 El resultado de un trabajo con LiDAR es una nube de puntos, normalmente en un número muy elevado debido a la precisión del instrumento, la cual puede emplearse para crear otro tipo de capas, tales como capas ráster. El nivel de postproceso que se requiere para la obtención final de una capa es mucho menor que con otras técnicas.
 \end{itemize}
@@ -1116,27 +1114,27 @@ Dentro de la gran variedad de formatos existentes, he aquí una breve lista de lo
 Dentro de los formatos para imágenes, cabe destacar los siguientes:
 
 \begin{itemize}
-	\item Tagged Image File Format (tif). Se trata de un formato complejo y altamente flexible, con muchas variantes distintas. Puede incorporar tanto compresión con pérdidas como sin pérdidas, en función del algoritmo que se utilice. Se utiliza habitualmente tanto en el ámbito del tratamiento de imágenes como en el ámbito SIG. En este último, permite también el almacenamiento de valores decimales, siendo apto para almacenar capas que no representen imágenes como tal.
+	\item \textbf{Tagged Image File Format (tif)}. Se trata de un formato complejo y altamente flexible, con muchas variantes distintas. Puede incorporar tanto compresión con pérdidas como sin pérdidas, en función del algoritmo que se utilice. Se utiliza habitualmente tanto en el ámbito del tratamiento de imágenes como en el ámbito SIG. En este último, permite también el almacenamiento de valores decimales, siendo apto para almacenar capas que no representen imágenes como tal.
 	Es un formato habitualmente generado por los escáneres, con lo cual es frecuente su utilización al trabajar con cartografía escaneada, según vimos antes en este mismo capítulo.
 	Existe una variante denominada GeoTIFF, que permite incorporar en el propio fichero la georreferencia de la imagen, haciendo innecesario el uso de un \emph{World File} asociado.
-	\item Joint Photographic Experts Group (jpg o jpeg). Un formato muy popular para imágenes (todas las cámaras digitales lo utilizan), no es sin embargo adecuado para el trabajo con SIG. Incorpora compresión con pérdidas (el ejemplo de la figura \ref{Fig:Compresion_con_perdidas} ha sido realizado utilizando este formato), y no es apto para almacenar capas ráster que no sean de tipo imagen.
+	\item \textbf{Joint Photographic Experts Group (jpg o jpeg)}. Un formato muy popular para imágenes (todas las cámaras digitales lo utilizan), no es sin embargo adecuado para el trabajo con SIG. Incorpora compresión con pérdidas (el ejemplo de la figura \ref{Fig:Compresion_con_perdidas} ha sido realizado utilizando este formato), y no es apto para almacenar capas ráster que no sean de tipo imagen.
 \end{itemize}
 \index{Tagged Image File Format (TIFF)}\index{Joint Photographic Experts Group (JPEG)}\index{GeoTIFF}
 
 Algunos formatos específicos para imágenes SIG tales como imágenes de satélite, son:
 
 \begin{itemize}
-	\item Enhanced Compression Wavelet (ecw). Formato desarrollado por Earth Resource Mapping. Al igual que el siguiente, está especialmente preparado para almacenar imágenes de gran tamaño, ya que las imágenes aéreas o de satélite en general tiene tamaños mayores que las imágenes de uso genérico para las que están pensados los formatos como TIFF o JPEG. 
+	\item \textbf{Enhanced Compression Wavelet (ecw)}. Formato desarrollado por Earth Resource Mapping. Al igual que el siguiente, está especialmente preparado para almacenar imágenes de gran tamaño, ya que las imágenes aéreas o de satélite en general tiene tamaños mayores que las imágenes de uso genérico para las que están pensados los formatos como TIFF o JPEG. 
 	En el uso de estas imágenes de gran tamaño en un SIG, es habitual que se quiera acceder a la imagen (por ejemplo para su visualización) solo en una parte determinada de la misma. Para optimizar este tipo de acceso, el formato soporta acceso sin necesidad de descomprimir la totalidad del archivo (descompresión selectiva).
 	Se trata de un formato de compresión con pérdidas, y su grado de compresión es alto. 
-	\item Multi--resolution Seamless Image Database (MrSID) (sid). Al contrario que el anterior, que es un formato abierto, el formato MrSID es un formato cerrado, pero sus características son similares: alta compresión, preparado para imágenes de gran volumen y con posibilidad de descompresión selectiva.
+	\item \textbf{Multi--resolution Seamless Image Database (MrSID)} (sid). Al contrario que el anterior, que es un formato abierto, el formato MrSID es un formato cerrado, pero sus características son similares: alta compresión, preparado para imágenes de gran volumen y con posibilidad de descompresión selectiva.
 \end{itemize}
 \index{Enhanced Compression Wavelet (ECW)}\index{Multi--resolution Seamless Image Database (MrSID)}
 
 Por último, entre los formatos para datos ráster (no imágenes) más comunes destacar el siguiente:
 
 \begin{itemize}
-	\item ArcInfo ASCII (asc). Un formato en texto plano ASCII\footnote{\emph{American Standard Code for Information Interchange}. Un esquema de codificación de caracteres ampliamente utilizado.}. Únicamente soporta una única banda, y permite almacenar el valor a considerar como valor de sin datos.
+	\item \textbf{ArcInfo ASCII (asc)}. Un formato en texto plano ASCII\footnote{\emph{American Standard Code for Information Interchange}. Un esquema de codificación de caracteres ampliamente utilizado.}. Únicamente soporta una única banda, y permite almacenar el valor a considerar como valor de sin datos.
 \end{itemize}
 \index{ArcInfo ASCII (formato)}\index{American Standard Code for Information Interchange (ASCII)}
 
@@ -1162,9 +1160,9 @@ Por esta razón, estos formatos son aptos para introducir información dentro de u
 Los formatos más extendidos para datos SIG vectoriales son los siguientes:
 
 \begin{itemize}
-	\item Shapefile (shp). Propuesto por la empresa ESRI, es el formato más utilizado en la actualidad, convertido en un estándar \emph{de facto}. No soporta topología y se compone de diversos ficheros, cada uno de los cuales contiene distintos elementos del dato espacial (geometrías, atributos, índices espaciales, etc.)
-	\item Spatialite. Una extensión espacial para la base de datos SQLite. Se trata de una base de datos, pero no tiene la arquitectura clásica de esta, con aplicación cliente y un servicio que provee los datos (lo veremos con más detalle en el capítulo \ref{Bases_datos}), sino que toda ella se encuentra almacenada en un fichero que puede copiarse o eliminarse de la forma habitual.
-	\item GeoJSON. Un formato de texto plano basado en notación JSON\footnote{JavaScript Object Notation}, de uso extendido debido a su simplicidad. Existe una variante denominada TopoJSON, que permite el almacenamiento de topología.
+	\item \textbf{Shapefile (shp)}. Propuesto por la empresa ESRI, es el formato más utilizado en la actualidad, convertido en un estándar \emph{de facto}. No soporta topología y se compone de diversos ficheros, cada uno de los cuales contiene distintos elementos del dato espacial (geometrías, atributos, índices espaciales, etc.)
+	\item \textbf{Spatialite}. Una extensión espacial para la base de datos \emph{SQLite}. Se trata de una base de datos, pero no tiene la arquitectura clásica de esta, con aplicación cliente y un servicio que provee los datos (lo veremos con más detalle en el capítulo \ref{Bases_datos}), sino que toda ella se encuentra almacenada en un fichero que puede copiarse o eliminarse de la forma habitual.
+	\item \textbf{GeoJSON}. Un formato de texto plano basado en notación JSON\footnote{JavaScript Object Notation}, de uso extendido debido a su simplicidad. Existe una variante denominada TopoJSON, que permite el almacenamiento de topología.
 \end{itemize}
 
 \section{Resumen}

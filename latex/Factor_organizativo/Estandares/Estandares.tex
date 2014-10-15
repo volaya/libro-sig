@@ -45,15 +45,15 @@ Un estándar \emph{abierto} es aquel cuya definición se encuentra disponible y to
 Los principios fundamentales de los estándares abiertos son los siguientes \cite{perensEstandares}:
 
 \begin{itemize}
-	\item { Disponibilidad}. Los estándares abiertos están disponibles para todos el mundo para su lectura y uso en cualquier implementación.
-	\item { Máxima posibilidad de elección para los usuarios finales}. Los estándares abiertos crean un mercado competitivo y justo, y no bloquean a los usuarios en el entorno de un vendedor particular. Desde el punto de quienes venden la tecnología SIG, esto no es tan ventajoso, ya que permite la aparición de competidores que antes no podían existir. Si un fabricante basa sus productos en un estándar cerrado definido por él mismo, otros no pueden elaborar soluciones que trabajen con esos productos, ya que no conocen el estándar empleado. 
+	\item \textbf{Disponibilidad}. Los estándares abiertos están disponibles para todos el mundo para su lectura y uso en cualquier implementación.
+	\item \textbf{Máxima posibilidad de elección para los usuarios finales}. Los estándares abiertos crean un mercado competitivo y justo, y no bloquean a los usuarios en el entorno de un vendedor particular. Desde el punto de quienes venden la tecnología SIG, esto no es tan ventajoso, ya que permite la aparición de competidores que antes no podían existir. Si un fabricante basa sus productos en un estándar cerrado definido por él mismo, otros no pueden elaborar soluciones que trabajen con esos productos, ya que no conocen el estándar empleado. 
 	
 	Asimismo, el fabricante puede cambiar el estándar utilizado por, por ejemplo, su producto de servidor, y obligar a los consumidores y a todo aquel que quiera utilizar un servicio basado en ese servidor a que actualicen también los clientes, pues los anteriores ya no podrán comunicarse con el nuevo servidor. Utilizando estándares abiertos, la competencia entre fabricantes ha de basarse puramente en las capacidades que ofrecen, con lo que los consumidores ganan en calidad de los productos y en posibilidades de elección.
-	\item { Gratuidad}. Implementar un estándar es gratuito, sin necesidad de pagar, como en el caso de una patente. Los organismos que generan los estándares pueden cobrar una cierta cantidad por acceder a la definición de los estándares, con objeto de financiar así la labor que desarrollan, y también pueden cobrar por emitir certificados de que un determinado producto o servicio se ha desarrollado de acuerdo con el estándar.
-	\item { Discriminación}. Los estándares abiertos y las organizaciones que los desarrollan no favorecen de ningún modo a uno u otro implementador sobre los restantes.
+	\item \textbf{Gratuidad}. Implementar un estándar es gratuito, sin necesidad de pagar, como en el caso de una patente. Los organismos que generan los estándares pueden cobrar una cierta cantidad por acceder a la definición de los estándares, con objeto de financiar así la labor que desarrollan, y también pueden cobrar por emitir certificados de que un determinado producto o servicio se ha desarrollado de acuerdo con el estándar.
+	\item \textbf{Discriminación}. Los estándares abiertos y las organizaciones que los desarrollan no favorecen de ningún modo a uno u otro implementador sobre los restantes.
 	
-	\item { Extensión o creación de subconjuntos de un estándar}. Los estándares abiertos pueden ser extendidos o bien presentados como subconjuntos del estándar original.
-	\item { Prácticas predatorias}. Los estándares abiertos pueden tener licencias que requieran a todo aquel que desarrolle una extensión de dicho estándar la publicación de información acerca de esa extensión, y el establecimiento de una licencia dada para todos aquellos que creen, distribuyan y vendan \emph{software} compatible con ella. Un estándar abierto no puede prohibir de otro modo el desarrollo de extensiones.
+	\item \textbf{Extensión o creación de subconjuntos de un estándar}. Los estándares abiertos pueden ser extendidos o bien presentados como subconjuntos del estándar original.
+	\item \textbf{Prácticas predatorias}. Los estándares abiertos pueden tener licencias que requieran a todo aquel que desarrolle una extensión de dicho estándar la publicación de información acerca de esa extensión, y el establecimiento de una licencia dada para todos aquellos que creen, distribuyan y vendan \emph{software} compatible con ella. Un estándar abierto no puede prohibir de otro modo el desarrollo de extensiones.
 \end{itemize}
 
 Para tener una noción de lo que en la práctica realmente significa el uso de estándares abiertos en el campo de los SIG y las IDE, podemos ver la figura \ref{Fig:Esquema_no_interoperable}, donde se representa el esquema de una arquitectura no interoperable. Es decir, una arquitectura que no se basa en este tipo de estándares.
@@ -70,10 +70,10 @@ Los datos que se encuentran en cada base de datos son accesibles únicamente a tr
 Entre los principales inconvenientes de una arquitectura no interoperable como la representada podemos citar los siguientes:
 
 \begin{itemize}
-\item { Desperdicio de recursos}. Cada servicio debe gestionar sus propio conjunto de datos, lo cual requiere abundantes recursos y no es sencillo, además de implicar un elevado coste.
-\item { Necesidad de conocer múltiples clientes}. Si para acceder a cada servicio necesitamos su cliente particular, acceder al conjunto de servicios ofrecidos por esos servidores requiere por parte de los usuarios aprender a utilizar tantos clientes como servidores existan.
-\item { Imposibilidad de combinar datos}. Dos datos a los que pueda accederse a través de dos servidores distintos no podrán utilizarse simultáneamente en un único cliente, ya que este no podrá comunicarse con ambos servidores. Un análisis que requiera distintos tipos de datos no podrá realizarse si todos ellos no se ofrecen a través de un mismo servidor.
-\item { Imposibilidad de combinar funcionalidades}. Los datos ofrecidos por un servidor pueden usarse para el desarrollo de muchas tareas. Estas tareas requieren que las correspondientes herramientas estén disponibles en los clientes, y estos se diferencian notablemente, de la misma forma que lo hacen también los SIG de escritorio entre sí. Si acceder a los datos a través de un servidor solo se puede hacer empleando un cliente concreto, no existe la posibilidad de aprovechar las funcionalidades de otro cliente sobre esos mismos datos, y el usuario ve así limitadas sus posibilidades de trabajo.
+\item \textbf{ Desperdicio de recursos}. Cada servicio debe gestionar sus propio conjunto de datos, lo cual requiere abundantes recursos y no es sencillo, además de implicar un elevado coste.
+\item \textbf{ Necesidad de conocer múltiples clientes}. Si para acceder a cada servicio necesitamos su cliente particular, acceder al conjunto de servicios ofrecidos por esos servidores requiere por parte de los usuarios aprender a utilizar tantos clientes como servidores existan.
+\item \textbf{ Imposibilidad de combinar datos}. Dos datos a los que pueda accederse a través de dos servidores distintos no podrán utilizarse simultáneamente en un único cliente, ya que este no podrá comunicarse con ambos servidores. Un análisis que requiera distintos tipos de datos no podrá realizarse si todos ellos no se ofrecen a través de un mismo servidor.
+\item \textbf{Imposibilidad de combinar funcionalidades}. Los datos ofrecidos por un servidor pueden usarse para el desarrollo de muchas tareas. Estas tareas requieren que las correspondientes herramientas estén disponibles en los clientes, y estos se diferencian notablemente, de la misma forma que lo hacen también los SIG de escritorio entre sí. Si acceder a los datos a través de un servidor solo se puede hacer empleando un cliente concreto, no existe la posibilidad de aprovechar las funcionalidades de otro cliente sobre esos mismos datos, y el usuario ve así limitadas sus posibilidades de trabajo.
 \end{itemize}
 
 En contraste con lo anterior, tenemos una situación de plena interoperabilidad basada en estándares abiertos como la representada en el esquema de la figura \ref{Fig:Esquema_interoperable}.
@@ -104,12 +104,12 @@ El Open Geospatial Consortium \cite{webOGC} es una organización internacional y 
 Algunos de los estándares OGC más relevantes, los cuales veremos a lo largo de este capítulo, son los siguientes:
 
 \begin{itemize}
-\item { WMS}. Para obtener imágenes de mapas.
-\item { WCS}. Para obtener y consultar coberturas.
-\item { WFS}. Para obtener y editar entidades geográficas y sus atributos asociados.
-\item { WPS}. Para servicios de procesos remotos.
-\item { GML}. Para almacenamiento de información geográfica.
-\item { CSW}. Para consultas en catálogos.
+\item \textbf{ WMS}. Para obtener imágenes de mapas.
+\item \textbf{ WCS}. Para obtener y consultar coberturas.
+\item \textbf{ WFS}. Para obtener y editar entidades geográficas y sus atributos asociados.
+\item \textbf{ WPS}. Para servicios de procesos remotos.
+\item \textbf{ GML}. Para almacenamiento de información geográfica.
+\item \textbf{ CSW}. Para consultas en catálogos.
 \end{itemize}
 
 Cada uno de estos estándares está descrito en una especificación, y estas están sujetas a cambios y mejoras, existiendo varias versiones en cada caso. 

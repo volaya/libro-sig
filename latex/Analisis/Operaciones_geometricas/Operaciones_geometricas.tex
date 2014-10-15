@@ -422,8 +422,8 @@ Este proceso de simplificación es parte de la \emph{generalización} de líneas, y
 Las razones que por las cuales puede resultar de interés llevar a cabo un proceso de generalización de líneas son diversas, y entre ellas cabe destacar las dos siguientes \cite{McMaster1992AAG}.
 
 \begin{itemize}
-	\item Reducción del tamaño de los datos. Una reducción del número de puntos elimina puntos en muchos casos superfluos, de tal forma que la capa simplificada presenta la misma utilidad pero ocupa un espacio menor.
-	\item Reducción del tiempo de proceso. La capa generalizada se maneja de forma más rápida en operaciones tales como la representación en pantalla, la impresión, o la realización de otros cálculos. En términos generales, todos los cálculos con la linea generalizada, como por ejemplo el trazado de una zona de influencia o de cualquier otro de los procesos vistos en este capítulo, se efectúan con un menor costo de proceso, ya que requieren el análisis de un menor número de puntos. Otros procesos tales como la conversión de esa capa en una capa ráster también experimentan una ganancia en rendimiento.	
+	\item \textbf{Reducción del tamaño de los datos}. Una reducción del número de puntos elimina puntos en muchos casos superfluos, de tal forma que la capa simplificada presenta la misma utilidad pero ocupa un espacio menor.
+	\item \textbf{Reducción del tiempo de proceso}. La capa generalizada se maneja de forma más rápida en operaciones tales como la representación en pantalla, la impresión, o la realización de otros cálculos. En términos generales, todos los cálculos con la linea generalizada, como por ejemplo el trazado de una zona de influencia o de cualquier otro de los procesos vistos en este capítulo, se efectúan con un menor costo de proceso, ya que requieren el análisis de un menor número de puntos. Otros procesos tales como la conversión de esa capa en una capa ráster también experimentan una ganancia en rendimiento.	
 	\end{itemize}
 
 En ocasiones, la simplificación puede implicar la reducción de elementos más allá de puntos aislados, tal y como operan los algoritmos que a continuación veremos. Eliminando puntos a lo largo de una línea puede lograrse el resultado buscado, reduciendo el detalle longitudinalmente, pero un cambio de escala puede también implicar la necesidad de eliminar no únicamente puntos, sino líneas completas. Por ejemplo, si una capa de líneas recoge con detalle una vía mediante dos líneas, una para cada borde de la misma, no tiene sentido emplear una capa de tal detalle para un mapa a una escala tal como, por ejemplo, 1:200000. En este caso, puede sustituirse el par de líneas anteriores por una única, ya que la variación en el resultado no será perceptible. La simplificación de las líneas en este caso debe operar sustituyendo dos líneas por una única.
@@ -460,11 +460,11 @@ Puesto que no todos los puntos deben ser considerados de igual modo, existen mét
 Podemos clasificar las rutinas de generalización de líneas en los siguientes bloques \cite{McMaster1987Cartographica}.
 
 \begin{itemize}
-	\item Rutinas de vecindad inmediata. Analizan cada punto y los inmediatamente anteriores y posteriores, estudiando los ángulos formados o las distancias.
-	\item Rutinas de vecindad acotada. Estudian una serie de puntos vecinos, no necesariamente restringida a los inmediatos pero sí con algun umbral máximo de alejamiento o número de puntos.
-	\item Rutinas de vecindad no acotada. Estudian los puntos vecinos y la región analizada depende de diversos factores, aunque no existe una dimensión máxima.
-	\item Rutinas globales. Analizan la línea de forma global, no a nivel de los puntos que la componen.
-	\item Rutinas que preservan la topología. Además de las propiedades geométricas ya sea a nivel global o local, estudian la conectividad y topología del conjunto de líneas para garantizar que la línea simplificada preserva dichas propiedades.
+	\item \textbf{Rutinas de vecindad inmediata}. Analizan cada punto y los inmediatamente anteriores y posteriores, estudiando los ángulos formados o las distancias.
+	\item \textbf{Rutinas de vecindad acotada}. Estudian una serie de puntos vecinos, no necesariamente restringida a los inmediatos pero sí con algun umbral máximo de alejamiento o número de puntos.
+	\item \textbf{Rutinas de vecindad no acotada}. Estudian los puntos vecinos y la región analizada depende de diversos factores, aunque no existe una dimensión máxima.
+	\item \textbf{Rutinas globales}. Analizan la línea de forma global, no a nivel de los puntos que la componen.
+	\item \textbf{Rutinas que preservan la topología}. Además de las propiedades geométricas ya sea a nivel global o local, estudian la conectividad y topología del conjunto de líneas para garantizar que la línea simplificada preserva dichas propiedades.
 \end{itemize}
 
 Uno de los algoritmos más habitualmente utilizados es el propuesto por\cite{Douglas1973TAC}, que pertenece al grupo de los globales. La intensidad del proceso de generalización se establece mediante un valor de tolerancia que indica la máxima desviación que se permite entre la línea original y la simplificada.
@@ -481,9 +481,9 @@ En la figura \ref{Fig:Generalizacion} puede verse cómo una línea original se sim
 Respecto a los algoritmos de suavizado, estos pueden dividirse en tres grupos principales \cite{McMaster1987Cartographica}:
 
 \begin{itemize}
-	\item Media entre puntos. Se consideran un número $n$ de puntos vecinos, y en base a ellos se calcula la nueva posición. 
-	\item Ajuste de funciones matemáticas. Ajustando funciones a los puntos que tengan un aspecto <<suave>>, tales como \emph{splines} o curvas Bézier.\index{Splines}\index{Curva!de Bezier}
-	\item Tolerancias. Se establece una tolerancia y un umbral de precisión, y se ignoran los detalles a lo largo de la línea que salen de ese umbral.
+	\item \textbf{Media entre puntos}. Se consideran un número $n$ de puntos vecinos, y en base a ellos se calcula la nueva posición. 
+	\item \textbf{Ajuste de funciones matemáticas}. Ajustando funciones a los puntos que tengan un aspecto <<suave>>, tales como \emph{splines} o curvas Bézier.\index{Splines}\index{Curva!de Bezier}
+	\item \textbf{Tolerancias}. Se establece una tolerancia y un umbral de precisión, y se ignoran los detalles a lo largo de la línea que salen de ese umbral.
 \end{itemize}
 
 En \cite{McMaster1989Cartographica} pueden encontrarse detallados métodos de todas las familias anteriores.
