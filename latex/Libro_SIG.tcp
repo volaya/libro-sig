@@ -8,5 +8,5 @@ UseBibTeX=1
 UseMakeIndex=1
 ActiveProfile=LaTeX ⇨ PDF
 ProjectLanguage=es
-ProjectDialect=ES
+ProjectDialect=ANY
 

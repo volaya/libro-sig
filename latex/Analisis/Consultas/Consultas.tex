@@ -137,16 +137,18 @@ Veamos un ejemplo de una unión entre tablas para comprender el significado de es
 \begin{table}
 \begin{center}
 \begin{tabular}{cc}\toprule
-\\texttt{ID} & \\texttt{TIPO\_SUELO}\\ \midrule
+\texttt{ID} & \texttt{TIPO\_SUELO}\\ \midrule
 1 & 3 \\ 
 2 & 1 \\ 
 3 & 3 \\
 4 & 3 \\
 5 & 2 \\ \bottomrule
 \end{tabular}
-\vspace{0.5cm}
+\\
+\vspace*{0.5cm}
+
 \begin{tabular}{ccc}\toprule
-\\texttt{TIPO\_SUELO} & \\texttt{NOMBRE\_SUELO} & \\texttt{APTITUD} \\ \midrule
+\texttt{TIPO\_SUELO} & \texttt{NOMBRE\_SUELO} & \texttt{APTITUD} \\ \midrule
 1 & Fluvisol & 5 \\ 
 2 & Cambisol & 7 \\ 
 3 & Leptosol & 4 \\ \bottomrule
@@ -163,7 +165,7 @@ Al efectuar una unión, \emph{pasamos} la información de una tabla a la otra, en 
 \begin{table*}
 \begin{center}
 \begin{tabular}{cccc}\toprule
-\\texttt{ID} & \\texttt{TIPO\_SUELO} & \\texttt{NOMBRE\_SUELO} & \\texttt{APTITUD} \\ \midrule
+\texttt{ID} & \texttt{TIPO\_SUELO} & \texttt{NOMBRE\_SUELO} & \texttt{APTITUD} \\ \midrule
 1 & 3 & Leptosol & 4 \\ 
 2 & 1 & Fluvisol & 5 \\ 
 3 & 3 & Leptosol & 4 \\ 
@@ -215,7 +217,7 @@ FROM nombre_de_tabla
 WHERE expresión_condicional
 \end{verbatim}
 
-\noindent \emph{Lista\_de\_columnas} es una lista con los nombres de los campos que nos interesa incluir en la tabla resultante de la consulta, \emph{nombre\_de\_tabla} es el nombre que identifica la tabla de la que queremos tomar los datos, y \emph{expresión\_condicional} un predicado que establece la condición que han de cumplir los registros a tomar.
+\noindent \texttt{Lista\_de\_columnas} es una lista con los nombres de los campos que nos interesa incluir en la tabla resultante de la consulta, \texttt{nombre\_de\_tabla} es el nombre que identifica la tabla de la que queremos tomar los datos, y \texttt{expresión\_condicional} un predicado que establece la condición que han de cumplir los registros a tomar.
 
 Como vemos, no es muy distinto de lo que hemos visto hasta ahora, y simplemente es otra forma de plantear consultas, de modo similar a lo que conocemos. La flexibilidad del lenguaje y la adición de funciones y nuevas ordenes permiten, no obstante, expresar prácticamente cualquier consulta, por compleja que esta sea, y extraer todo el potencial de la base de datos.
 
@@ -224,8 +226,7 @@ Sin animo de resultar un repaso exhaustivo a todos los elementos del lenguaje (e
 \begin{verbatim}
 SELECT *
 FROM Paises
-WHERE Moneda = 'Euro' AND 
-      Poblacion_actual > 40000000 
+WHERE Moneda = 'Euro' AND Poblacion_actual > 40000000 
 \end{verbatim}
 
 Esta consulta recupera todos aquellos registros en los que la población actual supera los 40 millones y la moneda es el euro. El asterisco indica que, para cada uno de estos registros, deben recuperarse todos los campos existentes. Se podría formar una nueva tabla solo con los nombres de los países que cumplen la condición establecida, mediante la siguiente sentencia:
@@ -233,8 +234,7 @@ Esta consulta recupera todos aquellos registros en los que la población actual s
 \begin{verbatim}
 SELECT Nombre
 FROM Paises
-WHERE Moneda = 'Euro' AND 
-      Poblacion_actual > 40000000 
+WHERE Moneda = 'Euro' AND Poblacion_actual > 40000000 
 \end{verbatim}
 
 Las consultas pueden ser mucho más complejas, y las sentencias \texttt{SELECT} pueden usarse como parámetros dentro de un predicado lógico. Por ejemplo, supongamos que disponemos de una tabla denominada \texttt{Capitales} con datos de todas las capitales del mundo, y que cuenta con los siguientes campos:

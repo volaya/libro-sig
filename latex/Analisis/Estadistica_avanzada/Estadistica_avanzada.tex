@@ -705,6 +705,7 @@ Una vez creada la matriz de comparaciones, el autovector principal de la misma c
 
 Veamos un ejemplo. Supongamos tres capas con tres factores, sean  $a$, $b$ y $c$, y la siguiente matriz de comparaciones entre pares de ellos, que describe la importancia de cada uno de los mismos frente a los restantes.
 
+\iftrue
 \begin{center}
 \begin{tabular}{|c|c|c|c|} \hline
  & a & b & c \\ \hline 
@@ -713,6 +714,10 @@ b & 1/4 & 1 & 1/2 \\ \hline
 c & 1/5 & 2 & 1 \\ \hline
 \end{tabular}
 \end{center}
+\fi
+\iffalse
+<p><img src="../img/tabla_ahp"/></p>
+\fi
 
 Según la tabla, el factor $a$ es cinco veces más relevante que el $c$ y, consecuentemente, $c$ tiene un quinto de la importancia de $a$. 
 

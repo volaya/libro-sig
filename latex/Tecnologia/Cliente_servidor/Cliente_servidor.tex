@@ -327,6 +327,17 @@ Este tipo de técnicas no son exclusivas de los SIG en Internet, sino que también
 
 La combinación de \emph{tiling} y \emph{cacheo} se lleva a cabo a múltiples escalas, de forma que se reduce el número de operaciones a realizar y se obtiene un mayor rendimiento. Se emplean las denominadas \emph{pirámides}, que ya vimos en el apartado \ref{Generalizacion_en_SIG} dedicado a la generalización cartográfica en un SIG. Estas pueden ser empleadas también en el lado del servidor, incluso cuando este sirve mapas creados a partir de cartografía vectorial. Para evitar tener que rasterizar los datos vectoriales cada vez que se realiza una petición (lo cual supondría un gran coste en términos de proceso), se rasterizan de antemano a distintas escalas, de forma que cuando el cliente efectúa la petición ya se dispone de una imagen que servirle, sea cual sea la escala que pida.\index{Pirámides}.
 
+Una técnica de reciente aparición es la denominada emph{tiling vectorial}. Aplicando los mismos principios que el \emph{tiling}, es decir, la subdivision de los datos de forma regular, las capas vectoriales se <<trocean>> en el origen y se envían después solamente los datos necesarios para el area cubierta en el cliente. Combinando este enfoque con el uso de capas con distinto detalle según la escala, se logran dos ventajas: 
+
+\begin{itemize}
+\item Disminución del volumen de datos. 
+\item Capacidad de modificar la simbología en el cliente.
+\end{itemize}
+
+Al enviar los datos en lugar de una representación de estos, el cliente es quien debe establecer la simbología, lo cual permite que sea el usuario quien seleccione cómo representar los elementos vectoriales. Al mismo tiempo, se logran ventajas en la experiencia de usuario, debidas principalmente a la escalabilidad de los datos vectoriales, que permite por ejemplo presentar transiciones más fluidas cuando se modifica la escala del mapa.
+
+Obviamente, este tipo de enfoque es válido unicamente para el caso de capas vectoriales.
+
 \section{Resumen}
 
 Hemos visto en este capítulo las ideas fundamentales del binomio cliente--servidor, tanto en su definición más general referente a servicios Web de cualquier tipo, como en aquellos específicos del ámbito SIG. En base a esto, existen distintas formas de llevar a la red tanto los propios datos geográficos como las funcionalidades principales de los SIG de escritorio, y que pueden variar en cuanto a su complejidad, desde simples mapas estáticos hasta aplicaciones Web complejas. Pese a las elevadas posibilidades que existen hoy en día en cuanto a tecnologías Web, es importante conocer también las limitaciones del entorno de trabajo, las cuales derivan tanto de la propia red como de otros aspectos, por ejemplo el hecho de que la aplicación Web se ejecute dentro de un navegador. Estas limitaciones llevan al desarrollo de técnicas particulares para optimizar el funcionamiento de las aplicaciones SIG Web, entre las que se han de destacar el \emph{tiling} y el \emph{cacheo}.
