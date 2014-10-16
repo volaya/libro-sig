@@ -40,7 +40,9 @@ exps_pre = [(r"\\bigskip", ""),
         (r"\\vspace\{.*?\}", ""),
         (r"\\begin\{center\}", ""),
         (r"\\end\{center\}", ""),
-        (r"\\small", "")]
+        (r"\\small", ""),
+        (r"\\iftrue[\s\S]*?\\fi", ""),
+        (r"\\iffalse([\s\S]*?)\\fi", r"\1")]
         
 exps_post = [(r"\\index\{.*?\}", ""),
         (r"\\pagestyle\{.*?\}",r""),
@@ -61,7 +63,8 @@ exps_post = [(r"\\index\{.*?\}", ""),
         (r"\\end\{enumerate\}", "</ol>"),
         (r"\\item", "<li>"),
         (r"\\subitem", ""),
-        (r"\\texttt\{(.*?)\}", r"<tt>\1</tt>"),        
+        (r"\\texttt\{(.*?)\}", r"<tt>\1</tt>"), 
+        (r"\\textbf\{(.*?)\}", r"<b>\1</b>"),        
         (r"\\chapter.*?\{(.*?)\}", ""),
         (r"\\section.*?\{(.*?)\}", r'<h2 id="\1">\1</h2>'),
         (r"\\subsection.*?\{(.*?)\}", r'<h3 id="\1">\1</h3>'),
@@ -183,7 +186,7 @@ if __name__ == '__main__':
         try:
             convertFile(f)
         except Exception, e:
-            #traceback.print_exc()
+            traceback.print_exc()
             pass 
     for path in  glob.glob("html/chapters/*.html"):
         with open(path) as f:
