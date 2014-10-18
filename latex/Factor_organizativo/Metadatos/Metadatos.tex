@@ -42,11 +42,9 @@ Uno de los beneficios más importantes que proporcionan los metadatos es asegurar
 
 \begin{enumerate}
 \item Un organismo crea un juego de datos con los ejes de las principales vías de una ciudad. Estos datos se emplean para labores de mantenimiento, de tal modo que faciliten la localización de las señales viales en la realización de inventarios. El juego de datos no contiene informacion sobre direcciones ni tampoco almacena la topología de la red. Posteriormente, una compañía especializada en reparto adquiere estos datos para el cálculo de rutas óptimas desde sus almacenes hasta las direcciones de destino de sus clientes.
-
 \item Un organismo crea un juego de datos con los elementos de la red de alcantarillado tales como alcantarillas, tuberías, bombas, etc. Durante años, esta capa no se actualiza. Años después de la creación de esos datos, ese mismo organismo desarrolla un proyecto relativo a la calidad de las aguas y el control de la contaminación y utiliza ese juego de datos.
-
 \item Una compañía mantiene un registro de los limites aproximados de las parcelas catastrales de una zona. El juego de datos, no obstante, no muestra las posibles discrepancias que pueden existir en esos límites, tales como solapes o huecos. Una inmobiliaria emplea ese juego de datos para asesorar a sus clientes y mostrarles la localización y límites de las parcelas a los compradores potenciales.
-\end{itemize}
+\end{enumerate}
 
 En los tres casos, nos encontramos con un usuario de un juego de datos que, por desconocer las características de este, realiza un uso indebido. 
 
@@ -103,13 +101,9 @@ Las características de los metadatos asociados a los datos dependerán directamen
 \begin{itemize}
 
 \item \textbf{El tipo de dato} y, en particular, \textbf{el modelo de representación empleado}. Los datos vectoriales tendrán asociados unos metadatos distintos que los correspondientes a datos ráster.
-
 \item \textbf{El formato en que se almacenan los datos}. El tipo de fichero o base de datos condiciona la información que puede almacenarse (vimos esto en detalle en la sección \ref{Formatos_archivo}), y por tanto condiciona los metadatos. 
-
 \item \textbf{La organización, entidad o individuo responsable} de la creación de los datos y el uso que se pretende dar a estos. Puesto que, como hemos dicho, los datos se crean para un objetivo definido, este objetivo y los intereses de quien ha creado los datos definirán el tipo y cantidad de información que se recoja en los metadatos. Datos pensados para un catálogo público tendrán asociados metadatos distintos que datos privados con acceso restringido, del mismo modo que datos pensados para un uso muy concreto presentarán unos metadatos diferentes a los que acompañarán a unos datos de uso más genérico.
-
 \item \textbf{El elemento al que se asocian los metadatos}. Como veremos en el siguiente apartado, podemos asociar metadatos a un juego de capas, una capa o una entidad aislada dentro de una capa. Esto implica diferencias en el contenido de los metadatos, pues esos elementos tienen características de distinta naturaleza.
-
 \item \textbf{El estándar empleado} para crear los metadatos. En el capítulo \ref{Estandares} veremos los estándares que existen para los metadatos geográficos y la forma que estos tienen, la cual define directamente su contenido.     
 
 \end{itemize}
@@ -118,7 +112,6 @@ Algunos de los elementos comunes que se incorporan a los metadatos geográficos s
 
 \begin{itemize}
 \item \textbf{Información de identificación}. Este tipo de información permite identificar de forma única un dato geográfico y distinguirlo de otros. Esta información ayuda a catalogar los datos, e incluye el nombre, palabras claves, una descripción básica o la ya mencionada extensión geográfica de los datos.
-
 \item \textbf{Información sobre la calidad de los datos}. La información sobre la calidad de los datos puede incluir, entre otros elementos, aquellos relativos a la completitud de estos, los procesos que se han empleado en su creación y mantenimiento, o las operaciones de validación y verificación a las que se han sometido.
 
 En relación con los procesos empleados, es importante reseñar que muchos de los algoritmos de algoritmos que ya conocemos toman algún tipo de dato geográfico como entrada y generan algún otro nuevo. Es decir, toman una o varias capas y generan nuevas capas como resultado. Para documentar la calidad de los datos resultantes se debe documentar en los metadatos la procedencia completa de estos, indicando las metodologías empleadas para su creación y todos los metadatos propios de las capas de entrada.
@@ -130,9 +123,7 @@ Si el MDE no se ha adquirido directamente, sino que se ha elaborado haciendo uso
 Con esto, puede <<rastrearse>> el origen de los datos y se dispone de una base sobre la que evaluar la calidad de estos en función de dicho origen. Tenemos así el concepto de \emph{linaje}\index{Linaje} de los datos. Esta idea es similar a la de \emph{trazabilidad}\index{trazabilidad} empleada en otros sectores como, por ejemplo, el alimentario.
 
 \item \textbf{Información sobre la representación del dato espacial}. Se incluyen en este grupo la precisión y exactitud de los datos, la escala de trabajo o la resolución en el caso de capas ráster. Este tipo de metadatos están también íntimamente ligados con la calidad de los datos.
-
 \item \textbf{Información sobre la componente no espacial}. Información relacionada con los atributos que acompañan a las capas vectoriales, o bien relativas a las variables que se recogen en capas ráster. Esto incluye explicaciones sobre el significado de los nombres de cada uno de los atributos, el rango de valores válidos para cada uno de ellos o los métodos empleados para recoger estos datos.
-
 \item \textbf{Información sobre la distribución}. Esta información sirve para definir el acceso a los datos y las posibilidades de distribución de estos, especificando quiénes pueden acceder a ellos y quiénes no, o en qué condiciones pueden hacerlo. También puede recoger elementos como la fecha en que fueron publicados los datos o bien cuándo fueron puestos a disposición del público, de tal forma que se disponga de toda la información referente a su presencia en el marco de una IDE o una red.
 
 \end{itemize}
@@ -228,7 +219,6 @@ Existe un amplio conjunto de herramientas que facilitan la labor de creación de 
 
 Del mismo modo, se puede establecer qué campos son obligatorios y cuáles opcionales, y avisar en caso de que un metadato no contenga valores para todos sus campos obligatorios.
 \item \textbf{Utilidades}. Existen aplicaciones que no se emplean directamente para introducir los valores de los metadatos, pero que pueden intervenir en el proceso. Entre ellas están aquellas que chequean y validan los metadatos o las que lo preprocesan dándole un formato adecuado según unas reglas establecidas de antemano.
-
 \item \textbf{Herramientas de creación automática de metadatos}. Algunos de los valores que se incorporan a los metadatos pueden extraerse de los propios datos. Por ello, el proceso de creación de metadatos puede automatizarse en cierta medida, y existen aplicaciones específicamente diseñada para realizar esa tarea.
 
 Las aplicaciones de creación automática de metadatos pueden, por ejemplo, analizar un archivo con una capa vectorial y crear un archivo adjunto de metadatos en el que se incluya la extensión de la capa, el tipo de geometrías que tiene o los campos de su tabla de atributos, indicando además el tipo de valor en cada uno de ellos.

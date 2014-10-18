@@ -38,36 +38,12 @@
 generated_toc = {
   generate: function() {
     // Identify our TOC element, and what it applies to
-    generate_from = '0';
+    generate_from = '2';
     generate_for = 'unset';
     tocparent = document.getElementById('generated-toc');
-    if (tocparent) {
-      // there is a div class="generated-toc" in the document
-      // dictating where the TOC should appear
-      classes = tocparent.className.split(/\s+/);
-      for (var i=0; i<classes.length; i++) {
-        // if it specifies which heading level to generate from,
-        // or what level to generate for, save these specifications
-        if (classes[i].match(/^generate_from_h[1-6]$/)) {
-          generate_from = classes[i].substr(classes[i].length-1,1);
-        } else if (classes[i].match(/^generate_for_[a-z]+$/)) {
-          generate_for = classes[i].match(/^generate_for_([a-z])+$/)[1];
-        }
-      }
-    } else {
-      // They didn't specify a TOC element; exit
-      return;
-    }
     
-    // set top_node to be the element in the document under which
-    // we'll be analysing headings
-    if (generate_for == 'page') {
-      top_node = document.getElementsByTagName('body');
-    } else {
-      // i.e., explicitly set to "parent", left blank (so "unset"),
-      // or some invalid value
-      top_node = tocparent.parentNode;
-    }
+    top_node = document.getElementById('chapter');
+
     
     // If there isn't a specified header level to generate from, work
     // out what the first header level inside top_node is
@@ -107,15 +83,14 @@ generated_toc = {
       }
     }
     
+    b = document.createElement('b');
+    b.appendChild(document.createTextNode("ÍNDICE DEL CAPÍTULO"));
+    tocparent.appendChild(b);
+
     // make the basic elements of the TOC itself, ready to fill into
-
-    display_initially = "none";
-    toggle_initially = "[Mostrar índice del capítulo]";
-
 
     cur_head_lvl = "h" + generate_from;
     cur_list_el = document.createElement('ul');
-    cur_list_el.style.display = display_initially;
     p = document.createElement('p');
     span = document.createElement('span');
     span.className = 'hidden';
@@ -124,15 +99,6 @@ generated_toc = {
     //a.appendChild(document.createTextNode('skip table of contents'));
     //span.appendChild(a);
     //p.appendChild(span);
-    tocparent.appendChild(p);
-    p = document.createElement('p');
-    p.id = 'toggle-container'; 
-    a = document.createElement('a');
-    a.id = 'generated_toc_d_toggle';
-    a.appendChild(document.createTextNode(toggle_initially));
-    p.appendChild(a);
-    a.onclick = generated_toc.wrapOpenClose(a,cur_list_el);
-    a.href = '#';
     tocparent.appendChild(p);
     tocparent.appendChild(cur_list_el);
     
@@ -201,28 +167,6 @@ generated_toc = {
       }
     }
     
-  },
-  
-  wrapOpenClose: function(a, cur_list_el) {
-    // we return a function here so that it acts as a closure;
-    // in essence the inner function, which is the event handler
-    // for clicking on the toggle-toc link, remembers the a and cur_list_el
-    // elements as they are when they're passed in to it.
-    // This is an explicit function rather than an anonymous function
-    // defined where it's called so it's easier to understand.
-    return function(e) {
-      d = cur_list_el.style.display;
-      a.firstChild.nodeValue = (d == 'block' ? '[Mostrar' : '[Ocultar') + ' índice del capítulo]';
-      a.className = (d == 'block' ? 'toggle-closed' : 'toggle-open'); 
-      cur_list_el.style.display = d == 'block' ? 'none' : 'block';
-      if (window.event) {
-        window.event.returnValue = false;
-        window.event.cancelBubble = true;
-      } else {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }
   },
   
     
