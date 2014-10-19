@@ -1,5 +1,5 @@
-
-body { font:1.05em "lucida grande","lucida sans unicode", sans-serif; background-color:#FFFFFF;  
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body { font:1.05em "Open Sans", sans-serif; background-color:#FFFFFF;  
 font-size-adjust:none;
 font-style:normal;
 font-variant:normal;
@@ -7,14 +7,15 @@ font-weight:normal;
 background: #FFFFFF;
 }
 
-p { padding:0 0  1em 0; color:#111; font-weight:300;}
+p { padding:0 0  1em 0; line-height: 150%;}
 
-ul,ol{padding-left: 40px;}
+ul,ol{padding-left: 40px; line-height: 150%;}
+.main li{margin: 0 0 9px 0}
 
 h1,h2{ font-weight:normal; color: #333; font-family:Georgia, serif; }
 h3,h4,h5,h6 { font-weight: normal; color: #333; font-family:Georgia, serif; }
 
-hr {border-top: dotted 2px;}
+hr {border-top: dotted 2px; margin-bottom:1.625em;}
 
 h1 { font-size: 3.125em; margin-bottom: 0.765em; line-height: 1; }
 h2 { font-size: 1.9em;  margin-bottom: 0.855em; margin-top: 1em;}
@@ -46,7 +47,6 @@ figcaption { text-align:center; font-style: italic; }
 
 pre, code { margin: 1.625em 0; white-space: pre; }
 pre, code, tt { font: 1.225em monospace; line-height: 1.5; } 
-hr { margin-bottom:1.625em; }
 
 img{  
   display: block;
@@ -85,7 +85,7 @@ img{
     background: #FFFFFF;
     width: 400px;
     padding: 25px;
-    height: 100%;
+    height: 95%;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -135,7 +135,10 @@ img{
     background: #FFaa56;
     width: 400px;
     padding: 25px;
-    height: 100%;    
+    height: -moz-calc(100% - 65px);
+    height: -webkit-calc(100% - 65px);
+    height: -o-calc(100% - 65px);
+    height: calc(100% - 65px);    
     overflow:auto;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
