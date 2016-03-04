@@ -1,4 +1,4 @@
-\pagestyle{fancy}
+
 \chapter{Modelos para la información geográfica}
 \label{Tipos_datos}
 
@@ -11,6 +11,7 @@ La realidad geográfica debe recogerse en un formato que pueda ser entendido por 
 \end{intro}
 
 \section{Introducción}
+\pagestyle{fancy}
 
 Los datos son, como ya sabemos, una parte imprescindible del SIG, ya que sin ellos las aplicaciones SIG y los restantes elementos que se encuentran en torno a estas no tienen utilidad alguna. Necesitamos conocer el área geográfica que estudiamos en un SIG (es decir, tener datos sobre ella), para así poder proceder a dicho estudio. 
 
@@ -90,7 +91,7 @@ Antes de entrar a describir los distintos modelos de representación, veamos algu
 
 \begin{figure}[!hbt]   
 \centering
-\includegraphics[width=.7\textwidth]{Tipos_datos/MDE_modelos_representacion.png}
+\includegraphics[width=.9\textwidth]{Tipos_datos/MDE_modelos_representacion.png}
 \caption{\small Distintas formas de representar una capa con información altitudinal.}
 \label{Fig:MDE_modelos_representacion} 
 \end{figure}
@@ -114,7 +115,7 @@ Comenzando con la elevación, encontramos cuatro distintas formas de representarl
 Para el caso de las vías encontramos dos representaciones distintas:
 
 \begin{itemize}
- \item \textbf{Una malla de celdas} como la citada en el caso anterior. Las celdas de vía tiene un valor (representado aquí en azul) distinto de las que se encuentran fuera de la vía (con valor representado aquí en blanco)
+ \item \textbf{Una malla de celdas} como la citada en el caso anterior. Las celdas de vía tienen un valor (representado aquí en azul) distinto de las que se encuentran fuera de la vía (con valor representado aquí en blanco)
 \item \textbf{Un conjunto de líneas} representando los trazados de las vías.
 \end{itemize}
 
@@ -251,7 +252,7 @@ Si el modelo ráster era similar al modelo conceptual de campos, el vectorial lo 
 
 \begin{figure}[!hbt]   
 \centering
-\includegraphics[width=.9\textwidth]{Tipos_datos/Primitivas_vectoriales.pdf}
+\includegraphics[width=.95\textwidth]{Tipos_datos/Primitivas_vectoriales.pdf}
 \caption{\small Primitivas geométricas en el modelo de representación vectorial y ejemplos particulares de cada una de ellas con atributos asociados}
 \label{Fig:Primitivas_vectoriales} 
 \end{figure}

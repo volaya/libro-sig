@@ -1,4 +1,4 @@
-\pagestyle{fancy}
+
 \chapter{Fuentes principales de datos espaciales}
 \label{Fuentes_datos}
 
@@ -13,6 +13,7 @@ Para seguir el contenido de este capítulo, es importante tener una buena compren
 \end{intro}
 
 \section{Introducción}
+\pagestyle{fancy}
 
 El origen de los datos con los que trabajamos en un SIG puede ser sumamente variado y presentarse asimismo en formas diversas. La metodología seguida en la recolección de datos condiciona directamente la forma en que estos datos llegan a nosotros, y por tanto el uso que les podemos dar dentro de un SIG o las operaciones que debemos realizar con ellos de cara a poder adaptarlos para la realización de un trabajo concreto.
 
@@ -1058,6 +1059,7 @@ Otra deficiencia de los formatos de imágenes es que no pueden recoger la referen
 
 Una forma habitual de resolver esto es acompañar cada fichero de imagen con un pequeño fichero de texto plano donde se contengan los datos geográficos correspondiente a la imagen. Este fichero se denomina \emph{World File}, y tiene una forma como la siguiente:\index{World file}
 
+\begin{minipage}{\linewidth}
 \begin{verbatim}
 1.0
 0.0
@@ -1066,6 +1068,7 @@ Una forma habitual de resolver esto es acompañar cada fichero de imagen con un p
 691200.0
 4576000.0
 \end{verbatim}
+\end{minipage}
 
 El significado de las anteriores líneas es el siguiente:
 \begin{itemize}

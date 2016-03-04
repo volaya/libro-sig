@@ -1,6 +1,6 @@
 \chapter{Operaciones geométricas con datos vectoriales}
 \label{Operaciones_geometricas}
-\pagestyle{fancy}
+
 
 
 
@@ -13,6 +13,7 @@ Al igual que entonces, se requiere un buen conocimiento del formato vectorial,y 
 \end{intro}
 
 \section{Introducción}
+\pagestyle{fancy}
 
 El análisis de los datos ráster se basa fundamentalmente en el análisis de sus valores. Esto es debido a que las entidades geográficas asociadas a esos valores (las celdas), presentan una regularidad estructural propia del formato, de la cual no se puede derivar nueva información. Más aún, según vimos en el capítulo \ref{Algebra_de_mapas}, resulta necesario homogeneizar dicha estructura, lo cual centra la atención del análisis en los valores recogidos y no en las formas geométricas a los que dichos valores caracterizan.
 
@@ -267,7 +268,7 @@ La parte principal de la operación no es, por tanto, la relativa a las geometría
 
 La tabla de la capa resultante contiene tantos elementos como existan en el conjunto de capas de partida. Si estas contienen respectivamente $n$ y $m$ elementos, la capa resultante tendrá $n + m$ entidades. Para cada elemento se recogen tantos campos como campos diferentes aparezcan entre las dos tablas. Las entidades de una de las capas, si no tienen valores para los campos provenientes de la otra ---por no aparecer este campo en ambas--- no tendrán valor alguno. Algunos SIG dan la opción de seleccionar qué capa es la capa principal, cuyos campos se emplearan para la capa definitiva. La información de las otras capas que se recoja en campos no existentes en dicha capa principal se perderá en la capa resultante. Con independencia de la implementación, el concepto es similar en todos los casos.
 
-Para comprender mejor esta operación, puede verse un ejemplo en la figura\ref{Fig:Ejemplo_juntar_capas}.
+Para comprender mejor esta operación, puede verse un ejemplo en la figura \ref{Fig:Ejemplo_juntar_capas}.
 
 \begin{figure}[!hbt]
 \centering

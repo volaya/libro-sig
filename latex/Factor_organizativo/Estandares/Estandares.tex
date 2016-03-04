@@ -1,4 +1,4 @@
-\pagestyle{fancy}
+
 \chapter{Estándares}
 \label{Estandares}
 
@@ -15,6 +15,7 @@ Puesto que estos estándares están relacionados con las tecnologías cliente--serv
 \end{intro}
 
 \section{Introducción}
+\pagestyle{fancy}
 
 En el capítulo \ref{Servidores_y_clientes_remotos} vimos los elementos tecnológicos que permiten ofrecer a través de una red de servicios relacionados con la información geográfica. Estos servicios eran muy diversos, y ofrecían posibilidades que iban desde obtener un dato en sí hasta la realización de consultas sobre el conjunto de operaciones que un servicio dado puede ofrecer. En todos ellos aparecen un cliente y un servidor, los cuales se comunican para realizar una tarea concreta.
 
@@ -24,7 +25,7 @@ Imaginemos ahora la situación en la que una persona en España desea adquirir un 
 
 Este pequeño ejemplo nos hace ver que en la relación cliente--servidor pueden surgir problemas derivados de la falta de elementos comunes entre ambos actores. Si todos los elementos que toman parte en el establecimiento de esa relación comercial estuvieran normalizados y fueran únicos, un comprador de cualquier parte del mundo podría de forma inmediata comprar un dispositivo a cualquier vendedor de otro país comunicándose en un único idioma, y tener después la garantía de poder usarlo sin problemas.
 
-En el ámbito de la información geográfica la situación es similar a la anterior. Hay muchos formatos distintos para almacenarla y muchas formas distintas de transmitirla, y ello dificulta el trabajo en el marco de una IDE. Igual que los clientes españoles no hablan el mismo idioma que los vendedores chinos, no todos los clientes SIG hablan el mismo idioma que todos los servidores, y dos cualesquiera de ellos no han de <<entenderse>> necesariamente.
+En el ámbito de la información geográfica la situación es similar a la anterior. Hay muchos formatos distintos para almacenarla y muchas formas distintas de transmitirla, y ello dificulta el trabajo. Igual que los clientes españoles no hablan el mismo idioma que los vendedores chinos, no todos los clientes SIG hablan el mismo idioma que todos los servidores, y dos cualesquiera de ellos no han de <<entenderse>> necesariamente.
 
 De hecho, históricamente los distintos fabricantes de clientes definían por sí mismos la forma en que sus programas se comunicaban, que no coincidía con la del resto de fabricantes. Un cliente de un fabricante dado no podría acceder a los servicios de un servidor creado por un fabricante distinto. Este paradigma, característico del software privativo, es un problema en el marco de una IDE, pues dificulta el acceso a los datos.
 

@@ -1,4 +1,4 @@
-\pagestyle{fancy}
+
 \chapter{Fundamentos cartográficos y geodésicos}
 \label{Fundamentos_cartograficos}
 
@@ -15,6 +15,7 @@ En este capítulo veremos algunas ideas esenciales sobre cartografía y geodesia, 
 \end{intro}
 
 \section{Introducción}
+\pagestyle{fancy}
 
 La característica principal de la información georreferenciada es que tiene una localización en el espacio, particularmente en el espacio terrestre. Esta localización se ha de dar por medio de unas coordenadas que la definan de forma adecuada, lo cual implica la necesidad de establecer un sistema en base al cual expresar dichas coordenadas. 
 
@@ -410,9 +411,9 @@ Esto es debido principalmente a que la escala tiene una relación directa con la 
 
 Un mapa impreso puede ampliarse o reducirse mediante medios fotomecánicos. Sin embargo, no es esta una operación <<natural>>, y está claro que desde el punto de vista del rigor cartográfico no es correcta si lo que se hace es aumentar el tamaño del mapa. En un SIG, sin embargo, es una operación más el elegir la escala a la que se representan los datos y modificar el tamaño de representación, y esta resulta por completo natural e incluso trivial\cite{Jenerette2000BESA}.
 
-Pese a ello, los datos tienen una escala inherente, ya que esta no está en función de la representación, sino del detalle con que han sido tomados los datos, y esta escala debe igualmente conocerse para dar un uso adecuado a dichos datos. En este sentido es más conveniente entender la escala como un elemento relacionado con la resolución de los datos, es decir, con el tamaño mínimo cartografiado. 
+Pese a ello, los datos tienen una escala inherente, ya que esta no está en función de la representación, sino del detalle con que han sido tomados, y esta escala debe igualmente conocerse para dar un uso adecuado a dichos datos. En este sentido es más conveniente entender la escala como un elemento relacionado con la resolución de los datos, es decir, con el tamaño mínimo cartografiado. 
 
-Esta concepción no es en absoluto propia de los SIG, ya que deriva de las representaciones clásicas y los mapas impresos. Se sabe que el tamaño mínimo que el ojo humano es capaz de diferenciar es del orden de 0,2 mm. Aplicando a este valor la escala a la que queremos crear un mapa, tendremos la mínima distancia sobre el terreno que debe medirse. Por ejemplo, para el caso de un mapa 1:50000, tenemos que la mínima distancia es de 10 metros
+Esta concepción no es en absoluto propia de los SIG, ya que deriva de las representaciones clásicas y los mapas impresos. Se sabe que el tamaño mínimo que el ojo humano es capaz de diferenciar es del orden de 0,2 mm. Aplicando a este valor la escala a la que queremos crear un mapa, tendremos la mínima distancia sobre el terreno que debe medirse. Por ejemplo, para el caso de un mapa 1:50000, tenemos que la mínima distancia es de 10 metros.
 \index{Resolución!ojo humano}
 
 Si medimos puntos a una distancia menor que la anterior y después los representamos en un mapa a escala 1:50000, esos puntos no serán distinguibles para el usuario de ese mapa, y la información recogida se perderá. Estos razonamientos sirven para calcular la intensidad del trabajo que ha de realizarse para tomar los datos con los que después elaborar una determinada cartografía.
@@ -486,6 +487,13 @@ Por todo lo anterior, la forma de incorporar la generalización dentro de un SIG 
 
 Por ejemplo, en un mapa con núcleos de población a escala 1:25000\index{Escala} se almacenará cada ciudad como un polígono que delimite su contorno. Esa misma información a escala 1:1000000 se almacenará como un único punto cada ciudad, ya que el tamaño de esta es demasiado pequeño en la representación, y no tiene sentido el empleo de tanto detalle. Para convertir un mapa en otro se ha producido un proceso de simplificación, convirtiendo polígonos en puntos.
 
+\begin{figure}
+\centering
+\includegraphics[width=.9\textwidth]{Fundamentos_cartograficos/SIG_multi_escala.png}
+\caption{\small En un SIG es habitual manejar información a diferentes escalas. En función de la escala de representación, la información visualizada será una u otra.}
+\label{Fig:SIG_multi_escala} 
+\end{figure}
+
 Si incorporamos ambos mapas dentro de un SIG, podemos utilizar el que corresponda en función de la escala requerida. De este modo, la generalización no es una tarea que el propio SIG desarrolle, sino que cuando esta es necesaria puede recurrir a una información ya generalizada de antemano. El rendimiento del proceso es mayor, y además el dato generalizado puede haber sido elaborado de la forma más conveniente.
 
 El concepto de \emph{capa},\index{Capa} que veremos en el capítulo \ref{Introduccion_datos} y que es vital para la idea actual de un SIG, permite este manejo simultáneo de información a distintas escalas.
@@ -493,12 +501,6 @@ El concepto de \emph{capa},\index{Capa} que veremos en el capítulo \ref{Introduc
 En la figura \ref{Fig:SIG_multi_escala} puede verse un esquema de lo anterior. A medida que variamos la escala de representación, la información que vemos representada tiene una escala distinta y podría también tener un distinto origen. Incluso el tipo de información que vemos varía, ya que las representaciones más globales son de tipo gráfico, creadas a partir de los propios datos almacenados como objetos (calles, carreteras, etc.), mientras que la de mayor detalle es una fotografía aérea.
 
 
-\begin{figure}
-\centering
-\includegraphics[width=.9\textwidth]{Fundamentos_cartograficos/SIG_multi_escala.png}
-\caption{\small En un SIG es habitual manejar información a diferentes escalas. En función de la escala de representación, la información visualizada será una u otra.}
-\label{Fig:SIG_multi_escala} 
-\end{figure}
 
 En el caso de imágenes tales como esa fotografía aérea, existen además en un SIG una serie de procesos que también pueden considerarse como parte de la generalización, y que atañen más al rendimiento que a la representación. Para entenderse esto piénsese que las imágenes se componen de elementos denominados \emph{píxeles}, que son pequeños puntos, cada uno de los cuales tendrá un color asociado (esto lo veremos con mucho más detalle en el capítulo \ref{Tipos_datos}). El numero de estos píxeles en una imagen grande es muy superior al de una pantalla (una pantalla también se divide en puntos, si te acercas a una lo podrás ver claramente). 
 
