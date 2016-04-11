@@ -181,6 +181,11 @@ def convertImages():
         #call(commands)
 
 if __name__ == '__main__':
+    try:
+    	os.mkdir("html/chapters")
+    except:
+    	pass
+
     i = 0
     for f in find_files('../latex', '*.tex'):
         try:
@@ -188,7 +193,7 @@ if __name__ == '__main__':
         except Exception, e:
             traceback.print_exc()
             pass 
-    for path in  glob.glob("html/chapters/*.html"):
+    for path in glob.glob("html/chapters/*.html"):
         with open(path) as f:
             s = f.read()
         p = re.compile(r"\\ref\{([^:]*?)\}")
