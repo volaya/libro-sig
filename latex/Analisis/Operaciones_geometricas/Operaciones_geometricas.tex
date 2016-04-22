@@ -130,14 +130,6 @@ Encontramos los siguientes tipos de operaciones de solape:
 	\item Unión
 \end{itemize}
 
-Estas operaciones pueden entenderse como operaciones de conjuntos y visualizarse mediante sencillos diagramas, de forma similar a lo que veíamos en la sección \ref{Mecanismos_consulta} al presentar los diagramas de Venn (Figura \ref{Fig:Operaciones_solape}).\index{Venn!diagrama de}
-
-\begin{figure}[!hbt]
-\centering
-\includegraphics[width=\textwidth]{Operaciones_geometricas/Operaciones_solape.pdf}
-\caption{\small Tipos de operaciones de solape entre dos elementos individuales.} 
-\label{Fig:Operaciones_solape}
-\end{figure}
 
 \subsection{Recorte}
 
@@ -152,7 +144,8 @@ En la figura \ref{Fig:Recorte_vectorial} podemos ver cómo la capa de entrada con
 \begin{figure}[!hbt]
 \centering
 \includegraphics[width=.9\textwidth]{Operaciones_geometricas/Recorte_vectorial.png}
-\caption{\small Recorte vectorial de un conjunto de capas de puntos, líneas y polígonos, con una capa de polígonos.} \label{Fig:Recorte_vectorial}
+\caption{\small Recorte vectorial de un conjunto de capas de puntos, líneas y polígonos, con una capa de polígonos.} 
+\label{Fig:Recorte_vectorial}
 \end{figure}
 
 Para los puntos, solo se mantienen aquellos que se sitúan dentro del polígono de recorte. Para las líneas, se mantienen aquellas que entran dentro del polígono o lo cruzan, recortándose para que no salgan de este. Y en el caso de polígonos, estos se recortan para restringir su extensión a la del  polígono de recorte.
