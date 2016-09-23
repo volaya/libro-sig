@@ -178,7 +178,7 @@ En la figura \ref{Fig:Coordenadas_geograficas} puede verse un esquema de los con
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\mycolumnwidth]{Fundamentos_cartograficos/Coordenadas_geograficas.pdf}
+\includegraphics[width=.75\mycolumnwidth]{Fundamentos_cartograficos/Coordenadas_geograficas.pdf}
 \caption{\small Esquema de los elementos del sistema de coordenadas geográficas.}
 \label{Fig:Coordenadas_geograficas} 
 \end{figure}
@@ -260,14 +260,6 @@ Las superficies más habituales son el cono y el cilindro (junto con, por supuest
 \begin{itemize}
 \item \textbf{Cónicas}.\index{Proyección geográfica!Cónica} La superficie desarrollable es un cono (Figura \ref{Fig:Proyeccion_conica}), que se sitúa generalmente tangente o secante en dos paralelos a la superficie del elipsoide. En este último caso, la distorsión se minimiza en las áreas entre dichos paralelos, haciéndola útil para representar franjas que no abarquen una gran distancia en latitud, pero poco adecuada para representación de grandes áreas. Algunas de las proyecciones más conocidas de este grupo son la proyección cónica equiárea de Albers\index{Proyección geográfica!equiárea de Albers} y la proyección conforme cónica de Lambert.
 
-\begin{figure}
-\centering
-\includegraphics[width=.35\mycolumnwidth]{Fundamentos_cartograficos/Proyeccion_cilindrica.png}
-\caption{\small Esquema de una proyección cilíndrica (tomado de Wikipedia)}
-\label{Fig:Proyeccion_cilindrica} 
-\end{figure}
-
-
 \item \textbf{Cilíndricas}. La superficie desarrollable es un cilindro (Figura \ref{Fig:Proyeccion_cilindrica}). Al proyectar, los meridianos se convierten en lineas paralelas, así como los paralelos, aunque la distancia entre estos últimos no es constante.
 
 En su concepción más simple, el cilindro se sitúa de forma tangente al ecuador (proyección normal o simple), aunque puede situarse secante y hacerlo a los meridianos (proyección transversa) o a otros puntos (proyección oblicua).
@@ -276,9 +268,9 @@ La proyección de Mercator, la transversa de Mercator, la cilíndrica de Miller\in
 
 \begin{figure}
 \centering
-\includegraphics[width=.35\mycolumnwidth]{Fundamentos_cartograficos/Proyeccion_conica.png}
-\caption{\small Esquema de una proyección cónica (tomado de Wikipedia)}
-\label{Fig:Proyeccion_conica} 
+\includegraphics[width=.6\mycolumnwidth]{Fundamentos_cartograficos/Proyeccion_conica_cilindrica.pdf}
+\caption{\small Esquema de una proyección cónica (izda.) y cilíndrica(dcha.)}
+\label{Fig:Proyeccion_conica_cilindirca} 
 \end{figure}
 
 
@@ -487,12 +479,6 @@ Por todo lo anterior, la forma de incorporar la generalización dentro de un SIG 
 
 Por ejemplo, en un mapa con núcleos de población a escala 1:25000\index{Escala} se almacenará cada ciudad como un polígono que delimite su contorno. Esa misma información a escala 1:1000000 se almacenará como un único punto cada ciudad, ya que el tamaño de esta es demasiado pequeño en la representación, y no tiene sentido el empleo de tanto detalle. Para convertir un mapa en otro se ha producido un proceso de simplificación, convirtiendo polígonos en puntos.
 
-\begin{figure}
-\centering
-\includegraphics[width=.9\textwidth]{Fundamentos_cartograficos/SIG_multi_escala.png}
-\caption{\small En un SIG es habitual manejar información a diferentes escalas. En función de la escala de representación, la información visualizada será una u otra.}
-\label{Fig:SIG_multi_escala} 
-\end{figure}
 
 Si incorporamos ambos mapas dentro de un SIG, podemos utilizar el que corresponda en función de la escala requerida. De este modo, la generalización no es una tarea que el propio SIG desarrolle, sino que cuando esta es necesaria puede recurrir a una información ya generalizada de antemano. El rendimiento del proceso es mayor, y además el dato generalizado puede haber sido elaborado de la forma más conveniente.
 
@@ -500,6 +486,12 @@ El concepto de \emph{capa},\index{Capa} que veremos en el capítulo \ref{Introduc
 
 En la figura \ref{Fig:SIG_multi_escala} puede verse un esquema de lo anterior. A medida que variamos la escala de representación, la información que vemos representada tiene una escala distinta y podría también tener un distinto origen. Incluso el tipo de información que vemos varía, ya que las representaciones más globales son de tipo gráfico, creadas a partir de los propios datos almacenados como objetos (calles, carreteras, etc.), mientras que la de mayor detalle es una fotografía aérea.
 
+\begin{figure}
+\centering
+\includegraphics[width=.9\textwidth]{Fundamentos_cartograficos/SIG_multi_escala.png}
+\caption{\small En un SIG es habitual manejar información a diferentes escalas. En función de la escala de representación, la información visualizada será una u otra.}
+\label{Fig:SIG_multi_escala} 
+\end{figure}
 
 
 En el caso de imágenes tales como esa fotografía aérea, existen además en un SIG una serie de procesos que también pueden considerarse como parte de la generalización, y que atañen más al rendimiento que a la representación. Para entenderse esto piénsese que las imágenes se componen de elementos denominados \emph{píxeles}, que son pequeños puntos, cada uno de los cuales tendrá un color asociado (esto lo veremos con mucho más detalle en el capítulo \ref{Tipos_datos}). El numero de estos píxeles en una imagen grande es muy superior al de una pantalla (una pantalla también se divide en puntos, si te acercas a una lo podrás ver claramente). 
@@ -508,14 +500,17 @@ El proceso de representación de la imagen en la pantalla consiste en calcular qu
 
 Este proceso en realidad puede verse como un tipo de generalización <<al vuelo>>. Ya dijimos que este tenía principalmente dos problemas: el rendimiento y la imposibilidad de obtener resultados óptimos de forma automatizada. En el caso de imágenes, existe el problema del rendimiento, pero es posible automatizar la creación de datos a diferente escala de trabajo. Esto es así debido a que la representación de elementos tales como carreteras o lagos se hace mediante una interpretación de esos objetos, y este proceso es en cierta medida subjetivo, como vimos.  En el caso de imágenes no hay que interpretar objeto alguno, ya que esos objetos ya <<están>> representados en la imagen, y únicamente es necesario disminuir la escala.
 
-\begin{figure}
+
+Los algoritmos para llevar a cabo este proceso se conocen como de \emph{remuestreo}\index{Remuestreo}, y los veremos con detalle en el capítulo \ref{Algebra_de_mapas}. Algunos SIG utilizan estos algoritmos para hacer más fluido el manejo de grandes imágenes mediante la creación de las denominadas \emph{pirámides}. Cuando el usuario introduce en el SIG una imagen de gran tamaño, este prepara varias versiones de esa imagen a distintas escalas de detalle, de forma que posteriormente pueda recurrir a la que sea más conveniente en cada caso en función de la escala de representación. Es decir, el SIG realiza la <<generalización>> de esa imagen de forma automática, siendo necesario proporcionarle únicamente la imagen de mayor detalle. La figura \ref{Fig:Piramides} ilustra gráficamente esto. \index{Pirámides}
+
+\begin{figure}[!hbt]
 \centering
 \includegraphics[width=.45\textwidth]{Fundamentos_cartograficos/Piramide.png}
 \caption{\small Pirámides de representación con imágenes preparadas a distintas escalas (Fuente: OSGeo).}
 \label{Fig:Piramides} 
 \end{figure}
 
-Los algoritmos para llevar a cabo este proceso se conocen como de \emph{remuestreo}\index{Remuestreo}, y los veremos con detalle en el capítulo \ref{Algebra_de_mapas}. Algunos SIG utilizan estos algoritmos para hacer más fluido el manejo de grandes imágenes mediante la creación de las denominadas \emph{pirámides}. Cuando el usuario introduce en el SIG una imagen de gran tamaño, este prepara varias versiones de esa imagen a distintas escalas de detalle, de forma que posteriormente pueda recurrir a la que sea más conveniente en cada caso en función de la escala de representación. Es decir, el SIG realiza la <<generalización>> de esa imagen de forma automática, siendo necesario proporcionarle únicamente la imagen de mayor detalle. La figura \ref{Fig:Piramides} ilustra gráficamente esto. \index{Pirámides}
+
 
 
 \section{Resumen}
@@ -529,5 +524,4 @@ El conjunto de un elipsoide y un punto de tangencia con la superficie terrestre 
 Para asignar coordenadas a un punto en función de los elementos anteriores es necesario definir un sistema de referencia. Las coordenadas geográficas han sido utilizadas tradicionalmente, y son de utilidad para grandes zonas. Otro tipo de coordenadas más intuitivas son las cartesianas, y para su obtención se requiere el concurso de una proyección cartográfica que convierta coordenadas espaciales en coordenadas planas. Hay muchos tipos de proyecciones, siendo el sistema UTM uno de los más extendidos.
 
 En el ámbito de la cartografía, hemos visto en este capítulo la importancia del concepto de escala, que no pierde su papel fundamental al trabajar en un SIG en lugar de hacerlo con cartografía impresa. Estrechamente relacionada con la escala encontramos la \emph{generalización}, que comprende una serie de procesos encaminados a la obtención de una representación lo más clara posible de una serie de datos a una escala dada.
-
 \pagestyle{empty}
