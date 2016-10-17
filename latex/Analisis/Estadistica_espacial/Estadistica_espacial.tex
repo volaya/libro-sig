@@ -617,17 +617,17 @@ Sobre la base anterior, se pueden establecer familias principales de funciones a
 \begin{itemize}
  \item \emph{Nugget} puro. Funciones constantes de la forma 
 \begin{equation}
- \gamma(h) =C_0 \qquad; \qquad \forall h \> 0
+ \gamma(h) =C_0 \qquad; \qquad \forall h \gt 0
 \end{equation}
 En este caso, la aplicación del kriging no resulta posible, y el valor estimado en un punto es la media de los valores muestreados.
 \item Funciones que alcanzan el valor del \emph{sill} $(c)$ para un rango concreto $(a)$. Son funciones de la forma
 \begin{equation}
 \gamma(h) = \left\{ \begin{array}{ll}
  f(x) & \textrm{si $h \leq a$}\\
- c & \textrm{si $h \> a$}
+ c & \textrm{si $h \gt a$}
   \end{array} \right. 
 \end{equation}
-\noindent siendo las más habituales de las funciones $f(x)$ las de tipo lineal, circular o esférico. Las formulas detalladas de estas y otras funciones pueden consultarse, por ejemplo en \cite{Isaaks1989Oxford}
+\noindent siendo las más habituales de las funciones $f(x)$ las de tipo lineal, circular o esférico. Las formulas detalladas de estas y otras funciones pueden consultarse, por ejemplo en \cite{Isaaks1989Oxford}.
 \item Funciones que tienden asintóticamente al valor del \emph{sill} $(c)$. Se define un \emph{rango efectivo}, siendo este en el cual se da $\gamma(h) = 0.95c$. Entre estas funciones destacan
 
 \subitem Exponencial 
