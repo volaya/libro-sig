@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="727.67944"
-   height="406.42386"
+   width="530.50177"
+   height="406.32233"
    id="svg3549"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
+   inkscape:version="0.48.4 r9939"
    version="1.0"
-   sodipodi:docbase="C:\Documents and Settings\Victor Olaya\Escritorio\LaTeX2\Factor_organizativo\Servicios"
    sodipodi:docname="Esquema_interoperable.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -28,13 +28,19 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.2597686"
      inkscape:cx="363.83972"
-     inkscape:cy="197.09644"
+     inkscape:cy="197.09643"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     inkscape:window-width="1024"
-     inkscape:window-height="708"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata3554">
     <rdf:RDF>
@@ -50,34 +56,34 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-260.46339,-217.62959)">
+     transform="translate(-260.46339,-217.73111)">
     <path
        sodipodi:type="arc"
-       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="path3191"
        sodipodi:cx="160.71428"
        sodipodi:cy="524.50507"
        sodipodi:rx="66.428574"
        sodipodi:ry="63.57143"
-       d="M 227.14285 524.50507 A 66.428574 63.57143 0 1 1  94.285706,524.50507 A 66.428574 63.57143 0 1 1  227.14285 524.50507 z"
+       d="m 227.14285,524.50507 c 0,35.10953 -29.74108,63.57143 -66.42857,63.57143 -36.68749,0 -66.428574,-28.4619 -66.428574,-63.57143 0,-35.10954 29.741084,-63.57143 66.428574,-63.57143 36.68749,0 66.42857,28.46189 66.42857,63.57143 z"
        transform="matrix(0.9747446,0,0,1.0185534,169.05891,24.566125)" />
     <rect
-       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3193"
        width="128.57143"
        height="71.428574"
        x="261.42856"
        y="355.9454" />
     <rect
-       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3197"
        width="128.57143"
        height="71.428574"
        x="261.42856"
-       y="220.23111" />
+       y="218.23111" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="281.99167"
        y="264.51685"
        id="text3201"><tspan
@@ -88,7 +94,7 @@
          style="font-size:28px">Cliente</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="272.70847"
        y="403.10974"
        id="text3205"><tspan
@@ -99,7 +105,7 @@
          style="font-size:28px">Servidor</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="291.51413"
        y="548.80261"
        id="text3209"><tspan
@@ -114,38 +120,44 @@
          id="tspan3213"
          style="font-size:28px">datos</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 325.71427,292.15968 L 325.71427,355.4454"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 325.71427,289.65968 0,66.28572"
        id="path3602"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3197"
-       inkscape:connection-end="#rect3193" />
+       inkscape:connection-end="#rect3193"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 325.71427,427.87398 L 325.71428,493.54053"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 325.71427,427.37398 10e-6,66.67767"
        id="path3604"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3193"
-       inkscape:connection-end="#path3191" />
+       inkscape:connection-end="#path3191"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
        sodipodi:type="arc"
-       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="path3606"
        sodipodi:cx="160.71428"
        sodipodi:cy="524.50507"
        sodipodi:rx="66.428574"
        sodipodi:ry="63.57143"
-       d="M 227.14285 524.50507 A 66.428574 63.57143 0 1 1  94.285706,524.50507 A 66.428574 63.57143 0 1 1  227.14285 524.50507 z"
+       d="m 227.14285,524.50507 c 0,35.10953 -29.74108,63.57143 -66.42857,63.57143 -36.68749,0 -66.428574,-28.4619 -66.428574,-63.57143 0,-35.10954 29.741084,-63.57143 66.428574,-63.57143 36.68749,0 66.42857,28.46189 66.42857,63.57143 z"
        transform="matrix(0.9747446,0,0,1.0185534,366.20177,23.321743)" />
     <rect
-       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3608"
        width="128.57143"
        height="71.428574"
        x="458.57144"
        y="354.70102" />
     <rect
-       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3610"
        width="128.57143"
        height="71.428574"
@@ -153,7 +165,7 @@
        y="218.98676" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="479.13455"
        y="263.27246"
        id="text3612"><tspan
@@ -164,7 +176,7 @@
          style="font-size:28px">Cliente</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="469.85135"
        y="401.86539"
        id="text3616"><tspan
@@ -175,7 +187,7 @@
          style="font-size:28px">Servidor</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="488.65701"
        y="547.55817"
        id="text3620"><tspan
@@ -190,34 +202,36 @@
          id="tspan3624"
          style="font-size:28px">datos</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 522.85713,290.91531 L 522.85713,354.20101"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 522.85713,290.91531 0,63.2857"
        id="path3626"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 522.85713,426.62959 L 522.85714,492.29615"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 522.85713,426.62959 10e-6,65.66656"
        id="path3628"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
        sodipodi:type="arc"
-       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="path3630"
        sodipodi:cx="160.71428"
        sodipodi:cy="524.50507"
        sodipodi:rx="66.428574"
        sodipodi:ry="63.57143"
-       d="M 227.14285 524.50507 A 66.428574 63.57143 0 1 1  94.285706,524.50507 A 66.428574 63.57143 0 1 1  227.14285 524.50507 z"
+       d="m 227.14285,524.50507 c 0,35.10953 -29.74108,63.57143 -66.42857,63.57143 -36.68749,0 -66.428574,-28.4619 -66.428574,-63.57143 0,-35.10954 29.741084,-63.57143 66.428574,-63.57143 36.68749,0 66.42857,28.46189 66.42857,63.57143 z"
        transform="matrix(0.9747446,0,0,1.0185534,569.05891,23.321743)" />
     <rect
-       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3632"
        width="128.57143"
        height="71.428574"
        x="661.42859"
        y="354.70102" />
     <rect
-       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3634"
        width="128.57143"
        height="71.428574"
@@ -225,7 +239,7 @@
        y="218.98672" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="681.9917"
        y="263.27246"
        id="text3636"><tspan
@@ -236,7 +250,7 @@
          style="font-size:28px">Cliente</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="672.7085"
        y="401.86536"
        id="text3640"><tspan
@@ -247,7 +261,7 @@
          style="font-size:28px">Servidor</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="691.51416"
        y="547.55823"
        id="text3644"><tspan
@@ -262,170 +276,72 @@
          id="tspan3648"
          style="font-size:28px">datos</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 725.71427,290.91531 L 725.71427,354.20101"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 725.71427,290.91531 0,63.2857"
        id="path3650"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 725.71427,426.62959 L 725.71428,492.29615"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 725.71427,426.62959 10e-6,65.66656"
        id="path3652"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
-       sodipodi:type="arc"
-       style="fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00360465;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path3654"
-       sodipodi:cx="160.71428"
-       sodipodi:cy="524.50507"
-       sodipodi:rx="66.428574"
-       sodipodi:ry="63.57143"
-       d="M 227.14285 524.50507 A 66.428574 63.57143 0 1 1  94.285706,524.50507 A 66.428574 63.57143 0 1 1  227.14285 524.50507 z"
-       transform="matrix(0.9747446,0,0,1.0185534,766.20177,22.4646)" />
-    <rect
-       style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect3656"
-       width="128.57143"
-       height="71.428574"
-       x="858.57141"
-       y="353.84387" />
-    <rect
-       style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect3658"
-       width="128.57143"
-       height="71.428574"
-       x="858.57141"
-       y="218.12959" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="879.13452"
-       y="262.41531"
-       id="text3660"><tspan
-         sodipodi:role="line"
-         id="tspan3662"
-         x="879.13452"
-         y="262.41531"
-         style="font-size:28px">Cliente</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="869.85132"
-       y="401.00821"
-       id="text3664"><tspan
-         sodipodi:role="line"
-         id="tspan3666"
-         x="869.85132"
-         y="401.00821"
-         style="font-size:28px">Servidor</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="888.65698"
-       y="546.70105"
-       id="text3668"><tspan
-         sodipodi:role="line"
-         id="tspan3670"
-         x="888.65698"
-         y="546.70105"
-         style="font-size:28px">Base </tspan><tspan
-         sodipodi:role="line"
-         x="888.65698"
-         y="581.70105"
-         id="tspan3672"
-         style="font-size:28px">datos</tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 922.85713,290.05817 L 922.85713,353.34387"
-       id="path3674"
-       inkscape:connector-type="polyline" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 922.85713,425.77245 L 922.85714,491.43901"
-       id="path3676"
-       inkscape:connector-type="polyline" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 378.80711,292.15968 L 469.76432,354.20102"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 377.30673,289.65968 93.95797,65.04134"
        id="path3678"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3197"
-       inkscape:connection-end="#rect3608" />
+       inkscape:connection-end="#rect3608"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 470.72909,290.91533 L 377.84233,355.4454"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 471.44881,290.41533 377.12262,355.9454"
        id="path3680"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3610"
-       inkscape:connection-end="#rect3193" />
+       inkscape:connection-end="#rect3193"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 576.98799,290.91533 L 671.58346,354.20102"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 576.24062,290.41533 96.09021,64.28569"
        id="path3682"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3610"
-       inkscape:connection-end="#rect3632" />
+       inkscape:connection-end="#rect3632"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 671.58348,290.9153 L 576.98798,354.20102"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 672.33084,290.4153 -96.09023,64.28572"
        id="path3684"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3634"
-       inkscape:connection-end="#rect3608" />
+       inkscape:connection-end="#rect3608"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 870.58128,290.05817 L 777.99015,354.20102"
-       id="path3686"
-       inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3658"
-       inkscape:connection-end="#rect3632" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 778.65467,290.9153 L 869.91676,353.34387"
-       id="path3688"
-       inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3634"
-       inkscape:connection-end="#rect3656" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 987.64284,253.84388 L 987.64284,253.84388"
-       id="path3690"
-       inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3658"
-       inkscape:connection-end="#rect3658" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 858.07141,275.96357 L 587.64287,368.29561"
-       id="path3692"
-       inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3658"
-       inkscape:connection-end="#rect3608" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 858.07141,268.79591 L 390.49998,376.70766"
-       id="path3694"
-       inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3658"
-       inkscape:connection-end="#rect3193" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 587.64287,276.54308 L 858.07141,367.71612"
-       id="path3696"
-       inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3610"
-       inkscape:connection-end="#rect3656" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 390.49998,277.72472 L 660.92859,368.63599"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 389.99998,275.87806 271.42861,92.60458"
        id="path3698"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#rect3197"
-       inkscape:connection-end="#rect3632" />
+       inkscape:connection-end="#rect3632"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 390.49998,270.44142 L 858.07141,375.06213"
-       id="path3700"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 661.30575,276.81805 389.87714,368.06549"
+       id="path3698-1"
        inkscape:connector-type="polyline"
-       inkscape:connection-start="#rect3197"
-       inkscape:connection-end="#rect3656" />
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

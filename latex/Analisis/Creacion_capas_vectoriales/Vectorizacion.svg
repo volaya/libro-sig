@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,9 +13,8 @@
    height="2294.5928"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
+   inkscape:version="0.48.4 r9939"
    version="1.0"
-   sodipodi:docbase="C:\Documents and Settings\Victor Olaya\Escritorio\libro_sig\LaTeX\Creacion_capas_vectoriales"
    sodipodi:docname="Vectorizacion.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -50,7 +50,9 @@
      inkscape:window-x="-4"
      inkscape:window-y="-4"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true"
+     showgrid="false"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -799,73 +801,69 @@
        id="path9537" />
     <text
        xml:space="preserve"
-       style="font-size:72px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       style="font-size:105px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="-456.03604"
        y="2508.6375"
        id="text9539"><tspan
          sodipodi:role="line"
          id="tspan9541"
          x="-456.03604"
-         y="2508.6375">a)</tspan><tspan
+         y="2508.6375"
+         style="font-size:105px">a)</tspan><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="2598.6375"
-         id="tspan9543" /><tspan
+         y="2646.1375"
+         id="tspan9543"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="2688.6375"
-         id="tspan9545" /><tspan
+         y="2783.6375"
+         id="tspan9545"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="2778.6375"
-         id="tspan9547" /><tspan
+         y="2921.1375"
+         id="tspan9547"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="2868.6375"
-         id="tspan9549" /><tspan
+         y="3058.6375"
+         id="tspan9549"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="2958.6375"
-         id="tspan9551" /><tspan
+         y="3196.1375"
+         id="tspan9551"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="3048.6375"
-         id="tspan9553" /><tspan
+         y="3333.6375"
+         id="tspan9553"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="3138.6375"
-         id="tspan9555" /><tspan
+         y="3471.1375"
+         id="tspan9567"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="3228.6375"
-         id="tspan9557" /><tspan
+         y="3608.6375"
+         style="font-size:105px"
+         id="tspan3115"></tspan><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="3318.6375"
-         id="tspan9559" /><tspan
+         y="3746.1375"
+         style="font-size:105px"
+         id="tspan3121">b)</tspan><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="3408.6375"
-         id="tspan9561" /><tspan
+         y="3883.6375"
+         id="tspan9569"
+         style="font-size:105px" /><tspan
          sodipodi:role="line"
          x="-456.03604"
-         y="3498.6375"
-         id="tspan9563" /><tspan
-         sodipodi:role="line"
-         x="-456.03604"
-         y="3588.6375"
-         id="tspan9565" /><tspan
-         sodipodi:role="line"
-         x="-456.03604"
-         y="3678.6375"
-         id="tspan9567">b)</tspan><tspan
-         sodipodi:role="line"
-         x="-456.03604"
-         y="3768.6375"
-         id="tspan9569" /><tspan
-         sodipodi:role="line"
-         x="-456.03604"
-         y="3858.6375"
-         id="tspan9571" /></text>
+         y="4021.1375"
+         id="tspan9571"
+         style="font-size:105px" /></text>
   </g>
 </svg>
