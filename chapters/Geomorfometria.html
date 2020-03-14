@@ -11,7 +11,7 @@
     TeX: { equationNumbers: {autoNumber: "all"} } 
   });
 </script>	
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
 <script src="../generated_toc.js"></script>
 </head>
 <body lang="es">
@@ -299,11 +299,11 @@ $$\label{Fig:Llenado_depresiones}$$
 $$\label{Fig:Planchon}$$ 
 </figure></p><h3 id="Área acumulada y parámetros derivados">Área acumulada y parámetros derivados</h3>
 <a name="Area_acumulada"></a></p><p>El área acumulada es el parámetro principal que puede obtenerse de la aplicación de los algoritmos de direcciones de flujo. Las direcciones de flujo como parámetro focal establecen relaciones entre las celdas y sus vecinas inmediatas. El área acumulada utiliza estas relaciones, pero no en el entorno reducido de la ventana de análisis, sino con carácter zonal, estudiando el conjunto de celdas hidrológicamente conectadas con una dada. En particular, conectadas y situadas aguas arriba de ella.</p><p>Para una celda cualquiera, su flujo va a desplazarse por efecto de la gravedad a una o varias (en función del método empleado) de sus celdas vecinas. Estas celdas que reciben el flujo lo desplazaran a su vez a las inferiores, y así sucesivamente. El área acumulada de una celda particular representa el área total de aquellas celdas cuyos flujos, siguiendo este mecanismo, acabaran pasando por dicha celda problema. En el caso del D8, se considera que todo el área de la celda es aportada a la celda inferior. En los métodos de flujo bidimensional, como vimos, solo una fracción es aportada a cada una de las inferiores.</p><p>El D8 es, por su simplicidad, el más didáctico de los métodos, y permite comprender visualmente el concepto de este parámetro (Figura \ref{Fig:Area_acumulada_D8}).</p><p><figure>
-<img src='../img/Area_acumulada_D8.png' width='55.0%'>
+<img src='../img/Area_acumulada_D8.png' width='55.00000000000001%'>
 <figcaption> El área acumulada de una celda dada (en rojo) es la suma de las áreas de las celdas conectadas con esta y situadas aguas arriba (en azul). Los trazos indican la conectividad entre celdas según el modelo D8</figcaption>
 $$\label{Fig:Area_acumulada_D8}$$ 
 </figure></p><p>La diferencia entre los métodos de asignación de direcciones de flujo se ve de forma gráfica al calcular el área acumulada empleando cada uno de ellos. La figura \ref{Fig:Diferencias_metodos_area_acumulada} muestra los valores de área acumulada para una superficie generada artificialmente con forma de cono, calculados estos con cada uno de los métodos explicados en <a href="Geomorfometria.html#Direcciones_flujo">Direcciones_flujo</a>.</p><p><figure>
-<img src='../img/Diferencias_metodos_area_acumulada.png' width='55.0%'>
+<img src='../img/Diferencias_metodos_area_acumulada.png' width='55.00000000000001%'>
 <figcaption> Representación del área acumulada sobre un cono circular según los principales algoritmos de asignación de direcciones de flujo (adaptado de [<a href="../bib.htm#Conrad2007phd">Conrad2007phd</a>])</figcaption>
 $$\label{Fig:Diferencias_metodos_area_acumulada}$$ 
 </figure></p><p>En la figura \ref{Fig:Area_acumulada} puede verse el mapa de área acumulada para la región del juego de datos de ejemplo. Como se dijo en <a href="Algebra_de_mapas.html#Funciones_locales">Funciones_locales</a>, el uso de una transformación logarítmica enriquece la representación resultante.</p><p><figure>

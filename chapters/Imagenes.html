@@ -11,7 +11,7 @@
     TeX: { equationNumbers: {autoNumber: "all"} } 
   });
 </script>	
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
 <script src="../generated_toc.js"></script>
 </head>
 <body lang="es">
@@ -251,7 +251,7 @@ $$\label{Fig:NDVI}$$
 \end{equation}</p><p><li> Índice de Vegetación Transformado de Thiam (Thiam's Transformed Vegetation Index)</p><p>\begin{equation}
  \mathrm{TTVI} = \sqrt{|\mathrm{NDVI} + 0.5|} 
 \end{equation}</p><p></ul></p><p>Como hemos dicho, las bandas del rojo y el infrarrojo cercano se corresponden en el caso del sensor LANDSAT TM con las bandas 3 y 4 respectivamente. La formulación original del NDVI se basaba en datos de dicho sensor, por lo que es habitual encontrar este bajo la denominación NDVI43. Si se emplea una notación similar, pueden definirse nuevos índices que mantienen la expresión del NDVI, pero utilizan distintas bandas como base de su cálculo. Algunos de estos índices derivados han sido estudiados y documentados en la literatura, y es posible asignárles una interpretación del mismo modo que con el modelo base de NDVI. Así, [<a href="../bib.htm#Rock1985Symp">Rock1985Symp</a>] define el NDVI54 y lo relaciona con el estrés hídrico de la vegetación y [<a href="../bib.htm#Lee1997FS">Lee1997FS</a>] define el NDVI75, el cual presenta una correlación apreciable con la biomasa existente.</p><p>Para el cálculo de los índices de vegetación del segundo grupo se requiere, como ya hemos visto,  el cálculo de una recta denominada <i>línea de suelo</i>. Esta recta viene definida por su pendiente $b$ y el punto $a$ en el que corta al eje de ordenadas, siendo estos valores los que se incorporan a las formulaciones de los índices de este grupo.</p><p>El fundamento en el que reside el uso de la linea de suelo y su incorporación a los índices de vegetación puede comprenderse con facilidad si se observa la figura \ref{Fig:Linea_del_suelo}. Los puntos de la gráfica representada son los correspondientes a los valores en las bandas del rojo y el infrarrojo para los píxeles sobre zonas de suelo desnudo. A estos se ajusta la recta $r$ mostrada, y los puntos sobre la misma tales como el punto $X$ se asocian al suelo desnudo. </p><p><figure>
-<img src='../img/Linea_del_suelo.png' width='55.0%'>
+<img src='../img/Linea_del_suelo.png' width='55.00000000000001%'>
 <figcaption> Representación gráfica de la línea de suelo, un punto correspondiente a suelo desnudo ($X$) y un punto correspondiente a la presencia de cierta vegetación ($X'$)</figcaption>
 $$\label{Fig:Linea_del_suelo}$$ 
 </figure></p><p>Para ese mismo suelo, una cierta cobertura vegetal haría que el valor correspondiente tuviera una menor reflectancia en el rojo y mayor en el infrarrojo cercano, alejándose de la línea de suelo perpendicularmente. Cuanto mayor es la cobertura vegetal y mayor la actividad fotosintética, mayor será esta distancia entre el punto y la linea de suelo, y por lo tanto su medida puede constituir un índice de vegetación válido. Esta es la razón por la que estos índices, como ya se dijo, se conozcan como índices basados en distancia.</p><p>El cálculo de la línea de suelo se lleva a cabo siguiendo los pasos enunciados a continuación:</p><p><ul>

@@ -11,7 +11,7 @@
     TeX: { equationNumbers: {autoNumber: "all"} } 
   });
 </script>	
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
 <script src="../generated_toc.js"></script>
 </head>
 <body lang="es">
@@ -194,17 +194,17 @@ $$\label{Fig:Variograma}$$
 </ul></p><p>Sobre la base anterior, se pueden establecer familias principales de funciones aptas para definir un variograma teórico:</p><p><ul>
  <li> <i>Nugget</i> puro. Funciones constantes de la forma 
 \begin{equation}
- \gamma(h) =C_0 \qquad; \qquad \forall h \> 0
+ \gamma(h) =C_0 \qquad; \qquad \forall h \gt 0
 \end{equation}
 En este caso, la aplicación del kriging no resulta posible, y el valor estimado en un punto es la media de los valores muestreados.
 <li> Funciones que alcanzan el valor del <i>sill</i> $(c)$ para un rango concreto $(a)$. Son funciones de la forma
 \begin{equation}
 \gamma(h) = \left\{ \begin{array}{ll}
  f(x) & \textrm{si $h \leq a$}\\
- c & \textrm{si $h \> a$}
+ c & \textrm{si $h \gt a$}
   \end{array} \right. 
 \end{equation}
- siendo las más habituales de las funciones $f(x)$ las de tipo lineal, circular o esférico. Las formulas detalladas de estas y otras funciones pueden consultarse, por ejemplo en [<a href="../bib.htm#Isaaks1989Oxford">Isaaks1989Oxford</a>]
+ siendo las más habituales de las funciones $f(x)$ las de tipo lineal, circular o esférico. Las formulas detalladas de estas y otras funciones pueden consultarse, por ejemplo en [<a href="../bib.htm#Isaaks1989Oxford">Isaaks1989Oxford</a>].
 <li> Funciones que tienden asintóticamente al valor del <i>sill</i> $(c)$. Se define un <i>rango efectivo</i>, siendo este en el cual se da $\gamma(h) = 0.95c$. Entre estas funciones destacan</p><p> Exponencial </p><p>\begin{equation}
  \gamma(h) = c\left(1-e^{\frac{-3h}a}\right)
 \end{equation}</p><p> Gaussiana</p><p>\begin{equation}
