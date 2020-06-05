@@ -23,7 +23,7 @@ La información de la que disponemos no siempre se encuentra en este formato, per
 
 Si disponemos de una capa de polígonos y estos cubren la totalidad del territorio, este proceso no es difícil. Basta ver dentro de qué polígono cae la coordenada que define cada celda, y asignar a esta el valor de uno de los atributos de la capa de polígonos, el cual contenga la variable a recoger en la capa ráster. En el caso del TIN es similar, ya que cada uno de los triángulos permite el cálculo de valores en sus puntos, y puede igualmente establecerse una relación entre estos y las celdas de una malla ráster que cubra el mismo espacio geográfico.
 
-Si tenemos una capa de líneas la cosa no es muy distinta. Basta ver por qué celdas pasan esas líneas y asignar el valor de estas a dichas celdas. Pueden existir ambigüedades a la hora de considerar \emph{cuánto} ha de recorrer una linea a través de una celda para considerar que pasa por esta y asignarle el valor correspondientes, como se muestra en la figura \ref{Fig:Formas_rasterizacion_lineas}. Aun así, y salvando estos aspectos, no resulta difícil rasterizar una capa de líneas y tener una capa ráster válida.
+Si tenemos una capa de líneas la cosa no es muy distinta. Basta ver por qué celdas pasan esas líneas y asignar el valor de estas a dichas celdas. Pueden existir ambigüedades a la hora de considerar \emph{cuánto} ha de recorrer una línea a través de una celda para considerar que pasa por esta y asignarle el valor correspondientes, como se muestra en la figura \ref{Fig:Formas_rasterizacion_lineas}. Aun así, y salvando estos aspectos, no resulta difícil rasterizar una capa de líneas y tener una capa ráster válida.
 
 
 \begin{figure*}[t]   

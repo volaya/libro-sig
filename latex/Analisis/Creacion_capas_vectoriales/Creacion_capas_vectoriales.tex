@@ -58,7 +58,7 @@ Partiendo de una capa ráster discreta, el proceso de vectorización pretende gene
 \label{Fig:Vectorizacion}. 
 \end{figure*}
 
-En la conversión de capas continuas, veremos cómo expresar una capa ráster continua mediante un conjunto de entidades, en particular mediante lineas y polígonos. Para el caso de líneas, analizaremos cómo delinear un conjunto de isolíneas a partir de una capa ráster. En el caso de polígonos, estudiaremos cómo crear un TIN, estructura de triángulos irregulares que, como ya vimos, sirve para almacenar variables continuas, particularmente la elevación.\index{Isolíneas}
+En la conversión de capas continuas, veremos cómo expresar una capa ráster continua mediante un conjunto de entidades, en particular mediante líneas y polígonos. Para el caso de líneas, analizaremos cómo delinear un conjunto de isolíneas a partir de una capa ráster. En el caso de polígonos, estudiaremos cómo crear un TIN, estructura de triángulos irregulares que, como ya vimos, sirve para almacenar variables continuas, particularmente la elevación.\index{Isolíneas}
 
 \section{Vectorización de entidades} \label{Vectorizacion}
 
@@ -76,7 +76,7 @@ Otros procesos de vectorización que ya conocemos son los que se llevan a cabo a 
 \begin{figure*}[t]   
 \centering
 \includegraphics[width=.88\textwidth]{Creacion_capas_vectoriales/Condiciones_vectorizacion.png}
-\caption{\small b)Imagen con polígonos y lineas para vectorizar. a) y c) La misma imagen tras ser trasformada con objeto de mejorar las condiciones para la vectorización (como capas de líneas y polígonos respectivamente) y aumentar la calidad de esta.}
+\caption{\small b)Imagen con polígonos y líneas para vectorizar. a) y c) La misma imagen tras ser trasformada con objeto de mejorar las condiciones para la vectorización (como capas de líneas y polígonos respectivamente) y aumentar la calidad de esta.}
 \label{Fig:Condiciones_vectorizacion}. 
 \end{figure*}
 
@@ -104,7 +104,7 @@ Debe pensarse que el mapa escaneado es habitualmente una imagen en color, más co
 El paso de una imagen original tal como el mapa escaneado de la figura \ref{Fig:Condiciones_vectorizacion} a uno más apto para la vectorización como el de la imagen $a)$ de dicha figura es un proceso más complejo de lo que puede parecer, ya que comporta las siguientes dificultades:
 
 \begin{itemize}
-\item Las lineas tienen más de un píxel de ancho
+\item Las líneas tienen más de un píxel de ancho
 \item Las líneas tienen píxeles de varios colores distintos
 \item Aparecen elementos adicionales que dificultan la identificación automática de las líneas, pues rompen su continuidad. Por ejemplo, es habitual que las líneas se encuentren interrumpidas por etiquetas en las que se refleja su valor de elevación correspondiente. Otros elementos tales como ríos o carreteras pueden estar representados en el mismo mapa, y trazarse por encima de las curvas de nivel, que suelen quedar en un segundo plano. Mientras que estos últimos se trazan con colores diferentes a las curvas de nivel, las etiquetas tienen el problema añadido de que presentan el mismo color que la propia línea, con lo cual no pueden eliminarse en base a dicho color con procesos tales como la segmentación (véase el apartado \ref{Segmentacion}) \cite{Ananthanarayanan2006GISDev}.
 \end{itemize}
@@ -339,7 +339,7 @@ Los algoritmos para crear una triangulación de Delaunay son abundantes, y existe
 Aunque este tipo de triangulaciones son las más recomendables, la propia naturaleza de un TIN puede aprovecharse para crear otras triangulaciones derivadas que, aun no cumpliendo las condiciones de la triangulación de Delaunay, representan de forma más fiel el relieve. La incorporación de las denominadas \emph{líneas de ruptura}\footnote{\emph{Breaklines}, en inglés} o \emph{líneas de falla} es una de las modificaciones de mayor interés.
 \index{Linea@Línea!de ruptura}\index{Breaklines}
 
-Dentro de un triángulo se asume que la pendiente y la orientación son constantes, y dicho triángulo define un plano en el espacio. Al pasar de un triángulo a otro, el cambio se produce justo en el lado que comparten dichos triángulos, representando dicho lado una línea de cambio. Si estas líneas de cambio coinciden con las lineas naturales en las que el relieve real que se quiere modelizar sufre un cambio brusco, el modelo obtenido será más fiel a la realidad.
+Dentro de un triángulo se asume que la pendiente y la orientación son constantes, y dicho triángulo define un plano en el espacio. Al pasar de un triángulo a otro, el cambio se produce justo en el lado que comparten dichos triángulos, representando dicho lado una línea de cambio. Si estas líneas de cambio coinciden con las líneas naturales en las que el relieve real que se quiere modelizar sufre un cambio brusco, el modelo obtenido será más fiel a la realidad.
 
 En base a esta idea, puede forzarse a que dichas fallas naturales coincidan con los lados de los triángulos, definiéndolas explícitamente junto a los puntos que van a formar la base de la triangulación. La triangulación resultante no es de Delaunay, pero es más cercana a la verdadera forma del terreno, ya que incorpora información adicional.
 
