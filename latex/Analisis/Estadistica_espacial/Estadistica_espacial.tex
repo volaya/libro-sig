@@ -362,23 +362,6 @@ Aplicando como en el caso de la media una corrección de los efectos de borde, se
 
 Conociendo este resultado y que bajo la hipótesis de aleatoriedad espacial completa puede asumirse una distribución normal de los valores de distancia con la media y la desviación típica anteriores, pueden hacerse test de significación para conocer con qué grado de confianza es posible afirmar que la distribución analizada es o no aleatoria.
 
-La tabla \ref{Tabla:Vecino_mas_cercano} muestra con más detalle los resultados correspondientes al análisis de vecino más cercano para los tres tipos de distribuciones mostradas.
-
-\begin{table}
-\begin{center}
-\begin{tabular}{lccc}\toprule
- & Aleatoria & Regular & Agregada \\ \midrule
-Dist. media & 8,802 & 13,658 & 3,759\\ 
-Varianza & 0,599 & 0,654 & 0,419\\ 
-Varianza corr.& 0,659 & 1,03 & 0,942 \\ 
-NNI & 1,487 & 2,207 & 0,759 \\ 
-NNI corr.&1,323 & 1,964 & 0,675 \\ \bottomrule
-\end{tabular}
-\end{center}
-\caption{\small Valores relativos al índice de vecino más próximo para los distintos tipos de distribuciones del ejemplo propuesto. NNI es el indice de vecino más próximo (\emph{Nearest--Neighbour Index}).}
-\label{Tabla:Vecino_mas_cercano}
-\end{table} 
-
 El análisis de vecino más cercano puede ampliarse al de los $n$ vecinos más cercanos. No obstante, este tipo de formulaciones se implementan con mucha menor frecuencia y son significativamente más complejas que las basadas en un único punto vecino.
 
 \subsection{Función K de Ripley}
@@ -556,7 +539,7 @@ Puesto que puede calcularse la distancia entre dichos puntos, pueden representar
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.7\mycolumnwidth]{Estadistica_espacial/Nube_variograma.png}
+\includegraphics[width=.75\mycolumnwidth]{Estadistica_espacial/Nube_variograma.png}
 \caption{\small Representación de valores de semivarianza frente a distancia, formando la nube del variograma.}
 \label{Fig:Nube_variograma} 
 \end{figure*}
