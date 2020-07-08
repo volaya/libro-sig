@@ -5,36 +5,38 @@
 \bigskip
 
 \begin{intro}
-El formato ráster es la base para un gran numero de algoritmos de análisis. No obstante, una buena parte de los métodos de obtención de información geográfica no generan capas ráster con una estructura regular, sino información distribuida de forma irregular. La creación de una estructura regular a partir de datos irregularmente distribuidos se lleva a cabo mediante métodos diversos, entre los cuales tienen especial presencia los métodos de interpolación. 
+El modelo ráster es la base para un gran numero de algoritmos de análisis. No obstante, una buena parte de los métodos de obtención de información geográfica no generan capas ráster con una estructura regular, sino información distribuida de forma irregular. La creación de una estructura regular a partir de datos irregularmente distribuidos se lleva a cabo mediante métodos diversos, entre los cuales tienen especial presencia los métodos de interpolación. 
 
 En este capítulo estudiaremos estos métodos, tanto aquellos que utilizan exclusivamente la variable a interpolar como aquellos que se basan en métodos estadísticos y permiten la incorporación de variables de apoyo. Por último, veremos cómo utilizar la información tomada en puntos aislados para generar capas ráster de densidad. Con todo ello, sentaremos la base para la creación de capas ráster a partir de información vectorial.
 
-Para seguir el capítulo debes dominar los conceptos básicos de la estadística espacial (Capítulo \ref{Estadistica_espacial}), así como de estadística general, pues ambas se usan con cierta profundidad en gran parte de los desarrollos a tratar.
+Para seguir el capítulo deben connocerse dominar los conceptos básicos de la estadística espacial (Capítulo \ref{Estadistica_espacial}), así como de estadística general, pues ambas se usan con cierta profundidad en gran parte de los desarrollos a tratar.
 \end{intro}
- 
+
+\begin{multicols}{2}
+
 \section{Introducción}
 \pagestyle{fancy}
 
-Una buena parte de los análisis geográficos se realizan sobre capas en formato ráster. Estas, por sus propias características, se prestan mejor a cierto tipo de análisis, y la implementación de estos resulta más sencilla, por lo que lo habitual es encontrarlos implementados para ser empleados con capas ráster. 
+Una buena parte de los análisis geográficos se realizan sobre capas ráster. Estas, por sus propias características, se prestan mejor a cierto tipo de análisis, y la implementación de estos resulta más sencilla, por lo que lo habitual es encontrarlos implementados para ser empleados con capas de esta clase. 
 
-La información de la que disponemos no siempre se encuentra en este formato, pero ello no significa necesariamente que no podamos utilizarla. A partir de información en otros formatos podemos generar capas ráster (este proceso lo denominaremos \emph{rasterización})\index{Rasterización} que reúnan las características para ser analizadas mediante dichos algoritmos. El problema es en todos los casos la creación de una estructura regular a partir de información que no es regular, tal como la contenida en un TIN\index{Triangulated Irregular Network (TIN)}, una capa de polígonos, una de líneas, o una capa de valores puntuales.
+La información de la que disponemos no siempre se encuentra en este formato, pero ello no significa que no podamos utilizarla. A partir de información almacenada según otros modelos de datos, podemos generar capas ráster (este proceso lo denominaremos \emph{rasterización})\index{Rasterización} que reúnan las características necesarias para usarse con los algoritmos correspondientes. El problema es en todos los casos la creación de una estructura regular a partir de información que no es regular, tal como la contenida en un TIN\index{Triangulated Irregular Network (TIN)}, una capa de polígonos, una de líneas, o una capa de valores puntuales.
 
-Si disponemos de una capa de polígonos y estos cubren la totalidad del territorio, este proceso no es difícil. Basta ver dentro de qué polígono cae la coordenada que define cada celda, y asignar a esta el valor de uno de los atributos de la capa de polígonos, el cual contenga la variable a recoger en la capa ráster\footnote{En realidad, y aunque esta sea una manera sencilla de rasterizar unos polígonos, operando de este modo el rendimiento que se obtendría sería insuficiente, ya que el número de celdas a comprobar es muy elevado. Existen otro tipo de algoritmos, denominados \emph{de barrido}\index{Algoritmos de barrido}, que resultan más eficaces, aunque no los detallaremos aquí. Estos algoritmos no tiene en su origen ninguna relación con un SIG, sino con la mera representación gráfica. Piensa que la pantalla de tu ordenador es como una capa ráster, formada por una malla de pequeños puntos de luz, y representar todo polígono en ella requiere en primer lugar expresar ese polígono en la forma en la que la estructura de la pantalla lo requiere. En \cite{Dunlavey1983ACM} puedes encontrar más información al respecto, así como en la dirección Web \cite{RasterizacionCimec}.\\ Para el caso de la rasterización de líneas, una referencia fundamental es \cite{Bresenham1965IBM}}. En el caso del TIN es similar, ya que cada uno de los triángulos permite el cálculo de valores en sus puntos, y puede igualmente establecerse una relación entre estos y las celdas de una malla ráster que cubra el mismo espacio geográfico.
+Si disponemos de una capa de polígonos y estos cubren la totalidad del territorio, este proceso no es difícil. Basta ver dentro de qué polígono cae la coordenada que define cada celda, y asignar a esta el valor de uno de los atributos de la capa de polígonos, el cual contenga la variable a recoger en la capa ráster. En el caso del TIN es similar, ya que cada uno de los triángulos permite el cálculo de valores en sus puntos, y puede igualmente establecerse una relación entre estos y las celdas de una malla ráster que cubra el mismo espacio geográfico.
 
-Si tenemos una capa de líneas la cosa no es muy distinta. Basta ver por qué celdas pasan esas líneas y asignar el valor de estas a dichas celdas. Pueden existir ambigüedades a la hora de considerar \emph{cuánto} ha de recorrer una linea a través de una celda para considerar que pasa por esta y asignarle el valor correspondientes, como se muestra en la figura \ref{Fig:Formas_rasterizacion_lineas}. No obstante, y salvando estos aspectos, no resulta difícil rasterizar una capa de líneas y tener una capa ráster válida.
+Si tenemos una capa de líneas la cosa no es muy distinta. Basta ver por qué celdas pasan esas líneas y asignar el valor de estas a dichas celdas. Pueden existir ambigüedades a la hora de considerar \emph{cuánto} ha de recorrer una línea a través de una celda para considerar que pasa por esta y asignarle el valor correspondientes, como se muestra en la figura \ref{Fig:Formas_rasterizacion_lineas}. Aun así, y salvando estos aspectos, no resulta difícil rasterizar una capa de líneas y tener una capa ráster válida.
 
 
-\begin{figure}[!hbt]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.7\textwidth]{Creacion_capas_raster/Formas_rasterizacion_lineas.pdf}
 \caption{\small Formas distintas de rasterizar una línea en función del criterio empleado.}
 \label{Fig:Formas_rasterizacion_lineas} 
-\end{figure}
+\end{figure*}
 
 
 Por último, para el caso de una capa de puntos, la conversión en una capa ráster es aún más sencilla. Basta con asignar los correspondientes valores a aquellas celdas en las que se sitúen los puntos. Las restantes, y puesto que no existe información al respecto, deberán llevar el valor que codifica la ausencia de datos. \index{Sin datos!valor de}
 
-Sin embargo, estas formas de rasterización pueden no ser idóneas según las circunstancias. En los dos últimos casos (líneas y puntos), y especialmente para el caso de puntos, la situación que se recoge en la capa ráster puede no ser la óptima para el análisis, y realmente no estaremos aprovechando las capacidades del modelo de datos ráster a pesar de haber llevado a cabo una conversión. 
+Estas formas de rasterización, sin embargo, pueden no ser idóneas según las circunstancias. En los dos últimos casos (líneas y puntos), y especialmente para el caso de puntos, la situación que se recoge en la capa ráster puede no ser la necesaria para el análisis, y realmente no estaremos aprovechando las capacidades del modelo de datos ráster a pesar de haber llevado a cabo una conversión. 
 
 Por ejemplo, si las líneas que rasterizamos son curvas de nivel, van a indicar la elevación en las mismas. Fuera de ellas, la capa ráster generada no tendrá datos, pero en realidad esas celdas sí que tienen una elevación concreta. Del mismo modo sucede si medimos esa elevación en una serie de puntos en lugar de en líneas y después rasterizamos la capa, o si medimos cualquier otra variable en un número dado de localizaciones puntuales y hacemos lo propio.
 
@@ -48,7 +50,12 @@ El número de métodos distintos es muy amplio, y es importante reseñar que la bon
 
 La aplicación de los métodos de interpolación es, asimismo, muy diversa. Casos habituales son, por ejemplo, la realizada a partir de datos de elevación tomados en campo mediante GPS o estación total, o de los datos climatológicos de precipitación y temperatura registrados en los observatorios de una red. Resulta imposible recoger valores para cada una de las celdas de una capa ráster que cubra el territorio a estudiar, pero estas variables, por ser continuas, se manejarán mejor y serán más útiles si se dispone de ellas en formato ráster. Los métodos de interpolación son los encargados de convertir esos datos puntuales en mallas regulares.\index{GPS}\index{Interpolación}
 
-Otro ejemplo claro es la realización de calicatas para la medida de las propiedades del suelo tales como porcentajes de arcilla o limo. Resulta de igual modo inviable muestrear todo el suelo, pero tomando un numero dado de muestras puede crearse una capa ráster de toda una zona a través del uso de métodos de interpolación.
+\begin{figure*}[!ht]   
+\centering
+\includegraphics[width=.9\mycolumnwidth]{Creacion_capas_raster/EjInterpolacion.pdf}
+\caption{\small Tres situaciones para la aplicación de interpolación espacial.}
+\label{Fig:EjInterpolacion} 
+\end{figure*}
 
 En general, cualquier variable recogida mediante muestreo puede ser el punto de partida para la aplicación de dichos métodos.
 
@@ -63,33 +70,15 @@ Junto con lo anterior, la información de una determinada variable cuantitativa t
 
 Un método de interpolación permite el calculo de valores en puntos no muestreados, a partir de los valores recogidos en otra serie de puntos.
 
-Supongamos el siguiente ejemplo sencillo:
+En la figura \ref{Fig:EjInterpolacion} encontramos tres situaciones en las cuales se hace necesario el uso de interpolación si queremos obtener una capa raster con valores en todas sus celdas. En dichas situaciones, los cuatro puntos señalados han sido muestreados y se dispone de un valor en ellos. Adviértase que no han de encontrarse necesariamente en el centro de las celdas. El problema es el mismo en cada uno de estos supuestos: queremos estimar los valores en las celdas de la malla, y en particular en la celda marcada con un interrogante.
 
-\begin{center}
-\includegraphics[width=.3\mycolumnwidth]{Creacion_capas_raster/EjInterpolacion_1.pdf} 
-\end{center}
+Para el caso a) la lógica nos indica que el valor en esta celda debe estar alrededor de 10, ya que este valor sigue la tendencia natural de los valores recogidos, que tiene todos ellos un valor de esa magnitud. Si aplicamos cualquiera de los métodos de interpolación que veremos a continuación, el valor que obtengamos será con seguridad muy aproximado a esa cifra.
 
-Los cuatro puntos señalados han sido muestreados y se dispone de un valor en ellos. Adviértase que no han de encontrarse necesariamente en el centro de las celdas. Queremos estimar los valores en las celdas de la malla, en particular en la celda marcada con un interrogante.
+Supongamos ahora que nos encontramos en el caso b). En este supuesto, la lógica nos indica que el valor será inferior a 10, y también probablemente a la media de los valores muestrales (9), ya que la celda problema se sitúa más cerca de los valores inferiores que de los superiores a ese valor medio. Razonando de este modo, aplicamos el hecho de que la proximidad incrementa la semejanza de valores. Es decir, que existe autocorrelación espacial para la variable interpolada.\index{Autocorrelación espacial}
 
-La lógica nos indica que el valor en esta celda debe estar alrededor de 10, ya que este valor sigue la tendencia natural de los valores recogidos, que tiene todos ellos un valor de esa magnitud. Si aplicamos cualquiera de los métodos de interpolación que veremos a continuación, el valor que obtengamos será con seguridad muy aproximado a esa cifra.
+El caso c) es algo distinto. Aquí ya no parece tan sencillo <<adivinar>> el valor que corresponde. Esto es así no porque las operaciones sean más complejas, sino porque no existe de la misma forma que en los ejemplos anteriores la autocorrelación espacial de la variable, y esa \emph{lógica} no resulta tan obvia. Utilizando los distintos métodos de interpolación, puede ser que estos den valores distintos, ya que se comportarán de forma diferente ante tal situación.
 
-Otro ejemplo sería el siguiente:
-
-\begin{center}
-\includegraphics[width=.3\mycolumnwidth]{Creacion_capas_raster/EjInterpolacion_2.pdf} 
-\end{center}
-
-En este caso, la lógica nos indica que el valorá ser inferior a 10, y también probablemente a la media de los valores muestrales (9), ya que la celda problema se sitúa más cerca de los valores inferiores que de los superiores a ese valor medio. Razonando de este modo, aplicamos el hecho de que la proximidad incrementa la semejanza de valores. Es decir, que existe autocorrelación espacial para la variable interpolada.\index{Autocorrelación espacial}
-
-El caso siguiente ya es algo distinto:
-
-\begin{center}
-\includegraphics[width=.3\mycolumnwidth]{Creacion_capas_raster/EjInterpolacion_3.pdf} 
-\end{center}
-
-En este caso, no parece tan sencillo <<adivinar>> el valor que corresponde. Esto es así no porque las operaciones sean más complejas, sino porque no existe de la misma forma que en los ejemplos anteriores la autocorrelación espacial de la variable, y esa \emph{lógica} no resulta tan obvia. Utilizando los distintos métodos de interpolación, puede ser que estos den valores distintos, ya que se comportarán de forma diferente ante tal situación.
-
-Estos sencillos ejemplos numéricos tienen como objetivo el dar otra imagen distinta de lo que el proceso de interpolación conlleva, y que puede resultar más intuitivo al analizarlo sobre un conjunto reducido de puntos. A pesar de sus diferencias, grandes en muchos casos, todos parten de ideas comunes que lo único que pretenden es replicar de forma lo más precisa posible un campo a partir de un conjunto definido de puntos con valores de este.
+Estos sencillos ejemplos numéricos tienen como objetivo dar imagen general de lo que el proceso de interpolación conlleva, y que puede resultar más intuitivo al analizarlo sobre un conjunto reducido de puntos. A pesar de sus diferencias, grandes en muchos casos, todos parten de ideas comunes que lo único que pretenden es replicar de forma lo más precisa posible un campo a partir de un conjunto definido de puntos con valores de este.
 
 Existen muchos métodos de interpolación, de los cuales algunos cuentan con más presencia en los SIG por estar más adaptados al tipo de dato que se maneja. Su aplicación habitual dentro de un SIG es bidimensional, ya que una capa ráster es una entidad bidimensional. Hablamos, por ello, de \emph{interpolación espacial}.  No obstante, estos métodos no han de restringirse al plano, y pueden extenderse a un numero superior de dimensiones para reflejar otras variables tales como la profundidad (por ejemplo, para construir un modelo tridimensional de las características del suelo entre dos profundidades establecidas y con un intervalo dado), o bien el tiempo. 
 
@@ -118,12 +107,20 @@ Se trata, por tanto, de un método local, exacto y determinístico.
 
 El resultado es una capa con saltos abruptos (tanto como lo sean las diferencias entre los valores de puntos cercanos), con un aspecto <<aterrazado>> (Figura \ref{Fig:Interpolacion_vecindad}). El conjunto de celdas con el mismo valor (dentro de la misma terraza) representa el lugar geométrico de las celdas cuyo punto más cercano de entre los de partida es uno dado.
 
-\begin{figure}[h]   
-\centering
-\includegraphics[width=.65\mycolumnwidth]{Creacion_capas_raster/Interpolacion_vecindad.png}
+\begin{figure*}
+\begin{minipage}{0.49\linewidth}
+\includegraphics[width=.8\mycolumnwidth]{Creacion_capas_raster/Interpolacion_vecindad.png}
 \caption{\small Superficie obtenida mediante interpolación por vecindad.}
 \label{Fig:Interpolacion_vecindad} 
-\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=.8\mycolumnwidth]{Creacion_capas_raster/Interpolacion_distancia.png}
+\caption{\small Superficie obtenida mediante ponderación por distancia inversa}
+\label{Fig:Interpolacion_distancia} 
+\end{minipage}
+\end{figure*}
 
 La interpolación por vecindad no es adecuada para el trabajo con variables continuas, pero sí para variables categóricas. Por ejemplo, para un conjunto de puntos cada uno de los cuales esté identificado con un código numérico, la interpolación por vecindad de ese valor da como resultado una capa donde los valores de las celdas identifican el punto más cercano. Esto puede utilizarse para calcular la influencia de cada uno de ellos en el espacio representado.
 
@@ -138,7 +135,7 @@ Los métodos basados en ponderación por distancia son algoritmos de interpolación
 \widehat{z}=\frac{\sum_{i=1}^n p_i z_i^k}{\sum_{i=1}^n p_i^k}
 \end{equation}
 
-\noindent siendo $p_i$ el peso asignado al punto i--ésimo. Este peso puede ser cualquier función dependiente de la distancia.
+\noindent siendo $p_i$ el peso asignado al punto i-ésimo. Este peso puede ser cualquier función dependiente de la distancia.
 
 La función más habitual es la que da lugar al método de \emph{ponderación por distancia inversa}, de la forma
 
@@ -168,90 +165,21 @@ Otra función habitual es la de la forma
 
 \noindent donde $k$ es un parámetro que regula la forma de la función y $d_{max}$ la distancia máxima de influencia.
 
-En la figura \ref{Fig:Pesos_ponderacion_distancia} puede verse el efecto del aumento de la distancia sobre los pesos asignados según las ecuaciones \ref{Eq:Distancia_inversa} y \ref{Eq:Decremento_lineal}.
-
-\begin{figure}[h]   
-\centering
-\includegraphics[width=.65\mycolumnwidth]{Creacion_capas_raster/Pesos_ponderacion_distancia.pdf}
-\caption{\small Variación del peso asignado en función de la distancia mediante ponderación por distancia inversa (trazo punteado) y decremento lineal (trazo continuo) para valores $k=1$, $k=2$ y $k=3$.}
-\label{Fig:Pesos_ponderacion_distancia}. 
-\end{figure}
 
 La figura \ref{Fig:Interpolacion_distancia} muestra la superficie calculada a partir de datos puntuales de elevación aplicando el método de ponderación por distancia inversa.
 
-\begin{figure}[h]   
-\centering
-\includegraphics[width=.65\mycolumnwidth]{Creacion_capas_raster/Interpolacion_distancia.png}
-\caption{\small Superficie obtenidas mediante ponderación por distancia inversa}
-\label{Fig:Interpolacion_distancia} 
-\end{figure}
+\begin{figure*}[t]
+\includegraphics[width=\mycolumnwidth]{Creacion_capas_raster/Zonas_llanas_por_IDW.pdf}
+\caption{\small La interpolación basada en ponderación por distancia (a) no crea valores extremos si estos no han sido recogidos, lo cual deriva en un  <<aplanamiento>> de la superficie y la aparición de falsas terrazas. Otros métodos tales como los \emph{splines} (b) sí que permiten la aparición de valores fuera del rango muestreado.}
+\label{Fig:Zonas_llanas_por_IDW} 
+\end{figure*}
+
 
 Los métodos basados en ponderación por distancia solo tienen en cuenta el alejamiento, pero no la posición. Es decir, un punto situado a una distancia $d$ hacia el Norte tiene la misma influencia que uno situado a esa misma distancia $d$ pero hacia el Oeste.
 
 Igualmente, los métodos basados en distancia no generan valores que se encuentren fuera del rango de valores de los datos de entrada. Eso causa efectos indeseados en caso de que el muestro de datos no recoja los puntos característicos de la superficie interpolada. La figura \ref{Fig:Zonas_llanas_por_IDW} muestra en un caso unidimensional cómo, de no recogerse los valores extremos (tales como cimas o valles), estos desaparecen y son sustituidos por tramos llanos 
 
-\begin{figure}[h]   
-\centering
-\includegraphics[width=.45\mycolumnwidth]{Creacion_capas_raster/Zonas_llanas_por_IDW.pdf}
-\caption{\small La interpolación basada en ponderación por distancia (a) no crea valores extremos si estos no han sido recogidos, lo cual deriva en un  <<aplanamiento>> de la superficie y la aparición de falsas terrazas. Otros métodos tales como los \emph{splines} (b) sí que permiten la aparición de valores fuera del rango muestreado.}
-\label{Fig:Zonas_llanas_por_IDW} 
-\end{figure}
-
 Puede entenderse el método de vecino más cercano como un caso particular de método ponderado por distancia, en el que se emplea un único punto de influencia, y su peso asignado es $p_1=1$.
-
-\subsection{Ajuste de funciones. Superficies de tendencia}
-\label{Ajuste_de_polinomios}
-
-El ajuste de funciones es un método de interpolación determinístico o estocástico (según el tipo de función a ajustar), aproximado y global. Puede aplicarse de forma local, aunque esto resulta menos habitual. Dado el conjunto completo de los puntos de partida, se estima una superficie definida por una función de la forma 
-
-\begin{equation}
-\widehat{z} = f(x,y)
-\end{equation}
-
-El ajuste de la función se realiza por mínimos cuadrados.\index{Minimos cuadrados@Mínimos cuadrados}
-
-Estas funciones son de tipo polinómico, y permiten el cálculo de parámetros en todas las celdas de la capa ráster. Por su propia construcción, requieren pocas operaciones y son rápidos de calcular. Sin embargo, esta sencillez es también su principal inconveniente. Los polinomios de grado cero (plano constante), uno (plano inclinado), dos (colina o depresión) o tres, son todos ellos demasiado simples, y las variables continuas que pueden requerir un proceso de interpolación dentro de un SIG son por lo general mucho más complejas. Pueden emplearse polinomios de mayor grado que aumentan la precisión del ajuste en los puntos de partida. Sin embargo, aumenta por igual la oscilación de la función entre puntos, mostrando un mal comportamiento con grados elevados, y no obteniéndose en ningún caso la fidelidad a la superficie real que se logra con otros métodos..
-
-La fígura \ref{Fig:Interpolacion_funcion} muestra superficies con valores de elevación obtenidos mediante ajuste polinómico de grados dos y cinco.
-
-\begin{figure}[!hbt]   
-\centering
-\includegraphics[width=.9\textwidth]{Creacion_capas_raster/Interpolacion_funcion.png}
-\caption{\small Superficies obtenidas mediante interpolación por ajuste polinómico de segundo (a) y quinto (b) grado.}
-\label{Fig:Interpolacion_funcion} 
-\end{figure}
-
-El empleo de funciones de ajuste permite incorporar otras variables adicionales $h_i$ mediante funciones de la forma 
- 
-\begin{equation}
-\label{Eq:Ajuste_polinomios}
-\widehat{z} = f(x,y, h_1, \ldots, h_n)
-\end{equation}
-
-Esto posibilita la incorporación de variables de apoyo (predictores) que pueden tener una influencia en la variable interpolada, considerando así no únicamente la posición de los distintos puntos, sino los valores en ellos de dichas variables de apoyo. Para todas las celdas a rellenar, se dispone de sus coordenadas $(x,y)$, que son las del centro de la celda. Si se añaden variables de apoyo, es necesario conocer los valores de estas variables también en todas las celdas, para de este modo aplicar la función estimada. Por ello, estas variables de apoyo tienen que encontrarse igualmente en formato ráster.\index{Predictor}
-
-Si bien en muchos casos la superficie interpolada puede no reflejar con precisión una variable, puede emplearse para considerar el efecto de tendencias globales en la distribución de esta. Una variable puede estar condicionada por efectos globales y efectos locales. Puesto que el ajuste de una función polinómica tal y como lo hemos visto aquí es un interpolador global, permite la separación de estos dos tipos de efectos. Este proceso constituye el empleo de las denominadas \emph{superficies de tendencia}.\index{Superficie!de tendencia}
-
-Supongamos una capa de temperatura. Esta dependerá de la altura, pero también de la latitud. Existe, por tanto, una tendencia global: a mayor latitud (supóngase hemisferio norte), menor temperatura. Esta se puede modelizar con una función lineal, y separar el efecto de ambos factores, altitud y latitud (Figura \ref{Fig:Superficies_tendencia}). El efecto local puede entenderse como el residuo de primer orden de la superficie interpolada.
-
-\begin{figure}[!hbt]   
-\centering
-\includegraphics[width=.95\textwidth]{Creacion_capas_raster/Separacion_tendencia.png}
-\caption{\small Separación de una variable en un efecto debido a una tendencia geográfica (en este caso en forma de plano inclinado con valores mayores la zona este) y un efecto local.}
-\label{Fig:Superficies_tendencia} 
-\end{figure}
-
-En la aplicación de predictores debe tenerse en cuenta el principio de parsimonia: mantener el modelo lo más simple posible. La incorporación de nuevos predictores, si estos se encuentran significativamente correlacionados, conlleva un aumento de la multicolinearidad\index{Mulicolinearidad} \cite{Myers1990PWS}. Esta circunstancia da lugar a un sobreajuste de la función y empeora la calidad de las estimaciones, especialmente en la predicción de datos fuera del área delimitada por los puntos de partida, es decir, la extrapolación. \index{Extrapolación}
-
-Un caso particular de las funciones del tipo señalado en la ecuación \ref{Eq:Ajuste_polinomios} son las de la forma
-
-\begin{equation}
-\widehat{z} = f(h_1, \ldots, h_n)
-\end{equation}
-
-\noindent es decir, aquellas que no consideran la componente geográfica y simplemente realizan una regresión en el espacio de atributos. 
-
-Puesto que existe autocorrelación espacial, en el caso de considerar el espacio geográfico resulta más conveniente el uso de mínimos cuadrados generalizados en lugar de mínimos cuadrados ordinarios. En el capítulo \ref{Estadistica_avanzada} veremos con más detalle los temas relacionados con regresiones e inferencia estadística basada en datos espaciales.
 
 \subsection{Curvas adaptativas (Splines)} 
 
@@ -263,21 +191,19 @@ Desde un punto de vista matemático, los splines son funciones polinómicas por tr
 
 Los splines no sufren los principales defectos de los dos métodos anteriores. Por un lado, pueden alcanzar valores fuera del rango definido por los puntos de partida. Por otro, el mal comportamiento de las funciones polinómicas entre puntos se evita incluso al utilizar polinomios de grados elevados. No obstante, en zonas con cambios bruscos de valores (como por ejemplo, dos puntos de entrada cercanos pero con valores muy diferentes), pueden presentarse oscilaciones artificiales significativas. Para solucionar este problema, una solución es el empleo de \emph{splines con tensión} \cite{Schweikert1966JMP}. La incorporación de la tensión en una dirección permite añadir anisotropía al proceso de interpolación \cite{Mitasova1993MathGeo}.
 
-La figura \ref{Fig:Interpolacion_splines} muestra una superficie calculada mediante interpolación con splines.
-
-\begin{figure}[!hbt]  
-\centering
-\includegraphics[width=.65\mycolumnwidth]{Creacion_capas_raster/Interpolacion_splines.png}
-\caption{\small Superficie obtenida mediante interpolación con splines.}
-\label{Fig:Interpolacion_splines} 
-\end{figure}
-
 \subsection{Kriging}
 \label{Kriging}
 
 \index{Kriging}
 
-El \emph{kriging}\footnote{\emph{Krigeage} en su denominación original en francés, que se traduce como \emph{krigeado} en castellano, aunque es mucho más habitual el uso de la denominación inglesa, la cual emplearemos aquí.} es un método de interpolación estocástico, exacto, aplicable tanto de forma global como local. Se trata de un método complejo con una fuerte carga (geo--)estadística, del que existen además diversas variantes.
+\begin{figure*}[!ht]   
+\centering
+\includegraphics[width=.9\textwidth]{Creacion_capas_raster/Interpolacion_kriging.png}
+\caption{\small Superficie obtenida mediante interpolación por kriging ordinario y capa de varianzas.}
+\label{Fig:Interpolacion_kriging} 
+\end{figure*}
+
+El \emph{kriging}\footnote{\emph{Krigeage} en su denominación original en francés, que se traduce como \emph{krigeado} en castellano, aunque es mucho más habitual el uso de la denominación inglesa, la cual emplearemos aquí.} es un método de interpolación estocástico, exacto, aplicable tanto de forma global como local. Se trata de un método complejo con una fuerte carga (geo-)estadística, del que existen además diversas variantes.
 
 El kriging se basa en la teoría de variables regionalizadas, la cual fue desarrollada por \cite{Matheron1963EcoGeo} a partir del trabajo pionero de \cite{Krige1951MsC}. El objetivo del método es ofrecer una forma objetiva de establecer la ponderación óptima entre los puntos en un interpolador local. Tal interpolación óptima debe cumplir los siguientes requisitos, que son cubiertos por el kriging:
 
@@ -305,7 +231,8 @@ A partir de los valores del variograma, se estima un vector de pesos que, multip
 
 En el denominado \emph{kriging ordinario},  e interpolando para un punto $p$ empleando $n$ puntos de influencia alrededor de este, el antedicho vector de pesos se calcula según\index{Kriging!ordinario}
 
-\begin{equation} 
+\begin{equation}
+\scriptsize 
 \left( \begin{array}{c}
 w_1 \\
 w_2 \\
@@ -348,18 +275,65 @@ La aplicación del kriging ordinario implica la asunción de una serie de caracter
 
 La figura \ref{Fig:Interpolacion_kriging} muestra una superficie obtenida mediante kriging ordinario, junto a la capa de varianzas asociada.
 
-\begin{figure}[!hbt]   
-\centering
-\includegraphics[width=.95\textwidth]{Creacion_capas_raster/Interpolacion_kriging.png}
-\caption{\small Superficie obtenida mediante interpolación por kriging ordinario y capa de varianzas. Nótese que, para lograr una representación visual mejor, la vista 3D tiene una orientación contraria a la vista 2D.}
-\label{Fig:Interpolacion_kriging} 
-\end{figure}
-
 Cuando no puede asumirse la estacionariedad de primer orden y existen una tendencia marcada en el valor medio esperado en los distintos puntos, puede aplicarse un tipo de kriging denominado \emph{kriging universal}. Además de los valores a interpolar y sus coordenadas, este método permite el uso de predictores relacionados con dicha tendencia. \index{Kriging!universal}
 
 El \emph{kriging con regresión} es similar en cuanto a sus resultados e ideas, aunque la forma de proceder es distinta. Mientras que en el universal se trabaja con los residuos y la superficie de tendencia conjuntamente, este separa ambas partes y las analiza por separado, combinándolas después para estimar los valores y los errores asociados.
 
-Existen muchas otras variaciones del kriging tales como el \emph{kriging simple}, el \emph{kriging por bloques} o el \emph{co--kriging}. La aplicación de los mismos, no obstante, es restringida debido a que no es tan frecuente su implementación. Los SIG habituales implementan por regla general las variantes básicas anteriores, quedando las restantes para programas mucho más especializados.\index{Co--kriging}\index{Kriging!por bloques}
+Existen muchas otras variaciones del kriging tales como el \emph{kriging simple}, el \emph{kriging por bloques} o el \emph{co--kriging}. La aplicación de estas formas, sin embargo, es limitada, debido a que no es tan frecuente su implementación. Los SIG habituales implementan por regla general las variantes básicas anteriores, quedando las restantes para programas especializados.\index{Co--kriging}\index{Kriging!por bloques}
+
+\subsection{Ajuste de funciones. Superficies de tendencia}
+\label{Ajuste_de_polinomios}
+
+El ajuste de funciones es un método de interpolación determinístico o estocástico (según el tipo de función a ajustar), aproximado y global. Puede aplicarse de forma local, aunque esto resulta menos habitual. Dado el conjunto completo de los puntos de partida, se estima una superficie definida por una función de la forma 
+
+\begin{equation}
+\widehat{z} = f(x,y)
+\end{equation}
+
+El ajuste de la función se realiza por mínimos cuadrados.\index{Minimos cuadrados@Mínimos cuadrados}
+
+Estas funciones son de tipo polinómico, y permiten el cálculo de parámetros en todas las celdas de la capa ráster. Por su propia construcción, requieren pocas operaciones y son rápidos de calcular. Sin embargo, esta sencillez es también su principal inconveniente. Los polinomios de grado cero (plano constante), uno (plano inclinado), dos (colina o depresión) o tres, son todos ellos demasiado simples, y las variables continuas que pueden requerir un proceso de interpolación dentro de un SIG son por lo general mucho más complejas. Pueden emplearse polinomios de mayor grado que aumentan la precisión del ajuste en los puntos de partida. Sin embargo, aumenta por igual la oscilación de la función entre puntos, mostrando un mal comportamiento con grados elevados, y no obteniéndose en ningún caso la fidelidad a la superficie real que se logra con otros métodos.
+
+\begin{figure*}[!ht]   
+\centering
+\includegraphics[width=.9\textwidth]{Creacion_capas_raster/Interpolacion_funcion.png}
+\caption{\small Superficies obtenidas mediante interpolación por ajuste polinómico de segundo (a) y quinto (b) grado.}
+\label{Fig:Interpolacion_funcion} 
+\end{figure*}
+
+La figura \ref{Fig:Interpolacion_funcion} muestra superficies con valores de elevación obtenidos mediante ajuste polinómico de grados dos y cinco.
+
+El empleo de funciones de ajuste permite incorporar otras variables adicionales $h_i$ mediante funciones de la forma 
+ 
+\begin{equation}
+\label{Eq:Ajuste_polinomios}
+\widehat{z} = f(x,y, h_1, \ldots, h_n)
+\end{equation}
+
+Esto posibilita la incorporación de variables de apoyo (predictores) que pueden tener una influencia en la variable interpolada, considerando así no únicamente la posición de los distintos puntos, sino los valores en ellos de dichas variables de apoyo. 
+
+Si bien en muchos casos la superficie interpolada puede no reflejar con precisión una variable, puede emplearse para considerar el efecto de tendencias globales en la distribución de esta. Una variable puede estar condicionada por efectos globales y efectos locales. Puesto que el ajuste de una función polinómica tal y como lo hemos visto aquí es un interpolador global, permite la separación de estos dos tipos de efectos. Este proceso constituye el empleo de las denominadas \emph{superficies de tendencia}.\index{Superficie!de tendencia}
+
+Supongamos una capa de temperatura. Esta dependerá de la altura, pero también de la latitud. Existe, por tanto, una tendencia global: a mayor latitud (supóngase hemisferio norte), menor temperatura. Esta se puede modelizar con una función lineal, y separar el efecto de ambos factores, altitud y latitud (Figura \ref{Fig:Superficies_tendencia}). El efecto local puede entenderse como el residuo de primer orden de la superficie interpolada.
+
+\begin{figure*}[t]   
+\centering
+\includegraphics[width=\textwidth]{Creacion_capas_raster/Separacion_tendencia.png}
+\caption{\small Separación de una variable en un efecto debido a una tendencia geográfica (en este caso en forma de plano inclinado con valores mayores en la parte derecha) y un efecto local.}
+\label{Fig:Superficies_tendencia} 
+\end{figure*}
+
+En la aplicación de predictores debe tenerse en cuenta el principio de parsimonia: mantener el modelo lo más simple posible. La incorporación de nuevos predictores, si estos se encuentran significativamente correlacionados, conlleva un aumento de la multicolinearidad\index{Mulicolinearidad} \cite{Myers1990PWS}. Esta circunstancia da lugar a un sobreajuste de la función y empeora la calidad de las estimaciones, especialmente en la predicción de datos fuera del área delimitada por los puntos de partida, es decir, la extrapolación. \index{Extrapolación}
+
+Un caso particular de las funciones del tipo señalado en la ecuación \ref{Eq:Ajuste_polinomios} son las de la forma
+
+\begin{equation}
+\widehat{z} = f(h_1, \ldots, h_n)
+\end{equation}
+
+\noindent es decir, aquellas que no consideran la componente geográfica y simplemente realizan una regresión en el espacio de atributos. 
+
+Puesto que existe autocorrelación espacial, en el caso de considerar el espacio geográfico resulta más conveniente el uso de mínimos cuadrados generalizados en lugar de mínimos cuadrados ordinarios. En el capítulo \ref{Estadistica_avanzada} veremos con más detalle los temas relacionados con regresiones e inferencia estadística basada en datos espaciales.
 
 \subsection{Muestreo de datos para interpolación}
 
@@ -367,7 +341,7 @@ Existen muchas otras variaciones del kriging tales como el \emph{kriging simple}
 
 Muchas veces, la información de la que disponemos la obtenemos de una fuente ajena y no queda más remedio que emplearla tal y como la recibimos. Tal es el caso de una curvas de nivel digitalizadas de un mapa clásico (no podemos disponer de más curvas porque no existen en el mapa original), o de unos datos de observatorios meteorológicos (no podemos densificar esa red y disponer de datos medidos en otros puntos). 
 
-En otras ocasiones, sin embargo, los datos pueden no haber sido tomados aún y debe plantearse un esquema para ello. Es decir, que ese conjunto finito de puntos a partir de los cuales obtener una superficie interpolada puede ser creado a voluntad, siempre que nos mantengamos dentro del marco de limitaciones (temporales, monetarias, etc.) existentes. El diseño del muestreo de forma eficiente ayuda de forma directa a obtener mejores resultados al interpolar los datos recogidos. Este diseño de muestreo puede realizarse no solo para obtener un conjunto de datos base, sino para enriquecer uno ya existente, ampliándolo con nuevos puntos.
+En otras ocasiones, sin embargo, los datos pueden no haber sido tomados aún y debe plantearse un esquema para ello. Es decir, que ese conjunto finito de puntos a partir de los cuales obtener una superficie interpolada puede ser creado a voluntad, siempre que nos mantengamos dentro del marco de limitaciones (temporales, monetarias, etc.) existentes. El diseño del muestreo de forma eficiente ayuda de manera directa a obtener mejores resultados al interpolar los datos recogidos. Este diseño de muestreo puede realizarse no solo para obtener un conjunto de datos base, sino para enriquecer uno ya existente, ampliándolo con nuevos puntos.
 
 El objetivo de un muestreo espacial es poder inferir nueva información acerca de una población en la que sus distintos elementos están georreferenciados, a partir de un subconjunto de dicha población. La razón de llevar a cabo el muestreo es la imposibilidad de analizar todos los miembros de la población, ya que estos pueden ser muy numerosos (como en el caso de todos los habitantes de un país) o infinitos (como sucede para variables continuas tales como elevaciones o temperaturas).
 
@@ -375,17 +349,18 @@ Aunque el uso de un muestreo no es exclusivamente la interpolación posterior de 
 
 Lógicamente, el trabajar con una fracción reducida de la población introduce un cierto nivel de error. Ese error puede controlarse y acotarse mediante el diseño del muestreo. Por ello, a la hora de diseñar un muestreo deben plantearse principalmente las siguientes preguntas \cite{Haining2003Cambridge}:
 
-\begin{itemize}
- \item ¿Qué se pretende estimar? Algunas propiedades no poseen componente espacial, y lo importante es el \emph{cuánto}, no el \emph{dónde}. Por ejemplo, la media de una variable. En el caso de la interpolación, sí es de gran importancia el dónde, puesto que, como ya sabemos, existe autocorrelación espacial y esta es utilizada como concepto inherente a los distintos métodos de interpolación.
-\item ¿Que tamaño de muestreo (número $n$ de muestras) se necesita para un nivel de precisión dado? El error esta acotado en función de los puntos muestrales. En algunos casos se necesita realizar una estimación con un alto grado de precisión, y dentro de un amplio intervalo de confianza. En otros, sin embargo, no es necesario, y plantear un muestreo demasiado amplio supone un gasto innecesario de recursos.
-\item ¿Dónde tomar esas $n$ muestras? Por la existencia de autocorrelación espacial o por la variación espacial que pueden presentar otras variables relacionadas, una de las partes más importantes del muestreo es determinar la localización exacta en la que tomar las muestras. Existen tres modelos básicos de muestreo: aleatorio, estratificado y regular (Figura \ref{Fig:Tipos_muestreo})
 
-\begin{figure}[!hbt] 
+\begin{figure*}[!ht] 
 \centering
 \includegraphics[width=.98\textwidth]{Creacion_capas_raster/Tipos_muestreo.png}
 \caption{\small Tipos de muestreo. a) regular, b) aleatorio, c) estratificado} 
 \label{Fig:Tipos_muestreo} 
-\end{figure}
+\end{figure*}
+
+\begin{itemize}
+ \item \textbf{¿Qué se pretende estimar?} Algunas propiedades no poseen componente espacial, y lo importante es el \emph{cuánto}, no el \emph{dónde}. Por ejemplo, la media de una variable. En el caso de la interpolación, sí es de gran importancia el dónde, puesto que, como ya sabemos, existe autocorrelación espacial y esta es utilizada como concepto inherente a los distintos métodos de interpolación.
+\item \textbf{¿Que tamaño de muestreo (número $n$ de muestras) se necesita para un nivel de precisión dado?} El error está acotado en función de los puntos muestrales. En algunos casos se necesita realizar una estimación con un alto grado de precisión, y dentro de un amplio intervalo de confianza. En otros, sin embargo, no es necesario, y plantear un muestreo demasiado amplio supone un gasto innecesario de recursos.
+\item \textbf{¿Dónde tomar esas $n$ muestras?} Por la existencia de autocorrelación espacial o por la variación espacial que pueden presentar otras variables relacionadas, una de las partes más importantes del muestreo es determinar la localización exacta en la que tomar las muestras. Existen tres modelos básicos de muestreo: aleatorio, estratificado y regular (Figura \ref{Fig:Tipos_muestreo})
 
 El muestreo aleatorio simplemente sitúa los puntos de muestreo al azar sin obedecer a ningún condición particular. Si se desconoce el comportamiento de la variable muestreada, un muestreo aleatorio puede ser una buena opción. 
 
@@ -399,21 +374,20 @@ Los diseños pueden combinarse para obtener resultados más satisfactorios. Por ej
 Aplicando conjuntamente todo lo anterior debe tratar de diseñarse un muestreo que cumpla con lo siguiente:
 
 \begin{itemize}
-\item Explicar la variabilidad de la variable lo mejor posible. Por ejemplo, en el caso de plantear un muestreo que complemente a uno previo, ya se dispone de información acerca de la variable muestreada. Esta puede emplearse para distribuir adecuadamente los nuevos puntos de muestreo, aplicando que, por ejemplo, se necesitan más muestras en zonas de alta variabilidad.
+\item Explicar la variabilidad de la variable lo mejor posible. Así, en el caso de plantear un muestreo que complemente a uno previo, ya se dispone de información acerca de la variable muestreada. Esta puede emplearse para distribuir adecuadamente los nuevos puntos de muestreo, aplicando que, por ejemplo, se necesitan más muestras en zonas de alta variabilidad.
 
 El empleo de los denominados \emph{muestreos pilotos} es una herramienta para conocer en primera aproximación las propiedades de la variable a estudiar y diseñar el muestreo acorde con estas.
 \item Ser representativa. Esta representatividad debe ser tanto en el espacio de atributos como en el espacio geográfico, según puede verse en la figura \ref{Fig:Representatividad_muestreo}
 \end{itemize}
 
-
-\begin{figure}[!hbt]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.85\textwidth]{Creacion_capas_raster/Representatividad_muestreo.png}
 \caption{\small El muestreo a) es representativo en el espacio de atributos pero no en el geográfico. El b), sin embargo, es representativo en el espacio geográfico pero no en el de atributos.} 
 \label{Fig:Representatividad_muestreo} 
-\end{figure}
+\end{figure*}
 
-Esta figura muestra también algunas de las principales debilidades que pueden encontrarse en los distintos métodos de diseño de muestreo. Si la variable exhibe un comportamiento periódico, un muestreo regular puede enmascarar la existencia de dicha periodicidad y no ser representativo en el espacio de atributos. Ese es el caso del ejemplo a). En general, si existe algún tipo de orden oculto en la variable a analizar, debe tenerse cuidado a la hora de emplear muestreos sistemáticos, para evitar estos fenómenos. En el caso de ejemplo a), aunque no es un muestreo sistemático, la estructura de los puntos muestrales es bastante regular, lo que provoca que no se obtenga la representatividad en el espacio de atributos, dada la estructura periódica de la variable en el eje $x$.
+La figura muestra también algunas de las principales debilidades que pueden encontrarse en los distintos métodos de diseño de muestreo. Si la variable exhibe un comportamiento periódico, un muestreo regular puede enmascarar la existencia de dicha periodicidad y no ser representativo en el espacio de atributos. Ese es el caso del ejemplo a). En general, si existe algún tipo de orden oculto en la variable a analizar, debe tenerse cuidado a la hora de emplear muestreos sistemáticos, para evitar estos fenómenos. En el caso del ejemplo a), aunque no es un muestreo sistemático, la estructura de los puntos muestrales es bastante regular, lo que provoca que no se obtenga la representatividad en el espacio de atributos, dada la estructura periódica de la variable en el eje $x$.
 
  En el ejemplo b) el muestreo no es representativo del espacio geográfico ya que el diseño deja grandes áreas sin ser muestreadas. Esto puede suceder al emplear muestreos aleatorios, ya que estos, por su propia aleatoriedad, pueden generar estructuras que dejen amplias zonas sin ser muestreadas o con una intensidad de muestreo insuficiente.
 
@@ -425,38 +399,42 @@ No existe un método universalmente establecido como más adecuado en todas situac
 
 \begin{itemize}
  \item \textbf{Las características de la variable a interpolar}. En función del significado de la variable, las características de un método pueden ser adecuadas o no. Si, por ejemplo, interpolamos valores de precipitación máxima anual, no es adecuado utilizar aquellos métodos que suavicen excesivamente la superficie resultante, ya que se estarían perdiendo los valores extremos que, por la naturaleza del valor interpolado, son de gran interés.
-\item \textbf{Las características de la superficie a interpolar}. Si conocemos a priori algunas características adicionales de la superficie resultante, algunos métodos permiten la incorporación de estas características. Por ejemplo, variaciones bruscas en puntos de discontinuidad tales como acantilados en el caso de interpolar elevaciones, son aplicables mediante la imposición de barreras con métodos como el de distancia inversa, pero no con otros como el kriging.
-\item \textbf{La calidad de los datos de partida}. Cuando los datos de partida son de gran precisión, los métodos exactos pueden tener más interés, de cara a preservar la información original. Si, por el contrario, sabemos que los datos de partida contienen mucho ruido, aquellos métodos que suavizan el resultado tal como el kriging son preferibles, de cara a atenuar el efecto de dicho ruido.
-\item \textbf{El rendimiento de los algoritmos}. Algunos algoritmos como los basados en distancia son rápidos y requieren un tiempo de proceso aceptable incluso en conjuntos de datos de gran tamaño. Otros, como el kriging, son mucho más complejos y el tiempo de proceso es elevado. A esto hay que sumar la configuración propia del método, con lo que crear una capa ráster con algunos métodos puede llevar mucho más tiempo que con otros y requerir un esfuerzo mayor.\index{Kriging}
-\item \textbf{El conocimiento de los métodos}. Por obvio que parezca, debe conocerse bien el significado del método para poder aplicarlo. Un método de gran complejidad como el kriging exige una solida base de conceptos geoestadísticos para su aplicación. Más aún, el elevado número de ajustes que requiere y la alta sensibilidad del método a la variación de estos valores refuerza lo anterior. 
+\item \textbf{Las características de la superficie a interpolar}. Si conocemos a priori algunas características adicionales de la superficie resultante, algunos métodos permiten la incorporación de estas características. Por ejemplo, variaciones bruscas en puntos de discontinuidad tales como acantilados en el caso de interpolar elevaciones son aplicables mediante la imposición de barreras con métodos como el de distancia inversa, pero no con otros como el kriging.
 
-La figura \ref{Fig:Kriging_resultados} muestra tres capas interpoladas mediante kriging a partir de un conjunto de puntos. El empleo de distintos ajustes y variogramas(lógicamente, no todos correctos) da lugar a capas completamente diferentes. Si no se emplea correctamente, un método de interpolación puede producir resultados carentes de sentido, que aunque dan lugar a una capa con datos en todas sus celdas, dichos datos pueden no ser adecuados.
-
-\begin{figure}[!hbt]   
+\begin{figure*}[ht]   
 \centering
 \includegraphics[width=.85\textwidth]{Creacion_capas_raster/Kriging_resultados.png}
 \caption{\small Distintos resutlados obtenidos por kriging a partir de un mismo juego de puntos, utilizando diferentes ajustes.} 
 \label{Fig:Kriging_resultados} 
-\end{figure}
+\end{figure*}
+
+
+\item \textbf{La calidad de los datos de partida}. Cuando los datos de partida son de gran precisión, los métodos exactos pueden tener más interés, de cara a preservar la información original. Si, por el contrario, sabemos que los datos de partida contienen mucho ruido, aquellos métodos que suavizan el resultado tales como el kriging son preferibles, de cara a atenuar el efecto de dicho ruido.
+\item \textbf{El rendimiento de los algoritmos}. Algunos algoritmos como los basados en distancia son rápidos y requieren un tiempo de proceso aceptable incluso en conjuntos de datos de gran tamaño. Otros, como el kriging, son mucho más complejos y el tiempo de proceso es elevado. A esto hay que sumar la configuración propia del método, con lo que crear una capa ráster con algunos métodos puede llevar mucho más tiempo que con otros y requerir un esfuerzo mayor.\index{Kriging}
+\item \textbf{El conocimiento de los métodos}. Por obvio que parezca, debe conocerse bien el significado del método para poder aplicarlo. Un método de gran complejidad como el kriging exige una sólida base de conceptos geoestadísticos para su aplicación. Más aún, el elevado número de ajustes que requiere y la alta sensibilidad del método a la variación de estos valores refuerza lo anterior. 
+
+La figura \ref{Fig:Kriging_resultados} muestra tres capas interpoladas mediante kriging a partir de un conjunto de puntos. El empleo de distintos ajustes y variogramas (lógicamente, no todos correctos) da lugar a capas muy diferentes. Si no se emplea correctamente, un método de interpolación puede producir resultados carentes de sentido, que aunque dan lugar a una capa con datos en todas sus celdas, dichos datos pueden no ser adecuados.
+
 
 Pese a lo anterior, el kriging es utilizado habitualmente sin considerar estos aspectos, obteniéndose resultados aparentemente correctos pero con frecuencia erróneos. La experiencia del usuario es un elemento clave en la aplicación de métodos de interpolación, y debe ponerse gran énfasis en este aspecto.
 
 No debe olvidarse tampoco que algunos métodos asumen que se dan ciertas condiciones de los datos de partida, y esto puede no ser cierto, o bien requerirse algún tipo de transformación para que así suceda. Es necesario siempre comprobar que se dan estos supuestos.
-\item \textbf{El uso de la capa resultante}. No es lo mismo utilizar un MDE para crear una vista 3D con una fotografía aérea, que emplearlo para crear una ortofoto. Los requerimientos de calidad en el primer caso son menores, tan solo de tipo visual, y cualquiera de los métodos puede sernos válido. Aplicar una metodología compleja y laboriosa como el kriging quizás no sea la mejor opción en este caso, y sí lo sea el empleo de una ponderación por distancia.\index{Modelo Digital de Elevaciones}
+
+\item \textbf{El uso de la capa resultante}. No es lo mismo utilizar un MDE para crear una vista 3D con una fotografía aérea, que emplearlo para crear una ortofoto. Los requerimientos de calidad en el primer caso son menores, tan solo de tipo visual, y cualquiera de los métodos puede sernos válido. Aplicar una metodología compleja y laboriosa quizás no sea la mejor opción en este caso, y sí lo sea el empleo de una más sencilla.\index{Modelo Digital de Elevaciones}
 \end{itemize}
 
 \subsection{Elección de las características de la capa resultante}
 \label{Eleccion_caracteristicas_capa_resultante_raster}
 
-Los métodos que hemos visto en este capítulo no imponen restricciones sobre la distribución o el número puntos de entrada (si bien el kriging, por ejemplo, exige un cierto número de puntos para un ajuste fiable del variograma teórico), ni tampoco sobre las características de la capa ráster resultante. No obstante, resulta claro que existe una relación directa entre ambas, y que la capacidad de un conjunto de valores puntuales para generar una capa ráster es limitada. 
+Los métodos que hemos visto en este capítulo no imponen restricciones sobre la distribución o el número puntos de entrada (si bien el kriging, por ejemplo, exige un cierto número de puntos para un ajuste fiable del variograma teórico), ni tampoco sobre las características de la capa ráster resultante. A pesar de ello, resulta claro que existe una relación directa entre ambas, y que la capacidad de un conjunto de valores puntuales para generar una capa ráster es limitada. 
 
-En la práctica, a partir de cualquier capa de puntos podemos obtener cualquier capa ráster, ya que pueden siempre calcularse los valores en las celdas. Si aplicamos algunos conceptos cartográficos e ideas básicas de teoría de la información, esto es, no obstante, incorrecto, existiendo unas características idóneas para la capa ráster interpolada, fuera de las cuales no es adecuado interpolar.
+En la práctica, a partir de cualquier capa de puntos podemos obtener cualquier capa ráster, ya que pueden siempre calcularse los valores en las celdas. Pero si aplicamos algunos conceptos cartográficos e ideas básicas de teoría de la información, no es difícil darse cuenta de que esto puede ser incorrecto. Existen unas características idóneas para la capa ráster interpolada, fuera de las cuales no es adecuado interpolar.
 
-Vimos en \ref{Modelo_raster} que la resolución horizontal o tamaño de celda era uno de los parámetros básicos que definían las características de una capa ráster. Existiendo relación entre los puntos de origen y la capa interpolada a partir de ellos, debe existir por igual una relación entre la distribución espacial de los valor puntuales y dicho tamaño de celda, pues ambos elementos definen la precisión con que se recoge la variable estudiada.
+Vimos en \ref{Modelo_raster} que la resolución horizontal o tamaño de celda era uno de los parámetros básicos que definían las características de una capa ráster. Existiendo relación entre los puntos de origen y la capa interpolada a partir de ellos, debe existir por igual una relación entre la distribución espacial de los valores puntuales y dicho tamaño de celda, pues ambos elementos definen la precisión con que se recoge la variable estudiada.
 
-Cuando el número de puntos no es suficiente para ello, crear una capa con una resolución alta (tamaño de celda pequeño) equivale a generar un resultado cartográficamente incorrecto. Por el contrario, interpolar con un tamaño de celda demasiado grande supone estar <<desperdiciando>> parte de la información de partida, lo cual, en el caso de trabajar sobre un muestreo realizado específicamente para ello, implica un malgasto de medios materiales y humanos en la recogida de datos. La elección del tamaño de celda adecuado es, por tanto, fundamental en el proceso de interpolación.
+Cuando el número de puntos no es suficiente para ello, crear una capa con una resolución alta (tamaño de celda pequeño) equivale a generar un resultado cartográficamente incorrecto. Por el contrario, interpolar con un tamaño de celda demasiado grande supone estar desperdiciando parte de la información de partida, lo cual, en el caso de trabajar sobre un muestreo realizado específicamente para ello, implica un malgasto de medios materiales y humanos en la recogida de datos. La elección del tamaño de celda adecuado es, por tanto, fundamental en el proceso de interpolación.
 
-Los conceptos que vamos a ver a este respecto pueden emplearse tanto para estimar el tamaño de celda de la capa a interpolar, como para ayudar en el diseño del muestro previo a la creación de esta. Así, si conocemos de antemano (por ejemplo, por el uso que le vamos a dar) las características de la capa que necesitamos generar, podemos diseñar de forma más correcta el muestreo haciendo uso de estas ideas.
+Los conceptos que vamos a ver a este respecto pueden emplearse tanto para estimar el tamaño de celda de la capa a interpolar, como para ayudar en el diseño del muestreo previo a la creación de esta. Así, si conocemos de antemano (por ejemplo, por el uso que le vamos a dar) las características de la capa que necesitamos generar, podemos diseñar de forma más correcta el muestreo haciendo uso de estas ideas.
 
 \cite{Hengl2006CG} argumenta que el tamaño de celda adecuado de una capa ráster es función de la escala, la capacidad de proceso, la precisión posicional, la densidad de muestreo, la correlación espacial existente y la complejidad de la superficie a interpolar. Según estos conceptos, define tamaños mínimos y máximos de celda para cada circunstancia y cada factor considerado de los anteriores. Asimismo, recomienda una solución de compromiso entre los citados valores extremos.
 
@@ -482,7 +460,6 @@ La gran diferencia existente entre este tamaño recomendado y el anterior se debe
 
 Aunque resulta imposible dar una cifra exacta para la resolución óptima considerando todos los factores implicados, valores recomendados como los anteriores son de gran utilidad para poder al menos tener una idea del intervalo en el que el tamaño de celda a escoger debe encontrarse. Sin constituir <<recetas>> infalibles a la hora de elegir un tamaño de celda, constituyen herramientas útiles que deben considerarse antes de interpolar un conjunto de puntos.
 
-Para información más detallada puede visitarse la Web \cite{HenglSpatialAnalyst}, donde pueden es posible además descargar materiales adicionales.
 
 \subsection{Comprobación del ajuste. Validación}
 
@@ -492,22 +469,32 @@ Algunos métodos como el kriging dan una estimación del error además de la capa d
 \varepsilon =  (\widehat{z} - z)^2
 \end{equation}
 
+\begin{figure*}[t]
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=\mycolumnwidth]{Creacion_capas_raster/Validacion_cruzada.pdf}
+\caption{\small Validación cruzada previa de datos puntuales para interpolación.} 
+\label{Fig:Validacion_cruzada} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=.8\mycolumnwidth]{Creacion_capas_raster/Densidad_sencillo.pdf}
+\caption{\small Esquema del cálculo de densidades utilizando un área de influencia fija.} 
+\label{Fig:Densidad_sencillo} 
+\end{minipage}
+\end{figure*}
+
+
 Es decir, como el cuadrado de la diferencia entre el valor real y el estimado.
 
 En los métodos exactos, por propia definición, este valor es cero, lo cual no quiere decir, lógicamente, que la capa interpolada sea <<perfecta>> (lo es, pero solo en los puntos de partida), ni que no pueda llevarse a cabo una validación.
 
-Una forma habitual de proceder es, si se dispone de un juego grande de datos (con muchos puntos), <<reservar>> algunos de ellos para una validación posterior. Se interpola así una capa a partir de la mayor parte de ese conjunto, y se comprueba la diferencia entre los valores estimados en los puntos restantes y los valores medidos en los mismos. Los valores estimados no han sido influenciados por los valores reales en dichos puntos, ya que no se han empleado en la interpolación.
+Una forma habitual de proceder es, si se dispone de un juego grande de datos (con muchos puntos), <<reservar>> algunos de ellos para una validación posterior. Se interpola así una capa a partir de la mayor parte de ese conjunto, y se comprueba la diferencia entre los valores estimados en los puntos restantes y los valores medidos en dichos puntos. Los valores estimados en esos puntos no han sido influenciados por los valores reales, ya que no estos se han empleado en la interpolación.
 
 Si no disponemos de un conjunto de datos de validación y el juego de datos disponible es reducido y no podemos separar una parte de él para validar el resultado, podemos llevar a cabo un proceso de validación cruzada. En este proceso, se calculan por interpolación puntos en cada una de las coordenadas de los puntos de muestreo, empleando en cada caso todos los puntos restantes.
 
 De esta forma, obtenemos un conjunto de pares de valores con los valores reales y estimados en cada punto, que podemos mostrar en una gráfica como la de la figura \ref{Fig:Validacion_cruzada}. De igual modo, podemos efectuar un análisis de regresión y obtener la expresión de la recta de ajuste, el coeficiente de correlación de esta o el residuo medio cuadrático. El valor representativo en este caso, no obstante, es la propia expresión de la función. En caso de un ajuste perfecto, la recta debe ser de la forma $y=x$, por lo que resulta interesante representar esta recta ideal para poder comparar.\index{Validación cruzada}
-
-\begin{figure}[!hbt]  
-\centering
-\includegraphics[width=.5\mycolumnwidth]{Creacion_capas_raster/Validacion_cruzada.pdf}
-\caption{\small Validación cruzada previa de datos puntuales para interpolación.} 
-\label{Fig:Validacion_cruzada} 
-\end{figure}
 
 \section{Densidad}
 \label{Densidad}
@@ -522,27 +509,21 @@ Por simplicidad, ignoraremos por el momento los atributos asociados a cada punto
 
 La figura \ref{Fig:Densidad_sencillo} muestra un ejemplo sencillo con la áreas de influencia de dos únicos puntos. Donde ambas áreas intersecan, la densidad es, lógicamente, mayor. Las celdas que no están en el área de influencia de ningún punto tienen un valor de densidad nulo.
 
-\begin{figure}[!hbt]  
-\centering
-\includegraphics[width=.4\mycolumnwidth]{Creacion_capas_raster/Densidad_sencillo.pdf}
-\caption{\small Esquema del cálculo de densidades utilizando un área de influencia fija.} 
-\label{Fig:Densidad_sencillo} 
-\end{figure}
-
-La elección del área de influencia afecta directamente al resultado obtenido, tal como puede verse en la figura \ref{Fig:Densidad}, que muestra dos capas de densidad calculadas para distintos radios de influencia.
-
-\begin{figure}[!hbt]   
+\begin{figure*}[!ht]   
 \centering
 \includegraphics[width=.85\textwidth]{Creacion_capas_raster/Densidad.png}
 \caption{\small Capas de densidad a partir de una capa de puntos. El tamaño del radio de influencia en (b) es el doble que en (a).}
 \label{Fig:Densidad} 
-\end{figure}
+\end{figure*}
+
+La elección del área de influencia afecta directamente al resultado obtenido, tal como puede verse en la figura \ref{Fig:Densidad}, que muestra dos capas de densidad calculadas para distintos radios de influencia.
+
 
 Se asume por defecto que el área de influencia es circular (mismo alcance de dicha influencia en todas direcciones), y que es la misma para todos los puntos.
 
 En realidad, puede entenderse la creación de una capa de densidades como un histograma bidimensional, siendo por tanto una función de probabilidad.
 
-La pertenencia o no al área de influencia de cada punto es una función discontinua. Para crear capas de densidad con transiciones suaves, pueden utilizarse funciones distintas de modo que la influencia varíe con la distancia de forma continua.
+La pertenencia o no al área de influencia de cada punto es una función discontinua. Para crear capas de densidad con transiciones suaves, pueden utilizarse funciones distintas, de modo que la influencia varíe con la distancia de forma continua.
 
 En estadística, una \emph{función núcleo} o \emph{núcleo (kernel)} es una función de densidad bivariante y simétrica, empleada en la estimación de funciones de densidad de probabilidad de variables aleatorias. El caso anterior en el que todos puntos de la ventana de influencia tienen el mismo peso es un caso particular de núcleo, pero existen muchos otros que dan lugar a estimaciones no discontinuas. 
 \index{Función!núcleo}\index{Kernel}\index{Nucleo@Núcleo!gaussiano}
@@ -556,38 +537,42 @@ k(h)=\left(1-\frac{h^2}{r^2}\right)^2 \qquad \forall h \leq r
 
 \noindent donde $h$ es la distancia al punto y $r$ el radio máximo de influencia.
 
-\begin{figure}[!hbt]  
+\begin{figure*}[t]
+\begin{minipage}{0.49\linewidth}
 \centering
-\includegraphics[width=.5\mycolumnwidth]{Creacion_capas_raster/Nucleo_gaussiano.pdf}
+\includegraphics[width=\mycolumnwidth]{Creacion_capas_raster/Nucleo_gaussiano.pdf}
 \caption{\small Comparación entre una función núcleo constante (en trazo punteado) y un núcleo gaussiano (en trazo continuo) para un radio de influencia $r=2$.} 
 \label{Fig:Nucleo_gaussiano} 
-\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=.8\mycolumnwidth]{Creacion_capas_raster/Densidad_sencillo_ponderada.pdf}
+\caption{\small Esquema del cálculo de densidades utilizando un área de influencia fija y ponderación según valores. El punto inferior derecho tiene un peso $p=2$, mientras que el superior izquierdo un peso $p=1$.} 
+\label{Fig:Densidad_sencillo_ponderada} 
+\end{minipage}
+\end{figure*}
+
 
 Como puede observarse comparando las figuras \ref{Fig:Densidad} y \ref{Fig:Densidad_kernel}, la diferencia entre el uso de uno u otro núcleo es notable, pero la utilización de radios distintos, independientemente del método empleado, da lugar a resultados muy diferenciados. El radio de influencia máxima es, pues, el parámetro más importante en la estimación de densidades, y debe seleccionarse de acuerdo con la distribución de los puntos muestrales.
 
-\begin{figure}[!hbt]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.85\textwidth]{Creacion_capas_raster/Densidad_kernel.png}
 \caption{\small Capas de densidad a partir de una capa de puntos mediante nucleo gaussiano. El tamaño del radio de influencia en (b) es el doble que en (a).} 
 \label{Fig:Densidad_kernel} 
-\end{figure}
+\end{figure*}
 
 Además de emplear las coordenadas de cada punto para la estimación de densidad, pueden ponderarse estos con los atributos de cada uno de ellos. Así, partiendo de una capa de puntos que represente núcleos poblacionales, para cada uno de los cuales se disponga de su número de habitantes, puede obtenerse una capa de densidad de población. O, en el caso de los puntos que representan observaciones de individuos de una especie, recoger en estos puntos no solo el hecho de que se ha producido un avistamiento, sino cuántos de ellos.
 
 La figura \ref{Fig:Densidad_sencillo_ponderada} muestra un ejemplo del cálculo de densidades si se emplea ponderación de los puntos.
 
-\begin{figure}[!hbt]  
-\centering
-\includegraphics[width=.4\mycolumnwidth]{Creacion_capas_raster/Densidad_sencillo_ponderada.pdf}
-\caption{\small Esquema del cálculo de densidades utilizando un área de influencia fija y ponderación según valores. El punto inferior derecho tiene un peso $p=2$, mientras que el superior izquierdo un peso $p=1$.} 
-\label{Fig:Densidad_sencillo_ponderada} 
-\end{figure}
 
-En el caso por ejemplo de las observaciones de una especie, la capa de densidad nos da igualmente una medida de la probabilidad de encontrar esa especie en cada celda. El cálculo de estas probabilidades es la base para el desarrollo de modelos predictivos más complejos. Estos modelos incluyen la utilización de variables de apoyo, así como muestreos no solo de presencia, sino también de ausencia.\index{Modelo!predictivo}
+En el caso de las observaciones de una especie, la capa de densidad nos da igualmente una medida de la probabilidad de encontrar esa especie en cada celda. El cálculo de estas probabilidades es la base para el desarrollo de modelos predictivos más complejos. Estos modelos incluyen la utilización de variables de apoyo, así como muestreos no solo de presencia, sino también de ausencia.\index{Modelo!predictivo}
 
 \section{Resumen}
 
-La información vectorial, en particular la disponible en forma de puntos, puede convertirse en capas ráster a través del uso de métodos de interpolación. Estos permiten calcular valores en puntos no muestreados, a partir de valores recogidos en una serie de puntos. De este modo, se puede asignar un valor a cada celda de una capa ráster, y crear una representación continua de la variable recogida en los puntos de muestreo.
+La información vectorial, en particular la disponible en forma de puntos, puede convertirse en capas ráster a través del uso de métodos de interpolación. Estos permiten calcular valores en puntos no muestreados, a partir de valores recogidos en una serie de localizaciones. De este modo, se puede asignar un valor a cada celda de una capa ráster, y crear una representación continua de la variable recogida en los puntos de muestreo.
 
 Existen muchos métodos de interpolación distintos, entre los que cabe destacar los siguientes por su implementación habitual en los SIG:
 
@@ -605,4 +590,5 @@ Empleando métodos de validación y validación cruzada, puede comprobarse la bonda
 
 Junto con los métodos de interpolación, el calculo de densidades permite igualmente la creación de capas ráster a partir de datos puntuales.
 
+\end{multicols}
 \pagestyle{empty}

@@ -14,11 +14,13 @@ Aplicando conceptos relacionados con los anteriores, calcularemos zonas de influ
 El álgebra de mapas será la base de herramientas a utilizar, por lo que, una vez más, lo que necesitas para seguir el capítulo es un buen conocimiento de sus conceptos y una buena comprensión de las particularidades del modelo ráster, sobre el cual trabajaremos. Al final del capítulo, trabajaremos con datos vectoriales para el análisis de redes, con lo que deberás conocer asimismo los conceptos fundamentales relativos a la topología de estas.
 \end{intro}
 
+\begin{multicols}{2}
+
 \section{Introducción}
 \pagestyle{fancy}
 
 
-Desplazarse entre dos puntos cualesquiera del espacio implica un coste. Cuanto más alejados se encuentren estos, llevará más tiempo efectuar ese desplazamiento y se consumirá más energía, entre otras cosas. La distancia como tal, así como el tiempo o la energía gastada, son ejemplos de variables de coste.
+Desplazarse entre dos puntos cualesquiera del espacio implica un coste. Cuanto más alejados se encuentren estos, más tiempo llevará efectuar ese desplazamiento y se consumirá más energía, entre otras cosas. La distancia como tal, así como el tiempo o la energía gastada, son ejemplos de variables de coste.
 
 Un coste expresa la resistencia ofrecida por el medio para desplazarse a través de él en un punto concreto.
 
@@ -32,11 +34,11 @@ La delimitación de zonas de influencia sobre una base ráster permite no solo int
 
 \section{Superficies de fricción}
 
-Una capa conteniendo una variable de coste se conoce como \emph{superficie de fricción}. Las variables de coste son de tipo cuantitativo y generalmente, aunque no siempre, continuas.\index{Superficie!de fricción}
+Una capa que contiene una variable de coste se conoce como \emph{superficie de fricción}. Las variables de coste son de tipo cuantitativo y generalmente, aunque no siempre, continuas.\index{Superficie!de fricción}
 
 El valor de cada celda de una superficie de fricción indica el coste que supone recorrer dicha celda \cite{Douglas1994Cartographica}. Puesto que la celda puede recorrerse en diversas direcciones, se establece que este coste se refiere a hacerlo en la dirección vertical u horizontal, no diagonal. Así, una capa que almacene la variable de coste <<distancia>> será una capa constante que contendrá en todas las celdas el tamaño de celda $\Delta s$.
 
-Por regla general, los costes son, no obstante, variables, esto es, distintos en cada celda. Veamos algunos casos.
+No obstante, los costes son, por regla general, variables. Esto es, distintos en cada celda. Veamos algunos casos.
 
 Una capa de pendientes, por ejemplo, es una capa de coste válida, ya que la dificultad de desplazarse sobre el terreno aumenta conforme lo hace la pendiente. De igual modo, el tiempo empleado en atravesar una celda, que será función de diversos factores, también representa un coste.\index{Pendiente}
 
@@ -47,14 +49,14 @@ El coste no es necesariamente una variable física de tipo continuo. Por ejemplo,
 Este tipo de variables hacen referencia a los denominados espacios \emph{subjetivos} \cite{Gatrell1983Clarendon}, en contraposición a los espacios  absolutos sobre los que se registran las medidas de distancia o tiempo que constituyen las fricciones empleadas más frecuentemente.
 \index{Espacio!subjetivo}
 
-Aunque la capa con la superficie de fricción cubre toda una extensión dada, es probable que puntos de esta extensión no sean transitables. Si suponemos que el coste viene expresado por la pendiente, hay zonas tales como embalses donde, con independencia de su pendiente, no podemos cruzar. Una solución habitual es asignar a las celdas en estas zonas un valor muy elevado (coste infinito), que haga que no sea viable transitarlas. No obstante, una opción más correcta es asignar valor de sin datos a estas zonas, de forma que queden directamente excluidas del cálculo. Esto puede emplearse para excluir en el posterior trazado de rutas óptimas aquellos puntos que no deseen ser transitados, bien sea por los propios valores de la variable de coste o bien por otras razones.
+Aunque la capa con la superficie de fricción cubre toda una extensión dada, es probable que puntos de esta extensión no sean transitables. Si suponemos que el coste viene expresado por la pendiente, hay zonas tales como embalses donde, con independencia de su pendiente, no podemos cruzar. Una solución habitual es asignar a las celdas en estas zonas un valor muy elevado (coste infinito), que haga que no sea viable transitarlas. Una opción más correcta es asignar valor de sin datos a estas zonas, de forma que queden directamente excluidas del cálculo. Esto puede emplearse para excluir en el posterior trazado de rutas óptimas aquellos puntos por los que no se desee transitar, bien sea por los propios valores de la variable de coste o bien por otras razones.
 
-\begin{figure}[h]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.3\textwidth]{Costes/Ejemplo_superficie_friccion.pdf}
 \caption{\small Una superficie de fricción permite calcular el coste de una ruta definida sobre ella.}
 \label{Fig:Ejemplo_superficie_friccion} 
-\end{figure}
+\end{figure*}
 
 Un ejercicio sencillo para comenzar a trabajar con superficies de fricción es el mostrado en la figura \ref{Fig:Ejemplo_superficie_friccion}. Sobre la pequeña capa ráster de la figura con valores de fricción, se representa una ruta entre dos de sus celdas. Podemos calcular el coste total de recorrer la ruta sumando los costes de cada movimiento entre celdas consecutivas. Para los desplazamientos en dirección horizontal o vertical, el desplazamiento tiene un coste dado por la expresión:
 
@@ -82,17 +84,17 @@ Aunque de interés, el análisis anterior es muy simple, y no revela todo el poten
 
 \index{Superficie!de coste acumulado}
 
-De igual modo, el análisis de la superficie de fricción es la base para resolver otros problemas de rutas óptima. Dada una serie de puntos posibles de destino y un punto de inicio, podemos calcular cuál es el punto más cercano (cercanía en términos de coste mínimo, no de distancia euclídea), y calcular la ruta óptima y el coste de esta.
+De igual modo, el análisis de la superficie de fricción es la base para resolver otros problemas de rutas óptimas. Dada una serie de puntos posibles de destino y un punto de inicio, podemos calcular cuál es el punto más cercano (cercanía en términos de coste mínimo, no de distancia euclídea), y calcular la ruta óptima y el coste de esta.
 
 Para ello, debemos convertir la capa con los costes unitarios por celda en una \emph{capa de coste acumulado}. El coste acumulado de cada celda representa el valor del coste total a recorrer desde dicha celda a la celda de destino más cercana, desplazándose por la ruta óptima. Para una superficie de fricción con distancias euclídeas, y un conjunto de $n$ puntos, la capa de coste acumulado correspondiente indica la distancia al punto más cercano. Si utilizamos una superficie de fricción con tiempos de tránsito, la capa de coste acumulado indica el tiempo mínimo que se tardaría en alcanzar uno de esos puntos de destino (el más cercano en términos de tiempo).\index{Distancia!euclidea}
 
-De forma habitual, los puntos de destino se recogen en otra capa ráster, codificados con un valor concreto, o bien simplemente con valores cualesquiera y valores de sin datos en las celdas que no representan puntos de destino.
+De forma habitual, los puntos de destino se recogen en otra capa ráster, codificados con un valor concreto, o bien simplemente con valores cualesquiera y utilizando valores de sin datos en las celdas que no representan puntos de destino.
 
 Para convertir una superficie de fricción en una superficie de coste acumulado en base a unos puntos de destino dados, se sigue el siguiente procedimiento \cite{Berry1996Wiley, Eastman1989Autocarto} :
 
 \begin{itemize}
 	\item Para cada una de las celdas de destino, analizamos el coste de desplazarse a las adyacentes.
-	\item Si estas no han sido analizadas aún o ya tienen un coste asignado pero es mayor que el calculado, se les asigna el valor de dicho coste calculado.
+	\item Si estas no han sido analizadas aún o ya tienen un coste asignado pero es mayor que el calculado en el paso anterior, se les asigna el valor de dicho coste calculado.
 	\item Desde este punto, repetimos el proceso pero en lugar de utilizar las celdas de destino, utilizando todas las celdas que han sido modificadas en la iteración anterior.
 	 \item El proceso se detiene cuando no se modifican nuevas celdas, ya que en este punto todas tienen asignado su coste acumulado mínimo.
 \end{itemize}
@@ -101,38 +103,41 @@ Para visualizar gráficamente esta metodología, puede observarse que el proceso d
 
 En la figura \ref{Fig:Coste_acumulado} podemos ver la capa de coste acumulado resultante de utilizar tres puntos de destino y una superficie de fricción constante. Puesto que la superficie de fricción es constante, dicho coste acumulado es proporcional a la distancia.
 
-\begin{figure}[h]   
+\begin{figure*}[t]
+\begin{minipage}{0.49\linewidth}
 \centering
-\includegraphics[width=.4\mycolumnwidth]{Costes/Coste_acumulado.png}
+\includegraphics[width=.8\mycolumnwidth]{Costes/Coste_acumulado.png}
 \caption{\small Capa de coste acumulado para tres puntos de destino y con una superficie de fricción constante. Para lograr una visualización más explícita se ha añadido un sombreado en función del propio coste.}
 \label{Fig:Coste_acumulado} 
-\end{figure}
-
-Para calcular la superficie de coste acumulado necesitamos puntos de destino, codificados según algún criterio preestablecido, como ya se ha dicho.. Puesto que trabajamos sobre una capa ráster, en realidad debemos definir celdas de destino. Estas, no obstante, no han de representar necesariamente localizaciones puntuales aisladas. Podemos establecer grupos de celdas de destino contiguas, que en realidad representan áreas de destino\ref{Fig:Coste_acumulado_area}. Esto nos permite recoger entidades lineales (por ejemplo, para calculo de costes de desplazamiento a una carretera) o de área, además de, por supuesto, elementos puntuales  
-
-\begin{figure}[h]   
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
 \centering
-\includegraphics[width=.4\mycolumnwidth]{Costes/Coste_acumulado_area.png}
+\includegraphics[width=.8\mycolumnwidth]{Costes/Coste_acumulado_area.png}
 \caption{\small Superficie de coste acumulado representando el coste mínimo a un área de destino. Las celdas en blanco indican las  celdas de destino, para las cuales el coste acumulado es nulo.}
-\label{Fig:Coste_acumulado_area} 
-\end{figure}
+\label{Fig:Coste_acumulado_area}
+\end{minipage}
+\end{figure*}
+
+
+Para calcular la superficie de coste acumulado necesitamos puntos de destino, codificados según algún criterio preestablecido, como ya se ha dicho. Puesto que trabajamos sobre una capa ráster, en realidad debemos definir celdas de destino. Estas, no obstante, no han de representar necesariamente localizaciones puntuales aisladas. Podemos establecer grupos de celdas de destino contiguas, que en realidad representan áreas de destino\ref{Fig:Coste_acumulado_area}. Esto nos permite recoger entidades lineales (por ejemplo, para calculo de costes de desplazamiento a una carretera) o de área, además de, por supuesto, elementos puntuales . 
 
 Uno de los problemas principales del cálculo con el método anterior es el debido a la limitación de los ángulos de movimiento. Al igual que veíamos para el modelo D8 de flujo, el hecho de que los movimientos se analicen en la ventana $3\times 3$ obliga a que la dirección sea una de las definidas por las ocho celdas circundantes, es decir, siempre un múltiplo de 45\degree. Observando la figura \ref{Fig:Coste_acumulado_area}, no es difícil percibir el efecto de esta limitación, del mismo modo que era sencillo detectar visualmente las deficiencias del modelo D8. Este efecto es especialmente patente al emplear una superficie de coste constante, tal y como se ha hecho en la figura anterior. \index{D8}
 
 Para solventar en parte este inconveniente, una opción es analizar no solo esas ocho celdas, sino también algunas de la ventana $5\times5$ centrada en la misma celda. En particular, aquellas situadas a salto de caballo desde la celda central, por lo que esta conectividad se conoce como \emph{vecindad de caballo}, en contraposición a la \emph{vecindad de reina} que define el conjunto de celdas contiguas en la ventana $3\times3$ \cite{Chaoqing2003IJGIS}. La figura \ref{Fig:Tipos_vecindad} muestra esquemas de ambos tipos de vecindad. \index{Vecindad!de caballo}\index{Vecindad!de reina}
 
-\begin{figure}[h]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.7\mycolumnwidth]{Costes/Tipos_vecindad.pdf}
 \caption{\small Tipos de vecindad. a) de caballo, b) de reina.}
 \label{Fig:Tipos_vecindad} 
-\end{figure}
+\end{figure*}
 
 \subsection{Coste isotrópico \emph{vs} coste anisotrópico}
 
 Al introducir el análisis de las superficies de fricción señalábamos la pendiente como una posible variable de coste. Los costes de un desplazamiento dependían de ese valor de la pendiente, así como de la dirección de desplazamiento, para aplicar el factor de corrección $\sqrt{2}s$ en caso de hacerlo diagonalmente. No obstante, además de considerar la dirección de desplazamiento para aplicar esa corrección en función de la distancia entre centros de celda, para modelizar el proceso de forma realista debemos considerarlo junto a la propia naturaleza de la variable de coste. En el caso de la pendiente, resulta obvio que no es igual recorrer la celda ascendiendo por la línea de máxima pendiente que hacerlo por la dirección de la curva de nivel. Es decir, el valor de coste en las celdas de una superficie de fricción no es único, sino que depende de la dirección.\index{Coste!isotrópico}\index{Coste!anisotrópico}\index{Isotropía}\index{Anisotropía}
 
-Frente al coste isotrópico (igual en todas las direcciones) que hemos visto hasta el momento, más fácil de modelizar y comprender, encontramos fenómenos en los que la resistencia del medio no es la misma en todas direcciones. Este coste es de tipo anisotrópico. Junto al caso de la pendiente, otro ejemplo claro de esto es, por ejemplo, la resistencia que el viento ofrece al movimiento. Si usamos como coste el tiempo que se tarda en atravesar cada celda, y este tiempo lo calculamos según la velocidad máxima a la que podamos desplazarnos, es obvio que esta velocidad máxima no será la misma si vamos en contra del viento que si vamos a favor. En general, la mayoría de procesos son de tipo anisotrópico, aunque muchos de ellos pueden simplificarse y estudiarse como procesos isotrópicos. 
+Frente al coste isotrópico (igual en todas las direcciones) que hemos visto hasta el momento, más fácil de modelizar y comprender, encontramos fenómenos en los que la resistencia del medio no es la misma en todas direcciones. Este coste es de tipo anisotrópico. Junto al caso de la pendiente, otro ejemplo claro de esto es, por ejemplo, la resistencia que el viento ofrece al movimiento. Es obvio que el coste de desplazamiento no será el mismo si vamos en contra del viento que si vamos a favor. En general, la mayoría de procesos son de tipo anisotrópico, aunque muchos de ellos pueden simplificarse y estudiarse como procesos isotrópicos. 
 
 El concepto de superficie de fricción debe extenderse para acomodar este nuevo tipo de modelos. La capa con valores unitarios no es suficiente, ya que estos reflejan únicamente el coste en una dirección de todas las posibles. La solución habitual es recoger en la superficie de fricción los valores de coste máximo (el que se tendría desplazándose en contra del viento o hacia arriba de la ladera por la línea de máxima pendiente), y acompañar esta de una capa adicional con las direcciones en las que dicho coste máximo se produce. En el caso de la pendiente, esta dirección la podríamos obtener con la orientación en la celda, y en el caso del viento tomando la dirección opuesta a aquella en la que este sopla en cada celda.
 
@@ -166,19 +171,18 @@ Aplicando este concepto es posible calcular una capa de distancias a un cauce, p
 
 La figura \ref{Fig:Distancia_cauce} muestra un mapa de distancia euclídea a un cauce, así como otro de distancia hidrológica, pudiendo apreciarse la diferencia entre ambas.
 
-\begin{figure}[!hbt]   
+\begin{figure*}[!ht]   
 \centering
 \includegraphics[width=.9\textwidth]{Costes/Distancia_cauce.png}
 \caption{\small a) Distancia euclídea al cauce, b) distancia hidrológica al cauce.}
 \label{Fig:Distancia_cauce} 
-\end{figure}
+\end{figure*}
  
-
 Un problema adicional de trabajar con superficies de fricción anisotrópicas es la combinación de varias fuerzas resistentes.
 
 Si las superficies de fricción son isotrópicas, y son varios los factores que dificultan el desplazamiento, combinar estos es tan sencillo como sumar las capas correspondientes. Si la influencia no es equivalente, pueden normalizarse o bien ponderarse, pero la capa resultante se obtiene con una mera suma y sigue siendo una superficie de fricción isotrópica.
 
-Consideremos ahora el caso de dos variables de coste anisotrópico tales como el viento y la pendiente. En este supuesto no podemos sumarlas, ya que es necesario considerar también las direcciones de coste máximo. Sólo si estas fuesen idénticas podríamos sumarlas y obtener una nueva superficie de fricción, que utilizaríamos con la capa de direcciones de máximo coste de cualquiera de ellas. Este caso, no obstante, es altamente improbable. Incluso puede darse que en un punto el coste máximo de un factor coincida con el mínimo de otro, por ejemplo si el viento sopla pendiente arriba.
+Consideremos ahora el caso de dos variables de coste anisotrópico tales como el viento y la pendiente. En este supuesto no podemos sumarlas, ya que es necesario considerar también las direcciones de coste máximo. Sólo si estas fuesen idénticas podríamos sumarlas y obtener una nueva superficie de fricción, que utilizaríamos con la capa de direcciones de máximo coste de cualquiera de ellas. Este caso es altamente improbable. Incluso puede darse que en un punto el coste máximo de un factor coincida con el mínimo de otro, por ejemplo si el viento sopla pendiente arriba.
 
 El problema estriba en la capa de direcciones, que por contener un parámetro circular tal como se vio al tratar la orientación en \ref{Medidas_derivadas_primer_grado}, no pueden utilizarse las operaciones aritméticas y estadísticas de la forma habitual. Este caso es similar a lo visto en \ref{Estadisticas_lineas}.
 
@@ -203,25 +207,25 @@ El valor de cada celda en una capa de coste acumulado nos indica el coste mínimo
 
 Para entender mejor la forma de llevar esto a cabo, resulta de interés representar la capa de coste acumulado con una vista tridimensional, empleando el coste como elevación. Visualizar así esta superficie es una forma muy intuitiva de ver lo que representa y cómo utilizarla. La figura \ref{Fig:Coste_acumulado_3D} muestra la capa de coste acumulado, así como una ruta óptima. Se ve que la superficie contiene tantos sumideros como puntos de destino. Estas son las zonas de mínimo coste (coste cero, ya que son los propios puntos de destino), que aparecen con mínima elevación. La ruta va desde el punto de origen hasta el fondo de uno de dichos sumideros.
 
-\begin{figure}[h]   
+\begin{figure*}[t]
 \centering
-\includegraphics[width=.5\mycolumnwidth]{Costes/Coste_acumulado_3D.png}
+\includegraphics[width=.4\mycolumnwidth]{Costes/Coste_acumulado_3D.png}
 \caption{\small Representación tridimensional de una capa de coste acumulado y una ruta óptima sobre esta.}
 \label{Fig:Coste_acumulado_3D} 
-\end{figure}
+\end{figure*}
 
-La superficie de coste acumulado es en realidad una superficie de potencial, y el desplazamiento entre el punto de origen y el de destino se asemeja mucho, como puede verse en la figura, a la ruta que seguiría un flujo desplazándose hacia aguas abajo si en lugar de coste acumulado fuera elevación el parámetro recogido en la capa. Por tanto podemos utilizar modelos de dirección similares a los mostrados para el caso del análisis hidrológico (\ref{Direcciones_flujo}). En particular, un modelo sencillo como el D8 en el que el flujo se desplaza hacia la máxima pendiente.
+La superficie de coste acumulado es en realidad una superficie de potencial, y el desplazamiento entre el punto de origen y el de destino se asemeja mucho, como puede verse en la figura, a la ruta que seguiría un flujo desplazándose hacia aguas abajo si en lugar de coste acumulado fuera elevación el parámetro recogido en la capa. Por tanto, podemos utilizar modelos de dirección similares a los mostrados para el caso del análisis hidrológico (\ref{Direcciones_flujo}). En particular, un modelo sencillo como el D8 en el que el flujo se desplaza hacia la máxima pendiente.
 
 Por la propia forma en la que se construye la superficie de coste acumulado, no existen sumideros aparte de las propias celdas de destino, y siempre existe una celda de menor valor alrededor de cualquier otra, excepto en dichas celdas de destino, que son mínimos absolutos.
 
 \section{Zonas de influencia}
 \label{Zona_influencia_raster}
 
-Como ya sabemos visto, los objetos geográficos tiene influencia sobre su entorno. Un elemento lineal como un río, o uno puntual como una estación de metro presentan una funcionalidad o un comportamiento respecto a su entorno que depende de la distancia.\index{Zona!de influencia}
+Como ya sabemos visto, los objetos geográficos tiene influencia sobre su entorno. Un elemento lineal como un río, o uno puntual como una estación de metro, presentan una funcionalidad o un comportamiento respecto a su entorno que depende de la distancia.\index{Zona!de influencia}
 
 A lo largo de este capítulo hemos visto que la distancia puede interpretarse como un tipo de coste. Por ello, podemos utilizar otras variables de la misma forma que la distancia para definir zonas de influencia.
 
-Al hacerlo, podemos crear zonas de influencia de dimensión fija, tales como las creadas en forma vectorial según vimos en \ref{Zona_influencia_vectorial}, o, por el contrario, de dimensión variable. Las de dimensión fija pueden tener formas irregulares alrededor del objeto central, ya que esa dimensión ya no es necesariamente en términos de distancia, sino de coste. Cumplen, no obstante, la condición de que todas las celdas en el borde de la zona tiene un mismo valor de coste (del mismo modo que, si empleamos la distancia euclídea, todos los puntos en el límite se encuentran a la misma distancia del objeto central.
+Al hacerlo, podemos crear zonas de influencia de dimensión fija, tales como las creadas en forma vectorial según vimos en \ref{Zona_influencia_vectorial}, o, por el contrario, de dimensión variable. Las de dimensión fija pueden tener formas irregulares alrededor del objeto central, ya que esa dimensión ya no es necesariamente en términos de distancia, sino de coste. Cumplen, no obstante, la condición de que todas las celdas en el borde de la zona tiene un mismo valor de coste (del mismo modo que, si empleamos la distancia euclídea, todos los puntos en el límite se encuentran a la misma distancia del objeto central).
 
 En las de dimensión variable, la dimensión de la zona de influencia varía según cada celda de las que conforman el objeto, teniendo cada una una capacidad distinta de ejercer su influencia sobre el medio circundante.
 
@@ -230,14 +234,14 @@ Frente al cálculo de zonas de influencia que vimos para las capas vectoriales, l
 \subsection{Zonas de influencia de dimensión fija}
 \label{Zonas_influencia_dimension_fija}
 
-Para comenzar, la figura \ref{Fig:Zona_influencia_raster} muestra una comparación entre la zona de influencia calculada sobre el trazado del cauce recogido según un modelo vectorial y la misma zona calculada sobre una base ráster. Para calcular esta última se ha creado la capa de coste acumulado tomando el cauce como conjunto de celdas de destino, pero deteniéndose el algoritmo una vez que se alcanza un umbral de distancia dado. También puede calcularse de la forma habitual, y después reclasificando todas aquellas celdas con distancia mayor que el umbral para asignarles valor de sin datos.
+Para comenzar, la figura \ref{Fig:Zona_influencia_raster} muestra una comparación entre la zona de influencia calculada sobre el trazado del cauce recogido según un modelo vectorial y la misma zona calculada sobre una base ráster. Para calcular esta última se ha creado la capa de coste acumulado tomando el cauce como conjunto de celdas de destino, pero deteniéndose el algoritmo una vez que se alcanza un umbral de distancia dado. También puede calcularse de la forma habitual, y después reclasificando todas aquellas celdas con distancia mayor que el umbral, para asignarles valor de sin datos.
 
-\begin{figure}[!hbt]   
+\begin{figure*}[t]
 \centering
-\includegraphics[width=.95\textwidth]{Costes/Zona_influencia_raster.png}
+\includegraphics[width=\textwidth]{Costes/Zona_influencia_raster.png}
 \caption{\small Comparación entre a) zona de influencia en formato vectorial y b) zona de influencia en formato ráster.}
 \label{Fig:Zona_influencia_raster} 
-\end{figure}
+\end{figure*}
 
 La primera diferencia apreciable es que la zona de influencia en el caso ráster viene limitada a la capa de entrada en la que se contienen las entidades. En general los SIG operan de este modo, y al efectuar un proceso de álgebra de mapas la salida ráster coincide en dimensiones y tamaño de celda con la entrada. En el caso vectorial no existe restricción espacial alguna, y la zona de influencia puede <<crecer>> más allá de los límites de la capa de entrada.
 
@@ -245,23 +249,25 @@ Una segunda diferencia la encontramos en el hecho de que, además del límite de l
 
 Por otra parte, este mismo proceso lo podemos realizar utilizando otras superficies de fricción, sean isotrópicas o anisotrópicas, sin estar limitados al caso de la distancia euclídea. En el caso vectorial, este cálculo no es posible desarrollarlo, ya que se trata de un proceso meramente geométrico sin el concurso de capas adicionales de fricción. Por ejemplo, la figura \ref{Fig:Zona_influencia_dist_hidro} muestra la misma zona de influencia anterior, con la misma distancia máxima, pero en este caso se trata de una distancia hidrológica en lugar de una euclídea.
 
-\begin{figure}[h]   
+\begin{figure*}[t]
+\begin{minipage}{0.49\linewidth}
 \centering
-\includegraphics[width=.5\mycolumnwidth]{Costes/Zona_influencia_dist_hidro.png}
+\includegraphics[width=.8\mycolumnwidth]{Costes/Zona_influencia_dist_hidro.png}
 \caption{\small Zona de influencia de un cauce basada en distancia hidrológica.}
 \label{Fig:Zona_influencia_dist_hidro} 
-\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=.8\mycolumnwidth]{Costes/Zona_influencia_especie.png}
+\caption{\small Zona de influencia de una especie dada su área de residencia y un coste máximo de desplazamiento.}
+\label{Fig:Zona_influencia_especie}
+\end{minipage}
+\end{figure*}
 
 Otro ejemplo lo encontramos en la figura \ref{Fig:Zona_influencia_especie}, la cual representa el espacio que se supone ocupado por una determinada especie. A partir de tres puntos donde se ha detectado la presencia de dicha especie, asignando por simplicidad un coste constante a las zonas circundantes en función de su vegetación, y estimando un coste máximo a superar por un individuo de dicha especie en una jornada, se calcula la superficie de coste acumulado y se delimita la zona de influencia. Fuera de esta, es improbable encontrar individuos. 
 
-Este análisis puede realizarse de forma similar con datos vectoriales, pero en ese caso se dispone únicamente de dos clases: o el punto esta dentro de la zona de influencia o no. En el caso ráster, no obstante, tenemos una medida de la distancia en cada celda, que sin duda es también una medida de la probabilidad de encontrar un individuo, ya que resulta lógico pensar que en los puntos más cerca del borde la probabilidad es menor que en puntos más centrales. 
-
-\begin{figure}[h]   
-\centering
-\includegraphics[width=.4\mycolumnwidth]{Costes/Zona_influencia_especie.png}
-\caption{\small Zona de influencia de una especie dada su área de residencia y un coste máximo de desplazamiento.}
-\label{Fig:Zona_influencia_especie} 
-\end{figure}
+Este análisis puede realizarse de forma similar con datos vectoriales, pero en ese caso se dispone únicamente de dos clases: o el punto esta dentro de la zona de influencia o no. En el caso ráster tenemos una medida de la distancia en cada celda, que sin duda es también una medida de la probabilidad de encontrar un individuo, ya que resulta lógico pensar que en los puntos más cerca del borde la probabilidad es menor que en puntos más centrales. 
 
 Pueden calcularse también las zonas de influencia de una manera similar a la vectorial, únicamente delimitando el contorno en función de la distancia euclídea y sin aplicar los conceptos de creación de capas de coste acumulado. En este caso basta tomar todas aquellas celdas que constituyen los objetos centrales (las celdas de destino en el caso del análisis de coste) y marcar con un valor establecido las celdas circundantes a una distancia menor que la distancia de influencia escogida. Se trataría de un análisis focal con una ventana de análisis circular de radio igual a la distancia de influencia, en la que los valores dentro de esta reciben todos el mismo valor. Obviamente, los resultados que pueden obtenerse de este modo son más limitados que aplicando toda la potencia del análisis de costes.
 
@@ -271,22 +277,22 @@ Al realizar el cálculo de una zona de influencia de dimensión fija, establecemos
 
 Con estos planteamientos podemos definir zonas de influencia de dimensión variable, en las cuales las celdas fronterizas no cumplen ningún requisito relativo al coste acumulado que se da en las mismas.
 
-Para ver un primer ejemplo considérese el siguiente supuesto: se dispone de una carretera y una capa de pendientes. Por la carretera los vehículos circulan sin dificultad, y fuera de ella, los vehículos todo--terreno pueden hacerlo siempre que la pendiente no sea superior al 5\%. Tratemos de calcular la zona de influencia de la carretera, es decir, la zona que es accesible con un vehículo todo terreno.
+Para ver un primer ejemplo considérese el siguiente supuesto: se dispone de una carretera y una capa de pendientes. Por la carretera los vehículos circulan sin dificultad, y fuera de ella, los vehículos todo-terreno pueden hacerlo siempre que la pendiente no sea superior al 5\%. Tratemos de calcular la zona de influencia de la carretera, es decir, la zona que es accesible con un vehículo todo-terreno.
 
 Podemos abordar el problema como un problema de costes habitual. Tomando la superficie de fricción, reclasificamos todos los valores por encima de nuestro umbral del 5\% y les asignamos valor de sin datos para indicar que no son transitables. Despues, calculamos la superficie de coste acumulado, tomando las celdas de carretera como celdas de destino (Figura \ref{Fig:Zona_influencia_vehiculo}). No todas las celdas con pendiente inferior al 5\% forman parte del área de influencia, ya que, aunque el vehículo puede transitarlas, algunas no puede alcanzarlas, y quedan como <<islas>>. \index{Pendiente}
 
 El modelo de coste, pese a incluir la pendiente, es en esta ocasión isotrópico, ya que el vehículo no puede desplazarse por zonas con pendiente superior al umbral, con independencia de la dirección en la que lo haga.
 
-\begin{figure}[h]   
+\begin{figure*}[t]   
 \centering
-\includegraphics[width=.5\mycolumnwidth]{Costes/Zona_influencia_vehiculo.png}
+\includegraphics[width=.4\mycolumnwidth]{Costes/Zona_influencia_vehiculo.png}
 \caption{\small Zona de influencia (en azul) de una vía (en rojo) , suponiendo que es posible el desplazamiento desde esta siempre que la pendiente no supere el 5\%. En el fondo, mapa de pendientes. Tonalidades más oscuras indican mayor pendiente.}
 \label{Fig:Zona_influencia_vehiculo} 
-\end{figure}
+\end{figure*}
 
 Asimismo, no es necesario aplicar ningún umbral a esta capa de coste acumulado, ya que no es ese parámetro el que define la zona de influencia. Si la carretera esta rodeada a ambos lados por zonas completamente llanas, la zona de influencia se extenderá indefinidamente, ya que el coste acumulado no es relevante en este caso. Lo utilizamos simplemente para incorporar la conectividad de las distintas celdas transitables con la vía central. Es por ello que el mapa de la figura \ref{Fig:Zona_influencia_vehiculo} solo marca la zona de influencia sin incorporar los valores interiores de coste acumulado (en este caso pendiente acumulada), ya que no son de interés.
 
-Podemos añadir más complejidad al modelo utilizando un umbral variable. Por ejemplo, sea un cauce del cual conocemos, en cada una de sus celdas el valor de su calado en un evento extremo. El cauce viene definido como una estructura lineal de una única celda de ancho, pero con estos datos vamos a tratar definir el área realmente ocupada por el agua en ese evento. Esto es, el área de inundación.
+Podemos añadir más complejidad al modelo utilizando un umbral variable. Por ejemplo, sea un cauce del cual conocemos, en cada una de sus celdas el valor de su calado en un evento extremo. El cauce viene definido como una estructura lineal de una única celda de ancho, pero con estos datos vamos a tratar de definir el área realmente ocupada por el agua en ese evento. Esto es, el área de inundación.
 
 Modelizar hidráulicamente un cauce en un supuesto como el presentado es mucho más complejo que lo que vamos a ver, y se requieren más datos, pero podemos plantear una primera aproximación al estudio de ese área de inundación, pues no deja de ser una zona de influencia.
 
@@ -294,12 +300,12 @@ Si en el caso del vehículo teníamos un umbral fijo, ahora este umbral es variabl
 
 Por ello, esta nueva capa también nos servirá como capa puntos de destino según la codificación habitual}, y además cada una de ellas contiene el valor de umbral. Es decir, que al operar según se explicó anteriormente para crear la capa de coste acumulado, el umbral dependerá de la celda concreta desde la que nos venimos desplazando. Las celdas por debajo del umbral son viables, mientras que las superiores, no. Este modelo es similar al que planteábamos al analizar la distancia hidrológica, solo que en este caso el umbral que aplicamos no es sobre el coste acumulado, sino que lo usamos para calcular en cada celda los costes unitarios. Para aquellas celdas que superan dicho umbral, el coste es infinito. Para las restantes, nulo.
 
-\begin{figure}[h]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.8\mycolumnwidth]{Costes/Influencia_calado.pdf}
 \caption{\small El calado $h$ define la inundabilidad de las zonas circundantes al cauce, en función de la elevación de estas. En rojo, celda central del cauce. }
 \label{Fig:Influencia_calado} 
-\end{figure}
+\end{figure*}
 
 \section{Influencia acumulada}
 
@@ -332,13 +338,13 @@ Un caso particular del análisis de costes es el análisis del movimiento a través
 
 En el supuesto de un desplazamiento por una red viaria, la división del terreno en unidades regulares que implica el modelo ráster no es adecuada, y resulta mucho más lógico un modelo vectorial que contenga las vías y los emplazamientos entre los que estas se sitúan, recogiendo igualmente la topología de la red. Esta estructura es óptima no solo para el almacenamiento y manejo, sino también para el análisis de costes, como a continuación veremos.
 
-El análisis de costes ráster tal como lo hemos visto permite modelizar los costes a través de vías y el movimiento restringido a estas. Basta excluir las celdas fuera de las vías (asignándoles coste infinito o valores de sin datos) y operar de la forma habitual. No obstante, el hecho de que exista dicha restricción (al analizar un coste de desplazamiento por vías, no podemos abandonar estas), favorece la utilización de un modelo vectorial para estos casos, haciendo que resulte más lógico. Otros elementos de la vía, como el hecho de que algunas de ellas puedan recorrerse únicamente en una dirección, se recogen mejor mediante un modelo de representación vectorial, como ya vimos en el capítulo \ref{Tipos_datos} al introducir el concepto de topología (de ese capítulo deberías recordar también los conceptos de arco y nodo, que aquí resultan básicos)
+El análisis de costes ráster tal como lo hemos visto permite modelizar los costes a través de vías y el movimiento restringido a estas. Basta excluir las celdas fuera de las vías (asignándoles coste infinito o valores de sin datos) y operar de la forma habitual. No obstante, el hecho de que exista dicha restricción (al analizar un coste de desplazamiento por vías, no podemos abandonar estas), favorece la utilización de un modelo vectorial para estos casos, haciendo que resulte más lógico. Otros elementos de la vía, como el hecho de que algunas de ellas puedan recorrerse únicamente en una dirección, se recogen mejor mediante un modelo de representación vectorial, como ya vimos en el capítulo \ref{Tipos_datos} al introducir el concepto de topología (de ese capítulo deberías recordar también los conceptos de arco y nodo, que aquí resultan básicos).
 
 Este es el tipo de modelo que implementan, por ejemplo, los navegadores GPS\index{GPS}, ya que el movimiento que estudian y sobre el cual nos informan se realiza siempre por una red de carreteras y calles. Sin embargo, si lo que pretendemos es calcular un coste de desplazamiento no confinado a una vía (por ejemplo, para calcular la ruta de menor coste caminando campo a través), es el modelo ráster el que debemos utilizar.
 
-Aunque formalmente son distintos tanto los modelos de representación como los casos particulares de análisis, la implementación de los algoritmos de cálculo de rutas de mínimo coste es en cierta medida similar. Así, los algoritmos sobre una base vectorial comparten elementos con los que ya conocemos para el análisis ráster. Estos algoritmos en realidad derivan todos ellos de la denominada \emph{teoría de grafos}, una rama de la matemática que se encarga de trabajar con un tipo de estructuras denominadas \emph{grafos}, de los cuales una red es una caso particular\footnote{Para el lector que desee conocer la parte estrictamente matemática de esta disciplina, pueden encontrarse interesantes libros sobre teoría de grafos en las direcciones Web \cite{graphTheory} y \cite{Diestel}.}. \index{Teoría de grafos}
+Aunque formalmente son distintos tanto los modelos de representación como los casos particulares de análisis, la implementación de los algoritmos de cálculo de rutas de mínimo coste es en cierta medida similar. Así, los algoritmos sobre una base vectorial comparten elementos con los que ya conocemos para el análisis ráster. Estos algoritmos en realidad derivan todos ellos de la denominada \emph{teoría de grafos}, una rama de la matemática que se encarga de trabajar con un tipo de estructuras denominadas \emph{grafos}, de los cuales una red es una caso particular. \index{Teoría de grafos}
 
-El cálculo de rutas óptimas es una de las áreas más trabajadas dentro de la teoría de grafos, y por ello existen muchos algoritmos distintos. El más popular de todos ellos es el propuesto por Edsger Dijkstra, que es en cierto modo en el que se basan las metodologías que hemos visto para el caso ráster. En realidad, las celdas de una capa ráster pueden entenderse también como una estructura de nodos conectados (una red), con la particularidad de que estas conexiones tienen una carácter sistemático: cada celda (nodo) está conectado siempre a las ocho que se sitúan entorno a ella, y únicamente a estas. \index{Dijkstra, Edsger} \index{Nodo}
+El cálculo de rutas óptimas es una de las áreas más trabajadas dentro de la teoría de grafos, y por ello existen muchos algoritmos distintos. El más popular de todos ellos es el conocido como algoritmo de Dijkstra, que es en cierto modo en el que se basan las metodologías que hemos visto para el caso ráster. En realidad, las celdas de una capa ráster pueden entenderse también como una estructura de nodos conectados (una red), con la particularidad de que estas conexiones tienen un carácter sistemático: cada celda (nodo) está conectado siempre a las ocho que se sitúan entorno a ella, y únicamente a estas. \index{Dijkstra, Edsger} \index{Nodo}
 
 En el algoritmo de Dijkstra, se inicia el cálculo en el nodo de destino y se \emph{marcan} los nodos a los que este se encuentra conectado, asociándoles el valor de coste entre dicho nodo inicial y cada uno de estos otros nodos. Los restantes nodos, hasta que no sean marcados con un valor concreto de coste, tienen un coste infinito, pues aún no se ha establecido una manera de conectarlos con el nodo de destino. 
 
@@ -346,18 +352,35 @@ Al acabar este proceso, se procede a repetirlo, en esta ocasión con todos los pu
 
 La figura \ref{Fig:Dijkstra} muestra un ejemplo de un grafo muy sencillo y el proceso de ejecución del algoritmo de Dijkstra sobre este. 
 
-\begin{figure}[!hbt]   
+\begin{figure*}[t]   
 \centering
 \includegraphics[width=.7\textwidth]{Costes/Dijkstra.pdf}
 \caption{\small Ejemplo de aplicación del algoritmo de Dijkstra para cálculo de rutas de mínimo coste. De izquierda a derecha, etapas sucesivas de asignación de coste por nodos (Adaptado de Wikipedia).}
 \label{Fig:Dijkstra} 
-\end{figure}
+\end{figure*}
 
 La descripción original del algoritmo puede consultarse en \cite{Dijkstra1959NumMath}. Para el lector interesado en profundizar sobre esta materia, un buen compendio de algoritmos de cálculo de rutas óptimas puede encontrarse en \cite{Gallo1988Annals}.
 
 Existen numerosos cálculos relacionados con las redes y la teoría de grafos cuya importancia dentro del ámbito SIG es notable. Uno de los más conocidos es el problema del árbol mínimo de recubrimiento, más habitualmente denotado por su nombre en inglés: \emph{minimum spanning tree} (MST). Dado un conjunto de puntos, este árbol representa el mínimo conjunto de líneas que permite conectar todos esos puntos. Es decir, el problema del MST implica crear una red que aporte conectividad a un conjunto dado de puntos, teniendo esa red la mínima longitud posible. \index{Arbol@Árbol!mínimo de recubrimiento}\index{Minimum Spanning Tree (MST)|see{Árbol mínimo de recubrimiento}}
 
 Este problema clásico en la teoría de grafos (y por tanto también muy estudiado al igual que los relativos al cálculo de rutas mínimas que acabamos de ver) tiene numerosas aplicaciones cuando se traslada al campo del análisis geográfico. Por ejemplo, permite calcular la red de canalizaciones necesaria para abastecer a una serie de puntos, minimizando el gasto en tuberías. 
+
+
+\begin{figure*}[t]
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=.7\mycolumnwidth]{Costes/MST.pdf}
+\caption{\small Árbol mínimo de recubrimiento para un conjunto de puntos.}
+\label{Fig:MST} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=.7\mycolumnwidth]{Costes/TSP.pdf}
+\caption{\small Solución al problema del viajante para un conjunto de puntos.}
+\label{Fig:TSP} 
+\end{minipage}
+\end{figure*}
 
 La figura \ref{Fig:MST} presenta un ejemplo de uno de estos árboles.
 
@@ -368,18 +391,18 @@ De entre los múltiples algoritmos existentes para resolver este problema, los de
 Puesto que se obtiene como resultado un árbol y este es un grafo de tipo acíclico, la ausencia de ciclos (circuitos cerrados) garantiza que no existan tramos <<redundantes>> en la red. Por esta razón, la estructura de árbol es la adecuada para minimizar la longitud de la red. Desde la perspectiva de su aplicación real, no obstante, un árbol no es la forma más ventajosa de conectar una serie de puntos, ya que la conectividad es reducida y puede perderse si se pierde una de las conexiones (en otras palabras, si se rompe una tubería, habría puntos que no estarían abastecidos, y no resultaría posible abastecerles por otra vía).
 
 
-\begin{figure}[!hbt]   
+\begin{figure*}[t]   
 \centering
-\includegraphics[width=.4\mycolumnwidth]{Costes/MST.pdf}
-\caption{\small Árbol mínimo de recubrimiento para un conjunto de puntos.}
-\label{Fig:MST} 
-\end{figure}
+\includegraphics[width=.6\mycolumnwidth]{Costes/Buffer_vectorial_red.png}
+\caption{\small Zona de influencia de un punto considerando distancias sobre una red en lugar de distancia euclídea.}
+\label{Fig:Buffer_vectorial_red} 
+\end{figure*}
 
 Una solución más adecuada es optar por una estructura que trate de reducir la longitud total de la red, pero garantizando una conectividad más robusta. El MST guarda mucha relación con una estructura que ya conocemos, la triangulación de Delaunay, ya que se forma como un subconjunto de las líneas que conforman esta (puede consultarse por ejemplo\cite{Cheriton1976SIAM} para ver detalles acerca del algoritmo de cálculo del MST a partir de la triangulación). Si de ese conjunto total de la triangulación se toman las líneas del MST y algunas adicionales, pueden obtenerse estructuras que solucionan de manera óptima el problema de conectar un conjunto de puntos con un diseño de red robusto. Un ejemplo de ésto son las denominadas redes de Gabriel \cite{Gabriel1969SZ}. \index{Triangulación de Delaunay}\index{Problema del viajante}\index{Travelling Salesman Problem|see{Problema del viajante}}
 
 También en cierta forma relacionado con los problemas anteriores, un enunciado clásico con gran aplicación en el ámbito SIG es el conocido como \emph{problema del viajante} o TSP\footnote{\emph{Travelling Salesman Problem}}. Dado un conjunto de puntos, se trata de calcular la forma de visitar todos ellos en un orden dado y regresando al punto inicial, de tal modo que el recorrido total tenga la mínima longitud posible.
 
-Este problema es uno de los problemas más conocidos dentro del campo de la optimización combinatoria, y se se encuadra dentro de los conocidos como \emph{NP--Hard}. La forma más directa y simple de resolver este problema es probar todas las posibles rutas y elegir la más corta. Sin embargo, debido al crecimiento exponencial del número de posibilidades, este planteamiento es inviable, y se ha de optar por métodos de resolución aproximada. Dado el grado de estudio este problema, estas soluciones son muy variadas, y existe bibliografía muy abundante al respecto. Pueden consultarse más sobre formas de resolución del TSP en \cite{webTSP}.\index{NP--Hard}
+La forma más directa y simple de resolver este problema es probar todas las posibles rutas y elegir la más corta. Sin embargo, debido al crecimiento exponencial del número de posibilidades, este planteamiento es inviable, y se ha de optar por métodos de resolución aproximada. Dado el grado de estudio este problema, estas soluciones son muy variadas, y existe bibliografía muy abundante al respecto.\index{NP--Hard}
 
 En relación con los SIG y, particularmente, con el tema de este apartado, el problema del viajante cobra interés cuando se considera, al igual que ya veíamos para el MST, que las distancias entre los distintos puntos no han de ser necesariamente euclídeas, sino que pueden ser distancias a través de una red. Así, si una persona ha de visitar un número dado de emplazamientos dentro de una ciudad desplazándose en un automóvil, el orden óptimo en que debe hacerlo es el que se obtendría como solución al problema del viajante para dichas localizaciones, y tomando las distancias entre estas como distancias por las calles de la propia ciudad.
 
@@ -387,32 +410,20 @@ Independientemente de la métrica empleada para calcular la distancia entre punto
 
 En la figura \ref{Fig:TSP} puede verse el circuito óptimo para el conjunto de puntos empleado en el ejemplo anterior de la figura \ref{Fig:MST}.
 
-\begin{figure}[!hbt]   
-\centering
-\includegraphics[width=.4\mycolumnwidth]{Costes/TSP.pdf}
-\caption{\small Solución al problema del viajante para un conjunto de puntos.}
-\label{Fig:TSP} 
-\end{figure}
-
 Para concluir este apartado, comentar que el concepto de \emph{buffer} vectorial puede extenderse si disponemos de una red sobre la que calcular distancias, haciéndolos más similares a los que hemos visto para el caso ráster, donde la anchura de estos era variable y no se presentaba la característica simetría de los que vimos en el capítulo \ref{Operaciones_geometricas}. Sobre dicha red, podemos calcular puntos a una distancia dada, y con ellos crear el polígono que delimita la zona de influencia. 
 
 La figura \ref{Fig:Buffer_vectorial_red} muestra una red viaria con costes asociados, y una posible zona de influencia basada en dichos costes en lugar de en distancia euclídea.
 
-\begin{figure}[!hbt]   
-\centering
-\includegraphics[width=.6\mycolumnwidth]{Costes/Buffer_vectorial_red.png}
-\caption{\small Zona de influencia de un punto considerando distancias sobre una red en lugar de distancia euclídea.}
-\label{Fig:Buffer_vectorial_red} 
-\end{figure}
 
 \section{Resumen}
 
 Las superficies de fricción contienen valores de coste que expresan la resistencia que presenta una celda a ser recorrida. Estos costes pueden reflejar muchos distintos factores, siendo la distancia uno de ellos.
 
-Con una superficie de fricción y un conjunto de puntos de destino, se calculan capas de coste acumulado. Empleando estas es posible calcular rutas óptimas que nos definen la ruta de menor coste desde un punto dado hasta el punto de destino más cercano (en términos de coste).
+Con una superficie de fricción y un conjunto de puntos de destino, se calculan capas de coste acumulado. Empleando estas es posible calcular rutas óptimas que definen la ruta de menor coste desde un punto dado hasta el punto de destino más cercano (en términos de coste).
 
-Empleando las ideas del análisis de coste se definen zonas de influencia tanto de dimensión fija como de dimensión variable, y puede estudiarse asimismo la influencia conjunta de una serie de elementos geográficos sobre el entorno inmediato de estos.
+Con estas ideas, pueden definirse zonas de influencia tanto de dimensión fija como de dimensión variable, y puede estudiarse asimismo la influencia conjunta de una serie de elementos geográficos sobre el entorno inmediato de estos.
 
-Aunque el análisis de costes y superficies de fricción es un análisis con elementos ráster, las redes vectoriales con topología permiten un análisis distinto para calcular rutas óptimas entre puntos dados de dichas redes.
+Aunque el análisis de costes y superficies de fricción es un análisis con elementos ráster, las redes vectoriales con topología permiten un análisis distinto para calcular rutas óptimas entre puntos de dichas redes.
 
+\end{multicols}
 \pagestyle{empty}

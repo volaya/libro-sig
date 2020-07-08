@@ -1,35 +1,50 @@
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usepackage{libertine}
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[pdftex]{graphicx}
-\usepackage[spanish]{babel}
 \usepackage[latin1]{inputenc}
-\usepackage{makeidx}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{xspace}
 \usepackage{color}
-\usepackage{booktabs}
 \usepackage{paralist}
 \usepackage{fancyhdr}
 \usepackage{geometry}
-\usepackage{fixltx2e}
 \usepackage{bibentry}
+\usepackage{multicol}
+\usepackage{float}
 \usepackage[raggedright]{titlesec}
 \usepackage[protrusion=true,expansion=true]{microtype}
-%\usepackage[subtle]{savetrees}
+\usepackage{etoolbox}
+\usepackage{comment}
+\usepackage{shapepar}
+\usepackage[all]{nowidow}
 
-\makeindex
-\widowpenalty=9999
+\makeatletter
+\patchcmd{\@verbatim}
+  {\verbatim@font}
+  {\verbatim@font\small}
+  {}{}
+\makeatother
+
+\newcommand{\setttsize}[1]{\def\ttsize{#1}}%
+\setttsize{\small}
+
+\renewcommand*\ttdefault{txtt}
 
 \renewcommand{\baselinestretch}{1}
 \renewcommand{\enumerate}{\compactenum}
+\setdefaultleftmargin{1mm}{}{}{}{}{}
 \renewcommand{\itemize}{\compactitem}
+\setlength{\pltopsep}{.1em}
+\setlength{\plpartopsep}{.1em}
 
-\geometry{verbose,dvips,paperwidth=6.69in,paperheight=9.61in,tmargin=2.2cm,bmargin=2.2cm, left=.876in, right=1.7cm}
+\geometry{verbose,dvips,paperwidth=7.44in,paperheight=9.68in,tmargin=2.6cm,bmargin=2.2cm, left=.8in, right=.6in}
 \newcommand{\mycolumnwidth}{\textwidth}
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -56,7 +71,9 @@
     \par\nobreak
     \vspace*{20\p@}
     \interlinepenalty\@M
-    {\raggedright \Large \bfseries #1}%
+    \begin{center}
+    {\Large \bfseries #1}%
+    \end{center}
     \par\nobreak
      \hrulefill
      \par
@@ -69,25 +86,22 @@
     \par\nobreak
     \vspace*{20\p@}
     \interlinepenalty\@M
-    {\raggedright \Large \bfseries #1}%
-    \par\nobreak
+    {\Large \bfseries #1}\\
     \hrulefill
-    \par
+    \par    
   }}
 
 \renewcommand{\v}[1]{\ensuremath{\overline{\mathbf{#1}}}}
-\newcommand{\chapterauthor}[1]{\begin{center}\sffamily{#1}\end{center}}
+\newcommand{\chapterauthor}[1]{\begin{center}\sffamily{#1}\end{center}\vspace*{.5cm}}
 \newcommand{\degree}{\ensuremath{^\circ}}
-\newenvironment{intro}{\small\itshape}{\normalsize\par\nobreak\noindent\rule{\textwidth}{0.5pt}}
+\newenvironment{intro}{}{}
+\excludecomment{intro}
 
-\definecolor{urlcolor}{rgb}{0,0,0.5}
-\definecolor{granate}{rgb}{0.5,0.0,0.0}
+\definecolor{urlcolor}{rgb}{0,0,0}
 
-\newcommand{\footurl}[1]{\footnote{\url{#1}\xspace}}
 \newcommand{\lt}{<}
 \newcommand{\gt}{>}
 
-%%Configuración de hyperref, SE RECOMIENDA DEJAR SIEMPRE AL FINAL DEL PREÁMBULO
 \hypersetup{
     pdftitle=Sistemas de Información Geográfica,
     pdfpagelayout=TwoColumnRight,
