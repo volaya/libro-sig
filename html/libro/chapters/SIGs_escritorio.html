@@ -1,0 +1,751 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+  </title>
+  <link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+    TeX: { equationNumbers: {autoNumber: "all"} }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+  <script src="../generated_toc.js">
+  </script>
+ </head>
+ <body lang="es">
+  <div class="main">
+   <div class="g960" id="chapter">
+    <h1>
+     Herramientas de escritorio
+    </h1>
+    <p>
+     <a name="SIGs_escritorio">
+     </a>
+    </p>
+    <h2 id="Introducción">
+     Introducción
+    </h2>
+    <p>
+     El concepto clásico de un SIG es el de una aplicación completa en la cual se implementan herramientas para llevar a cabo las tareas básicas del trabajo con datos geográficos: creación o edición, manejo y análisis. Con esta filosofía fueron desarrollados los primeros programas SIG, especialmente para el tratamiento y análisis de datos geográficos y, posteriormente, para dotar a estos de mayor versatilidad. Se tienen así las herramientas de escritorio, que son aquellas que más se asemejan a la concepción original de los SIG.
+    </p>
+    <p>
+     A pesar de que existen, como vimos en el capítulo anterior, otras clases de aplicaciones SIG, los SIG de escritorio siguen manteniendo su posición como aplicaciones fundamentales, y hablar de un SIG implica por lo general hacerlo de una aplicación de escritorio antes que de otros tipos de aplicaciones. Por otra parte, las herramientas de escritorio son soluciones completas que cubren la totalidad de necesidades que se presentan en el desarrollo de proyectos SIG, y por ello constituyen las herramientas primordiales para llevar estos a cabo.
+    </p>
+    <h2 id="Funciones básicas">
+     Funciones básicas
+    </h2>
+    <p>
+     Podemos dividir las funciones básicas de un SIG de escritorio en cinco bloques: entrada y salida de datos, visualización, edición, análisis y generación de cartografía. Una aplicación de escritorio habitual presenta todas estas capacidades en cierta medida, aunque no necesariamente con el mismo nivel de implementación.
+    </p>
+    <h3 id="Entrada y salida de datos">
+     Entrada y salida de datos
+    </h3>
+    <p>
+     Ya sabemos que los datos son una parte imprescindible de un SIG, y sin ellos no puede desarrollarse actividad con una aplicación SIG. Por esta razón, todas estas aplicaciones deben obligatoriamente implementar capacidades para leer datos y, opcionalmente, para guardarlos. Esta ultima es necesaria en el caso en que el SIG pueda generar nuevos datos geográficos (nuevas capas), pero no en aquellas aplicaciones sin capacidades de análisis o edición, donde su empleo no ha de crear nuevos datos.
+    </p>
+    <p>
+     Pese a ser de tal importancia, la implementación de las capacidades de entrada y salida es muy variable en unos u otros SIG. Una razón por la que esto sucede es el gran número de formatos de fichero distintos, la cual no favorece la interoperabilidad, como ya vimos en el capítulo
+     <a href="Fuentes_datos.html#Fuentes_datos">
+      Fuentes_datos
+     </a>
+     . Así, cada SIG es capaz de abrir unos u otros formatos de archivo, y mientras que algunos tratan a todos ellos por igual, ciertas aplicaciones trabajan en un formato propio con carácter nativo, y son capaces de incorporar datos en otros formatos a través de extensiones o funciones de conversión entre estos y el formato particular del programa.
+    </p>
+    <p>
+     La existencia de librerías y componentes de acceso a datos en los que las aplicaciones SIG de escritorio pueden apoyarse mejora la conectividad entre estas y aporta cierta homogeneidad en este aspecto.
+    </p>
+    <p>
+     Otra diferencia importante en la gestión de los datos es la capacidad de conexión a bases de datos o servicios remotos como los que veremos en el capítulo
+     <a href="Cliente_servidor.html#Servidores_y_clientes_remotos">
+      Servidores_y_clientes_remotos
+     </a>
+     . Así, algunas aplicaciones tienen únicamente capacidad de abrir archivos, pero no de acceder a servicios remotos, mientras que otras pueden acceder a todo tipo de orígenes de datos. Las aplicaciones que acceden a servicios remotos entran dentro de la denominación de
+     <i>
+      clientes
+     </i>
+     . Los clientes Web que veremos en el capítulo
+     <a href="Cliente_servidor.html#Servidores_y_clientes_remotos">
+      Servidores_y_clientes_remotos
+     </a>
+     se conocen como clientes
+     <i>
+      ligeros
+     </i>
+     , mientras que las aplicaciones SIG de escritorio con estas capacidades se denominan clientes
+     <i>
+      pesados
+     </i>
+     , haciendo referencia a su mayor volumen y el mayor número de funcionalidades que contienen. La funcionalidad que ofrecen en relación al acceso a datos remotos es similar en ambos casos, y la trataremos en el citado capítulo
+     <a href="Cliente_servidor.html#Servidores_y_clientes_remotos">
+      Servidores_y_clientes_remotos
+     </a>
+     con detalle.
+    </p>
+    <p>
+     En general, las capacidades de acceso a servicios remotos están en función del enfoque de la aplicación, y aquellas fuertemente enfocadas al análisis no suelen presentar tales funcionalidades, mientras que aquellas más orientadas a la visualización o las herramientas globales más completas sí que las incorporan.
+    </p>
+    <h3 id="Visualización">
+     Visualización
+    </h3>
+    <a name="Funcion_SIG_Visualizacion">
+    </a>
+    <p>
+     La visualización es una función fundamental dentro de los SIG y del trabajo con cartografía en general. En este libro, por ejemplo, existe una parte completa dedicada a esta materia, pues su conocimiento resulta fundamental para poder aprovechar plenamente la información contenida en el dato geográfico.
+    </p>
+    <p>
+     Aunque existen SIG que no incorporan capacidades de visualización o estas no son muy avanzadas, la gran mayoría de las herramientas de escritorio incluyen un gran número de elementos para representar los datos geográficos con los que se trabaja. En ocasiones, interesa únicamente crear una representación de los datos, pero incluso cuando el trabajo con una herramienta SIG está enfocado a la realización de un análisis, la visualización y exploración visual de los datos de partida es un paso previo.
+    </p>
+    <p>
+     En general, la forma de operar con los elementos de visualización es muy similar entre soluciones SIG distintas y, a diferencia de lo que sucede con la implementación de otras funcionalidades, el manejo es prácticamente igual. Esto sucede no solo ya en las herramientas de escritorio que tratamos en este capítulo, sino también en las que veremos en el dedicado a las aplicaciones Web, las cuales incorporan también capacidades de visualización del mismo tipo. En ambos casos, las herramientas fundamentales presentan una estructura similar y unos conceptos base muy parecidos.
+    </p>
+    <p>
+     Esta estructura se compone fundamentalmente de un lienzo sobre el que se sitúan las distintas capas de información geográfica, y al que el usuario va  añadiendo nuevas capas y editando la forma en la que estas se representan. Las capas se sitúan en un orden dado dentro del lienzo, lo que permite establecer una jerarquía de representación y así lograr el aspecto deseado.
+    </p>
+    <p>
+     Junto a este lienzo existen herramientas de navegación que permiten ampliar o reducir la escala, o bien modificar el encuadre (Figura \ref{Fig:Herramientas_navegacion}). Asimismo, se presentan todas las funciones que permiten obtener las distintas formas de representación que veremos en la parte \ref{Visualizacion}, tales como el ajuste de colores o el establecimiento de etiquetas en función de los valores asociados a las distintas entidades, entre otros.
+    </p>
+    <p>
+     <figure>
+      <img src="../img/Herramientas_navegacion.png" width="99.0%"/>
+      <figcaption>
+       Herramientas de navegación fundamentales en el entorno gráfico de un SIG de escritorio. a) alejamiento (
+       <i>
+        zoom out
+       </i>
+       ), b) acercamiento (
+       <i>
+        zoom in
+       </i>
+       ), c) desplazamiento (
+       <i>
+        pan
+       </i>
+       )
+      </figcaption>
+      $$\label{Fig:Herramientas_navegacion}$$
+     </figure>
+    </p>
+    <p>
+     Estas capacidades convierte a los datos geográficos en un elemento activo, ya que, a diferencia de un mapa clásico donde no pueden modificarse sus características, en un SIG el usuario puede de forma rápida y sencilla elegir
+     <i>
+      qué
+     </i>
+     ve y
+     <i>
+      cómo
+     </i>
+     lo ve.
+    </p>
+    <p>
+     Como parece lógico pensar, la visualización ha evolucionado mucho desde los primeros SIG, y ha ido progresivamente adquiriendo nuevas capacidades, muchas de las cuales solo son posibles con los componentes gráficos de los ordenadores actuales. Así, además de ofrecer mayores posibilidades de personalización, el uso del SIG como herramienta de representación permite obtener resultados novedosos que añaden nuevas formas de explorar los datos geográficos y trabajar con ellos.
+    </p>
+    <p>
+     En el caso más habitual, la representación de una capa en un lienzo de un SIG es bidimensional, de la misma forma que se representa en un mapa impreso, lo cual se debe tanto a la mayor facilidad de implementación de este tipo de representaciones como a la mayor exigencia que otro tipo de representaciones presentan en lo referente al equipo (
+     <i>
+      hardware
+     </i>
+     ).
+    </p>
+    <p>
+     No obstante, la presencia de visores tridimensionales está experimentando un gran crecimiento en los últimos años, y se van integrando paulatinamente dentro de los SIG para ofrecer una nueva forma de representación. Esta clase de capacidades gráficas, inalcanzables en términos de rendimiento para un equipo común hace unos años, son hoy día perfectamente utilizables en un ordenador de consumo habitual, y aportan una nueva forma de trabajar con los datos geográficos.
+    </p>
+    <p>
+     Las funcionalidades de representación 3D aún no se integran completamente dentro del entorno de un SIG de escritorio completo, ya que se conciben por lo general como un elemento puramente visual y enfocado a la representación como tal, mientras que un lienzo 2D cumple su función tradicional de marco de trabajo sobre el que se desarrollan las restantes tareas del SIG como el análisis o la propia gestión de datos. Aun así, conforme las vistas tridimensionales se van convirtiendo en elementos habituales, los restantes componentes del SIG se van coordinando con ellas para darles a su vez la capacidad de servir como entornos de trabajo versátiles.
+    </p>
+    <p>
+     La presencia de una dimensión adicional hace que las herramientas de navegación sean más complejas en el caso tridimensional, existiendo ajustes relativos a la perspectiva, a los ángulos de visión o a la exageración del relieve, entre otros parámetros. Como puede verse en la figura \ref{Fig:GEarth}, las herramientas de control de navegación de un visor 3D son sensiblemente más complejas que las herramientas base del caso 2D, presentadas en la figura \ref{Fig:Herramientas_navegacion}.
+    </p>
+    <p>
+     Esta mayor complejidad hace asimismo que puedan existir diversas formas en las que las capacidades de visualización 3D se presentan en un SIG. Las representaciones tridimensionales pueden ser simples representaciones en relieve de una capa (Figura \ref{Fig:Tipos_vistas_3D}a), o pueden incluir verdaderos elementos en tres dimensiones (Figura \ref{Fig:Tipos_vistas_3D}b). En el primer caso, la capa no contiene datos de elevación (puede ser por ejemplo una capa de usos de suelo), y la representación tridimensional se realiza basándose en la información de una capa adicional de elevaciones (que denominábamos de 2,5D por no poder representar todo tipo de formas en el espacio). La capa plana se representa en espacio «deformada» para ajustarse al relieve existente en la zona que representa.
+    </p>
+    <p>
+     En el caso de una representación tridimensional real, los objetos poseen información sobre su forma tridimensional, y junto con las coordenadas que delimitan su geometría plana (las geometrías básicas que conocemos: punto, línea y polígono), existen valores adicionales en el eje vertical. De este modo, pueden representarse entidades tales como edificios, o una ruta tridimensional que represente la trayectoria de un avión. Asimismo, y como puede verse en la figura, pueden añadirse elementos adicionales que aprovechan las capacidades de representación 3D, así como etiquetas o incluso elementos interactivos que también actúan en 3D (por ejemplo, para la selección de entidades).
+    </p>
+    <p>
+     <figure>
+      <img src="../img/Tipos_vistas_3D.png" width="100%"/>
+      <figcaption>
+       Distintas formas de representación 3D de capas de datos geográficos
+      </figcaption>
+      $$\label{Fig:Tipos_vistas_3D}$$
+     </figure>
+    </p>
+    <p>
+     Es importante recalcar que la visualización de una capa dentro de un SIG es independiente de la información que dicha capa contiene o la forma en que esta se almacena. El dato geográfico y su representación van por separado, y el dato en sí no define la representación, sino que únicamente sirve como apoyo para esta. Esto es particularmente cierto para el caso de capas vectoriales, así como para capas ráster que contengan un valor de tipo no gráfico, es decir, aquellas que no sean imágenes.
+    </p>
+    <p>
+     Una imagen tendrá el mismo aspecto en todos los SIG en los que se utilice, puesto que la información relativa a su representación se contiene, al menos en cierta medida, en la propia imagen. Los valores de la imagen representan una intensidad de luz y, si las bandas corresponden a la zona del visible, existe asimismo una información de colores. Otras imágenes pueden proceder del escaneo de un mapa o una fotografía impresa, y en ese caso recogen también los colores de cada píxel.
+    </p>
+    <p>
+     Aun en el caso de imágenes con más de tres bandas, en las que no existe una correspondencia directa entre los valores y la representación (tal como vimos, por ejemplo, en la creación de representaciones en falso color en el apartado
+     <a href="Imagenes.html#Visualizacion_imagenes">
+      Visualizacion_imagenes
+     </a>
+     ), puede existir una representación
+     <i>
+      por defecto
+     </i>
+     tomando, por ejemplo, las tres primeras bandas, y sigue siendo probable que estas imágenes también se vean de igual modo en uno u otro SIG (aunque luego ello no implica que dicha representación no pueda ajustarse a conveniencia en todos los casos).
+    </p>
+    <p>
+     En el caso de capas vectoriales o una capa ráster tal como un MDE, no existe ningún tipo de información acerca de la representación que acompañe al dato espacial en sí. Los datos necesitan de un esquema de asignación que los convierta en elementos visuales (colores, texturas, etc.), pero este esquema es ajeno al dato como tal.
+    </p>
+    <p>
+     La labor del SIG relativa a la visualización consiste en «interpretar» los datos y convertirlos en representaciones, y para ello se basa en esquemas definidos por el usuario. Estos esquemas pueden ser almacenados de forma que, en sucesivos usos de una capa de datos, esta se represente de una misma forma. No obstante, abrir la capa con una aplicación SIG distinta implicará en general perder las características definidas para su representación ya que, si bien los formatos de datos son relativamente interoperables, no así los formatos en que se almacenan los criterios de representación de esos datos.
+    </p>
+    <p>
+     Estándares para el almacenamiento de estilos como SLD(
+     <i>
+      Styled Layer Descriptor
+     </i>
+     ), que veremos en detalle en el apartado
+     <a href="Cliente_servidor.html#SLD">
+      SLD
+     </a>
+     , tienen como objeto solventar este problema.
+    </p>
+    <h3 id="Análisis">
+     Análisis
+    </h3>
+    <p>
+     Si hubiéramos de ordenar cronológicamente las distintas funcionalidades que un SIG de escritorio presenta, probablemente el análisis fuera una de las primeras. Por encima de otras capacidades, los ordenadores han sido y son principalmente herramientas de cálculo capaces de realizar operaciones y computar resultados, y este ha sido uno de los usos fundamentales relativos al manejo de datos geográficos. Otros usos, tales como la visualización, pese a ser prácticamente imprescindibles hoy en día, estaban muy limitados en los primeros SIG. No ocurría así en el ámbito del análisis, ya que, aunque con capacidades como es lógico menores que las actuales, los ordenadores ofrecían una potencia de calculo que los convertía en herramientas de análisis tan interesantes como en la actualidad.
+    </p>
+    <p>
+     La tendencia actual en los SIG es considerar las capacidades de análisis como herramientas modulares que se ejecutan sobre una plataforma base, la cual comprende las capacidades de visualización y entrada y salida de datos. Todas estas capacidades de análisis son independientes entre sí, aunque pueden coordinarse y emplearse en conjunto para alcanzar un resultado concreto. De otro modo, cada una de las formulaciones o algoritmos que vimos en capítulos anteriores aparece dentro del SIG como una herramienta individual que opera sobre una serie de capas y genera un resultado dado, tomando en muchas ocasiones esas capas de entre aquellas que se están representando en el SIG, e incorporando asimismo a dicha representación las nuevas capas generadas.
+    </p>
+    <p>
+     Las herramientas de análisis pueden aparecer igualmente como programas independientes, y el SIG de escritorio ser una herramienta aglutinadora que centraliza estas, facilitando su uso y la gestión de los datos implicados en los procesos de análisis.
+    </p>
+    <p>
+     Cuando las herramientas de análisis utilizan directamente la base del SIG en la que se encuentran a su vez las capacidades de visualización y manejo de datos, puede existir cierto grado de interactividad. Así sucede en las operaciones de consulta, las cuales vimos en el capítulo
+     <a href="Consultas.html#Consultas">
+      Consultas
+     </a>
+     , ya que el usuario puede actuar sobre el lienzo para hacer una selección de modo gráfico. Más aún, esa selección puede condicionar los posteriores análisis sobre la capa cuyas entidades se seleccionan, ya que los procesos que operen sobre ella pueden restringir su alcance a aquellas entidades seleccionadas.
+    </p>
+    <p>
+     En caso de no existir este tipo de interacción entre elementos de análisis y elementos de visualización y exploración de datos, los procesos de análisis suelen constituir utilidades autocontenidas que simplemente toman una serie de datos de entrada, realizan un proceso en el que el usuario no interviene, y finalmente generan un resultado con carácter definitivo. Este resultado podrá ser posteriormente visualizado o utilizado como entrada para un nuevo análisis.
+    </p>
+    <p>
+     A modo de ejemplo, podemos analizar el caso particular del cálculo de una ruta que conecte una serie de puntos a través de una red (los fundamentos de este análisis los vimos en el apartado
+     <a href="Costes.html#Analisis_redes">
+      Analisis_redes
+     </a>
+     ).
+    </p>
+    <p>
+     Una de las formas de implementar este análisis es aquella que requiere del usuario la introducción de la información necesaria (una capa de líneas con la red viaria y otra de puntos con los puntos de inicio, paso y llegada correspondientemente ordenados) como parámetros que el proceso toma y en función a los cuales se genera una nueva capa. El proceso es una tarea perfectamente definida, con unas entradas y una salidas, y tras la selección de unas capas de entrada se genera un nuevo resultado en forma de otra capa. Este proceso puede implementarse de forma aislada del SIG, aunque coordinada con él para lograr mejores resultados y una utilización más sencilla.
+    </p>
+    <p>
+     Otra forma con un enfoque distinto sería presentando un proceso interactivo en el cual se introduce como único parámetro inicial la red viaria. Posteriormente, el usuario puede operar sobre el lienzo en el que esta se encuentra representada para ir definiendo y editando la lista de puntos de paso. El cálculo se va efectuando cuando se produce algún cambio en la misma y debe aplicarse de nuevo el algoritmo pertinente para adaptar el resultado —la ruta óptima— a ese cambio.
+    </p>
+    <p>
+     Este tipo de formulaciones interactivas son más intuitivas y agradables de usar, pero en realidad menos productivas de cara a un trabajo dentro de un proyecto SIG. Aparecen por ello en aquellas funciones que tienen una mayor componente visual o, especialmente, en las que representan un análisis puntual que se realiza de forma común como algo individual. Estos son los análisis que se implementan en las aplicaciones que veremos más adelante como parte del grupo de SIG enfocados a la exploración visual de datos geográficos, que además de esta proveen alguna serie de utilidades de análisis, pocas en general, sin que estas estén concebidas para un trabajo completo en un proyecto SIG de cualquier índole.
+    </p>
+    <p>
+     En un proyecto SIG de cierto tamaño, lo más común es que la fase de análisis, a la que seguirá una fase también compleja de preparación e interpretación de resultados, y previa a la cual se ha debido llevar a cabo la preparación de los datos de partida, comprenda no uno, sino muchos análisis distintos. Estos análisis, a su vez, no son independientes, sino que están relacionados entre sí, y lo más habitual es que definan un flujo de trabajo que comienza en los datos de partida y desemboca en los resultados finales a través de una serie de procesos.
+    </p>
+    <p>
+     Por su naturaleza, tanto los datos espaciales como los procesos en los que estos intervienen se prestan a formar parte de estos flujos de trabajo más o menos complejos, y es por ello que en los SIG actuales una funcionalidad básica es la creación de tareas complejas que permiten simplificar todo un proceso de muchas etapas en una única que las engloba a todas. La forma anteriormente comentada en que aparecen las formulaciones dentro de un SIG, de forma atomizada y modular, facilita la creación de estos «modelos» a partir de procesos simples.
+    </p>
+    <p>
+     Para entender esta idea, podemos ver un ejemplo aplicado. La extracción de una red de drenaje en formato vectorial a partir de un MDE requiere una serie de procesos, a saber (para repasar los fundamentos de cada uno de estos procesos y comprender mejor la operación global, puede consultarse el capítulo
+     <a href="Geomorfometria.html#Geomorfometria">
+      Geomorfometria
+     </a>
+     , donde se describieron en su momento, así como la sección
+     <a href="Creacion_capas_vectoriales.html#Vectorizacion_lineas">
+      Vectorizacion_lineas
+     </a>
+     ):
+    </p>
+    <p>
+    </p>
+    <ol>
+     <li>
+      Eliminación de depresiones del MDE.
+     </li>
+     <li>
+      Cálculo de una capa de área acumulada a partir del MDE corregido
+     </li>
+     <li>
+      Extracción de capa ráster con la red de drenaje a partir de la capa anterior y un valor umbral
+     </li>
+     <li>
+      Vectorización de la capa resultante del paso anterior
+     </li>
+    </ol>
+    <p>
+     Lo anterior podría simplificarse si se agruparan en una sola operación todos los procesos anteriores, de forma que tomando dos datos de entrada (un MDE y un umbral), se realizara todo el proceso de forma continua. Las capacidades de creación de modelos que implementan los SIG de escritorio (en particular, los más enfocados al análisis) permiten crear nuevos procesos compuestos utilizando entornos gráficos intuitivos, y estos procesos pasan a formar parte del conjunto de ellos de que dispone el SIG, permitiendo que cada usuario «resuma» en procesos unitarios una serie de operaciones que, de otro modo, deberían realizarse de forma individual con el coste operacional que ello implica.
+    </p>
+    <p>
+     Una vez que se ha creado un proceso compuesto, este puede aplicarse sobre nuevos datos de entrada, reduciéndose así el tiempo y la complejidad con que nuevos parámetros de entrada pueden ser procesados según el esquema de trabajo definido en dicho proceso.
+    </p>
+    <p>
+     Debe pensarse que el proceso presentado como ejemplo es muy sencillo y únicamente implica cuatro operaciones encadenadas de forma lineal. Un proceso de análisis habitual puede contener muchas más operaciones individuales, y estas disponerse de forma más compleja, con dependencias de distinta índole entre sus resultados.
+    </p>
+    <p>
+     La imagen \ref{Fig:Proceso_complejo} muestra el aspecto de uno de tales procesos implementado en un software GIS con capacidad de de creación de modelos. El proceso representado en la figura \ref{Fig:Esquema_MonteCarlo} también es un ejemplo de otro tipo de análisis que puede adaptarse ventajosamente en este tipo de herramientas de modelización.
+    </p>
+    <p>
+     <figure>
+      <img src="../img/Proceso_complejo.png" width="90.0%"/>
+      <figcaption>
+       Esquema de un proceso complejo creado a partir de operaciones simples de análisis con datos SIG.
+      </figcaption>
+      $$\label{Fig:Proceso_complejo}$$
+     </figure>
+    </p>
+    <p>
+     Asimismo, las herramientas SIG que contienen funcionalidad de análisis suelen permitir el acceso a estas a traves de lenguajes de
+     <i>
+      scripting
+     </i>
+     , lo cual facilita la creación de flujos de trabajo y la automatización de rutinas complejas de análisis. Si bien este trabajo no se realiza de un modo gráfico e intuitivo como en el ejemplo mostrado anteriormente, y requiere mayores conocimientos, la flexibilidad y potencia que ofrece es mucho mayor.
+    </p>
+    <h3 id="Edición">
+     Edición
+    </h3>
+    <p>
+     Los datos geográficos con los que trabajamos en un SIG no son una realidad estática. La información contenida en una capa es susceptible de ser modificada o corregida, y las funciones que permiten estas tareas son importantes para dotar al SIG de versatilidad. Sin ellas, los datos espaciales pierden gran parte de su utilidad dentro de un SIG, ya que se limitan las posibilidades de trabajo sobre estos. Las funcionalidades de edición son, por tanto, básicas en una herramienta de escritorio.
+    </p>
+    <p>
+     Las operaciones de edición pueden emplearse, por ejemplo, para la actualización de cartografía. Como vimos en el capítulo
+     <a href="Fuentes_datos.html#Fuentes_datos">
+      Fuentes_datos
+     </a>
+     , una de las ventajas de los datos digitales frente a los analógicos es la mayor facilidad de actualización. Así, si una entidad en una capa vectorial modifica su geometría, no es necesario rehacer todo un mapa, sino simplemente editar ese elemento. A lo largo del desarrollo de un proyecto SIG, es muy probable que sea necesario editar de un modo u otro algún dato espacial, bien sea para corregirlo, ampliarlo, mejorarlo o sencillamente adaptarlo a las necesidades del propio proyecto.
+    </p>
+    <p>
+     Además de la modificación de una capa ya existente, las herramientas de edición de un SIG de escritorio se emplean igualmente para la creación de capas nuevas, que pueden crearse a partir de la digitalización de imágenes como vimos en el capítulo
+     <a href="Fuentes_datos.html#Fuentes_datos">
+      Fuentes_datos
+     </a>
+     , o bien en base a cualquier otra capa de la que dispongamos.
+    </p>
+    <p>
+     Aunque las tareas de edición más habituales son las relacionadas con la edición de geometrías, no es esta la única edición que puede realizarse dentro de un SIG. Podemos distinguir las siguientes formas de edición:
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      Edición de geometrías de una capa vectorial
+     </li>
+     <li>
+      Edición de atributos de una capa vectorial
+     </li>
+     <li>
+      Edición de valores de una capa ráster
+     </li>
+    </ul>
+    <p>
+     Las herramientas destinadas a la edición de entidades geométricas heredan sus características de los programas de diseño asistido por ordenador (CAD), cuya funcionalidad principal es precisamente la edición de elementos gráficos. Estas incluyen la adición o eliminación de nuevas geometrías, la modificación de ellas editando sus puntos (recordemos que toda entidad vectorial se reduce a un conjunto de puntos en última instancia), así como otras operaciones geométricas básicas. En la sección
+     <a href="Fuentes_datos.html#Digitalizacion_manual">
+      Digitalizacion_manual
+     </a>
+     vimos algunas de ellas a la hora de tratar la calidad de la digitalización en pantalla.
+    </p>
+    <p>
+     Otras funciones de edición que encontramos son las que permiten simplificar algunas tareas, tales como la división de un polígono. Otras funcionalidades similares incluyen la eliminación automática de polígonos espúreos (véase
+     <a href="Operaciones_geometricas.html#Poligonos_espureos">
+      Poligonos_espureos
+     </a>
+     ), o el ajuste automático entre entidades.
+    </p>
+    <p>
+     En general, el número de funcionalidades es sensiblemente menor que en el caso de los programas CAD, ya que gran parte de ellas no tiene aplicación directa en el caso de trabajar con datos geográficos. No obstante, también aparecen herramientas adicionales, como sucede en el caso de que se registre información topológica, lo cual ha de considerarse por igual en el proceso de edición.
+    </p>
+    <p>
+     Junto con las propias geometrías, toda capa vectorial tiene asociado un conjunto de atributos, y estos deben poder editarse también desde el SIG. De hecho, la adición de una nueva geometría a una capa vectorial no está completa hasta que no se añaden igualmente sus atributos.
+    </p>
+    <p>
+     La edición de toda la información alfanumérica relacionada con las distintas entidades se realiza en un SIG a través de elementos tomados del ámbito de las bases de datos, siendo esto en general válido tanto en lo referente a las interfaces como en el propio acceso a datos. Las operaciones de edición de atributos abarcan tanto la modificación de valores sencillos como la de la propia estructura del conjunto de atributos (adición o eliminación de columnas —campos— en la tabla correspondiente). Por supuesto, la edición de atributos y de geometrías esta íntimamente relacionada.
+    </p>
+    <p>
+     Por último, la edición de capas ráster es mucho menos frecuente, y una gran mayoría de SIG no permiten la modificación directa de los valores de las celdas. Las operaciones del álgebra de mapas permiten modificar los valores de una capa y obtener nuevas capas con esos valores modificados, pero editar directamente un valor de celda del mismo modo que se editan el valor de un atributo o la posición de un punto de una capa vectorial no es una funcionalidad tan habitual.
+    </p>
+    <h3 id="Generación de cartografía">
+     Generación de cartografía
+    </h3>
+    <a name="GeneracionCartografia">
+    </a>
+    <p>
+     A pesar de que la representación de las distintas capas de datos espaciales en un lienzo es suficientemente potente a efectos de explorar visualmente la información que estas contienen, la mayoría de los SIG incorporan capacidades de creación de cartografía impresa, generando un documento cartográfico que posteriormente puede imprimirse y emplearse como un mapa clásico. Las razones para la existencia de tales funcionalidades son muchas, pero la principal sigue siendo la necesidad general que aún existe de apoyarse en esa clase de documentos cartográficos.
+    </p>
+    <p>
+     Aunque la representación dentro de un SIG ofrece posibilidades mayores (cambio de escala, ajuste de los parámetros de visualización, etc.), disponer de una copia «estática» de cada bloque de información con el que se trabaja en un SIG es una necesidad ineludible. Más que una capacidad necesaria para la presentación adecuada de la información cartográfica, la generación de cartografía impresa es en muchos casos la principal razón para el uso de un SIG.
+    </p>
+    <p>
+     Fundamentalmente, estas capacidades permiten la composición de documentos cartográficos de acuerdo con un diseño dado, y la impresión directa de estas en algún periférico tal como una impresora común o un
+     <i>
+      plotter
+     </i>
+     de gran formato. En la elaboración de dicho diseño, pueden emplearse todos los elementos que habitualmente podemos encontrar en un mapa: el propio mapa en sí (la representación de la información geográfica), leyenda, título, escala, etc. Con estos elementos, se crea una versión autocontenida de la información geográfica, que puede ya emplearse de modo independiente del SIG.
+    </p>
+    <p>
+     Las funciones de diseño que se implementan por regla general en un SIG son similares a las que pueden encontrarse en un software de maquetación genérico, permitiendo la composición gráfica del documento general y el ajuste de los distintos elementos que lo forman. Se diferencian de aquellas en el hecho de que toman en consideración la naturaleza cartográfica de los elementos que componen el documento, y por ello disponen de funcionalidades para manejar correctamente parámetros tales como la escala de representación cuando se rediensionan dichos elementos.
+    </p>
+    <p>
+     Una de las funciones más interesantes de generación cartográfica en un SIG es la automatización del proceso y la simplificación de la producción de grandes volúmenes de cartografía. Por una parte, todas las herramientas de escritorio capaces de producir cartografía son a su vez capaces de «reutilizar» diseños, de tal modo que si un conjunto de mapas tienen unas características comunes (por ejemplo, una misma disposición de sus elementos), no es necesario elaborar todos ellos desde cero.
+    </p>
+    <p>
+     Esto permite, por ejemplo, crear una serie de mapas de una misma zona conteniendo cada uno de ellos información sobre distintas variables. A partir de un conjunto de capas, se elabora el diseño de un mapa y este se alimenta de dichas capas, creando mapas independientes que reflejan estas por separado o en distintas combinaciones. Esto simplifica notablemente el proceso, ya que el diseño ha de realizarse una única vez, al tiempo que se garantiza la uniformidad de los distintos resultados.
+    </p>
+    <p>
+     Otra aplicación en esta línea es la generación de una serie de mapas que cubren en su conjunto una amplia extensión, fragmentando esta en unidades. La gestión de los encuadres para cada una de esas unidades, o la creación de un mapa guía en cada caso que localice la hoja concreta dentro de la extensión global del conjunto, ambas pueden automatizarse junto con las restantes operaciones de diseño. De este modo, la producción de toda una serie cartográfica se simplifica en gran medida, siendo el SIG una herramienta que supone un gran avance en términos de productividad en este tipo de tareas.
+    </p>
+    <p>
+     La figura \ref{Fig:Serie_mapas} muestra un ejemplo de lo anterior.
+    </p>
+    <p>
+     <figure>
+      <img src="../img/Serie_mapas.png" width="90.0%"/>
+      <figcaption>
+       La automatización de las tareas de creación cartográfica permite simplificar la producción de grandes volúmenes de cartografía, como por ejemplo al dividir un área geográfica en una serie dada de mapas.
+      </figcaption>
+      $$\label{Fig:Serie_mapas}$$
+     </figure>
+    </p>
+    <p>
+     Estas posibilidades surgen de la separación existente en un SIG entre los datos espaciales y el diseño del documento cartográfico que los contiene, del mismo modo que ya vimos existe entre datos y parámetros de representación a la hora de visualizar los primeros.
+    </p>
+    <h2 id="Tipos de herramientas de escritorio">
+     Tipos de herramientas de escritorio
+    </h2>
+    <p>
+     No todas las aplicaciones de escritorio presentan las funcionalidades anteriores de igual modo. Es frecuente que ciertos Sistemas de Información Geográfica tengan una fuerte componente de análisis, pero que otras de las funciones principales, como por ejemplo la edición, no se presenten tan desarrolladas.
+    </p>
+    <p>
+     Un caso particular es el de aquellos SIG de escritorio que centran la gran mayoría de sus capacidades en el terreno de la visualización, permitiendo un uso de los datos geográficos similar al que corresponde a un mapa clásico, donde el trabajo con este se basa fundamentalmente en el análisis visual.
+    </p>
+    <p>
+     Comenzaremos por estos últimos para dar un breve repaso a los principales tipos de aplicaciones de escritorio en función de sus capacidades.
+    </p>
+    <h3 id="Visores y exploradores">
+     Visores y exploradores
+    </h3>
+    <a name="VisoresYExploradores">
+    </a>
+    <p>
+     Las aplicaciones SIG de escritorio cuya función principal es la visualización se conocen generalmente como
+     <i>
+      visores
+     </i>
+     o
+     <i>
+      exploradores
+     </i>
+     , y en la actualidad representan una fracción importante del conjunto total de herramientas SIG de escritorio.
+    </p>
+    <p>
+     En ocasiones, se trata de aplicaciones en el sentido habitual, las cuales presentan capacidades reducidas de análisis y edición, y cuyo objetivo no es otro que el permitir la visualización de cartografía, sin incorporar las restantes posibilidades del SIG. En otros casos, son versiones simplificadas de soluciones SIG de escritorio más complejas, desarrolladas como alternativas más asequibles (en términos de dificultad de manejo y aprendizaje, y también a veces en términos de coste).
+    </p>
+    <p>
+     Una forma también habitual en la que se presentan los exploradores son como herramientas de apoyo a unos datos espaciales particulares. Para entender este tipo de enfoque, debe pensarse que un mapa clásico puede visualizarse de igual modo con independencia del uso que se le pretenda dar y de la experiencia y formación de quien lo usa. Con un conjunto de datos espaciales en forma de una o varias capas, no sucede lo mismo, ya que estos datos no son un elemento «visual» de por sí. Es necesario utilizar un SIG para poder visualizarlos.
+    </p>
+    <p>
+     Un usuario experimentado no encontrará problemas en manejar un SIG de escritorio complejo, pero un usuario con poca experiencia que lo único que desee sea «ver» la cartografía y explorarla visualmente (del mismo modo que un excursionista casual puede querer emplear un mapa topográfico) encontrará el entorno de ese SIG demasiado complejo y con elementos que, en su mayoría, no le son necesarios. Con la disponibilidad creciente de cartografía y la popularización de las tecnologías SIG, este tipo de usuarios ha crecido notablemente, y las aplicaciones adaptadas a sus necesidades han ido apareciendo y popularizándose de forma progresiva.
+    </p>
+    <p>
+     Así, existen visores que ocupan un papel secundario como parte de un producto compuesto que incluye al propio programa y a los datos en sí. Ejemplos muy claros y muy populares son aplicaciones como Google Earth (figura \ref{Fig:GEarth}) , que permite que cada usuario incorpore su propia información para visualizar esta, pero cuyo mayor interés es el acceso a una enorme base de datos de imágenes de satélite con cobertura global. De esta forma, la aplicación puede utilizarse para explorar una área deseada, sin necesidad de disponer junto con ella de datos para dicha zona, puesto que por defecto la aplicación accede a una base de datos de imágenes que van indisolublemente unidos a ella.
+    </p>
+    <p>
+     <figure>
+      <img src="../img/gearth.png" width="70.0%"/>
+      <figcaption>
+       Aspecto de un globo o visor tridimensional (GoogleEarth).
+      </figcaption>
+      $$\label{Fig:GEarth}$$
+     </figure>
+    </p>
+    <p>
+     El usuario puede también añadir sus propias capas y usar estos visualizadores de la misma manera que emplea las capacidades de visualización de un SIG de escritorio más rico en funcionalidades, pero parte del interés de la aplicación no está solo en sus capacidades, sino en los datos que tiene vinculados y que permiten emplear estas.
+    </p>
+    <p>
+     En otros casos, un organismo o empresa puede generar un conjunto de capas bien a partir de algún tipo de análisis o de cualquier otra metodología, y opta por distribuir estas acompañadas de un visor que permita un primer acceso a los datos. Todas esas capas podrán ser empleadas dentro de un SIG que soporte los formatos de archivo en el que estas se hayan almacenado, pero aquellos usuarios que no dispongan de un SIG podrán igualmente efectuar consultas básicas y explorar la cartografía haciendo uso del visor incorporado.
+    </p>
+    <p>
+     En líneas generales podemos enumerar las siguientes características de los visores:
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      Interfaz simple en la que tienen un peso mayoritario las herramientas de navegación.
+     </li>
+     <li>
+      Capacidades de lectura de datos, pero no de escritura.
+     </li>
+     <li>
+      Reducidas o nulas capacidades de edición y análisis.
+     </li>
+     <li>
+      Enfocadas a usuarios no especializados.
+     </li>
+    </ul>
+    <p>
+     Encontramos dos grupos básicos de visores, en función de qué tipo de visualización principal incorporan: planos y tridimensionales (globos). Mientras que una aplicación SIG de escritorio completa puede presentar los dos tipos de representación, y sobre ambas implementar las restantes funcionalidades tales como la edición o el análisis (aunque, como ya dijimos, en mayor proporción sobre las vistas bidimensionales), los visores habitualmente reducen sus capacidades de representación a una de estas variantes.
+    </p>
+    <p>
+     Los visores bidimensionales, aunque sin alcanzar el enfoque especializado de una aplicación completa, se orientan más al usuario con cierto conocimiento del ámbito SIG, mientras que la tendencia en los tridimensionales es a ofrecer herramientas de acceso a datos geográficos con una apariencia atractiva. Ello, no obstante, no implica que estos visores carezcan de utilidad en el ámbito científico, siendo igualmente herramientas válidas para todo tipo de investigación o trabajo que incorpore cierta componente geográfica. De hecho, la popularización de este tipo de visores ha supuesto un gran acercamiento de los datos geográficos y las capacidades SIG a toda una amplia comunidad de usuarios, incluyendo los del mundo científico, permitiéndoles realizar sus trabajos de forma más adecuada. Esto es especialmente cierto con aquellos visores que se hallan vinculados a bases de datos particulares, como ya se ha comentado, ya que permiten explotar los datos de dichas bases y proporcionar a todo usuario un sustrato de información geográfica sobre la que trabajar.
+    </p>
+    <h3 id="Soluciones de escritorio completas">
+     Soluciones de escritorio completas
+    </h3>
+    <p>
+     La aplicación SIG más habitual, y la que constituye la herramienta básica para el desarrollo de un proyecto SIG, es aquella que reúne en un único producto todas las funciones básicas que hemos visto en este capítulo. Con las lógicas diferencias en cuanto al grado de funcionalidad de estas según su enfoque, una aplicación SIG de escritorio completa debe permitir la lectura de los datos, la creación y modificación de estos con sus capacidades de edición, su visualización, la realización de análisis con ellos y la generación de resultados cartográficos ya sea a partir de los datos originales o de datos generados en los procesos de análisis. Con todas estas capacidades, una herramienta SIG de escritorio constituye una solución completa para todo tipo de proyectos SIG, y puede dar respuesta a todas las necesidades que en ellos se presentan.
+    </p>
+    <p>
+     Como ya vimos en el capítulo introductorio de esta parte, y también en el capítulo
+     <a href="Bases_datos.html#Bases_datos">
+      Bases_datos
+     </a>
+     dedicado a las bases de datos, la forma de abordar la implementación de las distintas capacidades ha ido variando a medida que se iban desarrollando los SIG. En la actualidad, encontramos tanto SIG de escritorio que implementan en una sola aplicación central todas las funcionalidades base, como grupos de aplicaciones muy interrelacionadas que implementan por separado cada una de dichas funcionalidades. Tanto en uno como en otro caso, existen elementos sobre los que las distintas herramientas del SIG se apoyan, especialmente en lo relativo al acceso a datos.
+    </p>
+    <p>
+     Pese a que incorporan toda la gama de funcionalidades base, las soluciones de escritorio completas no cubren las necesidades de todo usuario de SIG. La convergencia a la que tienden este tipo de aplicaciones, comentada en el capítulo introductorio de esta parte del libro, y como ya entonces se mencionó, no se ha logrado completamente. El problema no es ya un problema de integración de tecnologías, sino una dificultad relativa a la gran amplitud de la ciencia de los SIG. Resulta imposible reunir en una sola herramienta todas las capacidades que un SIG de escritorio puede incluir, y es por ello que todas las soluciones de escritorio presentan algún tipo de especialización, dando prioridad a algún área respecto a las restantes.
+    </p>
+    <p>
+     Una división que perdura, aunque en mucho menor medida que en los primeros SIG, es la existente entre SIG ráster y SIG vectoriales, especialmente en lo relativo al análisis. Un usuario que trabaje con datos espaciales como los correspondientes, por ejemplo, a información catastral, utilizará para su labor un SIG de escritorio distinto al que usara alguien cuyo trabajo implique mayoritariamente la realización de análisis del terreno o la creación de modelos geográficos, a pesar de que ambas soluciones probablemente incorporen capacidades tanto en el ámbito ráster como en el vectorial. El alcance de estas, no obstante, será distinto en cada caso.
+    </p>
+    <p>
+     Incluso en caso de presentar una orientación principalmente hacia los datos de tipo ráster, existen también enfoques distintos dependiendo principalmente del tipo información que se vaya a manejar. Una división fundamental es la existente entre aquellas aplicaciones destinadas al manejo de imágenes y aquellas cuyo elemento principal de trabajo son las capas ráster con otro tipo de valores, tales como MDE o capas similares.
+    </p>
+    <p>
+     Las imágenes, especialmente si se trata de imágenes de satélite, van a constar de una serie de bandas cuyo número puede ser muy elevado, lo que requiere unas herramientas particulares para su manejo. Asimismo, gran parte de las funciones que vimos en el capítulo
+     <a href="Imagenes.html#Procesado_imagenes">
+      Procesado_imagenes
+     </a>
+     tales como las relativas a la corrección de imágenes, no tienen aplicación para otro tipo de capas (no tiene sentido aplicar una corrección geométrica a un MDE o una capa de pendientes, ya que estos datos necesariamente provienen de fuentes ya conveniente corregidas), por lo que en cierto modo pueden considerarse especificas de este campo, el de las imágenes, si bien es cierto que se trata de un campo de gran amplitud.
+    </p>
+    <p>
+     Por el contrario, capas como el propio MDE u otras similares solo contienen una única banda, y el tipo de operaciones que se desarrollan sobre ellos es bien distinto. Con objeto de simplificar estas operaciones, la estructura de estas aplicaciones ha de enfocarse hacia alguna de estas variantes, dándole prioridad sobre la otra. Por ello, las herramientas de escritorio que se orientan al trabajo con imágenes incorporan en general pocas o nulas herramientas en áreas como el análisis del terreno, mientras que aquellas que sí tratan estos análisis no incluyen salvo las funciones más simples para el manejo de imágenes (realces, ajuste de contraste, etc.), pero no las más específicas.
+    </p>
+    <p>
+     En realidad, una aplicación de escritorio global que cubriera todas estas funcionalidades no sería práctica desde el punto de vista de su uso, pues sería excesivamente compleja. Es poco probable, igualmente, que un mismo usuario requiera un entorno profesional productivo en todas ellas, y es más habitual que centre su trabajo en un área concreta.
+    </p>
+    <h2 id="Resumen">
+     Resumen
+    </h2>
+    <p>
+     Las herramientas de escritorio son la forma más clásica de los SIG. Entendemos como tales a aquellas herramientas ciertamente complejas que permiten llevar a cabo las tareas básicas de un SIG en sentido tradicional, como son el manejo de datos espaciales y el trabajo con los mismos.
+    </p>
+    <p>
+     Podemos distinguir cuatro funcionalidades básicas que aparecen representadas en mayor o menor medida en un SIG de escritorio: visualización, edición, análisis y generación de cartografía.
+    </p>
+    <p>
+     En función del grado de desarrollo e implementación en que las anteriores funcionalidades se encuentren en un SIG de escritorio, distinguimos distintas formas de estas herramientas. La división más genérica es aquella que distingue las herramientas pensadas para un trabajo completo en todas las distintas fases de un proyecto SIG de aquellas orientadas a la representación y exploración visual de los datos geográficos. Estas últimas representan un enfoque más reciente, y en la actualidad están contribuyendo de manera muy notable a la expansión de las tecnologías SIG fuera del ámbito más especializado.
+    </p>
+   </div>
+  </div>
+  <div id="toindex">
+   <a href="../index.html">
+    Portada
+   </a>
+  </div>
+  <div id="slideout_chapter">
+   Índice
+   <br/>
+   capítulo
+   <div id="slideout_inner_chapter">
+    <div id="generated-toc">
+    </div>
+   </div>
+  </div>
+  <div id="slideout_general">
+   Índice
+   <br/>
+   general
+   <div id="slideout_inner_general">
+    <p>
+     <b>
+      ÍNDICE GENERAL
+     </b>
+     <br/>
+    </p>
+    <ul>
+     <li>
+      <a href="Intro.html">
+       Introducción
+      </a>
+     </li>
+     <li>
+      Parte 1. Fundamentos
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_fundamentos.html">
+        Introducción. ¿Qué es un SIG?
+       </a>
+      </li>
+      <li>
+       <a href="Historia.html">
+        Historia de los SIG
+       </a>
+      </li>
+      <li>
+       <a href="Fundamentos_cartograficos.html">
+        Fundamentos cartográficos y geodésicos
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 2. Datos
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_datos.html">
+        Introducción. ¿Con qué trabajo en un SIG?
+       </a>
+      </li>
+      <li>
+       <a href="Tipos_datos.html">
+        Modelos para la información geográfica
+       </a>
+      </li>
+      <li>
+       <a href="Fuentes_datos.html">
+        Fuentes principales de datos espaciales
+       </a>
+      </li>
+      <li>
+       <a href="Calidad_datos.html">
+        La calidad de los datos espaciales
+       </a>
+      </li>
+      <li>
+       <a href="Bases_datos.html">
+        Bases de datos
+       </a>
+      </li>
+      <li>
+       <a href="Metadatos.html">
+        Metadatos
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 3. Analisis
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_procesos.html">
+        Introducción. ¿Qué puedo hacer con un SIG?
+       </a>
+      </li>
+      <li>
+       <a href="Analisis_espacial.html">
+        Conceptos básicos para el análisis espacial
+       </a>
+      </li>
+      <li>
+       <a href="Consultas.html">
+        Consultas y operaciones con bases de datos
+       </a>
+      </li>
+      <li>
+       <a href="Estadistica_espacial.html">
+        Estadísticas espaciales
+       </a>
+      </li>
+      <li>
+       <a href="Creacion_capas_raster.html">
+        Creación de capas raster
+       </a>
+      </li>
+      <li>
+       <a href="Algebra_de_mapas.html">
+        Álgebra de mapas
+       </a>
+      </li>
+      <li>
+       <a href="Geomorfometria.html">
+        Geomorfometría y análisis del terreno
+       </a>
+      </li>
+      <li>
+       <a href="Imagenes.html">
+        Procesado de imágenes
+       </a>
+      </li>
+      <li>
+       <a href="Creacion_capas_vectoriales.html">
+        Creación de capas vectoriales
+       </a>
+      </li>
+      <li>
+       <a href="Operaciones_geometricas.html">
+        Operaciones geométricas con capas vectoriales
+       </a>
+      </li>
+      <li>
+       <a href="Costes.html">
+        Costes, distancias y áreas de influencia
+       </a>
+      </li>
+      <li>
+       <a href="Estadistica_avanzada.html">
+        Más estadística espacial
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 4. Tecnología
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_tecnologia.html">
+        Introducción. ¿Cómo son las aplicaciones SIG?
+       </a>
+      </li>
+      <li>
+       <a href="SIGs_escritorio.html">
+        Herramientas de escritorio
+       </a>
+      </li>
+      <li>
+       <a href="Cliente_servidor.html">
+        Clientes y servidores remotos. Web mapping
+       </a>
+      </li>
+      <li>
+       <a href="SIG_movil.html">
+        SIG movil
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 5. Visualización
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_visualizacion.html">
+        Introducción. Los SIG como herramientas de visualización
+       </a>
+      </li>
+      <li>
+       <a href="Conceptos_basicos.html">
+        Conceptos básicos de visualización y representación
+       </a>
+      </li>
+      <li>
+       <a href="Mapas.html">
+        El mapa y la comunicación cartográfica
+       </a>
+      </li>
+      <li>
+       <a href="Visualizacion_SIG.html">
+        La visualización en términos SIG
+       </a>
+      </li>
+     </ul>
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>
