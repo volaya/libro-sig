@@ -1,940 +1,695 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title> </title>
-        <link
-            href="../reset.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="../typography.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script type="text/x-mathjax-config">
-             MathJax.Hub.Config({
-              tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
-              TeX: { equationNumbers: {autoNumber: "all"} }
-            });
-        </script>
-        <script
-            id="MathJax-script"
-            async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        ></script>
-        <script src="../generated_toc.js"></script>
-    </head>
-    <body lang="es">
-        <div class="main">
-            <div class="g960" id="chapter">
-                <h1>¿Qué puedo hacer con un SIG?</h1>
-                <p></p>
-                <p>
-                    <a name="Introduccion_procesos"> </a>
-                </p>
-                <h2 id="Introducción">Introducción</h2>
-                <p>
-                    El análisis de los datos geográficos es, junto con la
-                    generación cartográfica, una de las tareas fundamentales sin
-                    las cuales el concepto de SIG no alcanza su verdadero
-                    significado. La información que manejamos en un SIG es a su
-                    vez una fuente de nueva información, y solo es a través de
-                    su análisis que podemos obtener esta última y sacar partido
-                    de ella.
-                </p>
-                <p>
-                    Los datos espaciales contienen mucha más información de la
-                    que a primera vista nos muestran. Todo dato espacial es el
-                    resultado de un proceso localizado espacialmente, el cual
-                    podemos conocer en mayor medida si sabemos «leer» la
-                    información subyacente que dicho dato contiene. Los cursos
-                    de los ríos informan sobre la estructura del terreno o la
-                    litología existente. Los patrones en los que se disponen los
-                    nidos de una especie de ave dicen mucho acerca del
-                    comportamiento de esta. Y así, muchos otros ejemplos que
-                    pueden analizarse según alguna o varias de las formulaciones
-                    que veremos a lo largo de esta parte del libro. Lo
-                    importante es conocer qué formas hay de convertir la
-                    información espacial en información sobre un proceso dado, o
-                    cómo extraer parámetros de utilidad a partir de datos
-                    espaciales relacionados con nuestro área de estudio.
-                </p>
-                <p>
-                    Ahora que ya conocemos cómo son los datos que podemos
-                    incorporar a un SIG, es el momento de ver cómo los SIG
-                    constituyen herramientas de gran potencia para estudiar
-                    dichos datos. El análisis de estos datos geográficos ha
-                    cobrado una nueva dimensión desde la aparición de los SIG,
-                    surgiendo nuevos planteamientos y mejorándose los ya
-                    existentes. A lo largo de toda su historia, el análisis ha
-                    sido uno de los elementos más importantes de un SIG, y a día
-                    de hoy existen formulaciones que cubren casi todo el abanico
-                    posible de necesidades. Dados unos datos espaciales y un
-                    problema a resolver, es probable que exista algún
-                    procedimiento que, si no nos da una solución como tal a
-                    partir de dichos datos, pueda emplearlos para acercarnos a
-                    esta. El objetivo de esta parte del libro es mostrar los más
-                    importantes de dichos procedimientos, con el fin de dejar
-                    clara la potencialidad de los datos espaciales en los más
-                    diversos contextos de estudio.
-                </p>
-                <h2 id="¿Qué es el análisis espacial?">
-                    ¿Qué es el análisis espacial?
-                </h2>
-                <p>
-                    De modo formal, podemos decir que el análisis espacial es el
-                    estudio cuantitativo de aquellos fenómenos que se
-                    manifiestan en el espacio [
-                    <a href="../bib.htm#Anselin1989Syracuse">
-                        Anselin1989Syracuse
-                    </a>
-                    ]. Ello indica una importancia clave de la posición, la
-                    superficie, la distancia y la interacción a través del
-                    propio espacio. Para que estos conceptos cobren sentido, se
-                    necesita que toda la información esté referenciada
-                    espacialmente.
-                </p>
-                <p>
-                    En otros tipos de datos, el orden en que los elementos,
-                    indexados de una u otra forma, se dispongan no es relevante,
-                    y una reestructuración de los mismos no afecta
-                    necesariamente a los resultados. En el caso del dato
-                    espacial, este supuesto no se cumple, y alterar la
-                    distribución espacial de los valores de partida implica que
-                    los resultados de cualquier análisis espacial serán
-                    distintos. Esto nos permite definir tal análisis espacial
-                    como el conjunto de técnicas y modelos que hacen un uso
-                    explícito de la referencia espacial de cada dato particular
-                    [
-                    <a href="../bib.htm#Chorley1972Methuen">
-                        Chorley1972Methuen
-                    </a>
-                    ].
-                </p>
-                <p>
-                    Desde un punto de vista menos formal, podemos entender el
-                    análisis espacial sencillamente como el conjunto de
-                    operaciones que desarrollamos en base a los datos espaciales
-                    en el trabajo habitual con estos. En realidad, prácticamente
-                    todo cuanto hacemos con los datos espaciales constituye
-                    alguna forma de análisis. Pese a que, como ya sabemos, la
-                    aparición de los SIG ha propiciado un fuerte desarrollo en
-                    este terreno, el análisis espacial no es algo novedoso, y
-                    todos en algún momento hemos utilizado algún mapa clásico y
-                    efectuado algún análisis sobre él.
-                </p>
-                <p>
-                    Por ejemplo, hemos cogido un mapa de elevaciones y hemos
-                    buscado dónde se sitúa el pico más alto, o bien hemos visto
-                    la elevación concreta a la que se encuentra un elemento dado
-                    como, por ejemplo, una población. Igualmente, hemos mirado
-                    en un mapa de carreteras intentando planificar una jornada
-                    turística, viendo qué lugares de interés podemos visitar o
-                    cómo llegar desde uno a otro de estos lugares haciéndolo por
-                    las mejores carreteras o de la forma más rápida. Estas
-                    actividades habituales son ejemplos de análisis geográficos
-                    que podemos igualmente realizar dentro de un SIG.
-                </p>
-                <p>
-                    Cuando los datos espaciales que se recogen en ese mapa de
-                    elevaciones o ese mapa de carreteras pasan al marco de un
-                    SIG, se incorporan igualmente a un marco de análisis en el
-                    que además se contemplan otra serie de operaciones. Dentro
-                    de ese marco, se da por igual una formalización de los
-                    métodos de análisis espacial, fundamentada sobre todo en la
-                    naturaleza numérica y cuantitativa con la que se maneja todo
-                    dato espacial dentro de un Sistema de Información
-                    Geográfica. Esta formalización es la que provee el entorno
-                    adecuado para plantear todo tipo de análisis cuantitativos
-                    sobre los datos espaciales.
-                </p>
-                <p>
-                    No debe verse el análisis espacial como un conjunto de
-                    complejos algoritmos, sino como una colección de procesos
-                    con los que explotar los datos espaciales. Estas operaciones
-                    producen resultados de diversa clase, como pueden ser los
-                    siguientes:
-                </p>
-                <p></p>
-                <ul>
-                    <li>
-                        Capas de datos geográficos, en cualquiera de los
-                        formatos posibles, y con cualquier tipo de información.
-                    </li>
-                    <li>Tablas de datos.</li>
-                    <li>Escalares o vectores.</li>
-                </ul>
-                <p>
-                    En ocasiones, los resultados expresan la misma variable que
-                    el dato de partida (por ejemplo, el cálculo de una media), y
-                    en otros las variables de entrada y salida son distintas
-                    (por ejemplo, si a partir de una capa de elevaciones
-                    calculamos una de pendientes).
-                </p>
-                <p>
-                    Asimismo, todo análisis espacial parte de un conjunto de
-                    datos espaciales, pudiendo estos ser de un único tipo, o de
-                    varios distintos que se combinan en un procedimiento
-                    concreto. Por ejemplo, en el caso de calcular la
-                    localización del punto más alto el resultado es una sencilla
-                    coordenada, y tan solo se utiliza la variable elevación. En
-                    el caso de la altura media de una ciudad, se utilizan dos
-                    entradas. Por un lado, la elevación, y por otro el
-                    emplazamiento de la ciudad. Aunque en ese mapa de carreteras
-                    que antes citábamos toda esa información se contiene en una
-                    única hoja, en realidad son dos elementos distintos
-                    combinados a la hora de representarlos. En términos más
-                    acordes con un SIG, podemos decir que tenemos dos capas
-                    distintas que utilizamos como entradas.
-                </p>
-                <h2 id="Razonamiento y consulta geográfica en un SIG">
-                    Razonamiento y consulta geográfica en un SIG
-                </h2>
-                <p>
-                    Tanto si la información geográfica se encuentra dentro de un
-                    SIG como si no, las distintas herramientas de análisis
-                    espacial permiten estudiar los datos geográficos con el fin
-                    de obtener respuestas a cuestiones muy variadas. Estas
-                    cuestiones son las que motivan el propio análisis espacial y
-                    el desarrollo de las formulaciones correspondientes.
-                </p>
-                <p>
-                    A lo largo de esta parte del libro veremos una amplia serie
-                    de dichas formulaciones. Utilizando estas, obtenemos de los
-                    datos espaciales los valores que sirven como respuesta a las
-                    cuestiones planteadas. Sin embargo, la mayor importancia a
-                    la hora de plantear un análisis espacial apropiado no recae
-                    sobre los algoritmos, sino sobre los planteamientos previos.
-                    Es decir, no sobre las respuestas, sino sobre las preguntas
-                    que nos planteamos acerca de los datos y los procesos
-                    espaciales. Por ello, es importante desarrollar un adecuado
-                    razonamiento espacial y conocer bien el tipo de cuestiones
-                    que podemos plantear y cómo formular estas.
-                </p>
-                <p>
-                    Según [
-                    <a href="../bib.htm#Nyerges1991CartoAndGIS">
-                        Nyerges1991CartoAndGIS
-                    </a>
-                    ], pueden distinguirse las siguientes categorías de
-                    cuestiones geográficas:
-                </p>
-                <p></p>
-                <ul>
-                    <li>Relativas a posición y extensión</li>
-                    <li>Relativas a la forma y distribución</li>
-                    <li>Relativas a la asociación espacial</li>
-                    <li>Relativas a la interacción espacial</li>
-                    <li>Relativas a la variación espacial</li>
-                </ul>
-                <p>
-                    Por su parte, [
-                    <a href="../bib.htm#Slater1982Heineman">
-                        Slater1982Heineman
-                    </a>
-                    ] cita la siguiente lista como compendió básico de las
-                    cuestiones que pueden plantearse en el análisis espacial.
-                </p>
-                <p></p>
-                <ul>
-                    <li>¿Dónde se encuentra?</li>
-                    <li>¿Dónde tiene lugar?</li>
-                    <li>¿Qué hay ahí?</li>
-                    <li>¿Por qué esta ahí?</li>
-                    <li>¿Por qué no está en otro lugar?</li>
-                    <li>¿Qué podría haber ahí?</li>
-                    <li>¿Podría estar en otro lugar?</li>
-                    <li>¿Cuánto hay en ese lugar?</li>
-                    <li>¿Hasta dónde se extiende?</li>
-                    <li>¿Por qué tiene esa estructura particular?</li>
-                    <li>¿Existe regularidad en esa estructura?</li>
-                    <li>¿De qué naturaleza es esa regularidad?</li>
-                    <li>
-                        ¿Por qué el patrón de distribución espacial tiene que
-                        mostrar regularidad?
-                    </li>
-                    <li>
-                        ¿Dónde se encuentra en relación a otros de su misma
-                        clase?
-                    </li>
-                    <li>¿Qué clase de distribución conforma?</li>
-                    <li>¿Se encuentra en todo el mundo?</li>
-                    <li>¿Es universal?</li>
-                    <li>¿Donde están sus límites?</li>
-                    <li>¿Cual es la naturaleza de esos límites?</li>
-                    <li>¿Por qué esos límites acotan su distribución?</li>
-                    <li>
-                        ¿Qué otras cosas encontramos asociadas espacialmente a
-                        ese fenómeno?
-                    </li>
-                    <li>
-                        ¿Aparecen esas cosas asociadas espacialmente en otros
-                        lugares?
-                    </li>
-                    <li>¿Por qué deben estar asociadas espacialmente?</li>
-                    <li>¿Ha estado siempre allí?</li>
-                    <li>¿Cuándo apareció por primera vez?</li>
-                    <li>¿Cómo ha variado espacialmente a través del tiempo?</li>
-                    <li>¿Qué factores han influido en su dispersión?</li>
-                    <li>¿Por qué se ha dispersado de esa manera?</li>
-                    <li>
-                        ¿Qué factores geográficos han limitado su dispersión?
-                    </li>
-                </ul>
-                <p>
-                    Con todo lo anterior, un SIG es una herramienta de primer
-                    orden tanto para formular cuestiones geográficas como para
-                    resolverlas.
-                </p>
-                <p>
-                    Por ejemplo, a través de la mera representación de los datos
-                    geográficos, un SIG puede ayudar a identificar y definir los
-                    problemas a plantear, ya que la exploración visual de los
-                    datos es un elemento clave en la formulación de
-                    interrogantes geográficos. Esa misma representación puede
-                    ser también empleada para dar respuesta a dichos
-                    interrogantes, puesto que esas respuestas quedan muchas
-                    veces patentes con el simple análisis visual. Considerando
-                    la gran variedad de formas en que los datos espaciales
-                    pueden representarse dentro de un SIG, ello hace que la
-                    visualización sea de por sí una componente de los SIG de
-                    gran interés para el análisis.
-                </p>
-                <p>
-                    Asimismo, mediante las capacidades de superposición de capas
-                    y la visualización de dicha superposición se pueden tratar
-                    en un SIG las cuestiones relativas a la asociación entre
-                    distintas variables espaciales, y las que conciernen a la
-                    variación temporal de estas variables pueden estudiarse con
-                    conjuntos de representaciones sucesivas a modo de
-                    «instantáneas». También en esto las funcionalidades de
-                    visualización de la información espacial son herramientas de
-                    indudable utilidad.
-                </p>
-                <p>
-                    A lo anterior deben sumarse los distintos algoritmos de
-                    análisis geográfico, que iremos viendo a lo largo de los
-                    próximos capítulos, y que aprovechan la arquitectura
-                    particular de un SIG para explotar en profundidad la
-                    información espacial.
-                </p>
-                <h2 id="Tipos de análisis espacial">
-                    Tipos de análisis espacial
-                </h2>
-                <p>
-                    A la hora de analizar los datos en busca de respuestas a
-                    cuestiones como las anteriores, existen muchos enfoques
-                    distintos.
-                </p>
-                <p>
-                    Aunque dar una taxonomía del análisis espacial es difícil y
-                    la casuística es excesivamente amplia, podemos establecer
-                    algunas divisiones principales. Para cada una de ellas,
-                    veremos algunos ejemplos, con el objetivo de cubrir
-                    distintos supuestos y, una vez más, mostrar en detalle qué
-                    tipo de operaciones pueden realizarse a partir de datos
-                    espaciales. Estas divisiones no pretenden ser un conjunto
-                    exhaustivo ni una clasificación formal, sino simplemente
-                    hacer ver la variedad de análisis posibles y su complejidad.
-                </p>
-                <p>
-                    Debe resaltarse que la implementación de estos distintos
-                    tipos de análisis, así como la de las formulaciones más
-                    detalladas que iremos viendo en sucesivos capítulos, varía
-                    de unos SIG a otros. Nuevamente, aquí se tratan como
-                    elementos teóricos y su utilización práctica en un SIG dado
-                    puede ser de una forma u otra. Lo importante es conocer ese
-                    elemento conceptual y saber
-                    <i> qué </i>
-                    podemos obtener a partir de un determinado dato espacial,
-                    para poder así estudiar un problema concreto y plantear una
-                    forma de resolución del mismo.
-                </p>
-                <p>
-                    Las siguientes son algunas de las familias principales en
-                    las que englobar los procedimientos de análisis:
-                </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Consulta espacial </b>
-                        . El tipo de análisis más simple es la consulta directa
-                        de la información que contienen los datos espaciales. Es
-                        el tipo de análisis básico que usamos cuando trabajamos
-                        con cartografía clásica, y nos proporciona información
-                        inmediata a partir de una simple observación de los
-                        datos. La propiedad fundamental que empleamos es la
-                        posición de cada elemento geográfico.
-                        <p>
-                            Este tipo de operaciones da respuestas a preguntas
-                            de tipo
-                        </p>
-                        <p>
-                            ¿Qué tipo de suelo encontramos en una coordenada
-                            $(x,y)$ dada?
-                        </p>
-                        <p>¿Dónde se encuentra la localidad x?</p>
-                        <p>
-                            Son, como puede verse, análisis que se pueden
-                            resolver simplemente «mirando» al mapa que contiene
-                            la información de partida, y por ello constituyen la
-                            forma más sencilla de análisis espacial.
-                        </p>
-                        <p>
-                            Puesto que en la información geográfica dentro de un
-                            SIG todo elemento tiene asociadas unas propiedades
-                            en forma de valores, también podemos consultar estos
-                            valores. Así, podemos plantear consultas no
-                            necesariamente relacionadas con la componente
-                            espacial, tales como
-                        </p>
-                        <p>
-                            ¿Cuáles son las diez ciudades españolas con mayor
-                            población?
-                        </p>
-                        <p>¿Qué pueblos de España comienzan por la letra A?</p>
-                        <p>
-                            Combinar este tipo de consultas con las puramente
-                            espaciales constituye un análisis sencillo pero
-                            fundamental dentro de los posibles en un SIG, y
-                            representa una de las utilidades más frecuentemente
-                            empleadas de estos en el trabajo diario.
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Análisis topológico </b>
-                        . Las consultas hechas a las capas de datos espaciales
-                        pueden tener relación no solo con su posición sino con
-                        la relación con otros elementos de la misma capa. La
-                        existencia de topología (ver
-                        <a href="Tipos_datos.html#Topologia"> Topologia </a>
-                        ) puede emplearse para la realización de consultas que
-                        respondan a cuestiones como, entre otras, las
-                        siguientes:
-                        <p>
-                            ¿Cómo llegar desde mi posición actual hasta una
-                            coordenada concreta por la red viaria existente?
-                        </p>
-                        <p>
-                            ¿Qué comunidades autónomas comparten límite con
-                            Madrid?
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Medición </b>
-                        . La existencia de una referencia espacial para cada uno
-                        de los elementos con los que trabajamos en el análisis
-                        dentro de un SIG hace que podamos cuantificar otra serie
-                        de parámetros también espaciales. El más básico de estos
-                        parámetros es la distancia, que puede ser una distancia
-                        simple entre dos puntos dados o bien una distancia entre
-                        elementos complejos tales como polígonos o líneas, o
-                        combinaciones de ellos.
-                        <p>
-                            Además de la distancia podemos medir otras
-                            propiedades tales como
-                        </p>
-                        <p>Área</p>
-                        <p>Perímetro</p>
-                        <p>Longitud de un recorrido no lineal</p>
-                        <p>Factores de forma</p>
-                        <p>
-                            Dentro de este grupo incluimos parámetros más
-                            elaborados tales como pendientes, o índices diversos
-                            que derivan todos ellos de medidas sencillas
-                            similares a las anteriores. Estas medidas no tiene
-                            que ser necesariamente de tipo espacial, ya que
-                            conceptos como la pendiente pueden medirse no solo
-                            sobre un espacio geográfico —variación de $z$ sobre
-                            el plano $xy$— sino también sobre otras variables
-                            —variación de dicha variable (temperatura,
-                            concentración de un nutriente, etc.) sobre el plano
-                            $xy$—.
-                        </p>
-                        <p>Responden a preguntas muy variadas tales como</p>
-                        <p>
-                            ¿Qué superficie de zonas arboladas hay en mi término
-                            municipal?
-                        </p>
-                        <p>
-                            ¿Cuántos kilómetros comprende la red viaria
-                            española?
-                        </p>
-                        <p>
-                            ¿Tienen las distintas zonas de usos de suelo formas
-                            compactas o por el contrario son principalmente
-                            alargadas y de tipo fusiforme?
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Combinación </b>
-                        . Uno de los procedimientos más habituales y más
-                        característicos dentro del uso de un SIG es la
-                        combinación o superposición de varias capas de
-                        información. La propia estructura de la información
-                        geográfica en capas facilita notablemente estos
-                        procedimientos.
-                        <p>
-                            Antes de la existencia de los SIG, la combinación de
-                            capas implicaba la utilización de mapas en soportes
-                            tales como transparencias o acetatos, una opción
-                            farragosa y muy poco apta para el análisis de las
-                            combinaciones resultantes. Dentro de un SIG, existen
-                            metodologías para integrar la información de varias
-                            capas en formas muy distintas, y las nuevas capas
-                            resultantes pueden luego analizarse con sencillez
-                            independientemente de su origen.
-                        </p>
-                        <p>
-                            La estructura de las bases de datos geográficas es
-                            idónea para integrar toda la información disponible
-                            acerca de una región geográfica concreta, y las
-                            distintas capas que forman esta se pueden combinar
-                            de forma sencilla tanto para su análisis como para
-                            su simple visualización.
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Transformaciones </b>
-                        . Podemos englobar dentro de este grupo una amplia serie
-                        de procedimientos que modifican los elementos de entrada
-                        de diversas formas.
-                        <p>
-                            Por ejemplo, uno de los procedimientos más
-                            frecuentes dentro de un SIG es la creación de áreas
-                            de influencia. Este tipo de operaciones de análisis
-                            convierte los distintos elementos geográficos en
-                            áreas que reflejan la influencia de dicho elemento
-                            en base a parámetros tales como distancias o costes.
-                            Se tiene así una transformación geométrica, ya que
-                            la forma del objeto se transforma en una nueva que
-                            indica la zona que se ve afectada por dicho objeto.
-                        </p>
-                        <p>Con ellas podemos responder a preguntas como</p>
-                        <p>
-                            ¿Qué puntos de la ciudad no tienen una farmacia a
-                            menos de un kilómetro de distancia?
-                        </p>
-                        <p>
-                            ¿Están los distintos comercios de un barrio
-                            demasiado juntos, de forma que probablemente estén
-                            compitiendo por la clientela?
-                        </p>
-                        <p>
-                            Si considero que para una escapada de fin de semana
-                            el turista medio recorre como mucho 100 kilómetros,
-                            ¿qué municipios alrededor del mío son susceptibles
-                            de venir de visita turística y por tanto debería
-                            promover en ellos los valores naturales de este?
-                        </p>
-                        <p>
-                            Otros ejemplos de este tipo de modificaciones
-                            geométricas es la simplificación de líneas, que
-                            trata de definir los mismos trazados de un conjunto
-                            de líneas reduciendo el número de puntos empleados.
-                        </p>
-                        <p>
-                            También se pueden realizar transformaciones de las
-                            geometrías en función no solo de su componente
-                            espacial (sus coordenadas), sino utilizando
-                            igualmente los valores asociados a estas. Un ejemplo
-                            de esto es la agrupación de geometrías que comparten
-                            algún atributo común en entidades únicas. Dado un
-                            conjunto de polígonos con los distintos términos
-                            municipales, para los cuales exista un atributo que
-                            indique la comarca a la que pertenecen, se pueden
-                            agrupar estos para obtener polígonos únicos de cada
-                            comarca.
-                        </p>
-                        <p>
-                            Otras transformaciones son de tipo cartográfico,
-                            tales como la conversión entre sistemas de
-                            coordenadas distintos, las reproyecciones, o la
-                            aplicación de transformaciones afines en general.
-                            Estas son básicas para, por ejemplo, combinar datos
-                            referenciados según distintos sistemas.
-                        </p>
-                        <p>
-                            Un tipo de transformación importante es la relativa
-                            a los modelos de datos, pues estos, como ya sabemos,
-                            son tan variados como los sistemas de coordenadas.
-                            Las transformaciones entre formatos de
-                            almacenamiento son importantes para un manejo óptimo
-                            de los datos geográficos, ya que ciertas operaciones
-                            se realizan de manera más adecuada en unos formatos
-                            concretos. Igualmente, la combinación de capas
-                            requiere en muchos casos que estas se encuentre en
-                            un mismo modelo de datos, al igual que sucede con
-                            los sistemas de coordenadas. La conversión entre los
-                            modelos ráster y vectorial, la interpolación o el
-                            cálculo de capas de densidad son ejemplos de
-                            análisis que modifican la forma de representación de
-                            una realidad espacial concreta.
-                        </p>
-                        <p>
-                            Por último, encontramos transformaciones basadas en
-                            los valores de las variables estudiadas. Dentro de
-                            este grupo encontramos las reclasificaciones, que en
-                            el caso de datos categóricos transforman la
-                            identificación de cada elemento en una clase dada, o
-                            los cambios de escala u otras operaciones
-                            aritméticas tales como la normalización de una
-                            variable en un rango dado, o la tipificación de una
-                            variable para asimilar su distribución de valores a
-                            la de una curva normal. Estos últimos se efectúan
-                            sobre datos de tipo continuo.
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Análisis de superficies </b>
-                        . El análisis de superficies es uno de los más potentes
-                        de cuantos encontramos en un SIG. Desde parámetros
-                        básicos como la pendiente o la orientación hasta
-                        parámetros morfométricos muy específicos, pasando por
-                        todas las herramientas del análisis hidrológico, la
-                        batería de operaciones disponibles es muy amplia. Aunque
-                        este análisis de superficies se entiende como el de la
-                        superficie terrestre (es decir, el relieve), gran parte
-                        de estas operaciones pueden aplicarse a cualquier otra
-                        superficie, entendiendo esta en su sentido matemático.
-                        Así, la pendiente indica una tasa de variación y puede
-                        aplicarse a capas con valores distintos de la elevación,
-                        tales como temperaturas, densidades, etc.
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Estadística descriptiva </b>
-                        . Los elementos de la estadística clásica tienen sus
-                        equivalentes en los datos espaciales, y nos permiten
-                        calificar cuantitativamente los datos con los que
-                        trabajamos. Se incluyen aquí descriptores de centralidad
-                        y dispersión, de dependencia espacial o el estudio de
-                        patrones espaciales, entre otros muchos. Estos pueden a
-                        su vez usarse para el contraste de hipótesis que
-                        contengan una cierta componente espacial.
-                        <p>
-                            Por ejemplo, estos estadísticos nos permiten dar
-                            respuesta a cuestiones del tipo
-                        </p>
-                        <p>
-                            ¿Es constante la media de altura a lo largo de toda
-                            la geografía de mi país?
-                        </p>
-                        <p>
-                            ¿Existe alguna tendencia de los individuos de una
-                            especie a congregarse, o por el contrario se
-                            dispersan por todo el territorio disponible
-                            minimizando el contacto con otros congéneres?
-                        </p>
-                        <p>
-                            ¿Existe alguna dirección predominante en los
-                            movimientos de individuos de una especie o se
-                            desplazan erráticamente?
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Inferencia </b>
-                        . Otro análisis estadístico de gran importancia en los
-                        SIG es el que permite inferir comportamientos de las
-                        distintas variables y estudiar, por ejemplo, la forma en
-                        que estas van a evolucionar a lo largo del tiempo.
-                        <p>
-                            El establecimiento de modelos de cambio y variación
-                            representa una de las herramientas más actuales en
-                            el campo de los SIG, y un campo en abundante
-                            desarrollo.
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Toma de decisiones y optimización </b>
-                        . La realización de actividades en el medio tiene una
-                        obvia componente espacial. Son muchos los parámetros que
-                        influyen en ellas, y en función de estos dichas
-                        actividades se desarrollarán de una forma u otra. La
-                        estructura de la información geográfica en capas dentro
-                        de un SIG, favorable como ya vimos para la superposición
-                        de capas, lo es igualmente para estudiar de forma
-                        combinada los efectos de distintos factores.
-                        <p>
-                            El estudio de estos factores puede ser una
-                            herramienta clave para tomar decisiones relativas a
-                            la actividad sobre la que ejercen su influencia.
-                            Así, los procedimientos de análisis espacial nos
-                            sirven para responder a cuestiones como, por
-                            ejemplo,
-                        </p>
-                        <p>
-                            ¿Cuál es el mejor lugar para emplazar una nueva
-                            construcción en función de su impacto sobre el
-                            medio?
-                        </p>
-                        <p>
-                            ¿Por qué trazado es más conveniente construir una
-                            nueva carretera?
-                        </p>
-                        <p>
-                            ¿Dónde situar un nuevo hospital para que el servicio
-                            en la comarca mejore lo máximo posible?
-                        </p>
-                        <p>
-                            Dentro de estos análisis, muchos de ellos tratan de
-                            maximizar o minimizar alguna función objetivo
-                            dependiente de los factores implicados, que pueden
-                            ser tanto variables recogidas en distintas capas
-                            como parámetros espaciales tales como distancias.
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Modelización </b>
-                        . La creación de modelos espaciales dentro de un SIG es
-                        una tarea aún pendiente de mucho desarrollo. No
-                        obstante, existe un gran número de modelos en los más
-                        diversos campos, y la arquitectura de datos y procesos
-                        de los SIG es propicia para la implementación de otros
-                        nuevos.
-                        <p>
-                            Modelos como los de tipo hidrológico son habituales
-                            en los SIG más populares, y la estructura raster de
-                            los datos que se emplean generalmente en estos
-                            facilita en gran medida el análisis y la
-                            implementación de modelos distribuidos. Otros
-                            modelos que encuentran en los SIG una plataforma
-                            idónea para su implementación son los basados en
-                            autómatas celulares, con aplicación en muchas áreas
-                            distintas.
-                        </p>
-                        <p></p>
-                    </li>
-                </ul>
-                <p>
-                    Como ya se ha dicho, todos estos tipos de análisis no son
-                    independientes entre sí, y la verdadera potencia de un SIG
-                    radica en la elaboración de metodologías que los combinen.
-                    Por ejemplo, la elaboración de áreas de influencia
-                    considerando distancia a través de una red viaria,
-                    utilizando la topología de esta, que incorpora el estudio de
-                    la topología de la red, la medición de distancias sobre la
-                    misma, y la transformación de entidades geográficas en
-                    función de lo anterior.
-                </p>
-                <h2 id="Resumen">Resumen</h2>
-                <p>
-                    En líneas generales, todo cuanto hacemos con la información
-                    geográfica implica algún tipo de análisis. Desde una mera
-                    consulta a un modelo muy complejo, este análisis explora
-                    dicha información y permite obtener resultados que descubren
-                    otros tipos de información subyacente.
-                </p>
-                <p>
-                    Existe una gran variedad de procesos de análisis espacial.
-                    Estos pueden tomar datos espaciales de diversas clases y
-                    generar resultados también muy diversos, por lo que su
-                    clasificación es compleja. Algunos de los más
-                    característicos de cuantos podemos llevar a cabo dentro de
-                    un SIG son aquellos que sacan partido de la forma en que
-                    este maneja las distintas capas de información. Por ejemplo,
-                    la superposición de capas o el análisis combinado de
-                    distintos factores como herramienta de apoyo en la toma de
-                    decisiones.
-                </p>
-                <p>
-                    En este contexto, deben considerarse los SIG como
-                    herramientas que van a permitir una mejor formulación de las
-                    cuestiones geográficas, y que del mismo modo van a ayudar en
-                    la búsqueda de respuestas a estas.
-                </p>
-            </div>
-        </div>
-        <div id="toindex">
-            <a href="../index.html"> Portada </a>
-        </div>
-        <div id="slideout_chapter">
-            Índice
-            <br />
-            capítulo
-            <div id="slideout_inner_chapter">
-                <div id="generated-toc"></div>
-            </div>
-        </div>
-        <div id="slideout_general">
-            Índice
-            <br />
-            general
-            <div id="slideout_inner_general">
-                <p>
-                    <b> ÍNDICE GENERAL </b>
-                    <br />
-                </p>
-                <ul>
-                    <li>
-                        <a href="Intro.html"> Introducción </a>
-                    </li>
-                    <li>Parte 1. Fundamentos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_fundamentos.html">
-                                Introducción. ¿Qué es un SIG?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Historia.html"> Historia de los SIG </a>
-                        </li>
-                        <li>
-                            <a href="Fundamentos_cartograficos.html">
-                                Fundamentos cartográficos y geodésicos
-                            </a>
-                        </li>
-                    </ul>
-                    <li>Parte 2. Datos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_datos.html">
-                                Introducción. ¿Con qué trabajo en un SIG?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Tipos_datos.html">
-                                Modelos para la información geográfica
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Fuentes_datos.html">
-                                Fuentes principales de datos espaciales
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Calidad_datos.html">
-                                La calidad de los datos espaciales
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Bases_datos.html"> Bases de datos </a>
-                        </li>
-                        <li>
-                            <a href="Metadatos.html"> Metadatos </a>
-                        </li>
-                    </ul>
-                    <li>Parte 3. Analisis</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_procesos.html">
-                                Introducción. ¿Qué puedo hacer con un SIG?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Analisis_espacial.html">
-                                Conceptos básicos para el análisis espacial
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Consultas.html">
-                                Consultas y operaciones con bases de datos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_espacial.html">
-                                Estadísticas espaciales
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_raster.html">
-                                Creación de capas raster
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Algebra_de_mapas.html">
-                                Álgebra de mapas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Geomorfometria.html">
-                                Geomorfometría y análisis del terreno
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Imagenes.html"> Procesado de imágenes </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_vectoriales.html">
-                                Creación de capas vectoriales
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Operaciones_geometricas.html">
-                                Operaciones geométricas con capas vectoriales
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Costes.html">
-                                Costes, distancias y áreas de influencia
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_avanzada.html">
-                                Más estadística espacial
-                            </a>
-                        </li>
-                    </ul>
-                    <li>Parte 4. Tecnología</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_tecnologia.html">
-                                Introducción. ¿Cómo son las aplicaciones SIG?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="SIGs_escritorio.html">
-                                Herramientas de escritorio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Cliente_servidor.html">
-                                Clientes y servidores remotos. Web mapping
-                            </a>
-                        </li>
-                        <li>
-                            <a href="SIG_movil.html"> SIG movil </a>
-                        </li>
-                    </ul>
-                    <li>Parte 5. Visualización</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_visualizacion.html">
-                                Introducción. Los SIG como herramientas de
-                                visualización
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Conceptos_basicos.html">
-                                Conceptos básicos de visualización y
-                                representación
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Mapas.html">
-                                El mapa y la comunicación cartográfica
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Visualizacion_SIG.html">
-                                La visualización en términos SIG
-                            </a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </body>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+  </title>
+  <link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+    TeX: { equationNumbers: {autoNumber: "all"} }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+  <script src="../generated_toc.js">
+  </script>
+ </head>
+ <body lang="es">
+  <div class="main">
+   <div class="g960" id="chapter">
+    <h1>
+     ¿Qué puedo hacer con un SIG?
+    </h1>
+    <p>
+    </p>
+    <p>
+     <a name="Introduccion_procesos">
+     </a>
+    </p>
+    <h2 id="Introducción">
+     Introducción
+    </h2>
+    <p>
+     El análisis de los datos geográficos es, junto con la generación cartográfica, una de las tareas fundamentales sin las cuales el concepto de SIG no alcanza su verdadero significado. La información que manejamos en un SIG es a su vez una fuente de nueva información, y solo es a través de su análisis que podemos obtener esta última y sacar partido de ella.
+    </p>
+    <p>
+     Los datos espaciales contienen mucha más información de la que a primera vista nos muestran. Todo dato espacial es el resultado de un proceso localizado espacialmente, el cual podemos conocer en mayor medida si sabemos «leer» la información subyacente que dicho dato contiene. Los cursos de los ríos informan sobre la estructura del terreno o la litología existente. Los patrones en los que se disponen los nidos de una especie de ave dicen mucho acerca del comportamiento de esta. Y así, muchos otros ejemplos que pueden analizarse según alguna o varias de las formulaciones que veremos a lo largo de esta parte del libro. Lo importante es conocer qué formas hay de convertir la información espacial en información sobre un proceso dado, o cómo extraer parámetros de utilidad a partir de datos espaciales relacionados con nuestro área de estudio.
+    </p>
+    <p>
+     Ahora que ya conocemos cómo son los datos que podemos incorporar a un SIG, es el momento de ver cómo los SIG constituyen herramientas de gran potencia para estudiar dichos datos. El análisis de estos datos geográficos ha cobrado una nueva dimensión desde la aparición de los SIG, surgiendo nuevos planteamientos y mejorándose los ya existentes. A lo largo de toda su historia, el análisis ha sido uno de los elementos más importantes de un SIG, y a día de hoy existen formulaciones que cubren casi todo el abanico posible de necesidades. Dados unos datos espaciales y un problema a resolver, es probable que exista algún procedimiento que, si no nos da una solución como tal a partir de dichos datos, pueda emplearlos para acercarnos a esta. El objetivo de esta parte del libro es mostrar los más importantes de dichos procedimientos, con el fin de dejar clara la potencialidad de los datos espaciales en los más diversos contextos de estudio.
+    </p>
+    <h2 id="¿Qué es el análisis espacial?">
+     ¿Qué es el análisis espacial?
+    </h2>
+    <p>
+     De modo formal, podemos decir que el análisis espacial es el estudio cuantitativo de aquellos fenómenos que se manifiestan en el espacio [
+     <a href="../bib.htm#Anselin1989Syracuse">
+      Anselin1989Syracuse
+     </a>
+     ]. Ello indica una importancia clave de la posición, la superficie, la distancia y la interacción a través del propio espacio. Para que estos conceptos cobren sentido, se necesita que toda la información esté referenciada espacialmente.
+    </p>
+    <p>
+     En otros tipos de datos, el orden en que los elementos, indexados de una u otra forma, se dispongan no es relevante, y una reestructuración de los mismos no afecta necesariamente a los resultados. En el caso del dato espacial, este supuesto no se cumple, y alterar la distribución espacial de los valores de partida implica que los resultados de cualquier análisis espacial serán distintos. Esto nos permite definir tal análisis espacial como el conjunto de técnicas y modelos que hacen un uso explícito de la referencia espacial de cada dato particular [
+     <a href="../bib.htm#Chorley1972Methuen">
+      Chorley1972Methuen
+     </a>
+     ].
+    </p>
+    <p>
+     Desde un punto de vista menos formal, podemos entender el análisis espacial sencillamente como el conjunto de operaciones que desarrollamos en base a los datos espaciales en el trabajo habitual con estos. En realidad, prácticamente todo cuanto hacemos con los datos espaciales constituye alguna forma de análisis. Pese a que, como ya sabemos, la aparición de los SIG ha propiciado un fuerte desarrollo en este terreno, el análisis espacial no es algo novedoso, y todos en algún momento hemos utilizado algún mapa clásico y efectuado algún análisis sobre él.
+    </p>
+    <p>
+     Por ejemplo, hemos cogido un mapa de elevaciones y hemos buscado dónde se sitúa el pico más alto, o bien hemos visto la elevación concreta a la que se encuentra un elemento dado como, por ejemplo, una población. Igualmente, hemos mirado en un mapa de carreteras intentando planificar una jornada turística, viendo qué lugares de interés podemos visitar o cómo llegar desde uno a otro de estos lugares haciéndolo por las mejores carreteras o de la forma más rápida. Estas actividades habituales son ejemplos de análisis geográficos que podemos igualmente realizar dentro de un SIG.
+    </p>
+    <p>
+     Cuando los datos espaciales que se recogen en ese mapa de elevaciones o ese mapa de carreteras pasan al marco de un SIG, se incorporan igualmente a un marco de análisis en el que además se contemplan otra serie de operaciones. Dentro de ese marco, se da por igual una formalización de los métodos de análisis espacial, fundamentada sobre todo en la naturaleza numérica y cuantitativa con la que se maneja todo dato espacial dentro de un Sistema de Información Geográfica. Esta formalización es la que provee el entorno adecuado para plantear todo tipo de análisis cuantitativos sobre los datos espaciales.
+    </p>
+    <p>
+     No debe verse el análisis espacial como un conjunto de complejos algoritmos, sino como una colección de procesos con los que explotar los datos espaciales. Estas operaciones producen resultados de diversa clase, como pueden ser los siguientes:
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      Capas de datos geográficos, en cualquiera de los formatos posibles, y con cualquier tipo de información.
+     </li>
+     <li>
+      Tablas de datos.
+     </li>
+     <li>
+      Escalares o vectores.
+     </li>
+    </ul>
+    <p>
+     En ocasiones, los resultados expresan la misma variable que el dato de partida (por ejemplo, el cálculo de una media), y en otros las variables de entrada y salida son distintas (por ejemplo, si a partir de una capa de elevaciones calculamos una de pendientes).
+    </p>
+    <p>
+     Asimismo, todo análisis espacial parte de un conjunto de datos espaciales, pudiendo estos ser de un único tipo, o de varios distintos que se combinan en un procedimiento concreto. Por ejemplo, en el caso de calcular la localización del punto más alto el resultado es una sencilla coordenada, y tan solo se utiliza la variable elevación. En el caso de la altura media de una ciudad, se utilizan dos entradas. Por un lado, la elevación, y por otro el emplazamiento de la ciudad. Aunque en ese mapa de carreteras que antes citábamos toda esa información se contiene en una única hoja, en realidad son dos elementos distintos combinados a la hora de representarlos. En términos más acordes con un SIG, podemos decir que tenemos dos capas distintas que utilizamos como entradas.
+    </p>
+    <h2 id="Razonamiento y consulta geográfica en un SIG">
+     Razonamiento y consulta geográfica en un SIG
+    </h2>
+    <p>
+     Tanto si la información geográfica se encuentra dentro de un SIG como si no, las distintas herramientas de análisis espacial permiten estudiar los datos geográficos con el fin de obtener respuestas a cuestiones muy variadas. Estas cuestiones son las que motivan el propio análisis espacial y el desarrollo de las formulaciones correspondientes.
+    </p>
+    <p>
+     A lo largo de esta parte del libro veremos una amplia serie de dichas formulaciones. Utilizando estas, obtenemos de los datos espaciales los valores que sirven como respuesta a las cuestiones planteadas. Sin embargo, la mayor importancia a la hora de plantear un análisis espacial apropiado no recae sobre los algoritmos, sino sobre los planteamientos previos. Es decir, no sobre las respuestas, sino sobre las preguntas que nos planteamos acerca de los datos y los procesos espaciales. Por ello, es importante desarrollar un adecuado razonamiento espacial y conocer bien el tipo de cuestiones que podemos plantear y cómo formular estas.
+    </p>
+    <p>
+     Según [
+     <a href="../bib.htm#Nyerges1991CartoAndGIS">
+      Nyerges1991CartoAndGIS
+     </a>
+     ], pueden distinguirse las siguientes categorías de cuestiones geográficas:
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      Relativas a posición y extensión
+     </li>
+     <li>
+      Relativas a la forma y distribución
+     </li>
+     <li>
+      Relativas a la asociación espacial
+     </li>
+     <li>
+      Relativas a la interacción espacial
+     </li>
+     <li>
+      Relativas a la variación espacial
+     </li>
+    </ul>
+    <p>
+     Por su parte, [
+     <a href="../bib.htm#Slater1982Heineman">
+      Slater1982Heineman
+     </a>
+     ] cita la siguiente lista como compendió básico de las cuestiones que pueden plantearse en el análisis espacial.
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      ¿Dónde se encuentra?
+     </li>
+     <li>
+      ¿Dónde tiene lugar?
+     </li>
+     <li>
+      ¿Qué hay ahí?
+     </li>
+     <li>
+      ¿Por qué esta ahí?
+     </li>
+     <li>
+      ¿Por qué no está en otro lugar?
+     </li>
+     <li>
+      ¿Qué podría haber ahí?
+     </li>
+     <li>
+      ¿Podría estar en otro lugar?
+     </li>
+     <li>
+      ¿Cuánto hay en ese lugar?
+     </li>
+     <li>
+      ¿Hasta dónde se extiende?
+     </li>
+     <li>
+      ¿Por qué tiene esa estructura particular?
+     </li>
+     <li>
+      ¿Existe regularidad en esa estructura?
+     </li>
+     <li>
+      ¿De qué naturaleza es esa regularidad?
+     </li>
+     <li>
+      ¿Por qué el patrón de distribución espacial tiene que mostrar regularidad?
+     </li>
+     <li>
+      ¿Dónde se encuentra en relación a otros de su misma clase?
+     </li>
+     <li>
+      ¿Qué clase de distribución conforma?
+     </li>
+     <li>
+      ¿Se encuentra en todo el mundo?
+     </li>
+     <li>
+      ¿Es universal?
+     </li>
+     <li>
+      ¿Donde están sus límites?
+     </li>
+     <li>
+      ¿Cual es la naturaleza de esos límites?
+     </li>
+     <li>
+      ¿Por qué esos límites acotan su distribución?
+     </li>
+     <li>
+      ¿Qué otras cosas encontramos asociadas espacialmente a ese fenómeno?
+     </li>
+     <li>
+      ¿Aparecen esas cosas asociadas espacialmente en otros lugares?
+     </li>
+     <li>
+      ¿Por qué deben estar asociadas espacialmente?
+     </li>
+     <li>
+      ¿Ha estado siempre allí?
+     </li>
+     <li>
+      ¿Cuándo apareció por primera vez?
+     </li>
+     <li>
+      ¿Cómo ha variado espacialmente a través del tiempo?
+     </li>
+     <li>
+      ¿Qué factores han influido en su dispersión?
+     </li>
+     <li>
+      ¿Por qué se ha dispersado de esa manera?
+     </li>
+     <li>
+      ¿Qué factores geográficos han limitado su dispersión?
+     </li>
+    </ul>
+    <p>
+     Con todo lo anterior, un SIG es una herramienta de primer orden tanto para formular cuestiones geográficas como para resolverlas.
+    </p>
+    <p>
+     Por ejemplo, a través de la mera representación de los datos geográficos, un SIG puede ayudar a identificar y definir los problemas a plantear, ya que la exploración visual de los datos es un elemento clave en la formulación de interrogantes geográficos. Esa misma representación puede ser también empleada para dar respuesta a dichos interrogantes, puesto que esas respuestas quedan muchas veces patentes con el simple análisis visual. Considerando la gran variedad de formas en que los datos espaciales pueden representarse dentro de un SIG, ello hace que la visualización sea de por sí una componente de los SIG de gran interés para el análisis.
+    </p>
+    <p>
+     Asimismo, mediante las capacidades de superposición de capas y la visualización de dicha superposición se pueden tratar en un SIG las cuestiones relativas a la asociación entre distintas variables espaciales, y las que conciernen a la variación temporal de estas variables pueden estudiarse con conjuntos de representaciones sucesivas a modo de «instantáneas». También en esto las funcionalidades de visualización de la información espacial son herramientas de indudable utilidad.
+    </p>
+    <p>
+     A lo anterior deben sumarse los distintos algoritmos de análisis geográfico, que iremos viendo a lo largo de los próximos capítulos, y que aprovechan la arquitectura particular de un SIG para explotar en profundidad la información espacial.
+    </p>
+    <h2 id="Tipos de análisis espacial">
+     Tipos de análisis espacial
+    </h2>
+    <p>
+     A la hora de analizar los datos en busca de respuestas a cuestiones como las anteriores, existen muchos enfoques distintos.
+    </p>
+    <p>
+     Aunque dar una taxonomía del análisis espacial es difícil y la casuística es excesivamente amplia, podemos establecer algunas divisiones principales. Para cada una de ellas, veremos algunos ejemplos, con el objetivo de cubrir distintos supuestos y, una vez más, mostrar en detalle qué tipo de operaciones pueden realizarse a partir de datos espaciales. Estas divisiones no pretenden ser un conjunto exhaustivo ni una clasificación formal, sino simplemente hacer ver la variedad de análisis posibles y su complejidad.
+    </p>
+    <p>
+     Debe resaltarse que la implementación de estos distintos tipos de análisis, así como la de las formulaciones más detalladas que iremos viendo en sucesivos capítulos, varía de unos SIG a otros. Nuevamente, aquí se tratan como elementos teóricos y su utilización práctica en un SIG dado puede ser de una forma u otra. Lo importante es conocer ese elemento conceptual y saber
+     <i>
+      qué
+     </i>
+     podemos obtener a partir de un determinado dato espacial, para poder así estudiar un problema concreto y plantear una forma de resolución del mismo.
+    </p>
+    <p>
+     Las siguientes son algunas de las familias principales en las que englobar los procedimientos de análisis:
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      <b>
+       Consulta espacial
+      </b>
+      . El tipo de análisis más simple es la consulta directa de la información que contienen los datos espaciales. Es el tipo de análisis básico que usamos cuando trabajamos con cartografía clásica, y nos proporciona información inmediata a partir de una simple observación de los datos. La propiedad fundamental que empleamos es la posición de cada elemento geográfico.
+      <p>
+       Este tipo de operaciones da respuestas a preguntas de tipo
+      </p>
+      <p>
+       ¿Qué tipo de suelo encontramos en una coordenada $(x,y)$ dada?
+      </p>
+      <p>
+       ¿Dónde se encuentra la localidad x?
+      </p>
+      <p>
+       Son, como puede verse, análisis que se pueden resolver simplemente «mirando» al mapa que contiene la información de partida, y por ello constituyen la forma más sencilla de análisis espacial.
+      </p>
+      <p>
+       Puesto que en la información geográfica dentro de un SIG todo elemento tiene asociadas unas propiedades en forma de valores, también podemos consultar estos valores. Así, podemos plantear consultas no necesariamente relacionadas con la componente espacial, tales como
+      </p>
+      <p>
+       ¿Cuáles son las diez ciudades españolas con mayor población?
+      </p>
+      <p>
+       ¿Qué pueblos de España comienzan por la letra A?
+      </p>
+      <p>
+       Combinar este tipo de consultas con las puramente espaciales constituye un análisis sencillo pero fundamental dentro de los posibles en un SIG, y representa una de las utilidades más frecuentemente empleadas de estos en el trabajo diario.
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Análisis topológico
+      </b>
+      . Las consultas hechas a las capas de datos espaciales pueden tener relación no solo con su posición sino con la relación con otros elementos de la misma capa. La existencia de topología (ver
+      <a href="Tipos_datos.html#Topologia">
+       Topologia
+      </a>
+      ) puede emplearse para la realización de consultas que respondan a cuestiones como, entre otras, las siguientes:
+      <p>
+       ¿Cómo llegar desde mi posición actual hasta una coordenada concreta por la red viaria existente?
+      </p>
+      <p>
+       ¿Qué comunidades autónomas comparten límite con Madrid?
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Medición
+      </b>
+      . La existencia de una referencia espacial para cada uno de los elementos con los que trabajamos en el análisis dentro de un SIG hace que podamos cuantificar otra serie de parámetros también espaciales. El más básico de estos parámetros es la distancia, que puede ser una distancia simple entre dos puntos dados o bien una distancia entre elementos complejos tales como polígonos o líneas, o combinaciones de ellos.
+      <p>
+       Además de la distancia podemos medir otras propiedades tales como
+      </p>
+      <p>
+       Área
+      </p>
+      <p>
+       Perímetro
+      </p>
+      <p>
+       Longitud de un recorrido no lineal
+      </p>
+      <p>
+       Factores de forma
+      </p>
+      <p>
+       Dentro de este grupo incluimos parámetros más elaborados tales como pendientes, o índices diversos que derivan todos ellos de medidas sencillas similares a las anteriores. Estas medidas no tiene que ser necesariamente de tipo espacial, ya que conceptos como la pendiente pueden medirse no solo sobre un espacio geográfico —variación de $z$ sobre el plano $xy$— sino también sobre otras variables —variación de dicha variable (temperatura, concentración de un nutriente, etc.) sobre el plano $xy$—.
+      </p>
+      <p>
+       Responden a preguntas muy variadas tales como
+      </p>
+      <p>
+       ¿Qué superficie de zonas arboladas hay en mi término municipal?
+      </p>
+      <p>
+       ¿Cuántos kilómetros comprende la red viaria española?
+      </p>
+      <p>
+       ¿Tienen las distintas zonas de usos de suelo formas compactas o por el contrario son principalmente alargadas y de tipo fusiforme?
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Combinación
+      </b>
+      . Uno de los procedimientos más habituales y más característicos dentro del uso de un SIG es la combinación o superposición de varias capas de información. La propia estructura de la información geográfica en capas facilita notablemente estos procedimientos.
+      <p>
+       Antes de la existencia de los SIG, la combinación de capas implicaba la utilización de mapas en soportes tales como transparencias o acetatos, una opción farragosa y muy poco apta para el análisis de las combinaciones resultantes. Dentro de un SIG, existen metodologías para integrar la información de varias capas en formas muy distintas, y las nuevas capas resultantes pueden luego analizarse con sencillez independientemente de su origen.
+      </p>
+      <p>
+       La estructura de las bases de datos geográficas es idónea para integrar toda la información disponible acerca de una región geográfica concreta, y las distintas capas que forman esta se pueden combinar de forma sencilla tanto para su análisis como para su simple visualización.
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Transformaciones
+      </b>
+      . Podemos englobar dentro de este grupo una amplia serie de procedimientos que modifican los elementos de entrada de diversas formas.
+      <p>
+       Por ejemplo, uno de los procedimientos más frecuentes dentro de un SIG es la creación de áreas de influencia. Este tipo de operaciones de análisis convierte los distintos elementos geográficos en áreas que reflejan la influencia de dicho elemento en base a parámetros tales como distancias o costes. Se tiene así una transformación geométrica, ya que la forma del objeto se transforma en una nueva que indica la zona que se ve afectada por dicho objeto.
+      </p>
+      <p>
+       Con ellas podemos responder a preguntas como
+      </p>
+      <p>
+       ¿Qué puntos de la ciudad no tienen una farmacia a menos de un kilómetro de distancia?
+      </p>
+      <p>
+       ¿Están los distintos comercios de un barrio demasiado juntos, de forma que probablemente estén compitiendo por la clientela?
+      </p>
+      <p>
+       Si considero que para una escapada de fin de semana el turista medio recorre como mucho 100 kilómetros, ¿qué municipios alrededor del mío son susceptibles de venir de visita turística y por tanto debería promover en ellos los valores naturales de este?
+      </p>
+      <p>
+       Otros ejemplos de este tipo de modificaciones geométricas es la simplificación de líneas, que trata de definir los mismos trazados de un conjunto de líneas reduciendo el número de puntos empleados.
+      </p>
+      <p>
+       También se pueden realizar transformaciones de las geometrías en función no solo de su componente espacial (sus coordenadas), sino utilizando igualmente los valores asociados a estas. Un ejemplo de esto es la agrupación de geometrías que comparten algún atributo común en entidades únicas. Dado un conjunto de polígonos con los distintos términos municipales, para los cuales exista un atributo que indique la comarca a la que pertenecen, se pueden agrupar estos para obtener polígonos únicos de cada comarca.
+      </p>
+      <p>
+       Otras transformaciones son de tipo cartográfico, tales como la conversión entre sistemas de coordenadas distintos, las reproyecciones, o la aplicación de transformaciones afines en general. Estas son básicas para, por ejemplo, combinar datos referenciados según distintos sistemas.
+      </p>
+      <p>
+       Un tipo de transformación importante es la relativa a los modelos de datos, pues estos, como ya sabemos, son tan variados como los sistemas de coordenadas. Las transformaciones entre formatos de almacenamiento son importantes para un manejo óptimo de los datos geográficos, ya que ciertas operaciones se realizan de manera más adecuada en unos formatos concretos. Igualmente, la combinación de capas requiere en muchos casos que estas se encuentre en un mismo modelo de datos, al igual que sucede con los sistemas de coordenadas. La conversión entre los modelos ráster y vectorial, la interpolación o el cálculo de capas de densidad son ejemplos de análisis que modifican la forma de representación de una realidad espacial concreta.
+      </p>
+      <p>
+       Por último, encontramos transformaciones basadas en los valores de las variables estudiadas. Dentro de este grupo encontramos las reclasificaciones, que en el caso de datos categóricos transforman la identificación de cada elemento en una clase dada, o los cambios de escala u otras operaciones aritméticas tales como la normalización de una variable en un rango dado, o la tipificación de una variable para asimilar su distribución de valores a la de una curva normal. Estos últimos se efectúan sobre datos de tipo continuo.
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Análisis de superficies
+      </b>
+      . El análisis de superficies es uno de los más potentes de cuantos encontramos en un SIG. Desde parámetros básicos como la pendiente o la orientación hasta parámetros morfométricos muy específicos, pasando por todas las herramientas del análisis hidrológico, la batería de operaciones disponibles es muy amplia. Aunque este análisis de superficies se entiende como el de la superficie terrestre (es decir, el relieve), gran parte de estas operaciones pueden aplicarse a cualquier otra superficie, entendiendo esta en su sentido matemático. Así, la pendiente indica una tasa de variación y puede aplicarse a capas con valores distintos de la elevación, tales como temperaturas, densidades, etc.
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Estadística descriptiva
+      </b>
+      . Los elementos de la estadística clásica tienen sus equivalentes en los datos espaciales, y nos permiten calificar cuantitativamente los datos con los que trabajamos. Se incluyen aquí descriptores de centralidad y dispersión, de dependencia espacial o el estudio de patrones espaciales, entre otros muchos. Estos pueden a su vez usarse para el contraste de hipótesis que contengan una cierta componente espacial.
+      <p>
+       Por ejemplo, estos estadísticos nos permiten dar respuesta a cuestiones del tipo
+      </p>
+      <p>
+       ¿Es constante la media de altura a lo largo de toda la geografía de mi país?
+      </p>
+      <p>
+       ¿Existe alguna tendencia de los individuos de una especie a congregarse, o por el contrario se dispersan por todo el territorio disponible minimizando el contacto con otros congéneres?
+      </p>
+      <p>
+       ¿Existe alguna dirección predominante en los movimientos de individuos de una especie o se desplazan erráticamente?
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Inferencia
+      </b>
+      . Otro análisis estadístico de gran importancia en los SIG es el que permite inferir comportamientos de las distintas variables y estudiar, por ejemplo, la forma en que estas van a evolucionar a lo largo del tiempo.
+      <p>
+       El establecimiento de modelos de cambio y variación representa una de las herramientas más actuales en el campo de los SIG, y un campo en abundante desarrollo.
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Toma de decisiones y optimización
+      </b>
+      . La realización de actividades en el medio tiene una obvia componente espacial. Son muchos los parámetros que influyen en ellas, y en función de estos dichas actividades se desarrollarán de una forma u otra. La estructura de la información geográfica en capas dentro de un SIG, favorable como ya vimos para la superposición de capas, lo es igualmente para estudiar de forma combinada los efectos de distintos factores.
+      <p>
+       El estudio de estos factores puede ser una herramienta clave para tomar decisiones relativas a la actividad sobre la que ejercen su influencia. Así, los procedimientos de análisis espacial nos sirven para responder a cuestiones como, por ejemplo,
+      </p>
+      <p>
+       ¿Cuál es el mejor lugar para emplazar una nueva construcción en función de su impacto sobre el medio?
+      </p>
+      <p>
+       ¿Por qué trazado es más conveniente construir una nueva carretera?
+      </p>
+      <p>
+       ¿Dónde situar un nuevo hospital para que el servicio en la comarca mejore lo máximo posible?
+      </p>
+      <p>
+       Dentro de estos análisis, muchos de ellos tratan de maximizar o minimizar alguna función objetivo dependiente de los factores implicados, que pueden ser tanto variables recogidas en distintas capas como parámetros espaciales tales como distancias.
+      </p>
+      <p>
+      </p>
+     </li>
+     <li>
+      <b>
+       Modelización
+      </b>
+      . La creación de modelos espaciales dentro de un SIG es una tarea aún pendiente de mucho desarrollo. No obstante, existe un gran número de modelos en los más diversos campos, y la arquitectura de datos y procesos de los SIG es propicia para la implementación de otros nuevos.
+      <p>
+       Modelos como los de tipo hidrológico son habituales en los SIG más populares, y la estructura raster de los datos que se emplean generalmente en estos facilita en gran medida el análisis y la implementación de modelos distribuidos. Otros modelos que encuentran en los SIG una plataforma idónea para su implementación son los basados en autómatas celulares, con aplicación en muchas áreas distintas.
+      </p>
+      <p>
+      </p>
+     </li>
+    </ul>
+    <p>
+     Como ya se ha dicho, todos estos tipos de análisis no son independientes entre sí, y la verdadera potencia de un SIG radica en la elaboración de metodologías que los combinen. Por ejemplo, la elaboración de áreas de influencia considerando distancia a través de una red viaria, utilizando la topología de esta, que incorpora el estudio de la topología de la red, la medición de distancias sobre la misma, y la transformación de entidades geográficas en función de lo anterior.
+    </p>
+    <h2 id="Resumen">
+     Resumen
+    </h2>
+    <p>
+     En líneas generales, todo cuanto hacemos con la información geográfica implica algún tipo de análisis. Desde una mera consulta a un modelo muy complejo, este análisis explora dicha información y permite obtener resultados que descubren otros tipos de información subyacente.
+    </p>
+    <p>
+     Existe una gran variedad de procesos de análisis espacial. Estos pueden tomar datos espaciales de diversas clases y generar resultados también muy diversos, por lo que su clasificación es compleja. Algunos de los más característicos de cuantos podemos llevar a cabo dentro de un SIG son aquellos que sacan partido de la forma en que este maneja las distintas capas de información. Por ejemplo, la superposición de capas o el análisis combinado de distintos factores como herramienta de apoyo en la toma de decisiones.
+    </p>
+    <p>
+     En este contexto, deben considerarse los SIG como herramientas que van a permitir una mejor formulación de las cuestiones geográficas, y que del mismo modo van a ayudar en la búsqueda de respuestas a estas.
+    </p>
+   </div>
+  </div>
+  <div id="toindex">
+   <a href="../index.html">
+    Portada
+   </a>
+  </div>
+  <div id="slideout_chapter">
+   Índice
+   <br/>
+   capítulo
+   <div id="slideout_inner_chapter">
+    <div id="generated-toc">
+    </div>
+   </div>
+  </div>
+  <div id="slideout_general">
+   Índice
+   <br/>
+   general
+   <div id="slideout_inner_general">
+    <p>
+     <b>
+      ÍNDICE GENERAL
+     </b>
+     <br/>
+    </p>
+    <ul>
+     <li>
+      <a href="Intro.html">
+       Introducción
+      </a>
+     </li>
+     <li>
+      Parte 1. Fundamentos
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_fundamentos.html">
+        Introducción. ¿Qué es un SIG?
+       </a>
+      </li>
+      <li>
+       <a href="Historia.html">
+        Historia de los SIG
+       </a>
+      </li>
+      <li>
+       <a href="Fundamentos_cartograficos.html">
+        Fundamentos cartográficos y geodésicos
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 2. Datos
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_datos.html">
+        Introducción. ¿Con qué trabajo en un SIG?
+       </a>
+      </li>
+      <li>
+       <a href="Tipos_datos.html">
+        Modelos para la información geográfica
+       </a>
+      </li>
+      <li>
+       <a href="Fuentes_datos.html">
+        Fuentes principales de datos espaciales
+       </a>
+      </li>
+      <li>
+       <a href="Calidad_datos.html">
+        La calidad de los datos espaciales
+       </a>
+      </li>
+      <li>
+       <a href="Bases_datos.html">
+        Bases de datos
+       </a>
+      </li>
+      <li>
+       <a href="Metadatos.html">
+        Metadatos
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 3. Analisis
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_procesos.html">
+        Introducción. ¿Qué puedo hacer con un SIG?
+       </a>
+      </li>
+      <li>
+       <a href="Analisis_espacial.html">
+        Conceptos básicos para el análisis espacial
+       </a>
+      </li>
+      <li>
+       <a href="Consultas.html">
+        Consultas y operaciones con bases de datos
+       </a>
+      </li>
+      <li>
+       <a href="Estadistica_espacial.html">
+        Estadísticas espaciales
+       </a>
+      </li>
+      <li>
+       <a href="Creacion_capas_raster.html">
+        Creación de capas raster
+       </a>
+      </li>
+      <li>
+       <a href="Algebra_de_mapas.html">
+        Álgebra de mapas
+       </a>
+      </li>
+      <li>
+       <a href="Geomorfometria.html">
+        Geomorfometría y análisis del terreno
+       </a>
+      </li>
+      <li>
+       <a href="Imagenes.html">
+        Procesado de imágenes
+       </a>
+      </li>
+      <li>
+       <a href="Creacion_capas_vectoriales.html">
+        Creación de capas vectoriales
+       </a>
+      </li>
+      <li>
+       <a href="Operaciones_geometricas.html">
+        Operaciones geométricas con capas vectoriales
+       </a>
+      </li>
+      <li>
+       <a href="Costes.html">
+        Costes, distancias y áreas de influencia
+       </a>
+      </li>
+      <li>
+       <a href="Estadistica_avanzada.html">
+        Más estadística espacial
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 4. Tecnología
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_tecnologia.html">
+        Introducción. ¿Cómo son las aplicaciones SIG?
+       </a>
+      </li>
+      <li>
+       <a href="SIGs_escritorio.html">
+        Herramientas de escritorio
+       </a>
+      </li>
+      <li>
+       <a href="Cliente_servidor.html">
+        Clientes y servidores remotos. Web mapping
+       </a>
+      </li>
+      <li>
+       <a href="SIG_movil.html">
+        SIG movil
+       </a>
+      </li>
+     </ul>
+     <li>
+      Parte 5. Visualización
+     </li>
+     <ul>
+      <li>
+       <a href="Introduccion_visualizacion.html">
+        Introducción. Los SIG como herramientas de visualización
+       </a>
+      </li>
+      <li>
+       <a href="Conceptos_basicos.html">
+        Conceptos básicos de visualización y representación
+       </a>
+      </li>
+      <li>
+       <a href="Mapas.html">
+        El mapa y la comunicación cartográfica
+       </a>
+      </li>
+      <li>
+       <a href="Visualizacion_SIG.html">
+        La visualización en términos SIG
+       </a>
+      </li>
+     </ul>
+    </ul>
+   </div>
+  </div>
+ </body>
 </html>
