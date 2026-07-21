@@ -1,42 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title> </title>
-        <link
-            href="../reset.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="../typography.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> </title>
+<link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<script type="text/x-mathjax-config">
              MathJax.Hub.Config({
               tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
               TeX: { equationNumbers: {autoNumber: "all"} }
             });
         </script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"
-            type="text/javascript"
-        ></script>
-        <script src="../generated_toc.js"></script>
-    </head>
-    <body lang="es">
-        <div class="main">
-            <div class="g960" id="chapter">
-                <h1>Fuentes principales de datos espaciales</h1>
-                <p></p>
-                <p>
-                    <a name="Fuentes_datos"> </a>
-                </p>
-                <h2 id="Introducción">Introducción</h2>
-                <p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="../generated_toc.js"></script>
+</head>
+<body lang="es">
+<div class="main">
+<div class="g960" id="chapter">
+<h1>Fuentes principales de datos espaciales</h1>
+
+<h2 id="Introducción">Introducción</h2>
+<p>
                     El origen de los datos con los que trabajamos en un SIG
                     puede ser muy variado y presentarse en formas diversas. La
                     metodología seguida en la recolección de datos condiciona
@@ -44,7 +30,7 @@
                     y por tanto el uso que les podemos dar dentro de un SIG o
                     las operaciones que debemos realizar con ellos.
                 </p>
-                <p>
+<p>
                     No hace tanto tiempo, toda la información que se manejaba
                     dentro de un SIG tenía su origen en un mapa en papel, el
                     cual debía
@@ -56,7 +42,7 @@
                     se encontraban en formato digital, por lo que no eran
                     adecuados para su uso dentro de un SIG.
                 </p>
-                <p>
+<p>
                     Una tarea básica en esos tiempos era la digitalización de
                     cartografía, es decir, convertir los datos geográficos en
                     formato impreso en datos en formato digital que un SIG
@@ -73,7 +59,7 @@
                     igualmente para crear datos geográficos que podemos emplear
                     en un SIG.
                 </p>
-                <p>
+<p>
                     Hoy en día, la situación es bien distinta a la de aquellos
                     primeros tiempos, y puede afirmarse que los orígenes a
                     partir de los cuales se generan los datos geográficos son
@@ -81,7 +67,7 @@
                     más adaptadas al entorno de los SIG con métodos clásicos que
                     no han perdido su vigencia y valor.
                 </p>
-                <p>
+<p>
                     A lo largo de este capítulo veremos las principales técnicas
                     existentes para la creación de datos geograficos en un
                     formato apto para su uso en un SIG, centrándonos en los
@@ -97,11 +83,10 @@
                     completamente con independencia de su origen, y se sepan
                     utilizar y combinar todas las fuentes de datos.
                 </p>
-                <h2 id="Datos digitales y datos analógicos">
+<h2 id="Datos digitales y datos analógicos">
                     Datos digitales y datos analógicos
                 </h2>
-                <a name="Datos_digitales_y_analogicos"> </a>
-                <p>
+<p id="Datos_digitales_y_analogicos">
                     La principal diferencia que se presenta desde la aparición
                     de los SIG es la necesidad de utilizar datos digitales. Un
                     SIG implica una aplicación informática, y esta se alimenta
@@ -111,8 +96,8 @@
                     realidad que se pretende modelizar implica toda una serie de
                     etapas, las cuales ya vimos con detalle en el capítulo
                     <a href="Tipos_datos.html#Tipos_datos"> Tipos_datos </a>
-                </p>
-                <p>
+</p>
+<p>
                     Gran parte de los datos geográficos que se producen
                     actualmente son en formato digital. Otros, a pesar de
                     producirse hoy en día, no lo son directamente. Y junto a
@@ -122,17 +107,17 @@
                     SIG, de un modo u otro todos habrán de acabar siendo
                     digitales.
                 </p>
-                <p>
+<p>
                     Los datos geográficos digitales tienen una serie de ventajas
                     frente a los analógicos (además del mero hecho de que
                     podemos incorporarlos a nuestro SIG), y suponen, como sucede
                     en muchos otros campos, un salto cualitativo importante.
                     Estas ventajas pueden resumirse en las siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Sencillez de actualización </b>
+
+<ul>
+<li>
+<b> Sencillez de actualización </b>
                         . La cartografía digital es editable, y esto simplifica
                         enormemente la introducción de cambios. Si en una capa
                         con información catastral cambia la frontera de una
@@ -145,7 +130,7 @@
                             variables, pues son independientes y pueden
                             modificarse por separado.
                         </p>
-                        <p>
+<p>
                             Haciendo una analogía con el mundo editorial,
                             piénsese en un diario impreso, con una única edición
                             al día, en la que se ha de esperar al día siguiente
@@ -157,7 +142,7 @@
                             actualizar esa página que volver a poner la imprenta
                             en marcha.
                         </p>
-                        <p>
+<p>
                             Es asimismo muy importante el hecho de que, gracias
                             a los sistemas que centralizan el acceso a los
                             datos, esta edición y actualización de datos pueden
@@ -175,7 +160,7 @@
                             unir todas las modificaciones, lo cual no siempre
                             resulta sencillo o incluso posible.
                         </p>
-                        <p>
+<p>
                             Si varias personas trabajan con cartografía impresa
                             de una zona, cada una de ellas tendrá su propio
                             mapa. Con la cartografía digital, todos pueden
@@ -185,10 +170,10 @@
                             todas sus aportaciones para crear una nueva
                             cartografía actualizada.
                         </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Facilidad de distribución </b>
+
+</li>
+<li>
+<b> Facilidad de distribución </b>
                         . Resulta más sencillo y menos costoso distribuir
                         cartografía digital que analógica, por ejemplo a través
                         de Internet. Volviendo al ejemplo del diario, las
@@ -197,8 +182,8 @@
                         requiere una cadena de distribución más costosa, desde
                         la imprenta hasta el punto de venta.
                     </li>
-                    <li>
-                        <b> Espacio de almacenamiento </b>
+<li>
+<b> Espacio de almacenamiento </b>
                         . Se generan actualmente volúmenes ingentes de datos que
                         además, y gracias a que son más fáciles de actualizar,
                         se producen con una frecuencia mucho mayor. No obstante,
@@ -210,8 +195,8 @@
                         mismas cartoteca y hemeroteca en formato impreso
                         requieren edificios enteros.
                     </li>
-                    <li>
-                        <b> Facilidad y precisión de análisis </b>
+<li>
+<b> Facilidad y precisión de análisis </b>
                         . Como ya veremos en la parte correspondiente, el salto
                         cualitativo que se da en el campo del análisis es
                         enorme. Podemos hacer con los datos geográficos
@@ -227,8 +212,8 @@
                         —suponiendo que implementan todos las mismas fórmulas—
                         llegaría al mismo resultado exacto).
                     </li>
-                    <li>
-                        <b> Facilidad de mantenimiento </b>
+<li>
+<b> Facilidad de mantenimiento </b>
                         . Aunque no se introduzcan modificaciones y no se
                         actualicen los datos, el formato digital hace más fácil
                         su conservación. La degradación del soporte no degrada
@@ -239,8 +224,8 @@
                         garantizada en mayor medida y a un menor coste que la de
                         los datos analógicos.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Así pues, disponemos para nuestro trabajo en nuestro SIG de
                     datos analógicos y datos digitales, siendo estos últimos los
                     que necesitamos, y que presentan las ventajas anteriormente
@@ -251,10 +236,10 @@
                     a un SIG, y en general todo aquello que resulte de interés
                     para una mejor comprensión y uso de los mismos.
                 </p>
-                <h2 id="Fuentes primarias y fuentes secundarias">
+<h2 id="Fuentes primarias y fuentes secundarias">
                     Fuentes primarias y fuentes secundarias
                 </h2>
-                <p>
+<p>
                     Como hemos visto, algunos datos que utilizamos en un SIG son
                     de tipo analógico, mientras que otros son de tipo digital.
                     En algunos casos (generalmente en los analógicos), estos
@@ -266,7 +251,7 @@
                     Información Geográfica, y la forma en la que se presentan ya
                     es adecuada para incorporarlos en este y trabajar con ellos.
                 </p>
-                <p>
+<p>
                     En base a lo anterior, se define una forma distinta de
                     clasificar los datos espaciales con los que trabajamos en un
                     SIG: datos primarios (o procedentes de una fuente primaria)
@@ -277,7 +262,7 @@
                     </a>
                     ].
                 </p>
-                <p>
+<p>
                     Los datos primarios son aquellos que podemos emplear en un
                     SIG y que, en su forma original, ya son susceptibles de ser
                     sometidos a las operaciones de manejo y análisis que
@@ -286,7 +271,7 @@
                     recogidos ya en origen de forma adecuada para su empleo
                     directo en un SIG.
                 </p>
-                <p>
+<p>
                     Por su parte, los datos secundarios derivan de algún otro
                     tipo de dato previo, el cual no es adecuado para su empleo
                     en un SIG. Entre estos incluimos las versiones digitales de
@@ -297,15 +282,15 @@
                     tales como capas de elevaciones, también se incluyen en este
                     grupo.
                 </p>
-                <p>
+<p>
                     Al desarrollar las fuentes de datos en este capítulo, se
                     tratarán tanto fuentes primarias como secundarias, y en el
                     caso de estas últimas se tratarán a su vez las formas en las
                     que a partir de estas pueden derivarse datos digitales que
                     puedan ya ser incorporados a un SIG.
                 </p>
-                <h2 id="Teledetección">Teledetección</h2>
-                <p>
+<h2 id="Teledetección">Teledetección</h2>
+<p>
                     La primera fuente de datos que trataremos en este capítulo
                     es la teledetección. Entendemos por teledetección el estudio
                     y medida de las características de una serie de objetos (en
@@ -326,7 +311,7 @@
                     provoca en su entorno, principalmente las de tipo
                     electromagnético.
                 </p>
-                <p>
+<p>
                     Tradicionalmente, la teledetección se ha estudiado como una
                     materia complementaria pero en cierto modo separada de los
                     Sistemas de Información Geográfica. Ello es debido
@@ -340,7 +325,7 @@
                     teledetección, sino que las formulaciones de ambos ámbitos
                     contienen elementos similares.
                 </p>
-                <p>
+<p>
                     La teledetección es hoy en día un elemento clave para la
                     formación en SIG, y como tal debe incluirse en un libro como
                     este. Los bloques tradicionales en los que se divide el
@@ -351,7 +336,7 @@
                     sino en la parte dedicada al análisis, integrado junto con
                     otras formulaciones similares para proceso de imágenes.
                 </p>
-                <p>
+<p>
                     Aunque el aprovechamiento de los productos actuales de la
                     teledetección depende en gran medida del concurso de los SIG
                     y sus capacidades de análisis, los procesos de teledetección
@@ -363,7 +348,7 @@
                     medio para situar el aparato fotográfico a una altura
                     suficiente que permitiera obtener las imágenes.
                 </p>
-                <p>
+<p>
                     Las fotografías aéreas fueron el primer producto de la
                     teledetección, pero hoy en día existen otros que, basados en
                     esa misma idea de registro de información, pueden ser
@@ -373,23 +358,20 @@
                     representan de forma esquemática en la figura
                     \ref{Fig:Elementos_teledeteccion}.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Elementos_teledeteccion.png"
-                            width="40.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Elementos_teledeteccion" src="../img/Elementos_teledeteccion.png" width="40.0%"/>
+<figcaption>
                             Esquema de un sistema de teledetección.
                         </figcaption>
                         $$\label{Fig:Elementos_teledeteccion}$$
                     </figure>
-                </p>
-                <p>Estos elementos son los siguientes:</p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Una fuente de radiación (A) </b>
+</p>
+<p>Estos elementos son los siguientes:</p>
+
+<ul>
+<li>
+<b> Una fuente de radiación (A) </b>
                         . Puede ser de origen natural o artificial. La radiación
                         emitida por dicha fuente llega al terreno y sufre una
                         perturbación causada por los elementos de este, siendo
@@ -397,22 +379,22 @@
                         teledetección. Los propios objetos pueden ser también
                         emisores ellos mismos de radiación.
                     </li>
-                    <li>
-                        <b>
+<li>
+<b>
                             Unos objetos (B) que interaccionan con la radiación
                         </b>
                         o la emiten, según lo anterior.
                     </li>
-                    <li>
-                        <b> Una atmósfera (C) </b>
+<li>
+<b> Una atmósfera (C) </b>
                         por la que se desplaza la radiación, tanto desde la
                         fuente hasta el objeto como desde el objeto hasta el
                         receptor. La atmósfera también interactúa con la
                         radiación, introduciendo igualmente perturbaciones en
                         ella.
                     </li>
-                    <li>
-                        <b> Un receptor (D) que recoge la radiación </b>
+<li>
+<b> Un receptor (D) que recoge la radiación </b>
                         una vez esta ha sido perturbada o emitida por los
                         objetos. El receptor va a generar como producto final
                         una imagen (en términos de un SIG, una capa ráster), en
@@ -425,15 +407,15 @@
                         <i> Niveles Digitales </i>
                         .
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Para estudiar los dos primeros, estudiaremos los fundamentos
                     físicos relativos a la radiación y a la la interacción entre
                     esta y la materia, mientras que para el estudio del sistema
                     receptor analizaremos dos de sus componentes por separado:
                     sensores y plataformas.
                 </p>
-                <p>
+<p>
                     La interacción de la atmósfera interesa de cara a eliminar
                     su efecto, ya que lo que resulta de interés en general son
                     los objetos en la superficie terrestre, no la atmósfera como
@@ -444,32 +426,29 @@
                     Todos ellos se tratan, tal y como se dijo, en un capítulo
                     independiente dentro de la parte de procesos.
                 </p>
-                <h3 id="Fundamentos físicos">Fundamentos físicos</h3>
-                <p>
+<h3 id="Fundamentos físicos">Fundamentos físicos</h3>
+<p>
                     Es necesario conocer los conceptos fundamentales sobre la
                     radiación y su interacción con la materia (los objetos de la
                     superficie terrestre) para poder entender cómo, utilizando
                     la radiación de una fuente dada, se crea una imagen como
                     resultado final en un proceso de teledetección.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Onde_electromagnetique.png"
-                            width="75.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Onde_electromagnetique" src="../img/Onde_electromagnetique.png" width="75.0%"/>
+<figcaption>
                             Ondas correspondientes a los campos magnético y
                             eléctrico, ortogonales entre sí (Tomado de
                             Wikipedia).
                         </figcaption>
                         $$\label{Fig:Radiacion_electromagnetica}$$
                     </figure>
-                </p>
-                <h4 id="La radiación electromagnética">
+</p>
+<h4 id="La radiación electromagnética">
                     La radiación electromagnética
                 </h4>
-                <p>
+<p>
                     La radiación electromagnética es una de las cuatro fuerzas
                     fundamentales de la naturaleza y deriva del campo
                     electromagnético, el cual es ejercido por las partículas
@@ -485,14 +464,14 @@
                     campos anteriores (Figura
                     \ref{Fig:Radiacion_electromagnetica}).
                 </p>
-                <p>
+<p>
                     Estas ondas se desplazan a la velocidad de la luz, y se
                     pueden describir con los parámetros habituales, tales como
                     la longitud de onda o la frecuencia. Una mayor longitud de
                     onda (y, por tanto una menor frecuencia) tiene asociada una
                     mayor energía de la radiación.
                 </p>
-                <p>
+<p>
                     La radiación electromagnética puede cubrir de forma continua
                     todo un amplio rango de valores de longitudes de onda. Este
                     rango se conoce como
@@ -506,35 +485,32 @@
                     del espectro electromágnético y sus principales regiones de
                     interés.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Electromagnetic_spectrum-es.png"
-                            width="100%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Electromagnetic_spectrum-es" src="../img/Electromagnetic_spectrum-es.png" width="100%"/>
+<figcaption>
                             Espectro electromagnético y sus principales regiones
                             de interés (Tomado de Wikipedia).
                         </figcaption>
                         $$\label{Fig:Espectro_electromagnetico}$$
                     </figure>
-                </p>
-                <p>Dentro de estas regiones, son de destacar las siguientes:</p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Rayos $\gamma$ </b>
-                    </li>
-                    <li>
-                        <b> Rayos X </b>
+</p>
+<p>Dentro de estas regiones, son de destacar las siguientes:</p>
+
+<ul>
+<li>
+<b> Rayos $\gamma$ </b>
+</li>
+<li>
+<b> Rayos X </b>
                         (0.03 $nm$ - 3 $nm$).
                     </li>
-                    <li>
-                        <b> Ultravioleta </b>
+<li>
+<b> Ultravioleta </b>
                         (3 $nm$ - 0.3 $\mu$).
                     </li>
-                    <li>
-                        <b> Visible </b>
+<li>
+<b> Visible </b>
                         (0.3 $\mu$ - 0.7 $\mu$). Se corresponde con las
                         radiaciones que pueden ser detectadas por el ojo humano
                         o por aparatos tales como una cámara fotográfica común.
@@ -554,27 +530,27 @@
                             $\mu$, mientras que el verde lo hace con el rango
                             entre 0.5 $\mu$ y 0.6 $\mu$
                         </p>
-                    </li>
-                    <li>
-                        <b> Infrarrojo cercano </b>
+</li>
+<li>
+<b> Infrarrojo cercano </b>
                         (0.7 $\mu$ - 1.3 $\mu$).
                     </li>
-                    <li>
-                        <b> Infrarrojo medio </b>
+<li>
+<b> Infrarrojo medio </b>
                         (1.3 $\mu$ - 8 $\mu$).
                     </li>
-                    <li>
-                        <b> Infrarrojo lejano o térmico </b>
+<li>
+<b> Infrarrojo lejano o térmico </b>
                         (8 $\mu$ - 14 $\mu$). Dentro de esta región se
                         encuentran principalmente las radiaciones emitidas por
                         los cuerpos debido a su temperatura.
                     </li>
-                    <li>
-                        <b> Microondas </b>
+<li>
+<b> Microondas </b>
                         (1 $mm$ - 25 $cm$).
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     En el capítulo
                     <a href="Imagenes.html#Procesado_imagenes">
                         Procesado_imagenes
@@ -583,7 +559,7 @@
                     de las regiones del espectro, cuando veamos como analizar
                     las imágenes procedentes de la teledetección.
                 </p>
-                <p>
+<p>
                     Como ya se dijo en el capítulo
                     <a href="Tipos_datos.html#Tipos_datos"> Tipos_datos </a>
                     , las imágenes como capas ráster presentan habitualmente la
@@ -596,33 +572,33 @@
                     Digitales de cada banda corresponden a la intensidad dentro
                     de una de esas franjas del espectro en particular.
                 </p>
-                <h4 id="Interacción entre radiación y materia">
+<h4 id="Interacción entre radiación y materia">
                     Interacción entre radiación y materia
                 </h4>
-                <p>
+<p>
                     La radiación emitida por una fuente de radiación es alterada
                     por la presencia de los distintos objetos, que interactúan
                     con ella. Independientemente de su procedencia, para toda
                     radiación se dan tres fenómenos fundamentales al alcanzar un
                     objeto:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Absorción </b>
+
+<ul>
+<li>
+<b> Absorción </b>
                         . El objeto toma la energía de la radiación.
                     </li>
-                    <li>
-                        <b> Transmisión </b>
+<li>
+<b> Transmisión </b>
                         . La radiación atraviesa el objeto y continua su camino.
                     </li>
-                    <li>
-                        <b> Reflexión </b>
+<li>
+<b> Reflexión </b>
                         . La radiación «rebota» en el objeto y vuelve al
                         espacio.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Estos tres fenómenos se dan en diferente proporción en
                     función de las características del objeto y de la radiación.
                     Para una longitud de onda dada, existe, pues, un porcentaje
@@ -633,7 +609,7 @@
                     puede recogerse y emplearse para la generación de las
                     imágenes.
                 </p>
-                <p>
+<p>
                     La proporción en la que los tres procesos anteriores se dan
                     en un objeto no es la misma para todas las radiaciones. Un
                     objeto puede absorber una gran parte de la radiación dentro
@@ -642,7 +618,7 @@
                     del análisis que se desee realizar, debe trabajarse con
                     imágenes que traten una u otra región.
                 </p>
-                <p>
+<p>
                     Igualmente, una imagen con varias bandas contiene
                     información sobre la intensidad de la radiación reflejada en
                     distintas partes del espectro. Puesto que cada objeto
@@ -667,7 +643,7 @@
                     , donde estudiaremos una aplicación habitual de dichas
                     firmas espectrales.
                 </p>
-                <p>
+<p>
                     Además de la interacción con los objetos que se pretenden
                     estudiar, la radiación interactúa con la atmósfera. Esta
                     interacción afecta al resultado y es una variable a
@@ -679,8 +655,8 @@
                     </a>
                     , cuando tratemos esas operaciones.
                 </p>
-                <h3 id="Sensores y plataformas">Sensores y plataformas</h3>
-                <p>
+<h3 id="Sensores y plataformas">Sensores y plataformas</h3>
+<p>
                     En un sistema de teledetección, dos son los elementos
                     tecnológicos principales que lo definen: el
                     <i> sensor </i>
@@ -688,7 +664,7 @@
                     <i> plataforma </i>
                     .
                 </p>
-                <p>
+<p>
                     El sensor es el elemento que incorpora la capacidad de
                     «leer» la radiación electromagnética y registrar su
                     intensidad dentro de la una zona concreta del espectro. En
@@ -698,7 +674,7 @@
                     cientos de bandas en una región del espectro de gran
                     amplitud.
                 </p>
-                <p>
+<p>
                     La plataforma, por su parte, es el medio en el que se sitúa
                     el sensor y desde el cual se realiza la observación. Los dos
                     tipos principales de plataformas son aquellas situadas
@@ -707,13 +683,13 @@
                     aerostáticos) y aquellas situadas fuera de la atmósfera (a
                     bordo de satélites).
                 </p>
-                <p>
+<p>
                     Las características de estos dos elementos definen las del
                     sistema en su conjunto, así como las propiedades de sus
                     productos derivados y la utilidad que estos presentan.
                 </p>
-                <h4 id="Plataformas">Plataformas</h4>
-                <p>
+<h4 id="Plataformas">Plataformas</h4>
+<p>
                     La plataforma es el medio en el que se transporta el sensor,
                     y condiciona las mediciones efectuadas por este, ya que
                     establece la distancia a la que el sensor se sitúa del
@@ -724,14 +700,14 @@
                     mientras que en el segundo caso lo más frecuente es el uso
                     de satélites.
                 </p>
-                <p>
+<p>
                     Los aviones son las plataformas clásicas a bordo de las
                     cuales se montaban originariamente las cámaras empleadas
                     para la realización de fotografías aéreas. Hoy en día pueden
                     montarse igualmente otros sensores más complejos y modernos
                     a bordo de aeronaves.
                 </p>
-                <p>
+<p>
                     Las ventajas del empleo de aviones como plataformas de
                     teledetección son las relacionadas con la disponibilidad de
                     la plataforma, que es mucho mayor que en el caso de emplear
@@ -740,7 +716,7 @@
                     que en caso de satélites la disponibilidad viene
                     condicionada por numerosos factores y es muy reducida.
                 </p>
-                <p>
+<p>
                     Respecto a los inconvenientes, pueden citarse entre ellos la
                     inestabilidad de la plataforma y la dependencia de las
                     condiciones del clima, que pueden afectar a la propia
@@ -750,7 +726,7 @@
                     los satélites, requiriendo más tiempo para cubrir una zona
                     dada.
                 </p>
-                <p>
+<p>
                     Por su parte, los satélites artificiales presentan unas
                     características distintas como plataformas de teledetección,
                     siendo muy útiles para la teledetección sobre la superficie
@@ -758,7 +734,7 @@
                     coexistan diversos sensores, de forma que una única
                     plataforma transporta varios de ellos.
                 </p>
-                <p>
+<p>
                     A diferencia de un avión, un satélite no puede dirigirse a
                     voluntad (no puede pilotarse), y su movimiento es una
                     característica inherente que viene definida por una serie de
@@ -767,36 +743,36 @@
                     , pues definen la órbita descrita por el satélite en torno a
                     la Tierra.
                 </p>
-                <p>
+<p>
                     Las órbitas pueden clasificarse en función de su eje de
                     rotación en tres tipos:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Ecuatoriales </b>
+
+<ul>
+<li>
+<b> Ecuatoriales </b>
                         , si se sitúan en el mismo plano en el ecuador
                         terrestre.
                     </li>
-                    <li>
-                        <b> Polares </b>
+<li>
+<b> Polares </b>
                         , si se sitúan en un plano que contiene al eje de
                         rotación terrestre.
                     </li>
-                    <li>
-                        <b> Semipolares </b>
+<li>
+<b> Semipolares </b>
                         , si la órbita es oblicua al eje de rotación
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Con un criterio distinto, atendiendo a la forma en que se
                     produce el movimiento, distinguimos dos tipos de órbitas
                     para un satélite:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Geosíncronas </b>
+
+<ul>
+<li>
+<b> Geosíncronas </b>
                         . El satélite se sitúa sobre un punto fijo de la Tierra
                         y su movimiento sigue al de rotación de esta. Es decir,
                         no existe movimiento relativo entre dicho punto de la
@@ -821,8 +797,8 @@
                         posible, como es lógico, cubrir toda ella y hacerlo
                         además en las mismas condiciones en todas las zonas.
                     </li>
-                    <li>
-                        <b> Heliosíncronas </b>
+<li>
+<b> Heliosíncronas </b>
                         . Las órbitas heliosíncronas son generalmente polares.
                         Mientras el satélite recorre la órbita, la Tierra
                         efectúa su movimiento de rotación, lo cual hace que a
@@ -842,8 +818,8 @@
                         en que un satélite con una órbita heliosíncrona barre
                         toda la superficie de la Tierra.
                         <figure>
-                            <img src="../img/Orbita.png" width="80.0%" />
-                            <figcaption>
+<img alt="Orbita" src="../img/Orbita.png" width="80.0%"/>
+<figcaption>
                                 Esquema de barrido de un satélite con órbita
                                 heliosíncrona
                             </figcaption>
@@ -861,16 +837,15 @@
                         puede ser tan inmediata como en el caso de satélites
                         geosíncronos.
                     </li>
-                </ul>
-                <h4 id="Sensores">Sensores</h4>
-                <a name="Sensores"> </a>
-                <p>
+</ul>
+<h4 id="Sensores">Sensores</h4>
+<p id="Sensores">
                     Montado a bordo de cualquiera de los tipos de plataformas
                     que hemos visto en el apartado anterior, el sensor es el
                     encargado de registrar la radiación electromágnética
                     procedente de la zona estudiada y «tomar» la imagen.
                 </p>
-                <p>
+<p>
                     Existen diversas formas de clasificar los sensores. Una
                     división básica es la que distingue sensores
                     <i> activos </i>
@@ -889,7 +864,7 @@
                     recogen dicha radiación tras ser reflejada por los elementos
                     del medio.
                 </p>
-                <p>
+<p>
                     La diferencia fundamental entre estos dos tipos de sensores
                     es que los activos pueden funcionar en cualquier instante y
                     no dependen de la condiciones atmosféricas o el momento del
@@ -902,7 +877,7 @@
                     filosofía de un sensor activo es en cierta medida similar al
                     caso de la cámara con flash.
                 </p>
-                <p>
+<p>
                     Los sensores activos emiten su propia radiación, por lo que
                     no es necesario que existan fuentes externas (no es
                     necesaria la luz solar). Asimismo, los elementos
@@ -917,7 +892,7 @@
                     presentando así ventajas frente a los sensores pasivos en
                     este aspecto.
                 </p>
-                <p>
+<p>
                     Aunque el producto habitual de la teledetección son las
                     imágenes, entendidas estas como algo
                     <i> visual </i>
@@ -937,7 +912,7 @@
                     directamente relacionado con la distancia recorrida por la
                     radiación, y este con el relieve del terreno.
                 </p>
-                <p>
+<p>
                     Estos sensores, no obstante, operan de un modo similar a lo
                     que ya conocemos, y se consideran igualmente dentro del
                     ámbito de la teledetección, pues se adscriben a la
@@ -948,13 +923,13 @@
                     actualidad para la generación de cartografía, como por
                     ejemplo la ya citada de elevaciones.
                 </p>
-                <p>
+<p>
                     El radar es la tecnología más importante dentro de este
                     grupo. El sensor envía pulsos de radio, y posteriormente
                     recoge estos midiendo su intensidad y pudiendo calcular
                     también la distancia al objeto.
                 </p>
-                <p>
+<p>
                     Una técnica más moderna pero similar al radar es el
                     denominado LiDAR , que emplea pulsos de láser. El LiDAR es
                     en la actualidad la tecnología más avanzada para la creación
@@ -964,7 +939,7 @@
                     verticales (resolución en los valores de elevación
                     calculados).
                 </p>
-                <p>
+<p>
                     Los sistemas modernos de LiDAR son capaces de proporcionar
                     además varios retornos, de modo que, si el sensor sobrevuela
                     una zona arbolada, se tiene información sobre la distancia a
@@ -984,18 +959,18 @@
                     Trade Center el 27 de septiembre de 2001, creado a partir de
                     datos LiDAR.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/LiDARWTC.png" width="50.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="LiDARWTC" src="../img/LiDARWTC.png" width="50.0%"/>
+<figcaption>
                             Modelo del World Trade Center realizado a partir de
                             datos LiDAR tomados el día 27 de septiembre de 2001
                             (Fuente: NOAA/U.S. Army JPSD)
                         </figcaption>
                         $$\label{Fig:LiDARWTC}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     En la terminología del LiDAR, la imagen correspondiente al
                     primer retorno (el de los puntos más altos) se conoce como
                     Modelo Digital de Superficie (MDS), mientras que el
@@ -1003,18 +978,18 @@
                     Digital de Elevaciones (MDE). Veremos mucho acerca de los
                     MDE en posteriores capítulos de este libro.
                 </p>
-                <p>
+<p>
                     En [
                     <a href="../bib.htm#Kraus2001IASPRS"> Kraus2001IASPRS </a>
                     ] puede encontrarse una buena descripción del proceso de
                     creación de capas de elevación a partir de datos LiDAR.
                 </p>
-                <p>
+<p>
                     Además de la división entre activos y pasivos, otra forma de
                     clasificar los sensores es en función de la forma en la que
                     registran la imagen.
                 </p>
-                <p>
+<p>
                     Algunos sensores poseen un único detector de radiación que
                     no cubre todo el ancho de la franja del terreno que se
                     pretende recoger. Por medio de espejos oscilantes, se envía
@@ -1026,7 +1001,7 @@
                     <i> de barrido </i>
                     .
                 </p>
-                <p>
+<p>
                     Los denominados sensores
                     <i> de empuje </i>
                     (Figura \ref{Fig:Tipos_sensores}b) eliminan la necesidad de
@@ -1035,18 +1010,18 @@
                     Por ello, esta se va registrando no píxel a píxel, sino
                     línea a línea.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Tipos_sensores.png" width="100.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Tipos_sensores" src="../img/Tipos_sensores.png" width="100.0%"/>
+<figcaption>
                             Esquema de funcionamiento de un sensor de barrido
                             (a) y uno de empuje (b)
                         </figcaption>
                         $$\label{Fig:Tipos_sensores}$$
                     </figure>
-                </p>
-                <h4 id="Resoluciones">Resoluciones</h4>
-                <p>
+</p>
+<h4 id="Resoluciones">Resoluciones</h4>
+<p>
                     Uno de los parámetros principales que definen las
                     propiedades de un sistema de teledetección son las
                     <i> resoluciones </i>
@@ -1057,10 +1032,10 @@
                     operativo, y de las características propias de ambos.
                     Distinguimos cuatro resoluciones, a saber:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Resolución espacial </b>
+
+<ul>
+<li>
+<b> Resolución espacial </b>
                         . Indica la dimensión del objeto más pequeño que puede
                         distinguirse en la imagen. En líneas generales es el
                         equivalente al tamaño de píxel), modificar el tamaño de
@@ -1087,8 +1062,8 @@
                         cubre queden sin solaparse y existan zonas de las que no
                         se tomen imágenes.
                     </li>
-                    <li>
-                        <b> Resolución espectral </b>
+<li>
+<b> Resolución espectral </b>
                         . Todo sensor cubre una región particular del espectro y
                         almacena esta mediante un número dado de bandas. La
                         región del espectro abarcada y el número de bandas son
@@ -1122,8 +1097,8 @@
                         presentan más de cien bandas, lo cual permite una
                         caracterización espectral sumamente precisa.
                     </li>
-                    <li>
-                        <b> Resolución radiométrica </b>
+<li>
+<b> Resolución radiométrica </b>
                         . Para cada una de las bandas que produce un sensor
                         (asociada esta a una determinada región del espectro
                         según su resolución espectral), el dato recogido, que
@@ -1143,10 +1118,10 @@
                         se aprecia en la representación visual, sí que supone
                         una diferencia en el tratamiento analítico de esos
                         Niveles Digitales.
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Resolución temporal </b>
+                        
+</li>
+<li>
+<b> Resolución temporal </b>
                         . Indica el tiempo que tarda el sensor en volver a tomar
                         una imagen de una misma zona. Tiene sentido en el caso
                         de sensores orbitales, que funcionan por ciclos, y que
@@ -1161,8 +1136,8 @@
                         superficie y volver a comenzar el ciclo, con lo que la
                         resolución temporal será menor.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Parece lógico pensar que lo ideal en toda circunstancia
                     sería disponer de imágenes procedentes de sistemas con altas
                     resoluciones en cualquiera de las clases anteriores. De esta
@@ -1176,7 +1151,7 @@
                     resoluciones espacial y temporal, con lo que no resulta
                     viable que ambas sean elevadas simultáneamente.
                 </p>
-                <p>
+<p>
                     Así, existen sensores con, por ejemplo, gran resolución
                     espacial, en los cuales la resolución espectral no es tan
                     elevada. Por el contrario, los sensores con mayor resolución
@@ -1187,7 +1162,7 @@
                     de forma global, pero un único sensor no proporciona
                     resolución elevada en todas las variables.
                 </p>
-                <p>
+<p>
                     Otro tipo de circunstancias relativas al sensor afectan
                     igualmente a las resoluciones. Por ejemplo, aquellos
                     sensores que trabajan con radiaciones de poca energía (en la
@@ -1196,7 +1171,7 @@
                     para poder ser detectada por dicho sensor. Por esta razón,
                     su resolución espacial suele ser baja.
                 </p>
-                <p>
+<p>
                     A la hora de utilizar imágenes de teledetección, debe
                     considerarse qué tipo de resolución resulta de mayor interés
                     para el proyecto que se lleva a cabo, teniendo en cuenta la
@@ -1205,7 +1180,7 @@
                     producto, que será el que ofrezca los valores de resolución
                     más adecuados en conjunto.
                 </p>
-                <p>
+<p>
                     Si se pretende localizar elementos de pequeño tamaño, es
                     imprescindible trabajar con altas resoluciones espaciales.
                     Si lo que se desea es clasificar una serie de zonas en
@@ -1214,7 +1189,7 @@
                     todas las bandas para dar esa clasificación, y un número
                     mayor de bandas dará como resultado una mayor precisión.
                 </p>
-                <p>
+<p>
                     De igual modo, la detección de cambios de intensidad en una
                     banda hace necesario que se trabaje con una buena resolución
                     radiométrica, pero si lo que se desea es estudiar esos
@@ -1222,13 +1197,13 @@
                     con un sensor con gran resolución temporal se hace
                     imprescindible.
                 </p>
-                <p>
+<p>
                     En cada caso, las circunstancias particulares del trabajo
                     condicionan la elección de uno u otro sensor, puesto que,
                     como se ha dicho, un único sensor no ofrece elevadas
                     resoluciones en todas las variables.
                 </p>
-                <p>
+<p>
                     La utilización simultánea de datos de varios sensores en un
                     proyecto es una alternativa en ciertos casos. Como veremos,
                     existen técnicas que permiten combinar imágenes con alta
@@ -1244,7 +1219,7 @@
                     </a>
                     , más adelante en este libro.
                 </p>
-                <p>
+<p>
                     Además de lo anterior, un único sensor montado a bordo de un
                     satélite puede operar en varios
                     <i> modos </i>
@@ -1255,7 +1230,7 @@
                     visual real. Estas se suelen representar habitualmente en
                     escala de grises, resultando una imagen en blanco y negro.
                 </p>
-                <p>
+<p>
                     Las imágenes de este tipo se conocen como
                     <i> pancromáticas </i>
                     , y suelen tener mayor resolución espacial, por lo que
@@ -1265,10 +1240,10 @@
                     de gran resolución espacial (la pancromática) como la de
                     gran resolución espectral (la imagen multibanda).
                 </p>
-                <h3 id="Principales sensores y productos">
+<h3 id="Principales sensores y productos">
                     Principales sensores y productos
                 </h3>
-                <p>
+<p>
                     El número de diferentes productos provenientes de la
                     teledetección es muy elevado en la actualidad. Ahora que ya
                     conocemos los fundamentos del proceso y las principales
@@ -1276,15 +1251,15 @@
                     interesante mostrar un pequeño resumen de los principales
                     productos disponibles.
                 </p>
-                <p>
+<p>
                     A continuación se relacionan algunos de los sistemas de
                     teledetección principales y las características de sus
                     productos.
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> LANDSAT </b>
+
+<ul>
+<li>
+<b> LANDSAT </b>
                         . Se trata de un programa completo de adquisición de
                         datos mediante teledetección, que ha lanzado hasta la
                         fecha un total de siete satélites entre 1972 y 1999. Por
@@ -1301,7 +1276,7 @@
                             de 8 bandas, y el tamaño de la imagen es de 170
                             $\times$ 183 km.
                         </p>
-                        <p>
+<p>
                             Los sensores TM y MSS se montan a bordo del satélite
                             LANDSAT 5, todavía en funcionamiento y con una
                             resolución temporal de 16 días. El sensor TM ofrece
@@ -1310,17 +1285,17 @@
                             donde la resolución es de 120 metros. Las imágenes
                             tienen un tamaño de 185 $\times$ 172 km.
                         </p>
-                    </li>
-                    <li>
-                        <b> IKONOS </b>
+</li>
+<li>
+<b> IKONOS </b>
                         . Este satélite, lanzado en 1999, monta un sensor con
                         resolución de 1 metro para imágenes pancromáticas y 4
                         metros para imágenes multibanda (4 bandas). Las imágenes
                         cubren una área de 11 $\times$ 11 km y el satélite tiene
                         una resolución temporal de entre 3 y 5 días.
                     </li>
-                    <li>
-                        <b> SPOT </b>
+<li>
+<b> SPOT </b>
                         . Un conjunto de satélites lanzados inicialmente por la
                         agencia espacial francesa, con especial énfasis en la
                         recogida de información relativa a variables
@@ -1336,8 +1311,8 @@
                         fuera del área determinada en cada instante por la
                         órbita.
                     </li>
-                    <li>
-                        <b> QuickBird </b>
+<li>
+<b> QuickBird </b>
                         . Ofrece imágenes en pancromático y multibanda (azul,
                         verde, rojo e infrarrojo cercano). Las primeras tiene
                         una resolución de 60 cm y las multibanda de 2,4 metros,
@@ -1347,8 +1322,8 @@
                         y 7 días. Cada imagen cubre una superficie de 16,5
                         $\times$ 16,5 km.
                     </li>
-                    <li>
-                        <b> Aqua y Terra </b>
+<li>
+<b> Aqua y Terra </b>
                         . Dos satélites lanzados por la NASA dentro de un
                         proyecto de ámbito internacional para la observación de
                         la Tierra. Cada uno de ellos monta una serie de diversos
@@ -1370,9 +1345,9 @@
                             aplicaciones, especialmente las relacionadas con el
                             estudio del medio, la vegetación, etc.
                         </p>
-                    </li>
-                    <li>
-                        <b> NOAA--AVHRR </b>
+</li>
+<li>
+<b> NOAA--AVHRR </b>
                         . Se encuentra principalmente enfocado al estudio de los
                         océanos, aunque sus datos pueden aplicarse en muchos más
                         estudios. El sensor tiene una resolución de 1,1 km, y
@@ -1381,22 +1356,22 @@
                         medio día, produciendo una imagen nocturna y otra
                         diurna.
                     </li>
-                    <li>
-                        <b> RADARSAT </b>
+<li>
+<b> RADARSAT </b>
                         . Desarrollado por la Agencia Espacial Canadiense, monta
                         un radar de apertura sintética (SAR), y su principal
                         propósito es el control de las variaciones ambientales y
                         de los recursos naturales.
                     </li>
-                    <li>
-                        <b> ERS--1 y ERS--2 </b>
+<li>
+<b> ERS--1 y ERS--2 </b>
                         . Desarrollados por la Agencia Espacial Europea. Al
                         igual que el anterior, ambos están pensados para la
                         observación medioambiental, y montan tanto sensores
                         activos como pasivos.
                     </li>
-                    <li>
-                        <b> SRTM </b>
+<li>
+<b> SRTM </b>
                         . La misión SRTM es un proyecto internacional de gran
                         envergadura destinado a la creación de una cobertura de
                         elevaciones a nivel mundial. Recogiendo el relieve de
@@ -1405,8 +1380,8 @@
                         segundo de arco (aproximadamente 30 metros) para Estados
                         Unidos, y de unos 90 metros en el resto de zonas.
                     </li>
-                    <li>
-                        <b> PlanetScope y SkySat </b>
+<li>
+<b> PlanetScope y SkySat </b>
                         . Dos constelaciones de satélites desarrolladas y
                         gestionadas por la empresa Planet Labs. PlanetScope está
                         compuesta por más de 150 de los denominados
@@ -1422,11 +1397,11 @@
                         definidos por los propios clientes a través de un
                         sistema de interfaz y API.
                     </li>
-                </ul>
-                <h2 id="Cartografía impresa. Digitalización">
+</ul>
+<h2 id="Cartografía impresa. Digitalización">
                     Cartografía impresa. Digitalización
                 </h2>
-                <p>
+<p>
                     La primera fuente de cartografía de la que se disponía en
                     las etapas iniciales de los SIG era la cartografía impresa.
                     No se trataba de elementos creados pensando en su
@@ -1436,7 +1411,7 @@
                     espaciales. Aun así, su uso ha sido desde esos tiempos una
                     constante dentro del ámbito SIG.
                 </p>
-                <p>
+<p>
                     A pesar de que hoy en día disponemos de otras fuentes
                     cartográficas, la cartografía impresa sigue siendo básica
                     para trabajar con un SIG, ya que existe mucha información
@@ -1445,7 +1420,7 @@
                     su desarrollo la necesidad de recurrir a cartografía impresa
                     y tratar esta para su inclusión dentro de un SIG.
                 </p>
-                <p>
+<p>
                     Cuando hablamos de cartografía impresa, no hay que pensar
                     únicamente en mapas o planos, sino también en imágenes tales
                     como fotografías aéreas, las cuales, dependiendo de su
@@ -1456,7 +1431,7 @@
                     más antiguos solo pueden adquirirse por regla general como
                     un producto impreso.
                 </p>
-                <p>
+<p>
                     Los procesos que permiten obtener un producto digital a
                     partir de esas imágenes son costosos en tiempo y dinero, y
                     es por ello que no todos los proveedores de estas ofrecen la
@@ -1467,13 +1442,13 @@
                     cartográfica, susceptible de ser convertida en una o varias
                     capas.
                 </p>
-                <p>
+<p>
                     Tanto mapas como fotografías aéreas pueden servir como
                     fuente de información para crear o bien capas ráster o bien
                     capas vectoriales, ya que la información que contienen puede
                     de igual modo representarse según uno u otro modelo.
                 </p>
-                <p>
+<p>
                     Un mapa o plano sobre un soporte impreso, sin embargo, dista
                     considerablemente de ese concepto de capa con el que
                     trabajamos en un SIG. Suele contener información sobre
@@ -1484,13 +1459,13 @@
                     conjunto que será conveniente disgregar en base a esas
                     distintas variables.
                 </p>
-                <p>
+<p>
                     La creación de un dato digital a partir de un dato analógico
                     como un mapa impreso se conocen como
                     <i> digitalización </i>
                     , y esta puede ser automatica o manual.
                 </p>
-                <p>
+<p>
                     En la digitalización automática, el sistema (informático o
                     mecánico) se encarga de generar los elementos digitales que
                     ya podremos incorporar a un SIG, ahorrando trabajo al
@@ -1503,7 +1478,7 @@
                     del operario y no es un proceso tan sencillo, pudiendo
                     obtenerse resultados desiguales.
                 </p>
-                <p>
+<p>
                     La digitalización manual requiere por parte del operario una
                     definición explícita de los elementos a crear, y es por ello
                     únicamente adecuada para obtener un resultado vectorial,
@@ -1511,7 +1486,7 @@
                     polígonos) manualmente mediante algún sistema que permita
                     esa introducción de datos.
                 </p>
-                <p>
+<p>
                     La elección de uno u otro tipo de digitalización no depende
                     solo del tipo de capa que se desee obtener. Tanto la
                     digitalización manual como la automática, tienen cada una de
@@ -1520,7 +1495,7 @@
                     obtener una capa vectorial puede ser interesante optar por
                     una o otra metodología en función de las circunstancias.
                 </p>
-                <p>
+<p>
                     La digitalización manual es mucho más costosa y su resultado
                     es muy variable en cuanto a su precisión espacial, ya que
                     depende en gran medida de la experiencia del operario y de
@@ -1532,7 +1507,7 @@
                     esta reconocerá sus elementos sin dificultad y con total
                     fiabilidad).
                 </p>
-                <p>
+<p>
                     Asimismo, un proceso automático, en caso de proceder de
                     forma correcta, tendrá una exactitud absoluta y «clonará»
                     con absoluta fidelidad los elementos del mapa impreso. Esto
@@ -1543,9 +1518,8 @@
                     que digitaliza. Un sistema automático, por el contrario, no
                     puede.
                 </p>
-                <h3 id="Digitalización manual">Digitalización manual</h3>
-                <a name="Digitalizacion_manual"> </a>
-                <p>
+<h3 id="Digitalización manual">Digitalización manual</h3>
+<p id="Digitalizacion_manual">
                     La digitalización manual es la forma más básica de crear
                     información digital a partir de un documento cartográfico
                     impreso. Un operario trabaja directamente sobre la fuente
@@ -1554,7 +1528,7 @@
                     capaz de convertir su trabajo en la información necesaria
                     para crear dicha capa.
                 </p>
-                <p>
+<p>
                     En el modelo de representación ráster, los elementos básicos
                     son las celdas, que forman una malla regular que puede
                     presentar un numero muy elevado de estas. Una definición
@@ -1563,7 +1537,7 @@
                     documento cartográfico impreso para la obtención de una capa
                     ráster a partir de ella de forma manual no es factible.
                 </p>
-                <p>
+<p>
                     Por el contrario, se puede realizar con cierta sencillez la
                     digitalización de una entidad vectorial, trazando la forma
                     de esta o, en caso de ser una entidad de tipo punto,
@@ -1573,7 +1547,7 @@
                     sencilla y accesible de crear una capa vectorial a partir de
                     otra fuente de datos.
                 </p>
-                <p>
+<p>
                     Para llevar a cabo ese trazado de la entidad, se necesita
                     emplear algún equipo que recoja la información introducida
                     por el operador. Existen dos alternativas principales:
@@ -1583,27 +1557,21 @@
                     dentro de este y sin más herramientas que el propio
                     ordenador y un dispositivo señalador como el ratón.
                     <figure></figure>
-                </p>
-                <p>
-                    <img
-                        src="../img/Tableta_digitalizadora.png"
-                        width="80.0%"
-                    />
-                    <figcaption>
+</p>
+<p>
+<img alt="Tableta_digitalizadora" src="../img/Tableta_digitalizadora.png" width="80.0%"/>
+<figcaption>
                         Esquema de una tableta digitalizadora y los elementos
                         del proceso de digitalización.
                     </figcaption>
                     $$\label{Fig:Tableta_digitalizadora}$$
                 </p>
-                <h4
-                    id="Con equipo especializado (&lt;i&gt;heads--down&lt;/i&gt;)"
-                >
+<h4 id="Con equipo especializado (&lt;i&gt;heads--down&lt;/i&gt;)">
                     Con equipo especializado (
                     <i> heads--down </i>
                     )
                 </h4>
-                <a name="heads-down"> </a>
-                <p>
+<p id="heads-down">
                     La forma tradicional de proceder a la digitalización manual
                     de entidades es utilizando equipos y periféricos
                     expresamente diseñados para llevar a cabo esta tarea. La
@@ -1611,7 +1579,7 @@
                     (Figura \ref{Fig:Tableta_digitalizadora}) es la herramienta
                     fundamental para este trabajo.
                 </p>
-                <p>
+<p>
                     Se trata de una superficie plana a modo de atril, sobre la
                     cual se sitúa el documento cartográfico a digitalizar, y
                     sobre este se van trazando las distintas entidades con un
@@ -1623,17 +1591,17 @@
                     estuviera calcando, de modo que indique al sistema las
                     geometrías que se quieren definir.
                 </p>
-                <p>
+<p>
                     El proceso de digitalización implica los siguientes pasos [
                     <a href="../bib.htm#Heywood1998Longman">
                         Heywood1998Longman
                     </a>
                     ]:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Registro </b>
+
+<ul>
+<li>
+<b> Registro </b>
                         . La etapa fundamental del proceso, que garantiza que
                         las coordenadas de las entidades digitalizadas sean
                         correctas. El mapa se ha de adherir a la tableta de modo
@@ -1649,12 +1617,12 @@
                         que puedan inducir errores en el cálculo de coordenadas
                         posteriores.
                     </li>
-                    <li>
-                        <b> Digitalización </b>
+<li>
+<b> Digitalización </b>
                         . De entidades puntuales, lineales y poligonales.
                     </li>
-                    <li>
-                        <b> Asignación de atributos </b>
+<li>
+<b> Asignación de atributos </b>
                         . A cada una de las entidades digitalizadas se le añaden
                         sus correspondientes propiedades. Este paso no se
                         realiza ya con la tableta digitalizadora. En el caso más
@@ -1673,20 +1641,20 @@
                         Los SIG más populares presentan habitualmente
                         herramientas que facilitan este proceso.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Esta forma de digitalizar se conoce como «cabeza abajo» (
                     <i> heads--down </i>
                     ), en referencia a la posición del operario a la hora de
                     trabajar sobre la tableta.
                 </p>
-                <p>
+<p>
                     Se distinguen dos formas principales de registro de puntos:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Manual </b>
+
+<ul>
+<li>
+<b> Manual </b>
                         . El usuario debe ir marcando uno por uno todos los
                         puntos que desee incorporar a la entidad digitalizada.
                         Por ejemplo, para el caso de una línea, debe ir
@@ -1695,8 +1663,8 @@
                         del cursor para indicar al sistema que ha de registrar
                         dichos puntos.
                     </li>
-                    <li>
-                        <b> Semiautomática </b>
+<li>
+<b> Semiautomática </b>
                         . El operario simplemente desliza el cursor definiendo
                         la forma de las entidades, y el propio sistema se
                         encarga de almacenar puntos regularmente según un
@@ -1704,19 +1672,19 @@
                         tiempo considerable y una correcta densidad de puntos
                         recogidos para cada entidad.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Las tabletas digitalizadoras son elementos caros, motivo por
                     el cual se tiende a favorecer en la actualidad la
                     digitalización en pantalla, que presenta además otra serie
                     de ventajas adicionales, como seguidamente veremos.
                 </p>
-                <h4 id="En pantalla (&lt;i&gt;heads--up&lt;/i&gt;)">
+<h4 id="En pantalla (&lt;i&gt;heads--up&lt;/i&gt;)">
                     En pantalla (
                     <i> heads--up </i>
                     )
                 </h4>
-                <p>
+<p>
                     La otra forma de digitalizar elementos es utilizando las
                     capacidades de edición de un SIG. Estas capacidades son
                     heredadas de las aplicaciones de diseño asistido por
@@ -1725,7 +1693,7 @@
                     rectas que constituyen los objetos en el modelo de
                     representación vectorial.
                 </p>
-                <p>
+<p>
                     En este proceso se parte igualmente de una capa base,
                     generalmente una imagen, y basándose en ella se van
                     definiendo los objetos, «dibujándolos» sobre la pantalla,
@@ -1738,7 +1706,7 @@
                     cubrir un área más amplia que la de una simple hoja de mapa
                     o una única imagen.
                 </p>
-                <p>
+<p>
                     En este proceso, no partimos en realidad de un documento
                     cartográfico analógico, pues ya ha sido necesario
                     digitalizarlo de alguna forma para incorporarlo en un SIG.
@@ -1753,7 +1721,7 @@
                     <i> escaneo </i>
                     , el cual se tratará en la siguiente sección.
                 </p>
-                <p>
+<p>
                     En la figura \ref{Fig:Digitalizacion_en_pantalla} puede
                     verse un ejemplo de la digitalización de una imagen en
                     pantalla. Sobre una imagen aérea en color, se digitalizan
@@ -1763,21 +1731,18 @@
                     de comunicación sobre una fotografía aérea, entre muchas
                     otras.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Digitalizacion_en_pantalla.png"
-                            width="80.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Digitalizacion_en_pantalla" src="../img/Digitalizacion_en_pantalla.png" width="80.0%"/>
+<figcaption>
                             Digitalización en pantalla. En rojo, polígono ya
                             digitalizado. Las líneas rojas indican un nuevo
                             polígono, actualmente en edición
                         </figcaption>
                         $$\label{Fig:Digitalizacion_en_pantalla}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La digitalización en pantalla se conoce también como
                     digitalización «cabeza arriba» (
                     <i> heads--up </i>
@@ -1785,19 +1750,19 @@
                     una postura bien distinta a la que se tiene al trabajar con
                     una tableta digitalizadora.
                 </p>
-                <p>
+<p>
                     Frente a dicho trabajo con tableta digitalizadora, la
                     digitalización en pantalla tiene las siguientes ventajas:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Menor coste </b>
+
+<ul>
+<li>
+<b> Menor coste </b>
                         . No se requiere equipo especializado de alto coste, ya
                         que basta con un ordenador personal.
                     </li>
-                    <li>
-                        <b> Posibilidad de dividir el trabajo </b>
+<li>
+<b> Posibilidad de dividir el trabajo </b>
                         . Cuando se trabaja con un mapa sobre una tableta
                         digitalizadora, este mapa no puede ser utilizado por
                         otro operario. Sin embargo, el uso de una capa digital
@@ -1805,16 +1770,16 @@
                         permite que varios operarios trabajen con ella
                         simultáneamente y se repartan el trabajo.
                     </li>
-                    <li>
-                        <b> Posibilidad de corrección y edición precisa </b>
+<li>
+<b> Posibilidad de corrección y edición precisa </b>
                         . Las mismas capacidades que se usan para trazar las
                         distintas entidades pueden emplearse para corregir o
                         modificar estas una vez que han sido digitalizadas
                         (Figura \ref{Fig:Correccion_digitalizacion}), resultando
                         esto en un proceso de digitalización más flexible.
                     </li>
-                    <li>
-                        <b> Posibilidad de ampliación </b>
+<li>
+<b> Posibilidad de ampliación </b>
                         . Para cartografías de baja calidad, puede ser difícil
                         obtener precisión si se trabaja directamente sobre el
                         mapa, así como si los elementos a digitalizar son
@@ -1827,8 +1792,8 @@
                         realizar o las características de los objetos
                         digitalizados.
                     </li>
-                    <li>
-                        <b> Mayor precisión </b>
+<li>
+<b> Mayor precisión </b>
                         . La capacidad de resolución del ojo humano es mucho
                         menor que la resolución de las imágenes (véase más
                         adelante el apartado
@@ -1840,29 +1805,26 @@
                         original, y que los resultados obtenidos en la
                         digitalización de esta sean más fieles a ella.
                     </li>
-                    <li>
-                        <b> Mayor comodidad para el operario </b>
+<li>
+<b> Mayor comodidad para el operario </b>
                         . La postura del operario es más adecuada cuando se
                         digitaliza sobre la pantalla, permitiendo unas mejores
                         condiciones. Esto que se traduce en menor cansancio y
                         ello indirectamente comporta resultados más precisos.
                     </li>
-                </ul>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Correccion_digitalizacion.png"
-                            width="80.0%"
-                        />
-                        <figcaption>
+</ul>
+<p>
+<figure>
+<img alt="Correccion_digitalizacion" src="../img/Correccion_digitalizacion.png" width="80.0%"/>
+<figcaption>
                             Corrección de entidades con las funciones de edición
                             de un SIG. El polígono de la derecha se encuentra en
                             edición, siendo modificado uno de sus vértices.
                         </figcaption>
                         $$\label{Fig:Correccion_digitalizacion}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Para conocer con más detalle las capacidades básicas de
                     edición de un SIG, así como las restantes capacidades que
                     contribuyen a su vez a facilitar la labor de edición,
@@ -1872,10 +1834,10 @@
                     </a>
                     .
                 </p>
-                <h3 id="Digitalización automática">
+<h3 id="Digitalización automática">
                     Digitalización automática
                 </h3>
-                <p>
+<p>
                     La digitalización automática limita el trabajo del operario,
                     ya que este no es responsable directo de definir las
                     propiedades de los elementos que se digitalizan. Este tipo
@@ -1884,16 +1846,15 @@
                     vectoriales procesando de modo automático cartografía
                     impresa.
                 </p>
-                <p>
+<p>
                     Este segundo caso, no obstante, requiere una cartografía en
                     condiciones especiales, no siendo adecuada para todo tipo de
                     mapas. En caso de no presentarse esas condiciones, los
                     resultados de la digitalización no son óptimos, y requieren
                     posteriormente un gran trabajo de corrección y supervisión.
                 </p>
-                <h4 id="Escaneo">Escaneo</h4>
-                <a name="Escaneo"> </a>
-                <p>
+<h4 id="Escaneo">Escaneo</h4>
+<p id="Escaneo">
                     El escaneo es el proceso de digitalización que convierte una
                     imagen impresa (analógica) en una imagen digital [
                     <a href="../bib.htm#Jackson1991Longman">
@@ -1908,7 +1869,7 @@
                     de un SIG o cualquier otro software tal como, por ejemplo,
                     un software de tratamiento de imágenes.
                 </p>
-                <p>
+<p>
                     El dispositivo fundamental para realizar este proceso es el
                     <i> escáner </i>
                     . Este se compone de una
@@ -1919,7 +1880,7 @@
                     todo el documento, recogiendo la información de toda su
                     extensión.
                 </p>
-                <p>
+<p>
                     Este proceso de
                     <i> barrido </i>
                     se realiza en una única ocasión, aunque dispositivos más
@@ -1928,7 +1889,7 @@
                     creación de una imagen en color, también pueden obtenerse
                     imágenes en blanco y negro o en escala de grises.
                 </p>
-                <p>
+<p>
                     Existen escáneres específicamente diseñados para el trabajo
                     con documentos cartográficos, pero son dispositivos muy
                     especializados y de coste elevado. Los escáneres más
@@ -1938,11 +1899,11 @@
                     imágenes aéreas con resultados aceptables, utilizándose con
                     frecuencia.
                 </p>
-                <p>Existen tres tipos principales de escáneres:</p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> De sobremesa </b>
+<p>Existen tres tipos principales de escáneres:</p>
+
+<ul>
+<li>
+<b> De sobremesa </b>
                         (
                         <i> flat--bed </i>
                         ). Los habituales para el uso doméstico o el escaneo de
@@ -1952,39 +1913,33 @@
                         el sensor. Puede verse uno de estos escáneres en la
                         figura \ref{Fig:Escaner_sobremesa}.
                         <p>
-                            <figure>
-                                <img
-                                    src="../img/Escaner_sobremesa.png"
-                                    width="100%"
-                                />
-                                <figcaption>
+<figure>
+<img alt="Escaner_sobremesa" src="../img/Escaner_sobremesa.png" width="100%"/>
+<figcaption>
                                     Escáner de sobremesa (tomado de Wikipedia)
                                 </figcaption>
                                 $$\label{Fig:Escaner_sobremesa}$$
                             </figure>
-                        </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> De tambor </b>
+</p>
+
+</li>
+<li>
+<b> De tambor </b>
                         . El mapa se sitúa sobre un tambor que rota, mientras
                         que la cabeza se mantiene fija. La figura
                         \ref{Fig:Escaner_tambor} muestra uno de estos escáneres.
                         <p>
-                            <figure>
-                                <img
-                                    src="../img/Escaner_tambor.png"
-                                    width="95.0%"
-                                />
-                                <figcaption>
+<figure>
+<img alt="Escaner_tambor" src="../img/Escaner_tambor.png" width="95.0%"/>
+<figcaption>
                                     Escáner de tambor (fotografía: Stefan Kuehn)
                                 </figcaption>
                                 $$\label{Fig:Escaner_tambor}$$
                             </figure>
-                        </p>
-                    </li>
-                    <li>
-                        <b> Alimentados </b>
+</p>
+</li>
+<li>
+<b> Alimentados </b>
                         . El sensor se mantiene fijo y el documento se desplaza
                         mediante un mecanismo de arrastre, de forma similar a
                         como avanza el papel en una impresora doméstica. Salvo
@@ -1993,10 +1948,9 @@
                         distorsiones geométricas causadas por un desplazamiento
                         impreciso del papel.
                     </li>
-                </ul>
+</ul>
 
-                <p></p>
-                <p>
+<p>
                     Los parámetros básicos que definen las características de un
                     escáner son la resolución espacial y la resolución
                     radiométrica. La primera de estas se mide habitualmente en
@@ -2007,7 +1961,7 @@
                     capacidad del sensor para distinguir entre dos colores
                     distintos.
                 </p>
-                <p>
+<p>
                     A la hora de trabajar con documentos cartográficos de cara a
                     su posterior utilización en un SIG, tanto la resolución
                     espacial como la radiométrica de los escáneres habituales es
@@ -2021,7 +1975,7 @@
                     trabajo con cartografía, sino que pueden ser de uso
                     genérico, siempre, eso sí, que sean de la calidad necesaria.
                 </p>
-                <p>
+<p>
                     La velocidad del escáner es otro parámetro importante, pues
                     la preparación de una base de datos cartográfica a partir de
                     cartografía analógica puede llevar un tiempo considerable si
@@ -2036,7 +1990,7 @@
                     que el volumen de información generado es mayor, así como el
                     detalle que ha de registrarse.
                 </p>
-                <p>
+<p>
                     Para cada documento existe una resolución óptima de escaneo
                     en función de las características de este. Esta resolución
                     debe elegirse teniendo en cuenta que el volumen de datos
@@ -2046,7 +2000,7 @@
                     Asimismo, se ha considerar igualmente el tiempo necesario
                     para escanear el documento, tal como se dijo anteriormente.
                 </p>
-                <p>
+<p>
                     El parámetro base es la relación entre el tamaño de píxel
                     (la longitud real que representa el ancho de un píxel sobre
                     el terreno) y el tamaño de este píxel en la imagen (lo que
@@ -2058,31 +2012,31 @@
                     <a href="../bib.htm#Welch1996Onward"> Welch1996Onward </a>
                     ]. Por ejemplo para una resolución de 300 dpi, se tiene:
                 </p>
-                <p>
+<p>
                     \begin{eqnarray} 300\; \mathrm{dpi} &amp;=&amp;
                     \frac{300\;\mathrm{filas}}{2,54\; \mathrm{cm\; de\; mapa}}
                     \nonumber\\ &amp;=&amp; 118,11\; \mathrm{filas/cm}
                     \end{eqnarray}
                 </p>
-                <p>
+<p>
                     En un centímetro cuadrado se tienen $118,11^2\approx13950$
                     puntos.
                 </p>
-                <p>
+<p>
                     Si trabajamos, por ejemplo, con un mapa a una escala
                     1:50000, tenemos que la distancia real que representa el
                     alto de cada fila es
                 </p>
-                <p>
+<p>
                     \begin{equation} \frac{50000\; \mathrm{cm}}{118,11
                     \mathrm{filas}} = 4,24\; \mathrm{metros}/\mathrm{fila}
                     \end{equation}
                 </p>
-                <p>
+<p>
                     Es decir, cada píxel del mapa representa sobre el terreno un
                     cuadrado de lado 4,24 metros.
                 </p>
-                <p>
+<p>
                     Con cálculos similares podemos calcular para cada posible
                     resolución el espacio real que representa, y elegir esta en
                     función del detalle que necesitemos. Como regla general,
@@ -2092,7 +2046,7 @@
                     manualmente mediante una digitalización en pantalla con esa
                     imagen) sean distinguibles con claridad.
                 </p>
-                <p>
+<p>
                     En el caso de imágenes aéreas, la resolución de estas medida
                     en pares de líneas por milímetro puede ser superior y
                     permitir escanear a mayor resolución, aunque ello no es
@@ -2100,20 +2054,18 @@
                     equilibrio entre las ventajas y los inconvenientes de
                     trabajar con una resolución más elevada.
                 </p>
-                <p>
+<p>
                     En [
                     <a href="../bib.htm#Welch1996Onward"> Welch1996Onward </a>
                     ] puede encontrarse información más detallada sobre la
                     elección de una resolución óptima en el escaneo de imágenes
                     aéreas.
                 </p>
-                <p>
+<p>
                     Para el caso de mapas, no deben olvidarse los fundamentos
                     cartográficos en base a los cuales se ha creado dicho mapa,
                     que fueron detallados en el capítulo
-                    <a
-                        href="Fundamentos_cartograficos.html#Fundamentos_cartograficos"
-                    >
+                    <a href="Fundamentos_cartograficos.html#Fundamentos_cartograficos">
                         Fundamentos_cartograficos
                     </a>
                     . Trabajar con una resolución más elevada no hace
@@ -2122,7 +2074,7 @@
                     volumen de datos más elevado que el necesario para recoger
                     toda la información del mapa.
                 </p>
-                <p>
+<p>
                     Una diferencia fundamental entre escanear una hoja de un
                     mapa y una imagen aérea es la diferencia de tamaño. Los
                     mapas suelen tener tamaños mucho mayores que los de un
@@ -2131,7 +2083,7 @@
                     de escaneo especializados, ya que estos equipos tiene un
                     coste muy elevado.
                 </p>
-                <p>
+<p>
                     Una solución distinta en el caso de mapas de gran tamaño es
                     el escaneo de la hoja por partes y la posterior unión de las
                     distintas partes. En este caso, es necesario asegurarse de
@@ -2144,7 +2096,7 @@
                     composición de todas las partes para dar lugar al resultado
                     global.
                 </p>
-                <p>
+<p>
                     Otra diferencia entre trabajar con mapas e imágenes es la
                     relativa al tipo de soporte. En el caso de mapas, el
                     documento original se encuentra siempre impreso en papel. En
@@ -2160,7 +2112,7 @@
                     digital, siendo esta diferencia menos relevante a efectos
                     prácticos.
                 </p>
-                <p>
+<p>
                     Por último, un aspecto clave en el escaneo de cartografía es
                     la asignación de coordenadas a la capa resultante. Cuando
                     utilizamos una tableta digitalizadora, debemos definir los
@@ -2172,7 +2124,7 @@
                     en el mapa en forma de marcas fiduciales o una retícula con
                     coordenadas impresas, pero no se digitaliza como tal.
                 </p>
-                <p>
+<p>
                     Si simplemente escaneamos el documento, se digitaliza la
                     marca fiducial o la etiqueta que indica las coordenadas,
                     pero tan solo como una imagen, y no como un dato
@@ -2183,7 +2135,7 @@
                     calcular las coordenadas de los puntos que introducimos,
                     pues carece de una referencia.
                 </p>
-                <p>
+<p>
                     Para que una imagen procedente del escaneo de un documento
                     impreso tenga plena validez y utilidad dentro de un SIG, es
                     necesario añadirle información sobre la localización en el
@@ -2192,7 +2144,7 @@
                     <i> georreferenciación </i>
                     .
                 </p>
-                <p>
+<p>
                     La georreferenciación es un proceso tratado dentro de este
                     libro en el apartado
                     <a href="Imagenes.html#Rectificacion"> Rectificacion </a>
@@ -2200,8 +2152,8 @@
                     la adquisición de datos, sino un tratamiento a aplicar una
                     vez que el proceso de digitalización ha sido realizado.
                 </p>
-                <h4 id="Vectorización automática">Vectorización automática</h4>
-                <p>
+<h4 id="Vectorización automática">Vectorización automática</h4>
+<p>
                     La vectorización automática es un proceso completamente
                     distinto al de escaneo, y no es tan habitual en el ámbito de
                     los SIG, principalmente debido a la mayor dificultad que
@@ -2210,29 +2162,29 @@
                     operario no tiene que señalar los puntos de estas o trazar
                     los contornos de las entidades.
                 </p>
-                <p>
+<p>
                     Existen distintos procesos de vectorización automática,
                     entre los que distinguiremos los siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Vectorización en base a una imagen digital, por
                         reconocimiento de entidades en un software apropiado.
                     </li>
-                    <li>
+<li>
                         Vectorización mediante dispositivos específicos que
                         trabajan sobre un documento analógico.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     En el primer caso, partimos de una imagen digital, que puede
                     proceder o no de un proceso de escaneo. Sobre esta imagen se
                     aplican algoritmos que identifican de modo automático las
                     distintas entidades y crean los correspondientes objetos
                     vectoriales.
                 </p>
-                <p>
+<p>
                     El mayor inconveniente de esta técnica es que requiere que
                     la imagen tenga unas condiciones especiales, pues de otro
                     modo es difícil que esos algoritmos de identificación den
@@ -2245,7 +2197,7 @@
                     las características de la imagen de partida puede ser
                     importante.
                 </p>
-                <p>
+<p>
                     Esta forma de vectorización automática es, al igual que la
                     georreferenciación, un proceso a llevar a cabo sobre la
                     imagen. Por esta razón, no se trata en este capítulo sino en
@@ -2254,9 +2206,7 @@
                         Procesado_imagenes
                     </a>
                     dedicado al tratamiento de imágenes. Igualmente, el capítulo
-                    <a
-                        href="Creacion_capas_vectoriales.html#Creacion_capas_vectoriales"
-                    >
+                    <a href="Creacion_capas_vectoriales.html#Creacion_capas_vectoriales">
                         Creacion_capas_vectoriales
                     </a>
                     , dedicado a la conversión entre capas ráster y vectoriales,
@@ -2264,7 +2214,7 @@
                     automática, con particular atención a la conversión de un
                     mapa escaneado en una capa vectorial de curvas de nivel.
                 </p>
-                <p>
+<p>
                     La otra forma de digitalización es totalmente diferente y no
                     se realiza en el ordenador, sino en un periférico externo a
                     este, tal como una tableta digitalizadora o un escáner. El
@@ -2272,7 +2222,7 @@
                     una tableta digitalizadora, pero su comportamiento imita al
                     de un operario trabajando sobre esta última.
                 </p>
-                <p>
+<p>
                     Para ello, dispone de sensores luminosos y de láser que
                     buscan las líneas en la imagen y las recorren, almacenando
                     las coordenadas por las que han pasado en el recorrido. De
@@ -2281,7 +2231,7 @@
                     un escáner, sino que «sigue» las líneas que están presentes
                     en la imagen, y que son las que van a digitalizarse.
                 </p>
-                <p>
+<p>
                     Al igual que con la digitalización automática, las buenas
                     condiciones de la imagen de partida son básicas para obtener
                     resultados de calidad. En un mapa es habitual que las líneas
@@ -2294,13 +2244,10 @@
                     adecuadamente, lo cual da lugar a resultados de poca
                     calidad.
                 </p>
-                <h3
-                    id="Digitalización a partir de coordenadas. Geocodificación"
-                >
+<h3 id="Digitalización a partir de coordenadas. Geocodificación">
                     Digitalización a partir de coordenadas. Geocodificación
                 </h3>
-                <a name="Geocodificacion"> </a>
-                <p>
+<p id="Geocodificacion">
                     Junto a las formas de digitalización que acabamos de ver,
                     existe una forma aún más básica: la digitalización directa
                     de valores y coordenadas, sin necesidad alguna de
@@ -2310,7 +2257,7 @@
                     expresados de forma alfanumérica que son susceptibles de
                     convertirse en una capa y emplearse así dentro de un SIG.
                 </p>
-                <p>
+<p>
                     Este proceso se conoce como
                     <i> geocodificación </i>
                     [
@@ -2323,17 +2270,17 @@
                     sobre mapas, sí que pueden emplearse como base para la
                     creación de capas. Algunos ejemplos son los siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Muestreos de campo tales como la medición de parcelas en
                         un inventario forestal. Cada parcela tiene una
                         coordenada correspondiente a su centro, y los árboles
                         medidos se referencian con un rumbo y una dirección en
                         base a ese centro.
                     </li>
-                    <li>Calicatas para análisis de suelo</li>
-                    <li>
+<li>Calicatas para análisis de suelo</li>
+<li>
                         Levantamientos topográficos con instrumentación tanto
                         analógica como digital. Existe un conjunto de
                         instrucciones y procedimientos denominado COGO (
@@ -2346,7 +2293,7 @@
                         convertirse con sencillez a coordenadas mediante la
                         incorporación al SIG de ese conjunto de valores.
                     </li>
-                    <li>
+<li>
                         Coordenadas en las que han sucedido algún tipo de
                         sucesos. Por ejemplo, la geocodificación de
                         localizaciones en las que han tenido lugar sucesos
@@ -2354,7 +2301,7 @@
                         distribución y el establecimiento de políticas de
                         seguridad más acordes con el escenario real.
                     </li>
-                    <li>
+<li>
                         Coordenadas de cierto tipo particular de elementos,
                         tales como elementos arquitectónicos, árboles
                         singulares, paradas de autobús. Estas permiten la
@@ -2363,7 +2310,7 @@
                         por ejemplo, la forma más rápida de desplazamiento hasta
                         uno de ellos.
                     </li>
-                    <li>
+<li>
                         Coordenadas correspondientes a otras formas de
                         codificación espacial. Sistemas de localización espacial
                         tales como códigos postales o, por ejemplo, los sistemas
@@ -2373,7 +2320,7 @@
                         geográficas, de tal modo que a cada uno de los códigos
                         de estos sistemas se le asigne una de tales coordenadas.
                     </li>
-                    <li>
+<li>
                         En la actualidad, Internet está viendo aparecer
                         tendencias relacionadas con la asignación de una
                         localización geográfica a muchos de sus elementos. Así,
@@ -2387,8 +2334,8 @@
                         <i> geotagging </i>
                         .
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Todos estos datos presentan en común que, recogidos de un
                     modo u otro, conforman un conjunto de coordenadas puntuales
                     que habitualmente sirven para el trabajo fuera de un SIG y
@@ -2396,7 +2343,7 @@
                     dispuestos en la forma habitual de capa con la que
                     trabajamos en un SIG.
                 </p>
-                <p>
+<p>
                     En el caso de encontrarse en formato analógico, estos datos
                     pueden digitalizarse mediante la simple introducción manual
                     de coordenadas a través del teclado o bien mediante algún
@@ -2404,7 +2351,7 @@
                     empleo de algún software de reconocimiento de caracteres
                     (OCR).
                 </p>
-                <p>
+<p>
                     En el caso de encontrarse ya en formato digital, estos datos
                     pueden presentarse como tablas en una hoja de cálculo, datos
                     asociados a otro dato de cualquier tipo (como en el caso del
@@ -2414,7 +2361,7 @@
                     coordenadas que contienen con el fin de crear una nueva
                     capa, en general de puntos.
                 </p>
-                <p>
+<p>
                     Un caso particular de la creación de puntos con coordenadas
                     es la asignación de direcciones dentro de núcleos urbanos,
                     tales como direcciones postales o códigos postales. Estas
@@ -2427,9 +2374,8 @@
                     elementos implica establecer una coordenada geográfica
                     correspondiente a cada dirección postal.
                 </p>
-                <h3 id="Fotogrametría">Fotogrametría</h3>
-                <a name="Fotogrametria"> </a>
-                <p>
+<h3 id="Fotogrametría">Fotogrametría</h3>
+<p id="Fotogrametria">
                     Un caso particular de digitalización lo encontramos en la
                     <i> fotogrametría </i>
                     . En la definición clásica de [
@@ -2452,7 +2398,7 @@
                     , cuya base de trabajo tradicional son las fotografías
                     aéreas.
                 </p>
-                <p>
+<p>
                     Esta clase de fotogrametría viene, pues, ligada íntimamente
                     a los inicios de la teledetección, cuando los sensores
                     modernos que hemos estudiado antes en este mismo capítulo no
@@ -2461,7 +2407,7 @@
                     fotografías de tipo cartográfico) se montaban a bordo de
                     aviones.
                 </p>
-                <p>
+<p>
                     Históricamente, el término
                     <i> teledetección </i>
                     aparece con posterioridad, una vez que las técnicas de toma
@@ -2476,7 +2422,7 @@
                     encargada de operar sobre imágenes de satélite bajo unos
                     principios similares.
                 </p>
-                <p>
+<p>
                     Dentro de este libro entenderemos por teledetección todo el
                     conjunto de técnicas y operaciones de obtención de imágenes
                     (que ya conocemos), así como las de tratamiento y posterior
@@ -2491,13 +2437,13 @@
                     término, es decir, aquellas que derivan de la medición de
                     elementos.
                 </p>
-                <p>
+<p>
                     La denominación, no obstante, no es tan relevante, y sí lo
                     es sin embargo comprender la importancia de ambas,
                     particularmente dentro de este capítulo como técnicas de
                     producción cartográfica.
                 </p>
-                <p>
+<p>
                     En lo que respecta a la fotogrametría, el proceso de
                     <i> restitución </i>
                     es el que interesa principalmente para el contenido de este
@@ -2511,7 +2457,7 @@
                     , como directamente Modelos Digitales de Elevaciones a
                     partir de imágenes.
                 </p>
-                <p>
+<p>
                     En realidad, los procesos de digitalización que ya hemos
                     visto son también parte de la fotogrametría digital, y es
                     habitual encontrarlos en los textos al uso sobre esta.
@@ -2525,7 +2471,7 @@
                     relacionadas, y las divisiones que hacemos pueden ser unas u
                     otras en función del enfoque que se dé para su estudio
                 </p>
-                <p>
+<p>
                     Todas estas operaciones se llevan a cabo con una
                     <i> estación fotogramétrica </i>
                     , que comprende las herramientas necesarias para llevar
@@ -2534,28 +2480,28 @@
                     distinguimos los siguientes tipos de fotogrametría, que
                     representan a su vez la evolución de la disciplina.
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Fotogrametría
                         <b> analógica </b>
                         . Basada en mediciones y procedimientos sobre imágenes
                         analógicas
                     </li>
-                    <li>
+<li>
                         Fotogrametría
                         <b> analítica </b>
                         . Basada en formulaciones matemáticas y técnicas
                         computacionales, permite obtener grandes precisiones.
                     </li>
-                    <li>
+<li>
                         Fotogrametría
                         <b> digital </b>
                         . Basada en el trabajo con imágenes digitales dentro de
                         un entorno informático.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     El interés principal desde el punto de vista de los SIG es
                     en la fotogrametría digital, ya que existe una gran relación
                     entre estos y las aplicaciones empleadas en dicho tipo de
@@ -2569,7 +2515,7 @@
                     se visualizan a través de él, y la generación de nueva
                     cartografía también se produce de forma digital.
                 </p>
-                <p>
+<p>
                     Esto no es muy diferente de lo que veíamos en el caso de la
                     digitalización en pantalla algunas paginas atrás, pero el
                     trabajo fotogramétrico engloba otros procesos además de los
@@ -2581,7 +2527,7 @@
                     ratón) y un SIG, que eran los requisitos básicos para
                     digitalizar en pantalla una imagen.
                 </p>
-                <p>
+<p>
                     Una estación fotogramétrica digital ha de tener, por
                     ejemplo, capacidad para generar visualizaciones con
                     sensación de profundidad a partir de pares de imágenes, que
@@ -2591,7 +2537,7 @@
                     son los mismos empleados en la fotogrametría no digital,
                     fundamentados en la visión estereoscópica.
                 </p>
-                <p>
+<p>
                     La visión tridimensional en el ser humano se basa en el
                     hecho de que la imagen que ve cada ojo es ligeramente
                     distinta a la del otro, lo cual permite al cerebro extraer
@@ -2604,7 +2550,7 @@
                     y «engañar» al cerebro del observador para que este pueda
                     observar la escena con volumen y profundidad.
                 </p>
-                <p>
+<p>
                     Cuando se emplean imágenes de satélite, los pares se pueden
                     obtener con aquellas plataformas y sensores que permiten
                     variar el ángulo de visión, de modo que en la misma pasada
@@ -2616,24 +2562,21 @@
                     realización de los procesos fotogramétricos (Figura
                     \ref{Fig:Par_estereo_satelite}).
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Par_estereo_satelite.png"
-                            width="85.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Par_estereo_satelite" src="../img/Par_estereo_satelite.png" width="85.0%"/>
+<figcaption>
                             Toma de pares de imágenes estereosópicas desde un
                             satélite, mediante variación del ángulo de visión.
                         </figcaption>
                         $$\label{Fig:Par_estereo_satelite}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     El sensor HRS que montan los satélites SPOT, o el sensor
                     ASTER, ambos son capaces de tomar este tipo de imágenes.
                 </p>
-                <p>
+<p>
                     Las formas de conseguir que el observador perciba la
                     profundidad de la escena a partir de las imágenes son
                     variadas, y van desde el uso de sencillos instrumentos
@@ -2649,14 +2592,14 @@
                     encargadas de generar en el observador la sensación de
                     profundidad .
                 </p>
-                <p>
+<p>
                     Además de lo anterior, la estación fotogramétrica digital
                     dispone de periféricos específicos tales como ratones 3D, o
                     manivelas como las que presentan los restituidores
                     analíticos, facilitando así la adaptación de los operarios a
                     este tipo de estación.
                 </p>
-                <p>
+<p>
                     Por último el software que implementan, y que es el
                     encargado de representar las imágenes y acoger el proceso de
                     digitalización, suele ser específico, y es frecuente que se
@@ -2668,11 +2611,10 @@
                     aplicaciones específicas, siendo el SIG tan solo un
                     beneficiario directo de sus productos.
                 </p>
-                <h3 id="Calidad de la digitalización">
+<h3 id="Calidad de la digitalización">
                     Calidad de la digitalización
                 </h3>
-                <a name="Condiciones_digitalizacion"> </a>
-                <p>
+<p id="Condiciones_digitalizacion">
                     Uno de los aspectos más importantes del proceso de
                     digitalización es la calidad del resultado obtenido, que
                     debe tratar de ser lo más cercana posible a la calidad
@@ -2682,7 +2624,7 @@
                     operario, la digitalización no es por completo perfecta,
                     conteniendo siempre ciertas deficiencias y errores.
                 </p>
-                <p>
+<p>
                     Además de los errores que puedan incorporarse en las
                     distintas fases del proceso de digitalización (sea este del
                     tipo que sea), hay que considerar que las fuentes originales
@@ -2693,7 +2635,7 @@
                     consecuencia de su deterioro, más patente cuanto más antigua
                     sea esta.
                 </p>
-                <p>
+<p>
                     La información contenida en el documento cartográfico puede
                     también contener elementos problemáticos de cara a obtener
                     un producto de calidad, que pueden ir desde líneas borradas
@@ -2704,20 +2646,17 @@
                     </a>
                     ].
                 </p>
-                <p>
+<p>
                     Dentro de los errores que aparecen como consecuencia de la
                     digitalización en sí, un tipo importante de ellos son las
                     discrepancias y coincidencias imperfectas entre las
                     distintas entidades, tal como las que se muestran en la
                     figura \ref{Fig:Imprecisiones_digitalizacion}
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Imprecisiones_digitalizacion.png"
-                            width="80.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Imprecisiones_digitalizacion" src="../img/Imprecisiones_digitalizacion.png" width="80.0%"/>
+<figcaption>
                             Errores derivados del proceso de digitalización. a)
                             Versión correcta, con nodos coincidentes. b) y c)
                             Versiones con errores que causan una falsa
@@ -2725,20 +2664,18 @@
                         </figcaption>
                         $$\label{Fig:Imprecisiones_digitalizacion}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Estas imprecisiones son causantes de numerosos problemas,
                     tales como la aparición de polígonos espúreos en las
                     operaciones de solape entre capas vectoriales, que veremos
                     en el capítulo
-                    <a
-                        href="Operaciones_geometricas.html#Operaciones_geometricas"
-                    >
+                    <a href="Operaciones_geometricas.html#Operaciones_geometricas">
                         Operaciones_geometricas
                     </a>
                     .
                 </p>
-                <p>
+<p>
                     Debido a esto, las capacidades de edición de los SIG
                     incorporan funcionalidades que permiten evitar estos errores
                     en el momento de la digitalización, ayudando al operario en
@@ -2751,7 +2688,7 @@
                     ), que ayudan a garantizar la coincidencia entre los
                     distintos vértices.
                 </p>
-                <p>
+<p>
                     De este modo, polígonos adyacentes o líneas que se cortan en
                     un punto dado lo hacen con total exactitud. Dichos polígonos
                     comparten exactamente el mismo lado con las mismas
@@ -2764,10 +2701,10 @@
                     <i> snapping </i>
                     en un proceso de digitalización.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Snapping.png" width="40.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Snapping" src="../img/Snapping.png" width="40.0%"/>
+<figcaption>
                             Ajuste automático mediante tolerancia(
                             <i> snapping </i>
                             ). El nodo azul representa el nodo en edición. La
@@ -2780,15 +2717,15 @@
                         </figcaption>
                         $$\label{Fig:Snapping}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Mediante estas funcionalidades, el operador simplemente
                     selecciona un punto, y el sistema digitalizador lo desplaza
                     para que coincida con el punto existente más cercano,
                     siempre que se encuentre a menos distancia que la tolerancia
                     establecida de antemano.
                 </p>
-                <p>
+<p>
                     El hecho de que exista una completa coincidencia es
                     especialmente importante cuando la capa vectorial que se
                     digitaliza contiene información topológica. La topología
@@ -2804,27 +2741,27 @@
                     comunicación y se quiere hacer un análisis de redes con
                     ellas).
                 </p>
-                <p>
+<p>
                     La digitalización de entidades en caso de querer recoger su
                     topología debe obedecer una serie de reglas, a saber:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Las líneas deben cruzarse en nodos, en caso de que
                         exista relación (conexión) entre ellas.
                     </li>
-                    <li>
+<li>
                         Las líneas que coinciden en un nodo común deben
                         coincidir exactamente. Las funciones de
                         <i> snapping </i>
                         se han de utilizar por ello durante la digitalización.
                     </li>
-                    <li>
+<li>
                         Los lados comunes de los polígonos deben digitalizarse
                         una única vez.
                     </li>
-                    <li>
+<li>
                         Las áreas deben ser cerradas (el primer punto ha de
                         coincidir exactamente con el último). Las funciones de
                         <i> snapping </i>
@@ -2833,8 +2770,8 @@
                         polígono las coordenadas del primero) deben emplearse
                         para ello.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Todos los aspectos relativos a la calidad de datos, entre
                     los cuales se incluyen los relacionados con los errores del
                     proceso de digitalización, se tratan con mayor profundidad
@@ -2844,9 +2781,8 @@
                     </a>
                     .
                 </p>
-                <h2 id="GPS">GPS</h2>
-                <a name="GPS"> </a>
-                <p>
+<h2 id="GPS">GPS</h2>
+<p id="GPS">
                     Uno de los hitos en la aparición de nuevas fuentes de datos
                     geográficos es la aparición de los
                     <i> Sistemas Globales de Navegación por Satélite </i>
@@ -2855,7 +2791,7 @@
                     para su uso en actividades como la elaboración de
                     cartografía.
                 </p>
-                <p>
+<p>
                     En esencia, un GNSS es un sistema que permite conocer en
                     todo momento y en cualquier punto del globo la localización
                     exacta de dicho punto con un margen de error del orden de
@@ -2864,7 +2800,7 @@
                     y una red de satélites, pudiendo establecerse la posición
                     exacta mediante las características de dicha transmisión.
                 </p>
-                <p>
+<p>
                     El ejemplo más extendido de un GNSS es el Sistema de
                     Posicionamiento Global (Global Positioning System, o GPS),
                     originalmente puesto en funcionamiento por el Departamento
@@ -2873,62 +2809,62 @@
                     <i> Galileo </i>
                     europeo)
                 </p>
-                <h3 id="Fundamentos del sistema GPS">
+<h3 id="Fundamentos del sistema GPS">
                     Fundamentos del sistema GPS
                 </h3>
-                <p>
+<p>
                     El sistema GPS se divide en tres subsistemas o
                     <i> segmentos </i>
                     :
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Segmento espacial </b>
+
+<ul>
+<li>
+<b> Segmento espacial </b>
                         . Lo componen los satélites de la constelación GPS (un
                         total de 27, siendo 24 de ellos operativos y 3 de
                         reserva), con los cuales se comunican las unidades
                         receptoras, y en función de los cuales puede
                         triangularse la posición actual de estas.
                     </li>
-                    <li>
-                        <b> Segmento de control </b>
+<li>
+<b> Segmento de control </b>
                         . Lo forman un conjunto de estaciones terrestres que
                         controlan el funcionamiento de los satélites, pudiendo
                         enviar señales a estos para modificar su comportamiento.
                     </li>
-                    <li>
-                        <b> Segmento de usuarios </b>
+<li>
+<b> Segmento de usuarios </b>
                         . Lo conforman los receptores GPS y todos los
                         dispositivos que hacen uso de la señal de los satélites
                         para el cálculo de posiciones.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Los satélites del segmento espacial emiten una señal
                     compleja cuyo contenido puede dividirse esencialmente en dos
                     bloques de información:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Señales empleadas para el cálculo de distancias </b>
+
+<ul>
+<li>
+<b> Señales empleadas para el cálculo de distancias </b>
                         . Estas incluyen dos códigos: P(Precise) y C/A
                         (Coarse/Aquisition). El segundo de ellos es el empleado
                         habitualmente, ya que el primero se encuentra encriptado
                         y está pensado para uso militar, mientras que el C/A
                         esta disponible para todos los usuarios.
                     </li>
-                    <li>
-                        <b> Mensajes de navegación </b>
+<li>
+<b> Mensajes de navegación </b>
                         . Estos informan de la posición orbital del satélite
                         (conocida como
                         <i> efeméride </i>
                         ), y pueden asimismo contener información adicional
                         referente al segmento espacial.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Las señales para el cálculo de distancias (en la
                     terminología GPS estas distancias se conocen como
                     <i> pseudodistancias </i>
@@ -2937,7 +2873,7 @@
                     P se envía además en una segunda portadora denominada L2,
                     con una frecuencia de 1227,60 MHz.
                 </p>
-                <p>
+<p>
                     El funcionamiento del sistema se basa en la triangulación de
                     la posición mediante las señales procedentes de un cierto
                     número de los satélites. Esta posición se calcula no
@@ -2960,7 +2896,7 @@
                     </a>
                     ].
                 </p>
-                <p>
+<p>
                     La posición de los satélites es conocida en todo momento, y
                     los propios satélites informan de ella a los receptores a
                     través de los mensajes de navegación. En base a esas
@@ -2971,7 +2907,7 @@
                     <i> trilateración </i>
                     ).
                 </p>
-                <p>
+<p>
                     El cálculo de la distancia puede realizarse utilizando la
                     información de las señales (los códigos C/A o P), o bien
                     empleando las propias portadoras. El primer método es más
@@ -2980,7 +2916,7 @@
                     lo cual sí es necesario en el segundo, como a continuación
                     veremos.
                 </p>
-                <p>
+<p>
                     En el caso de emplear la portadora, se mide el desfase entre
                     esta y una señal generada por el receptor, lo cual permite
                     calcular una parte de la distancia (la que es menor que la
@@ -2993,7 +2929,7 @@
                     cierto tiempo para recopilar datos suficientes que permitan
                     el cálculo del valor antedicho.
                 </p>
-                <p>
+<p>
                     Así, la resolución de la ambigüedad es la que hace necesario
                     un tiempo de
                     <i> inicialización </i>
@@ -3008,7 +2944,7 @@
                     </a>
                     ].
                 </p>
-                <p>
+<p>
                     Puesto que la velocidad a la que la señal se desplaza es muy
                     elevada, se requieren relojes muy precisos para poder medir
                     con precisión los tiempos tan cortos que tarda dicha señal
@@ -3020,8 +2956,7 @@
                     el fin de obtener mayores precisiones en la medida del
                     tiempo.
                 </p>
-
-                <p>
+<p>
                     Si el receptor es capaz de establecer comunicación con tres
                     satélites, dispone ya de información suficiente para conocer
                     su posición $(x,y)$ como intersección de las esferas
@@ -3029,7 +2964,7 @@
                     distancia existente entre este y el receptor. Con cuatro
                     satélites se puede ya obtener la posición $(x,y,z)$.
                 </p>
-                <p>
+<p>
                     Un número mayor de satélites (cuatro al menos) es necesario,
                     no obstante, para eliminar las imprecisiones debidas a los
                     distintos elementos implicados, y se emplean habitualmente
@@ -3041,14 +2976,14 @@
                     variable de gran importancia en el proceso y sin la cual no
                     se pueden obtener precisiones elevadas.
                 </p>
-                <p>
+<p>
                     Los receptores actuales están preparados para trabajar con
                     un número máximo de satélites habitualmente igual a 12, por
                     lo que en todas circunstancias tratan de localizar el mayor
                     número posible de satélites con objeto de lograr una mayor
                     precisión.
                 </p>
-                <p>
+<p>
                     El diseño de la red de satélites está pensado para
                     garantizar que en cualquier punto de la superficie terrestre
                     y en cualquier momento, un receptor puede localizar el
@@ -3062,10 +2997,10 @@
                     precisión que se obtiene es mayor que si estos son menores
                     (Figura \ref{Fig:DOP}).
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/DOP.png" width="100%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="DOP" src="../img/DOP.png" width="100%"/>
+<figcaption>
                             Dilución de la precisión. La geometría de los
                             satélites en el ejemplo a) da una mayor precisión en
                             el cálculo de la posición del receptor que la del
@@ -3073,32 +3008,31 @@
                         </figcaption>
                         $$\label{Fig:DOP}$$
                     </figure>
-                </p>
-
-                <p>
+</p>
+<p>
                     Junto a esto, existen otras muchas fuentes de error en el
                     sistema GPS, cada una de las cuales afecta a la precisión
                     del mismo. Entre ellas, cabe destacar las siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>Errores en la posición de los satélites.</li>
-                    <li>
+
+<ul>
+<li>Errores en la posición de los satélites.</li>
+<li>
                         Errores por el rebote de la señal en otros elementos
                         tales como edificios, con anterioridad a alcanzar el
                         receptor.
                     </li>
-                    <li>
+<li>
                         Errores derivados del paso de la señal por la atmósfera.
                         Al atravesar la ionosfera y la troposfera se genera un
                         retraso por la alteración que dicho paso produce sobre
                         la señal.
                     </li>
-                    <li>
+<li>
                         Errores en la precisión de los relojes, ya mencionados.
                     </li>
-                    <li>
-                        <i> Disponibilidad selectiva </i>
+<li>
+<i> Disponibilidad selectiva </i>
                         . Debido a su concepción como una herramienta militar,
                         el departamento de Defensa de los Estados Unidos,
                         propietario del sistema, introducía errores aleatorios
@@ -3107,8 +3041,8 @@
                         muy elevada. La disponibilidad selectiva fue eliminada
                         en el año 2000.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     En conjunto, todos estos errores suman desviaciones
                     apreciables, que sin embargo pueden corregirse con la
                     aplicación de técnicas adicionales, por ejemplo incorporando
@@ -3120,7 +3054,7 @@
                     corregir una buena parte los restantes errores citados
                     anteriormente.
                 </p>
-                <p>
+<p>
                     Para la aplicación del GPS diferencial se requiere no solo
                     un receptor único (aquel del cual se quiere calcular su
                     posición), sino también otro receptor fijo de referencia
@@ -3132,20 +3066,20 @@
                     soportar este tipo de correcciones, para poder hacer uso de
                     la señal de la estación de referencia.
                 </p>
-                <p>
+<p>
                     Los datos que permiten llevar a cabo la corrección puede
                     obtenerse en el receptor mediante radio, descargarse por
                     Internet mediante una conexión inalámbrica, o bien utilizar
                     una constelación de satélites adicional dedicada a elaborar
                     y servir este tipo de datos.
                 </p>
-                <p>
+<p>
                     La corrección puede realizarse fuera del propio receptor, a
                     posteriori, utilizando software adecuado y los mismos datos
                     de corrección que si se realiza la corrección en tiempo
                     real.
                 </p>
-                <p>
+<p>
                     El fundamento de este sistema es que los errores que afectan
                     al receptor móvil también afectan al de referencia. La
                     magnitud del error que afecta al receptor de referencia
@@ -3154,42 +3088,42 @@
                     al receptor móvil, asumiendo que ambos errores son de
                     similar índole.
                 </p>
-                <p>
+<p>
                     En la actualidad, aplicando estas técnicas de corrección
                     diferencial, un GPS puede obtener precisiones del orden de 2
                     metros en latitud y longitud, y 3 en altitud. Sin corrección
                     diferencial, esta precisión es de unos 10--20 metros.
                 </p>
-                <p>
+<p>
                     La figura \ref{Fig:DGPS} muestra un esquema del
                     funcionamiento del GPS diferencial.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/DGPS.png" width="50.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="DGPS" src="../img/DGPS.png" width="50.0%"/>
+<figcaption>
                             Esquema de funcionamiento del GPS diferencial
                         </figcaption>
                         $$\label{Fig:DGPS}$$
                     </figure>
-                </p>
-                <h3 id="Tipos de receptores">Tipos de receptores</h3>
-                <p>
+</p>
+<h3 id="Tipos de receptores">Tipos de receptores</h3>
+<p>
                     La precisión del sistema global GPS depende del tipo de
                     receptor GPS (o, en el lenguaje común, GPS a secas) que se
                     emplee, obteniéndose mayores precisiones con receptores más
                     avanzados, siempre dentro de las posibilidades del propio
                     sistema.
                 </p>
-                <p>
+<p>
                     En función de sus características y de la forma en que
                     operan, podemos distinguir los siguientes tipos de
                     receptores GPS:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Receptores secuenciales </b>
+
+<ul>
+<li>
+<b> Receptores secuenciales </b>
                         . Establece conexiones secuenciales con los distintos
                         satélites disponibles, estando conectado a uno o dos a
                         lo sumo simultáneamente. Estos receptores son más
@@ -3197,16 +3131,16 @@
                         menos complejos, aunque la precisión que se obtiene
                         también es menor.
                     </li>
-                    <li>
-                        <b> Receptores continuos </b>
+<li>
+<b> Receptores continuos </b>
                         . Disponen de más canales de radio que los anteriores y
                         ello permite que la conexión a los satélites sea
                         continua, sin tener que alternar entre uno y otro. La
                         precisión que se obtiene es mayor, pero se trata de
                         equipos más caros.
                     </li>
-                    <li>
-                        <b> Receptores con canales multiplexados </b>
+<li>
+<b> Receptores con canales multiplexados </b>
                         . El esquema de funcionamiento es similar al secuencial,
                         alternando entre los distintos satélites y utilizando un
                         único canal. No obstante, utilizan software más complejo
@@ -3214,13 +3148,13 @@
                         alternancia se puede producir con una frecuencia mucho
                         más elevada.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     A día de hoy, es habitual que incluso los GPS de menor coste
                     tengan múltiples canales, permitiendo la conexión continua
                     con un número elevado de satélites.
                 </p>
-                <p>
+<p>
                     Como hemos visto, las señales emitidas por los satélites
                     contienen dos códigos (C/A y P) que se transmiten modulados
                     sobre dos ondas portadoras distintas (L1 y L2). No todos los
@@ -3228,14 +3162,14 @@
                     las señales, y en función de ello podemos también
                     clasificarlos.
                 </p>
-                <p>
+<p>
                     Los más sencillos únicamente basan sus cálculos en el código
                     C/A, mientras que los más avanzados y complejos son capaces
                     de utilizar el código P (encriptado, por lo que es necesaria
                     una clave correspondiente), así como las portadoras para un
                     cálculo más preciso, según se explicó en un punto anterior.
                 </p>
-                <p>
+<p>
                     Por último, y teniendo en cuenta que el sistema GPS mide las
                     coordenadas $(x,y,z)$ y el tiempo, y que existen diferentes
                     precisiones en función de la tecnología que los receptores
@@ -3245,9 +3179,8 @@
                     algunos de los tipos principales en función de dicho uso.
                 </p>
 
-                <p></p>
-                <ul>
-                    <li>
+<ul>
+<li>
                         GPS para uso general. Unidades pequeñas y portátiles, de
                         bajo coste, para actividades al aire libre, donde no se
                         requiere una precisión elevada sino simplemente un
@@ -3263,7 +3196,7 @@
                         previamente incorporada al dispositivo. La figura
                         \ref{Fig:gps_1}a muestra un receptor GPS de uso general.
                     </li>
-                    <li>
+<li>
                         GPS para la medición topográfica. Unidades de medio
                         tamaño, generalmente con una antena independiente que se
                         conecta a la unidad y que el propio operario carga a la
@@ -3282,7 +3215,7 @@
                         aplicaciones propias, más allá de la mera visualización
                         de cartografía asociada, como en el caso anterior.
                     </li>
-                    <li>
+<li>
                         GPS para la medición del tiempo. Estos GPS no resultan
                         de tanto interés para su uso en un SIG, ya que se
                         encuentran fijos en un punto y no conceden importancia a
@@ -3291,28 +3224,28 @@
                         precisa del tiempo, ya que la referencia temporal que
                         ofrece el sistema GPS es muy precisa y estable.
                     </li>
-                </ul>
-                <p>
-                    <figure>
-                        <img src="../img/gps.png" width="60.0%" />
-                        <figcaption>
+</ul>
+<p>
+<figure>
+<img alt="gps" src="../img/gps.png" width="60.0%"/>
+<figcaption>
                             Receptor GPS de bajo coste para uso general (a) y
                             receptor GPS de alta precisión con antena externa
                             (b)
                         </figcaption>
                         $$\label{Fig:gps_1}$$
                     </figure>
-                </p>
-                <h3 id="Operaciones con la unidad GPS">
+</p>
+<h3 id="Operaciones con la unidad GPS">
                     Operaciones con la unidad GPS
                 </h3>
-                <p>
+<p>
                     La forma en que utilizamos el receptor GPS para recoger los
                     datos que emplearemos posteriormente en el SIG puede ser muy
                     variada en función del tipo de dato, la precisión necesaria
                     o las características del propio receptor.
                 </p>
-                <p>
+<p>
                     Los receptores de menor coste están generalmente pensados
                     para ser de utilidad directamente en el campo, por ejemplo
                     para localizar un punto concreto y conocer la dirección en
@@ -3322,7 +3255,7 @@
                     de vista de un SIG, ya que las coordenadas recogidas serán
                     después los datos que llevemos a este.
                 </p>
-                <p>
+<p>
                     Por su parte, las unidades de mayor precisión están
                     concebidas para tareas tales como levantamientos
                     topográficos, donde la toma de datos es lo fundamental, pero
@@ -3333,7 +3266,7 @@
                     son aquellas que van a recoger coordenadas, pues son las que
                     generan datos y convierten al GPS en una fuente de ellos.
                 </p>
-                <p>
+<p>
                     Las capacidades de recogida de datos en una unidad GPS de
                     bajo coste permiten almacenar puntos o trazados completos,
                     encontrándose el operario inmóvil o bien en movimiento a lo
@@ -3350,7 +3283,7 @@
                     <i> route </i>
                     (ruta).
                 </p>
-                <p>
+<p>
                     En el trabajo con el receptor GPS, el operario se puede
                     detener en un punto cualquiera y memorizar las coordenadas
                     del mismo, añadiendo así un
@@ -3364,7 +3297,7 @@
                     quiera obtenerse, la edición posterior en gabinete habrá de
                     ser más o menos intensa.
                 </p>
-                <p>
+<p>
                     Esta edición no está relacionada solo con la introducción de
                     correcciones, sino con la interpretación de los distintos
                     puntos recogidos. Por ejemplo, para registrar el trazado de
@@ -3374,7 +3307,7 @@
                     obtención de una línea recta a partir de estos, y ello
                     requiere la interpretación de los datos disponibles.
                 </p>
-                <p>
+<p>
                     Pese a que la precisión de estas unidades es limitada y no
                     permiten técnicas avanzadas de corrección (tal precisión no
                     es necesarias para las actividades tales como senderismo o
@@ -3391,14 +3324,14 @@
                     <a href="Fuentes_datos.html#VGI"> VGI </a>
                     .
                 </p>
-                <p>
+<p>
                     Para trabajos de mayor precisión tales como levantamientos
                     topográficos, estos receptores no son, sin embargo,
                     suficientes. El uso de receptores más precisos y de técnicas
                     avanzadas es necesario para obtener precisiones mayores, que
                     pueden ser incluso milimétricas.
                 </p>
-                <p>
+<p>
                     Estos receptores pueden emplearse individualmente del mismo
                     modo que se hace con un GPS de bajo coste, y registrar
                     puntos de forma similar. La verdadera potencia, no obstante,
@@ -3406,7 +3339,7 @@
                     o varias unidades adicionales, las cuales aportan valores de
                     referencia que permiten aumentar la precisión.
                 </p>
-                <p>
+<p>
                     Entre el receptor móvil y el de referencia se establece una
                     <i> línea base </i>
                     , y en el cálculo de la posición lo que se calcula es el
@@ -3417,7 +3350,7 @@
                     ese vector también se calcula con precisión, la posición
                     buscada que se obtiene es altamente precisa.
                 </p>
-                <p>
+<p>
                     La principal ventaja con respecto a métodos topográficos
                     clásicos es que no es necesario que haya visibilidad entre
                     los dos receptores. De esta forma, puede utilizarse una
@@ -3425,13 +3358,13 @@
                     cuyas coordenadas queremos medir, y las líneas base pueden
                     ser de mayor longitud.
                 </p>
-                <p>
+<p>
                     Otras ventajas también destacables son el hecho de que puede
                     obtenerse una productividad mucho mayor, ya que una única
                     unidad de referencia puede ser utilizada por varias unidades
                     móviles.
                 </p>
-                <p>
+<p>
                     El número de técnicas existentes en la actualidad para
                     realizar este tipo de mediciones (ya sea con uno o con
                     varios receptores) es variada. El hecho de que se busquen
@@ -3442,16 +3375,16 @@
                     base y los requerimientos concretos del trabajo, serán unas
                     u otras las más adecuadas para cada caso.
                 </p>
-                <p>
+<p>
                     La diferencia principal entre estas técnicas es el tiempo
                     necesario para la recogida de un punto. En general, un mayor
                     tiempo equivale a una mayor precisión. Entre las técnicas
                     habituales, cabe citar las siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Estático </b>
+
+<ul>
+<li>
+<b> Estático </b>
                         . En base a dos puntos de referencia (con una unidad GPS
                         fija en cada uno de ellos), se calcula la posición de un
                         tercero en un punto dado. Se trata del método más
@@ -3461,13 +3394,13 @@
                         se emplean casi exclusivamente en trabajos geodésicos y
                         las líneas base pueden ser de gran longitud.
                     </li>
-                    <li>
-                        <b> Estático rápido </b>
+<li>
+<b> Estático rápido </b>
                         . Igual que el anterior, pero con tiempos menores, del
                         orden de 5--10 minutos por punto medido.
                     </li>
-                    <li>
-                        <b> Cinemático </b>
+<li>
+<b> Cinemático </b>
                         . Los tiempos son aún menores que en el estático rápido,
                         del orden del minuto. El fundamento de la técnica es
                         distinto a los anteriores, ya que tras la inicialización
@@ -3515,14 +3448,14 @@
                         <a href="../bib.htm#Rizos1998BCG"> Rizos1998BCG </a>
                         ].
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Para profundizar más al respecto, en [
                     <a href="../bib.htm#Asenjo1997UPV"> Asenjo1997UPV </a>
                     ] puede encontrarse información sobre la realización de
                     levantamientos con GPS.
                 </p>
-                <p>
+<p>
                     En base a los ejemplos anteriores, y para concluir esta
                     parte, podemos dar una clasificación de las operaciones con
                     un receptor GPS en función de tres criterios básicos: el
@@ -3531,17 +3464,17 @@
                     el que se obtiene el dato ya listo para su utilización
                     posterior.
                 </p>
-                <p>Según el número de unidades, tenemos:</p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Absolutas </b>
+<p>Según el número de unidades, tenemos:</p>
+
+<ul>
+<li>
+<b> Absolutas </b>
                         . Se tiene un único receptor y un único operario. La
                         posición se calcula con la información de los satélites,
                         sin apoyo de otra unidad adicional.
                     </li>
-                    <li>
-                        <b> Relativas </b>
+<li>
+<b> Relativas </b>
                         . Se emplea una unidad adicional a modo de referencia.
                         Las medidas se basan en la información de los satélites
                         y la que aporta dicha unidad de referencia, y la
@@ -3549,45 +3482,45 @@
                         términos absolutos. Estas operaciones alcanzan un grado
                         de precisión mayor que las de tipo absoluto.
                     </li>
-                </ul>
-                <p>Atendiendo al movimiento del receptor encontramos:</p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Estáticas </b>
+</ul>
+<p>Atendiendo al movimiento del receptor encontramos:</p>
+
+<ul>
+<li>
+<b> Estáticas </b>
                         .
                     </li>
-                    <li>
-                        <b> Cinemáticas </b>
+<li>
+<b> Cinemáticas </b>
                         .
                     </li>
-                    <li>
-                        <b> Variantes intermedias </b>
+<li>
+<b> Variantes intermedias </b>
                         .
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Por último, en función de la obtención de datos,
                     distinguimos:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> En tiempo real </b>
+
+<ul>
+<li>
+<b> En tiempo real </b>
                         . Las correcciones pertinentes se realizan en el acto, y
                         el resultado que se visualiza en el receptor o se
                         almacena en este ya ha sido filtrado y corregido.
                     </li>
-                    <li>
-                        <b> Con necesidad de postproceso </b>
+<li>
+<b> Con necesidad de postproceso </b>
                         . Las correcciones se realizan en gabinete
                         posteriormente, con información que el receptor no posee
                         o no es capaz de procesar de modo inmediato durante su
                         utilización.
                     </li>
-                </ul>
-                <h3 id="Integración de GPS y SIG">Integración de GPS y SIG</h3>
-                <p>
+</ul>
+<h3 id="Integración de GPS y SIG">Integración de GPS y SIG</h3>
+<p>
                     La utilidad de un GPS como fuente de datos para el trabajo
                     en un SIG es innegable. Multitud de trabajos que requieren
                     la toma de datos en campo y la medición de coordenadas
@@ -3595,7 +3528,7 @@
                     información derivada de ese uso puede ser posteriormente
                     incorporada a un SIG.
                 </p>
-                <p>
+<p>
                     EL GPS puede emplearse como una fuente de datos estática (se
                     utiliza como herramienta para la creación de una capa de
                     información geográfica y esta después se emplea en el SIG de
@@ -3607,7 +3540,7 @@
                     dispositivos habitualmente incorporan, y alimentarse con los
                     datos de dichos receptores en tiempo real.
                 </p>
-                <p>
+<p>
                     Un caso particular de esto son los cada día más populares
                     navegadores GPS. Estos dispositivos aúnan el receptor GPS y
                     una aplicación de tipo SIG que presenta un visor y permite
@@ -3620,7 +3553,7 @@
                     en que se encuentra el dispositivo, que se obtiene a partir
                     del GPS.
                 </p>
-                <p>
+<p>
                     Como herramientas estáticas, el trabajo en campo con un GPS
                     genera un conjunto de puntos o de trazados, que pueden
                     fácilmente transferirse al ordenador para poder trabajar con
@@ -3630,13 +3563,13 @@
                     dicho GPS incorpora herramientas para ayudar en la
                     comunicación entre SIG y GPS.
                 </p>
-                <p>
+<p>
                     Además de la información posicional que deriva del sistema
                     GPS, los receptores GPS pueden incorporar elementos que
                     permitan la entrada de la componente temática asociada a las
                     distintas entidades, es decir, los atributos.
                 </p>
-                <p>
+<p>
                     Las funcionalidades incorporadas en el receptor suelen ser
                     sencillas, pero permiten que desde este se pueda llevar a
                     cabo todo el proceso de creación de la capa que
@@ -3648,7 +3581,7 @@
                     trabajo en gabinete, lo cual en ocasiones resulta más
                     sencillo y práctico.
                 </p>
-                <p>
+<p>
                     El volumen de trabajo que se requiere una vez que los datos
                     han sido recogidos dependerá también de las necesidades de
                     precisión que se presenten y del tipo de trabajo en que se
@@ -3666,7 +3599,7 @@
                     verificado los datos del GPS y elaborado las capas
                     correspondientes.
                 </p>
-                <p>
+<p>
                     Para el lector interesado, una referencia completa sobre el
                     uso de GPS de cara a la integración de los datos en un SIG
                     es [
@@ -3677,11 +3610,10 @@
                     ámbito en el que SIG y GPS se unen para conformar
                     herramientas conjuntas.
                 </p>
-                <h2 id="Información Geográfica Voluntaria">
+<h2 id="Información Geográfica Voluntaria">
                     Información Geográfica Voluntaria
                 </h2>
-                <a name="VGI"> </a>
-                <p>
+<p id="VGI">
                     Hemos mencionado ya que los dispositivos tales como
                     receptores GPS de bajo coste pueden emplearse para recoger
                     información geográfica y crear datos geográficos, y que
@@ -3703,7 +3635,7 @@
                     abren el ámbito de la creación cartográfica a grupo nuevo de
                     personas.
                 </p>
-                <p>
+<p>
                     Se conoce como
                     <i> Información Geográfica Voluntaria o Participativa </i>
                     (en inglés Volunteered Geographical Information, VGI)[
@@ -3719,7 +3651,7 @@
                     anterior en este mismo capítulo, sirve perfectamente para
                     ilustrar qué es lo que entendemos por VGI y neogeografía. }
                 </p>
-                <p>
+<p>
                     En el caso particular de esta última, la neogeografía ha
                     supuesto un profundo cambio en algunas de las ideas básicas
                     de la cartografía, modificando asimismo la concepción
@@ -3730,9 +3662,9 @@
                     escaso). Algunas de las ideas principales sobre la
                     neogeografía son las siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Popularización y democratización. La producción
                         cartográfica ha estado siempre en manos de gobiernos u
                         organismos, y en muchas ocasiones fuertemente censurada
@@ -3742,16 +3674,16 @@
                         restricciones. Se invierte el esquema «hacia abajo» de
                         producción y uso de información geográfica.
                     </li>
-                    <li>
+<li>
                         Los ciudadanos se convierten en «sensores» y tienen
                         mayor consciencia de su realidad geo-espacial.
                     </li>
-                    <li>
+<li>
                         Se elimina parte del «misticismo» de la producción de
                         información geográfica
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     En parte, estas ideas son también comunes a otros fenómenos
                     basados en la Web 2.0, ya que todas se fundamentan en una
                     mayor democratización de la información, sea esta geográfica
@@ -3770,14 +3702,14 @@
                     Esto puede plantear dudas lógicas acerca de la conveniencia
                     de usar esa información.
                 </p>
-                <p>
+<p>
                     No debe olvidarse, no obstante, que la Web 2.0 también tiene
                     sus mecanismos de regulación, y que en otros casos ya se ha
                     demostrado que, para otros tipos de información, la calidad
                     y rigor de esta no es inferior a la creada con esquemas más
                     clásicos y menos abiertos.
                 </p>
-                <p>
+<p>
                     Por otra parte, el hecho de que se use equipo de bajo coste
                     y los usuarios no sean técnicos especializados no es
                     necesariamente un problema. Un usuario sin formación no está
@@ -3792,10 +3724,10 @@
                     otorgarle validez y precisión adecuada al uso del que
                     posteriormente va a ser objeto.
                 </p>
-                <h2 id="Sobre cartografía de elevaciones">
+<h2 id="Sobre cartografía de elevaciones">
                     Sobre cartografía de elevaciones
                 </h2>
-                <p>
+<p>
                     La cartografía de elevaciones es probablemente la de mayor
                     importancia de entre todas las que se emplean de forma
                     habitual dentro de cualquier proyecto SIG. Su relevancia
@@ -3805,7 +3737,7 @@
                     tanto puede obtenerse amplia información sobre dichos
                     procesos a partir de una capa con datos de elevación.
                 </p>
-                <p>
+<p>
                     Dedicaremos en este libro un capítulo entero, el
                     <a href="Geomorfometria.html#Geomorfometria">
                         Geomorfometria
@@ -3825,7 +3757,7 @@
                     para el análisis de la cartografía de elevaciones, ya que
                     ofrece un mayor abanico de posibilidades frente a otros.
                 </p>
-                <p>
+<p>
                     Aunque el formato ráster es el más indicado para llevar a
                     cabo los análisis correspondientes, la cartografía de
                     elevaciones puede crearse originalmente con muy diversas
@@ -3842,16 +3774,16 @@
                     análisis de este tipo de cartografía, abundantes en este
                     libro como ya se ha dicho.
                 </p>
-                <p>
+<p>
                     A modo de resumen, he aquí una lista de metodologías a
                     partir de las cuales puede obtenerse cartografía de
                     elevaciones, gran parte de las cuales han sido tratadas con
                     detalle antes en este mismo capítulo.
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> GPS </b>
+
+<ul>
+<li>
+<b> GPS </b>
                         . Como ya sabemos, un GPS toma datos no solo de la
                         posición que ocupa en coordenadas $x$ e $y$, sino
                         también su elevación. La utilización de GPS permite
@@ -3863,8 +3795,8 @@
                         más reducidas, donde se demuestra como una herramienta
                         sumamente eficaz.
                     </li>
-                    <li>
-                        <b> Digitalización de curvas de nivel </b>
+<li>
+<b> Digitalización de curvas de nivel </b>
                         . En ocasiones la cartografía de elevaciones ya existe,
                         aunque no en el formato adecuado para su empleo en un
                         SIG. Ya conocemos los métodos de digitalización de
@@ -3874,8 +3806,8 @@
                         capa de líneas con la información altitudinal que
                         contiene un mapa topográfico habitual.
                     </li>
-                    <li>
-                        <b> Estereografía </b>
+<li>
+<b> Estereografía </b>
                         . A partir de pares estereoscópicos, y con el concurso
                         de una estación fotogramétrica digital pueden delinearse
                         líneas o puntos de una elevación dada, digitalizando así
@@ -3885,8 +3817,8 @@
                         las imágenes de partida, y se infieren a partir de la
                         visualización tridimensional de las mismas.
                     </li>
-                    <li>
-                        <b> Interferometría </b>
+<li>
+<b> Interferometría </b>
                         . La interferometría es una técnica cuyos fundamentos
                         son en cierta medida similares a los de la
                         estereografía, pues se basan en la información recogida
@@ -3916,9 +3848,9 @@
                             ] puede encontrarse una descripción detallada de
                             este tipo de técnicas y las etapas que comprenden.
                         </p>
-                    </li>
-                    <li>
-                        <b> LiDAR </b>
+</li>
+<li>
+<b> LiDAR </b>
                         . La técnica más avanzada en la actualidad es el uso de
                         aparatos de altimetría basados en láser, como el LiDAR,
                         que ya hemos visto en este mismo capítulo. El LiDAR
@@ -3934,9 +3866,9 @@
                             requiere para la obtención final de una capa es
                             mucho menor que con otras técnicas.
                         </p>
-                    </li>
-                </ul>
-                <p>
+</li>
+</ul>
+<p>
                     A la hora de plantear un proyecto SIG, debe elegirse entre
                     estas fuentes, tanto si se desea adquirir la cartografía ya
                     elaborada como si se desea crearla a partir de otras
@@ -3954,9 +3886,8 @@
                     <a href="../bib.htm#Mercer2001PW"> Mercer2001PW </a>
                     ].
                 </p>
-                <h2 id="Formatos de archivo">Formatos de archivo</h2>
-                <a name="Formatos_archivo"> </a>
-                <p>
+<h2 id="Formatos de archivo">Formatos de archivo</h2>
+<p id="Formatos_archivo">
                     Conocer las distintas fuentes de datos es importante para
                     elaborar una base de datos geográfica que permita obtener
                     los mejores resultados posibles, pero también lo es el
@@ -3965,7 +3896,7 @@
                     archivos, y existen muchos formatos de archivo distintos
                     para recoger un mismo conjunto de datos.
                 </p>
-                <p>
+<p>
                     Estos archivos son la materialización de los modelos de
                     almacenamiento que veíamos en el apartado
                     <a href="Tipos_datos.html#Modelos_almacenamiento">
@@ -3978,7 +3909,7 @@
                     homogeneizar la forma en que se presentan los datos dentro
                     de un determinado ámbito de trabajo.
                 </p>
-                <p>
+<p>
                     Datos de una misma procedencia pueden presentarse de forma
                     distinta si se emplean diferentes formatos de archivo. Las
                     circunstancias por las cuales se opta por uno u otro formato
@@ -3988,7 +3919,7 @@
                     lo adecuadas que estas son para recoger la información con
                     la que trabajamos.
                 </p>
-                <p>
+<p>
                     La existencia de muchos formatos de archivo dificulta el
                     trabajo con los datos en un SIG, principalmente porque
                     ningún SIG implementa la capacidad de poder «leer» todos los
@@ -4000,7 +3931,7 @@
                     proyecto requiere normalmente tiempo para la gestión
                     adecuada de datos en formatos variados.
                 </p>
-                <p>
+<p>
                     Un problema más serio, no obstante, es el desconocimiento
                     por parte de los usuarios de las implicaciones que tiene el
                     uso de uno u otro formato, ya que en ocasiones no permiten
@@ -4016,14 +3947,14 @@
                     de capas de datos SIG (en este caso, capas vectoriales), y
                     es importante conocer este hecho.
                 </p>
-                <p>
+<p>
                     La existencia de librerías que actúan a modo de interpretes
                     facilita el desarrollo de aplicaciones SIG con capacidades
                     de lectura y escritura en muchos formatos distintos, pero
                     aún así se requiere un cierto grado de comprensión de estos
                     por parte del usuario.
                 </p>
-                <p>
+<p>
                     Debemos pensar asimismo que los formatos de archivo no solo
                     se emplean en un proyecto SIG para los datos de entrada,
                     sino también para almacenar los resultados que se generan a
@@ -4038,7 +3969,7 @@
                     comunicación como la potencialidad de nuestros datos para
                     todo tipo de uso, ya sea dentro o fuera de un SIG.
                 </p>
-                <p>
+<p>
                     En esta sección no se pretende describir todos los formatos
                     existentes, ya que son demasiados y ello no tendría sentido.
                     Se describirán solo los más populares (que no siempre han de
@@ -4051,7 +3982,7 @@
                     discernir si un formato es o no adecuado para sus datos y
                     las operaciones que quiere aplicar sobre ellos.
                 </p>
-                <p>
+<p>
                     Junto con estos formatos de archivo, en el capítulo
                     <a href="Cliente_servidor.html#Estandares"> Estandares </a>
                     se presentan los estándares de datos, que también se emplean
@@ -4065,10 +3996,10 @@
                     el acceso a los datos, incluyendo entre ellas el acceso
                     directo a archivos.
                 </p>
-                <h3 id="Formatos para datos ráster">
+<h3 id="Formatos para datos ráster">
                     Formatos para datos ráster
                 </h3>
-                <p>
+<p>
                     Los formatos de archivo para datos ráster son muy
                     abundantes, existiendo numerosas alternativas con
                     diferencias en ocasiones notables entre sí. Debido a que uno
@@ -4081,8 +4012,8 @@
                     ráster y son de hecho de uso habitual en el ámbito de los
                     Sistemas de Información Geográfica.
                 </p>
-                <h4 id="Formatos para imágenes">Formatos para imágenes</h4>
-                <p>
+<h4 id="Formatos para imágenes">Formatos para imágenes</h4>
+<p>
                     Las imágenes son un tipo de dato muy habitual en un SIG y se
                     corresponden con el modelo de datos ráster. Por ello, los
                     formatos de archivo empleados para el almacenamiento de
@@ -4093,7 +4024,7 @@
                     no son imágenes como tales, como por ejemplo un Modelo
                     Digital de Elevaciones.
                 </p>
-                <p>
+<p>
                     Los formatos de archivo para imágenes son adecuados para
                     recoger los colores de las imágenes, pero esto no es
                     suficiente a la hora de almacenar otros valores (por
@@ -4101,7 +4032,7 @@
                     número más elevado de bandas, como en el caso de imágenes
                     hiperespectrales.
                 </p>
-                <p>
+<p>
                     Una imagen en blanco y negro o en escala de grises contiene
                     una banda. Una imagen en color contiene tres, ya que los
                     colores se expresan como una terna de colores básicos: rojo,
@@ -4115,13 +4046,13 @@
                     tales como las variables físicas que pueden emplearse en un
                     SIG, ya que estas presentan valores continuos.
                 </p>
-                <p>
+<p>
                     En estos casos, los formatos de imágenes no son adecuados en
                     su forma original, y deben o bien adaptarse o bien emplearse
                     formatos más específicos que tengan en cuenta el tipo
                     particular de datos que se almacenan.
                 </p>
-                <p>
+<p>
                     Otro problema es la presencia de celdas sin datos. La
                     existencia de celdas sin datos es un hecho que no contemplan
                     los formatos de imágenes. A estas celdas se les asigna un
@@ -4137,7 +4068,7 @@
                     los más adecuados para datos SIG, y esta solución no
                     resuelve por completo esta deficiencia.
                 </p>
-                <p>
+<p>
                     Otra carencia de la mayoría de formatos de imágenes es que
                     no pueden recoger la referencia geográfica de la imagen.
                     Salvo que las imágenes sean utilizadas en un SIG, no hay
@@ -4149,7 +4080,7 @@
                     imágenes de satélite o aéreas destinadas a un análisis
                     espacial), no tienen en cuenta estas necesidades.
                 </p>
-                <p>
+<p>
                     Una forma habitual de resolver esto es acompañar cada
                     fichero de imagen con un pequeño fichero de texto plano
                     donde se contengan los datos geográficos correspondientes a
@@ -4157,26 +4088,26 @@
                     <i> World File </i>
                     , y contiene los siguientes valores:
                 </p>
-                <p></p>
-                <ul>
-                    <li>Tamaño de celda en la dirección Este--Oeste</li>
-                    <li>
+
+<ul>
+<li>Tamaño de celda en la dirección Este--Oeste</li>
+<li>
                         Ángulos de rotación del plano respecto a los ejes X e Y.
                         Estos valores son siempre iguales a cero.
                     </li>
-                    <li>
+<li>
                         Tamaño de celda en la dirección Norte--Sur, con signo
                         negativo
                     </li>
-                    <li>
+<li>
                         Coordenadas
                         <i> x </i>
                         e
                         <i> y </i>
                         del píxel superior izquierdo de la imagen.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Este
                     <i> World File </i>
                     tiene el mismo nombre que el archivo de imagen, y su
@@ -4194,7 +4125,7 @@
                     espaciales u operaciones como la digitalización en pantalla
                     (heads--up) que hemos visto anteriormente.
                 </p>
-                <p>
+<p>
                     Por último, un aspecto importante de los archivos de imagen
                     es el tipo de compresión que utilizan. Las imágenes con las
                     que se trabaja en un SIG pueden ser muy voluminosas, y para
@@ -4207,7 +4138,7 @@
                     algún método de compresión para disminuir el volumen del
                     archivo.
                 </p>
-                <p>
+<p>
                     En el apartado relativo a los modelos de almacenamiento
                     vimos algunas ideas sobre compresión, presentando la
                     codificación
@@ -4225,7 +4156,7 @@
                     <i> sin pérdidas </i>
                     .
                 </p>
-                <p>
+<p>
                     Por el contrario, existen otros métodos de compresión
                     <i> con pérdidas </i>
                     , en los cuales se pierde información y la imagen
@@ -4237,7 +4168,7 @@
                     relevante, que se pierde en aras de obtener un menor volumen
                     de almacenamiento.
                 </p>
-                <p>
+<p>
                     Siempre que sea posible, los formatos de compresión sin
                     pérdidas deben preferirse frente a los que utilizan
                     algoritmos de compresión con pérdidas. En función de las
@@ -4246,7 +4177,7 @@
                     siempre la degradación que la compresión con pérdidas
                     implica.
                 </p>
-                <p>
+<p>
                     Algunos formatos de imagen que emplean compresión con
                     pérdidas son altamente populares, ya que se emplean para
                     tareas donde la reducción de tamaño de los ficheros es
@@ -4261,17 +4192,14 @@
                     pérdidas responden mejor a las necesidades del
                     almacenamiento de datos SIG.
                 </p>
-                <p>
+<p>
                     En la imagen \ref{Fig:Compresion_con_perdidas} puede verse
                     el efecto de la utilización de compresión con pérdidas.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Compresion_con_perdidas.png"
-                            width="100%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Compresion_con_perdidas" src="../img/Compresion_con_perdidas.png" width="100%"/>
+<figcaption>
                             Efectos de la utilización de algoritmos de
                             compresión con pérdidas. a) Imagen original. b)
                             Imagen almacenada mediante compresión con pérdidas.
@@ -4281,23 +4209,23 @@
                         </figcaption>
                         $$\label{Fig:Compresion_con_perdidas}$$
                     </figure>
-                </p>
-                <h4 id="Formatos para datos SIG">Formatos para datos SIG</h4>
-                <p>
+</p>
+<h4 id="Formatos para datos SIG">Formatos para datos SIG</h4>
+<p>
                     Junto con los formatos de archivo para imágenes, los SIG
                     ráster han desarrollado sus propios formatos para el
                     almacenamiento de capas ráster en general, y en particular
                     de aquellas que no representan imágenes, tales como capas de
                     variables físicas.
                 </p>
-                <p>
+<p>
                     Estos formatos están pensados para las características de
                     estas capas, que habitualmente recogen valores decimales (a
                     diferencia de los valores enteros de los Niveles Digitales
                     de una imagen), y que no suelen contener más que una única
                     banda.
                 </p>
-                <p>
+<p>
                     Prácticamente cada SIG tiene su propio formato de archivo
                     ráster, y otras aplicaciones que trabajan con este tipo de
                     datos, tales como todas aquellas que usan por una u otra
@@ -4305,23 +4233,23 @@
                     formatos particulares. Muchos SIG pueden leer algunos de
                     estos formatos junto con los suyos propios .
                 </p>
-                <h4 id="Principales formatos existentes">
+<h4 id="Principales formatos existentes">
                     Principales formatos existentes
                 </h4>
-                <p>
+<p>
                     Dentro de la gran variedad de formatos existentes, he aquí
                     una breve lista de los principales, los cuales suelen
                     encontrarse con frecuencia a lo largo del desarrollo de un
                     proyecto SIG habitual.
                 </p>
-                <p>
+<p>
                     Dentro de los formatos para imágenes, cabe destacar los
                     siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Tagged Image File Format (tif) </b>
+
+<ul>
+<li>
+<b> Tagged Image File Format (tif) </b>
                         . Se trata de un formato complejo y altamente flexible,
                         con muchas variantes distintas. Puede incorporar tanto
                         compresión con pérdidas como sin pérdidas, en función
@@ -4340,8 +4268,8 @@
                         <i> World File </i>
                         asociado.
                     </li>
-                    <li>
-                        <b> Joint Photographic Experts Group (jpg o jpeg) </b>
+<li>
+<b> Joint Photographic Experts Group (jpg o jpeg) </b>
                         . Un formato muy popular para imágenes (todas las
                         cámaras digitales lo utilizan), no es sin embargo
                         adecuado para el trabajo con SIG. Incorpora compresión
@@ -4350,15 +4278,15 @@
                         utilizando este formato), y no es apto para almacenar
                         capas ráster que no sean de tipo imagen.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Algunos formatos específicos para imágenes SIG tales como
                     imágenes de satélite, son:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Enhanced Compression Wavelet (ecw) </b>
+
+<ul>
+<li>
+<b> Enhanced Compression Wavelet (ecw) </b>
                         . Está especialmente preparado para almacenar imágenes
                         de gran tamaño, ya que las imágenes aéreas o de satélite
                         en general tiene tamaños mayores que las imágenes de uso
@@ -4372,8 +4300,8 @@
                         selectiva). Se trata de un formato de compresión con
                         pérdidas, y su grado de compresión es alto.
                     </li>
-                    <li>
-                        <b>
+<li>
+<b>
                             Multi--resolution Seamless Image Database (MrSID)
                         </b>
                         (sid). Al contrario que el anterior, que es un formato
@@ -4382,24 +4310,24 @@
                         preparado para imágenes de gran volumen y con
                         posibilidad de descompresión selectiva.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Por último, entre los formatos para datos ráster (no
                     imágenes) más comunes destacar el siguiente:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> ArcInfo ASCII (asc) </b>
+
+<ul>
+<li>
+<b> ArcInfo ASCII (asc) </b>
                         . Un formato en texto plano ASCII. Únicamente soporta
                         una única banda, y permite almacenar el valor a
                         considerar como valor de sin datos.
                     </li>
-                </ul>
-                <h3 id="Formatos para datos vectoriales">
+</ul>
+<h3 id="Formatos para datos vectoriales">
                     Formatos para datos vectoriales
                 </h3>
-                <p>
+<p>
                     Sin ser tan abundantes como los formatos para datos ráster,
                     existe también un buen número de formatos de archivo para
                     datos vectoriales. Al igual que en el caso ráster, estos
@@ -4408,19 +4336,19 @@
                     vectorial, con particular importancia de las de diseño
                     asistido por ordenador (CAD).
                 </p>
-                <p>
+<p>
                     A la hora de definir las características de un formato de
                     archivo para datos vectoriales, encontramos dos aspectos
                     principales, a saber:
                 </p>
-                <p></p>
-                <ul>
-                    <li>Capacidad para recoger la topología de la capa</li>
-                    <li>
+
+<ul>
+<li>Capacidad para recoger la topología de la capa</li>
+<li>
                         Capacidad para recoger los atributos de las entidades.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     En el primer aspecto, debemos considerar que existen SIG no
                     topológicos, es decir, que no son capaces de manejar
                     información sobre la topología de la capa, y por tanto no la
@@ -4428,7 +4356,7 @@
                     por tanto pensados para trabajar con topología, y por ello
                     no la almacenan.
                 </p>
-                <p>
+<p>
                     Respecto a la capacidad para recoger los atributos de una
                     capa, este aspecto afecta principalmente a los formatos
                     propios de las aplicaciones CAD. En estas, la componente
@@ -4442,7 +4370,7 @@
                     emplearlas, ya que no están soportadas con carácter general
                     en los distintos SIG.
                 </p>
-                <p>
+<p>
                     Por esta razón, estos formatos son aptos para introducir
                     información dentro de un SIG o para exportarla a un CAD con
                     objeto de utilizar capacidades de este que no se tengan en
@@ -4450,17 +4378,17 @@
                     de un SIG no son los más adecuados, y debe optarse por otros
                     más específicos para datos SIG.
                 </p>
-                <h4 id="Principales formatos existentes">
+<h4 id="Principales formatos existentes">
                     Principales formatos existentes
                 </h4>
-                <p>
+<p>
                     Los formatos más extendidos para datos SIG vectoriales son
                     los siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Shapefile (shp) </b>
+
+<ul>
+<li>
+<b> Shapefile (shp) </b>
                         . Propuesto por la empresa ESRI, es el formato más
                         utilizado en la actualidad, convertido en un estándar
                         <i> de facto </i>
@@ -4469,8 +4397,8 @@
                         elementos del dato espacial (geometrías, atributos,
                         índices espaciales, etc.)
                     </li>
-                    <li>
-                        <b> Spatialite </b>
+<li>
+<b> Spatialite </b>
                         . Una extensión espacial para la base de datos
                         <i> SQLite </i>
                         . Se trata de una base de datos, pero no tiene la
@@ -4483,16 +4411,16 @@
                         habitual. Basado en él, surge el formato GeoPackage, que
                         cada día va cobrando más popularidad.
                     </li>
-                    <li>
-                        <b> GeoJSON </b>
+<li>
+<b> GeoJSON </b>
                         . Un formato de texto plano basado en notación JSON, de
                         uso extendido debido a su simplicidad. Existe una
                         variante denominada TopoJSON, que permite el
                         almacenamiento de topología.
                     </li>
-                </ul>
-                <h2 id="Resumen">Resumen</h2>
-                <p>
+</ul>
+<h2 id="Resumen">Resumen</h2>
+<p>
                     Los datos con los que trabajamos en un SIG pueden tener muy
                     distintas procedencias. Distinguimos aquellos que provienen
                     directamente de algún tipo de medida o del empleo directo de
@@ -4500,14 +4428,14 @@
                     que proceden de procesar un dato ya existente para adaptarlo
                     a su uso en un SIG (fuentes de datos secundarias).
                 </p>
-                <p>
+<p>
                     Una forma básica de crear datos espaciales digitales es la
                     utilización de fuentes no digitales y su digitalización.
                     Este proceso puede llevarse a cabo tanto de forma manual
                     como automatizada, y puede dar como resultado tanto capas
                     ráster como capas vectoriales.
                 </p>
-                <p>
+<p>
                     La teledetección es una fuente de datos de gran importancia
                     para los SIG. Dentro de ella se incluyen técnicas de muy
                     diversa índole cuyos productos son muy distintos entre sí.
@@ -4520,14 +4448,14 @@
                     aunque tecnologías como el radar o el LiDAR pueden emplearse
                     para la generación de cartografía de elevaciones.
                 </p>
-                <p>
+<p>
                     Dentro de las tecnologías que permiten la recogida de datos
                     en campo, el GPS ha supuesto un cambio en la realización de
                     este tipo de trabajos, y su integración en SIG es sencilla.
                     Esto les ha convertido en una fuente de datos muy utilizada
                     en un gran número de proyectos SIG.
                 </p>
-                <p>
+<p>
                     Independientemente de su origen, los datos espaciales se
                     almacenan en archivos cuyos formatos son a su vez muy
                     variados. En este capítulo hemos visto algunos de los más
@@ -4535,186 +4463,186 @@
                     definen, y que han de tenerse en cuenta a la hora de
                     trabajar con dichos formatos y elegir los más adecuados.
                 </p>
-            </div>
-        </div>
-        <div id="toindex">
-            <a href="../index.html"> Portada </a>
-        </div>
-        <div id="slideout_chapter">
+</div>
+</div>
+<div id="toindex">
+<a href="../index.html"> Portada </a>
+</div>
+<div id="slideout_chapter">
             Índice
-            <br />
+            <br/>
             capítulo
             <div id="slideout_inner_chapter">
-                <div id="generated-toc"></div>
-            </div>
-        </div>
-        <div id="slideout_general">
+<div id="generated-toc"></div>
+</div>
+</div>
+<div id="slideout_general">
             Índice
-            <br />
+            <br/>
             general
             <div id="slideout_inner_general">
-                <p>
-                    <b> ÍNDICE GENERAL </b>
-                    <br />
-                </p>
-                <ul>
-                    <li>
-                        <a href="Intro.html"> Introducción </a>
-                    </li>
-                    <li>Parte 1. Fundamentos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_fundamentos.html">
+<p>
+<b> ÍNDICE GENERAL </b>
+<br/>
+</p>
+<ul>
+<li>
+<a href="Intro.html"> Introducción </a>
+</li>
+<li>Parte 1. Fundamentos</li>
+<ul>
+<li>
+<a href="Introduccion_fundamentos.html">
                                 Introducción. ¿Qué es un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Historia.html"> Historia de los SIG </a>
-                        </li>
-                        <li>
-                            <a href="Fundamentos_cartograficos.html">
+</li>
+<li>
+<a href="Historia.html"> Historia de los SIG </a>
+</li>
+<li>
+<a href="Fundamentos_cartograficos.html">
                                 Fundamentos cartográficos y geodésicos
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 2. Datos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_datos.html">
+</li>
+</ul>
+<li>Parte 2. Datos</li>
+<ul>
+<li>
+<a href="Introduccion_datos.html">
                                 Introducción. ¿Con qué trabajo en un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Tipos_datos.html">
+</li>
+<li>
+<a href="Tipos_datos.html">
                                 Modelos para la información geográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Fuentes_datos.html">
+</li>
+<li>
+<a href="Fuentes_datos.html">
                                 Fuentes principales de datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Calidad_datos.html">
+</li>
+<li>
+<a href="Calidad_datos.html">
                                 La calidad de los datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Bases_datos.html"> Bases de datos </a>
-                        </li>
-                        <li>
-                            <a href="Metadatos.html"> Metadatos </a>
-                        </li>
-                    </ul>
-                    <li>Parte 3. Analisis</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_procesos.html">
+</li>
+<li>
+<a href="Bases_datos.html"> Bases de datos </a>
+</li>
+<li>
+<a href="Metadatos.html"> Metadatos </a>
+</li>
+</ul>
+<li>Parte 3. Analisis</li>
+<ul>
+<li>
+<a href="Introduccion_procesos.html">
                                 Introducción. ¿Qué puedo hacer con un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Analisis_espacial.html">
+</li>
+<li>
+<a href="Analisis_espacial.html">
                                 Conceptos básicos para el análisis espacial
                             </a>
-                        </li>
-                        <li>
-                            <a href="Consultas.html">
+</li>
+<li>
+<a href="Consultas.html">
                                 Consultas y operaciones con bases de datos
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_espacial.html">
+</li>
+<li>
+<a href="Estadistica_espacial.html">
                                 Estadísticas espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_raster.html">
+</li>
+<li>
+<a href="Creacion_capas_raster.html">
                                 Creación de capas raster
                             </a>
-                        </li>
-                        <li>
-                            <a href="Algebra_de_mapas.html">
+</li>
+<li>
+<a href="Algebra_de_mapas.html">
                                 Álgebra de mapas
                             </a>
-                        </li>
-                        <li>
-                            <a href="Geomorfometria.html">
+</li>
+<li>
+<a href="Geomorfometria.html">
                                 Geomorfometría y análisis del terreno
                             </a>
-                        </li>
-                        <li>
-                            <a href="Imagenes.html"> Procesado de imágenes </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_vectoriales.html">
+</li>
+<li>
+<a href="Imagenes.html"> Procesado de imágenes </a>
+</li>
+<li>
+<a href="Creacion_capas_vectoriales.html">
                                 Creación de capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Operaciones_geometricas.html">
+</li>
+<li>
+<a href="Operaciones_geometricas.html">
                                 Operaciones geométricas con capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Costes.html">
+</li>
+<li>
+<a href="Costes.html">
                                 Costes, distancias y áreas de influencia
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_avanzada.html">
+</li>
+<li>
+<a href="Estadistica_avanzada.html">
                                 Más estadística espacial
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 4. Tecnología</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_tecnologia.html">
+</li>
+</ul>
+<li>Parte 4. Tecnología</li>
+<ul>
+<li>
+<a href="Introduccion_tecnologia.html">
                                 Introducción. ¿Cómo son las aplicaciones SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIGs_escritorio.html">
+</li>
+<li>
+<a href="SIGs_escritorio.html">
                                 Herramientas de escritorio
                             </a>
-                        </li>
-                        <li>
-                            <a href="Cliente_servidor.html">
+</li>
+<li>
+<a href="Cliente_servidor.html">
                                 Clientes y servidores remotos. Web mapping
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIG_movil.html"> SIG movil </a>
-                        </li>
-                    </ul>
-                    <li>Parte 5. Visualización</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_visualizacion.html">
+</li>
+<li>
+<a href="SIG_movil.html"> SIG movil </a>
+</li>
+</ul>
+<li>Parte 5. Visualización</li>
+<ul>
+<li>
+<a href="Introduccion_visualizacion.html">
                                 Introducción. Los SIG como herramientas de
                                 visualización
                             </a>
-                        </li>
-                        <li>
-                            <a href="Conceptos_basicos.html">
+</li>
+<li>
+<a href="Conceptos_basicos.html">
                                 Conceptos básicos de visualización y
                                 representación
                             </a>
-                        </li>
-                        <li>
-                            <a href="Mapas.html">
+</li>
+<li>
+<a href="Mapas.html">
                                 El mapa y la comunicación cartográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Visualizacion_SIG.html">
+</li>
+<li>
+<a href="Visualizacion_SIG.html">
                                 La visualización en términos SIG
                             </a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </body>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</body>
 </html>

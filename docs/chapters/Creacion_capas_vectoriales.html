@@ -1,42 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title> </title>
-        <link
-            href="../reset.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="../typography.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> </title>
+<link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<script type="text/x-mathjax-config">
              MathJax.Hub.Config({
               tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
               TeX: { equationNumbers: {autoNumber: "all"} }
             });
         </script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"
-            type="text/javascript"
-        ></script>
-        <script src="../generated_toc.js"></script>
-    </head>
-    <body lang="es">
-        <div class="main">
-            <div class="g960" id="chapter">
-                <h1>Creación de capas vectoriales</h1>
-                <p></p>
-                <p>
-                    <a name="Creacion_capas_vectoriales"> </a>
-                </p>
-                <h2 id="Introducción">Introducción</h2>
-                <p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="../generated_toc.js"></script>
+</head>
+<body lang="es">
+<div class="main">
+<div class="g960" id="chapter">
+<h1>Creación de capas vectoriales</h1>
+
+<h2 id="Introducción">Introducción</h2>
+<p>
                     La conversión de datos espaciales desde el modelo vectorial
                     al modelo ráster nos servía para obtener un dato espacial
                     mucho más adecuado para el análisis. Para variables
@@ -45,7 +31,7 @@
                     conversión que vimos era un paso previo para poder acceder a
                     toda la potencia de análisis de un SIG.
                 </p>
-                <p>
+<p>
                     Las ventajas del modelo ráster, que fueron comentadas con
                     detalle en el capítulo
                     <a href="Tipos_datos.html#Tipos_datos"> Tipos_datos </a>
@@ -56,7 +42,7 @@
                     preferible, pues, como ya vimos, también tiene su particular
                     serie de ventajas.
                 </p>
-                <p>
+<p>
                     Si en el capítulo
                     <a href="Creacion_capas_raster.html#Creacion_capas_raster">
                         Creacion_capas_raster
@@ -69,7 +55,7 @@
                     sencillamente el inverso de lo entonces presentado, sino que
                     implica otra serie de operaciones.
                 </p>
-                <p>
+<p>
                     Así, la conversión de puntos en una capa ráster, que nos
                     ocupó la mayoría de paginas en aquel capítulo, no tiene un
                     equivalente en la conversión de una capa ráster en una de
@@ -81,7 +67,7 @@
                     </a>
                     para calcular los valores de la variable en dichos puntos.
                 </p>
-                <p>
+<p>
                     Otras operaciones, sin embargo, tales como convertir una
                     capa ráster en una capa vectorial no de puntos sino de
                     isolíneas, sí que requieren algo más de explicación. Más
@@ -89,7 +75,7 @@
                     existen y son parte de los procesos que un SIG nos ofrece,
                     para que pueda incorporarlas a su batería de herramientas.
                 </p>
-                <p>
+<p>
                     La coexistencia de los datos vectoriales y ráster no solo es
                     una realidad, sino que en muchas ocasiones es una necesidad.
                     A lo largo de las distintas fases de trabajo dentro de un
@@ -104,10 +90,10 @@
                     inverso (de ráster a vectorial), como las que trataremos en
                     el presente.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Conversiones.png" width="80.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Conversiones" src="../img/Conversiones.png" width="80.0%"/>
+<figcaption>
                             Distintas conversiones de modelo de datos, a lo
                             largo de un proceso de trabajo con una capa de
                             elevaciones: a) mapa escaneado, b) curvas de nivel,
@@ -115,8 +101,8 @@
                         </figcaption>
                         $$\label{Fig:Conversiones}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     En el esquema de la figura, partimos de un mapa escaneado,
                     el cual es una imagen donde se pueden ver las curvas de
                     nivel con sus valores de altitud correspondientes. Se trata
@@ -131,7 +117,7 @@
                     </a>
                     , cuando vimos las fuentes de datos más habituales.
                 </p>
-                <p>
+<p>
                     Como se dijo entonces, esa digitalización puede llevarse a
                     cabo manualmente, bien digitalizando en pantalla o bien con
                     alguna otra herramienta más específica. Esa conversión no
@@ -141,7 +127,7 @@
                     escaneado y delinear en base a ellas las entidades de la
                     capa vectorial resultante.
                 </p>
-                <p>
+<p>
                     A partir de esa capa de líneas, el siguiente paso es la
                     obtención de una capa ráster. Todo lo necesario para llevar
                     a cabo este proceso ya lo hemos visto en el capítulo
@@ -150,7 +136,7 @@
                     </a>
                     .
                 </p>
-                <p>
+<p>
                     Por último, a partir de esa capa ráster podemos obtener de
                     nuevo un dato vectorial tal como un TIN, o bien de nuevo
                     unas curvas de nivel. En el caso de la figura, las curvas de
@@ -165,19 +151,19 @@
                     capítulo veremos en qué se basan las formulaciones que nos
                     permiten hacer tal conversión.
                 </p>
-                <p>
+<p>
                     A lo largo de este capítulo vamos a ver dos clases de
                     procesos para crear capas vectoriales a partir de capas
                     ráster.
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Conversión de capas ráster discretas. Vectorización.
                     </li>
-                    <li>Conversión de capas ráster continuas.</li>
-                </ul>
-                <p>
+<li>Conversión de capas ráster continuas.</li>
+</ul>
+<p>
                     Partiendo de una capa ráster discreta, el proceso de
                     vectorización pretende generar una capa vectorial que recoja
                     las geometrías que aparecen en dicha capa. Estas geometrías
@@ -190,17 +176,17 @@
                     conjuntos de celdas contiguas con el mismo valor. Esta idea
                     se recoge en la figura \ref{Fig:Vectorizacion}
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Vectorizacion.png" width="70.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Vectorizacion" src="../img/Vectorizacion.png" width="70.0%"/>
+<figcaption>
                             Vectorización de capas ráster discretas en capas de
                             polígonos (a) y de líneas (b). .
                         </figcaption>
                         $$\label{Fig:Vectorizacion}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     En la conversión de capas continuas, veremos cómo expresar
                     una capa ráster continua mediante un conjunto de entidades,
                     en particular mediante líneas y polígonos. Para el caso de
@@ -210,25 +196,24 @@
                     irregulares que, como ya vimos, sirve para almacenar
                     variables continuas, particularmente la elevación.
                 </p>
-                <h2 id="Vectorización de entidades">
+<h2 id="Vectorización de entidades">
                     Vectorización de entidades
                 </h2>
-                <a name="Vectorizacion"> </a>
-                <p>
+<p id="Vectorizacion">
                     La vectorización de entidades tiene como base una capa
                     ráster con una variable de tipo nominal u ordinal, en la
                     cual se reflejan distintas categorías. El objetivo es
                     expresar mediante entidades vectoriales los conjuntos de
                     celdas de una misma categoría.
                 </p>
-                <p>
+<p>
                     La necesidad de efectuar este tipo de operaciones va a
                     aparecer habitualmente cuando encontremos en nuestro trabajo
                     una capa ráster de este tipo, pues ya sabemos que resulta
                     más adecuado en la mayoría de casos almacenar esta
                     información según el modelo de datos vectorial.
                 </p>
-                <p>
+<p>
                     Capas tales pueden surgir en el trabajo con SIG en diversos
                     momentos, pues muchas operaciones de análisis sobre capas
                     ráster van a generar este tipo de resultados. La conversión
@@ -236,7 +221,7 @@
                     permitir darles un uso distinto y combinar ambos modelos de
                     representación, utilizando cada cual cuando más convenga.
                 </p>
-                <p>
+<p>
                     Estas operaciones pueden partir de capas ráster con
                     variables continuas, de las que se extraen entidades de
                     acuerdo a formulaciones diversas. Un ejemplo muy
@@ -249,7 +234,7 @@
                     </a>
                     .
                 </p>
-                <p>
+<p>
                     Otros procesos de vectorización que ya conocemos son los que
                     se llevan a cabo a partir de cartografía escaneada. En este
                     caso, no obstante, la situación es bien distinta, ya que lo
@@ -268,13 +253,10 @@
                     a vectorizarlas como capas de líneas o capas de polígonos
                     respectivamente.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Condiciones_vectorizacion.png"
-                            width="88.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Condiciones_vectorizacion" src="../img/Condiciones_vectorizacion.png" width="88.0%"/>
+<figcaption>
                             b)Imagen con polígonos y líneas para vectorizar. a)
                             y c) La misma imagen tras ser trasformada con objeto
                             de mejorar las condiciones para la vectorización
@@ -283,8 +265,8 @@
                         </figcaption>
                         $$\label{Fig:Condiciones_vectorizacion}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     El paso de las versiones originales a estas versiones
                     óptimas implica el uso de operaciones de álgebra de mapas,
                     así como las que se vieron en las secciones
@@ -302,7 +284,7 @@
                     previos, ya que en algunos casos son parte inseparable de
                     ciertos procesos de vectorización muy frecuentes en un SIG.
                 </p>
-                <p>
+<p>
                     Algoritmos para el tratamiento de imágenes no necesariamente
                     en estas circunstancias óptimas se detallan en [
                     <a href="../bib.htm#Price2006MsC"> Price2006MsC </a>
@@ -312,9 +294,8 @@
                     ello pueden no satisfacer exactamente las necesidades que se
                     presentan dentro de nuestro campo.
                 </p>
-                <h3 id="Vectorización de líneas">Vectorización de líneas</h3>
-                <a name="Vectorizacion_lineas"> </a>
-                <p>
+<h3 id="Vectorización de líneas">Vectorización de líneas</h3>
+<p id="Vectorizacion_lineas">
                     Volviendo a los algoritmos sobre capas discretas donde las
                     entidades a definir están claramente definidas, comencemos
                     con los de vectorización de líneas. Estos son similares en
@@ -322,7 +303,7 @@
                     aunque entrañan en principio algo menos de dificultad
                     técnica.
                 </p>
-                <p>
+<p>
                     Una característica reseñable de los algoritmos de
                     vectorización de líneas son sus mayores requerimientos en lo
                     que respecta a las características de la capa de partida.
@@ -336,7 +317,7 @@
                     </a>
                     al tratar las operaciones de esqueletización.
                 </p>
-                <p>
+<p>
                     Para el caso de polígonos, si en la obtención de una imagen
                     binaria los polígonos han quedado más grandes o más
                     pequeños, o con una forma u otra, este hecho no afecta al
@@ -347,7 +328,7 @@
                     algoritmos de vectorización no verán afectado su
                     funcionamiento por dichas imprecisiones.
                 </p>
-                <p>
+<p>
                     En el caso de las líneas encontramos una situación bien
                     distinta. La presencia de píxeles adicionales o la falta de
                     conectividad entre líneas van a dificultar seriamente la
@@ -355,7 +336,7 @@
                     pensados para trabajar sobre entidades lineales que cumplan
                     las características citadas anteriormente.
                 </p>
-                <p>
+<p>
                     En ocasiones, las capas con las que trabajamos van a estar
                     en buenas condiciones de ser vectorizadas (por ejemplo, en
                     el caso ya citado de una red de drenaje extraída a partir de
@@ -368,7 +349,7 @@
                     condiciones requeridas y hacen necesario un importante
                     trabajo de preparación.
                 </p>
-                <p>
+<p>
                     Para ver un ejemplo de lo anterior, trataremos una de las
                     tareas que con más frecuencia se presenta dentro del trabajo
                     con SIG: la digitalización de curvas de nivel de un mapa
@@ -380,7 +361,7 @@
                     necesario en la mayoría de los casos un cierto grado de
                     trabajo manual.
                 </p>
-                <p>
+<p>
                     Debe pensarse que el mapa escaneado es habitualmente una
                     imagen en color, más compleja que las imágenes binarias
                     sobre las que se presentaron en el capítulo
@@ -390,20 +371,20 @@
                     las operaciones morfológicas. Por ello, resulta más difícil
                     ajustar estos procesos.
                 </p>
-                <p>
+<p>
                     El paso de una imagen original tal como el mapa escaneado de
                     la figura \ref{Fig:Condiciones_vectorizacion} a uno más apto
                     para la vectorización como el de la imagen $a)$ de dicha
                     figura es un proceso más complejo de lo que puede parecer,
                     ya que comporta las siguientes dificultades:
                 </p>
-                <p></p>
-                <ul>
-                    <li>Las líneas tienen más de un píxel de ancho</li>
-                    <li>
+
+<ul>
+<li>Las líneas tienen más de un píxel de ancho</li>
+<li>
                         Las líneas tienen píxeles de varios colores distintos
                     </li>
-                    <li>
+<li>
                         Aparecen elementos adicionales que dificultan la
                         identificación automática de las líneas, pues rompen su
                         continuidad. Por ejemplo, es habitual que las líneas se
@@ -425,8 +406,8 @@
                         </a>
                         ].
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     El problema más grave de los anteriores es la falta de
                     continuidad, el cual puede tratar de solucionarse tanto en
                     la parte ráster, como en la vectorial, es decir, antes o
@@ -441,7 +422,7 @@
                     entre los tramos de líneas existan como tales de un modo más
                     tangible.
                 </p>
-                <p>
+<p>
                     Para el caso ráster, ya vimos en su momento (apartado
                     <a href="Imagenes.html#Operaciones_morfologicas">
                         Operaciones_morfologicas
@@ -459,40 +440,40 @@
                     no se detallarán aquí por estar fuera al alcance de este
                     capítulo.
                 </p>
-                <p>
+<p>
                     En líneas generales, y teniendo en cuenta los condicionantes
                     anteriores, la vectorización de curvas de nivel a partir de
                     mapas topográficos se lleva a cabo siguiendo una cadena de
                     procesos que comporta los siguientes pasos.
                 </p>
-                <p></p>
-                <ul>
-                    <li>Escaneado del mapa original</li>
-                    <li>Filtrados y mejoras sobre la imagen resultante</li>
-                    <li>Segmentación</li>
-                    <li>Operaciones morfológicas</li>
-                    <li>Conversión ráster--vectorial</li>
-                </ul>
-                <p>
+
+<ul>
+<li>Escaneado del mapa original</li>
+<li>Filtrados y mejoras sobre la imagen resultante</li>
+<li>Segmentación</li>
+<li>Operaciones morfológicas</li>
+<li>Conversión ráster--vectorial</li>
+</ul>
+<p>
                     siendo en este último paso en el que nos centramos dentro de
                     este capítulo.
                 </p>
-                <p>
+<p>
                     Para esta conversión ráster--vectorial, el algoritmo
                     correspondiente debe seguir un esquema genérico como el
                     siguiente, a aplicar para cada una de las curvas de nivel.
                 </p>
-                <p></p>
-                <ul>
-                    <li>Localizar una celda de la curva.</li>
-                    <li>
+
+<ul>
+<li>Localizar una celda de la curva.</li>
+<li>
                         Analizar las celdas alrededor suyo para localizar la
                         siguiente celda de la curva.
                     </li>
-                    <li>Desplazarse a esa celda.</li>
-                    <li>Repetir los pasos anteriores.</li>
-                </ul>
-                <p>
+<li>Desplazarse a esa celda.</li>
+<li>Repetir los pasos anteriores.</li>
+</ul>
+<p>
                     Este proceso se detiene hasta que se cumple un criterio
                     dado, que es el que concluye la vectorización de la línea.
                     En general, el criterio a aplicar suele ser que se regrese a
@@ -500,21 +481,21 @@
                     celda entre las circundantes (a excepción de la anterior
                     desde la cual se ha llegado a esta).
                 </p>
-                <p>
+<p>
                     Siguiendo este esquema, se dota de un orden a las celdas de
                     la línea. Mediante esta secuencia ordenada de celdas, puede
                     crearse la línea vectorial como una secuencia ordenada de
                     coordenadas (particularmente, las coordenadas de los centros
                     de esas celdas).
                 </p>
-                <p>
+<p>
                     Hay muchos algoritmos distintos de vectorización. Las
                     diferencias van desde la forma en que se analizan las celdas
                     circundantes o el criterio que hace que se concluya la
                     vectorización de la línea, hasta formulaciones más complejas
                     que siguen un esquema distinto.
                 </p>
-                <p>
+<p>
                     Más allá de lo visto en este apartado, la conversión de
                     mapas topográficos en capas de curvas de nivel es un proceso
                     complejo del que existe abundante literatura. Buenas
@@ -530,7 +511,7 @@
                     <a href="../bib.htm#Greenlee1987PERS"> Greenlee1987PERS </a>
                     ]
                 </p>
-                <p>
+<p>
                     Además de la vectorización de curvas de nivel, tarea
                     habitual que ya hemos visto, existen otras muy variadas que
                     presentan cada una de ellas distintas circunstancias. Así, y
@@ -542,7 +523,7 @@
                     forma, sino por otros elementos tales como, por ejemplo, la
                     topología.
                 </p>
-                <p>
+<p>
                     En el caso particular de vectorizar un conjunto de curvas de
                     nivel tal y como lo venimos detallando, esta topología es
                     clara y no entraña dificultad añadida a la hora de
@@ -552,7 +533,7 @@
                     Sin embargo, vectorizar otros elementos implica tener en
                     cuenta circunstancias distintas.
                 </p>
-                <p>
+<p>
                     Algo más complejo que vectorizar curvas de nivel es hacerlo,
                     por ejemplo, con una red de drenaje (recordemos que en el
                     capítulo
@@ -567,7 +548,7 @@
                     estructura en árbol, lo cual quiere decir que no van a
                     existir rutas cíclicas en dicha red.
                 </p>
-                <p>
+<p>
                     Si lo que tratamos de vectorizar es una red viaria, las
                     posibilidades son más amplias, y además, como ya sabemos, el
                     modelo ráster no es adecuado para registrar completamente la
@@ -577,7 +558,7 @@
                     lo que la operación no resulta tan sencilla como en el caso
                     de las curvas de nivel.
                 </p>
-                <p>
+<p>
                     En resumen, la existencia de topología añade complejidad a
                     la vectorización de líneas. Aún así, siempre resulta posible
                     (y en muchos casos suficiente) vectorizar estas y obtener
@@ -587,10 +568,10 @@
                     posteriormente para dotarla de la topología necesaria, en
                     caso de que así se requiera.
                 </p>
-                <h3 id="Vectorización de polígonos">
+<h3 id="Vectorización de polígonos">
                     Vectorización de polígonos
                 </h3>
-                <p>
+<p>
                     Muy relacionada con la vectorización de líneas, tenemos como
                     herramienta habitual dentro de un SIG la vectorización de
                     polígonos. Esta guarda gran similitud con la anterior, en
@@ -598,7 +579,7 @@
                     ir siguiendo una serie de puntos y conectarlos, para de este
                     modo definir el contorno del polígono.
                 </p>
-                <p>
+<p>
                     Los puntos que nos interesan para la delineación de un
                     polígono no son, a diferencia del caso de líneas, todos los
                     que conforman el objeto a vectorizar, sino tan solo una
@@ -612,7 +593,7 @@
                     situar ninguna de las coordenadas de la entidad vectorial
                     que buscamos.
                 </p>
-                <p>
+<p>
                     Siendo dichas celdas externas las que debemos tratar para
                     delinear la entidad vectorial, el primer paso es, por tanto,
                     su localización. Esta no es difícil si recordamos algunas de
@@ -631,13 +612,10 @@
                     valor 0 de las imágenes binarias, que entonces
                     identificábamos con el fondo)
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Erosion_para_vectorizacion.png"
-                            width="98.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Erosion_para_vectorizacion" src="../img/Erosion_para_vectorizacion.png" width="98.0%"/>
+<figcaption>
                             a) Imagen base con un polígono a vectorizar. Las
                             celdas que forman el contorno se muestran en gris.
                             b) La imagen anterior tras un proceso de dilatación.
@@ -646,8 +624,8 @@
                         </figcaption>
                         $$\label{Fig:Erosion_para_vectorizacion}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     De las operaciones morfológicas que conocemos, la erosión
                     nos da una idea de la forma de proceder a la hora de
                     localizar las celdas importantes. De la forma en que lo
@@ -659,7 +637,7 @@
                     una imagen binaria y dicha imagen tras un proceso de erosión
                     es el contorno del objeto.
                 </p>
-                <p>
+<p>
                     El proceso de erosión se aplica en este caso con un elemento
                     estructural como el siguiente, en lugar del que vimos en el
                     apartado
@@ -668,10 +646,8 @@
                     </a>
                     .
                 </p>
-                <p>
-                    <img src="../img/Kernel.png" width="13.0%" />
-                </p>
-                <p>
+
+<p>
                     Esto no es estrictamente necesario ya que, de aplicar el que
                     vimos entonces, y aunque el contorno resultante sería
                     distinto, el resultado sería igualmente vectorizable el
@@ -692,14 +668,14 @@
                     <i> vecindad de Moore </i>
                     para el caso de 8.}.
                 </p>
-                <p>
+<p>
                     Sobre este contorno, el proceso de digitalización ya no
                     difiere, a primera vista, del que efectuábamos sobre una
                     curva de nivel. El objetivo es asignar un orden a las celdas
                     de ese contorno, de modo que siguiendo dicho orden quede
                     definido el perímetro del polígono.
                 </p>
-                <p>
+<p>
                     Para ello, y como en el caso de las curvas de nivel, basta
                     comenzar en uno de los puntos e ir siguiendo de un modo
                     sistemático el contorno, añadiendo las coordenadas de los
@@ -712,13 +688,10 @@
                     exterior del contorno. Esto puede comprenderse mejor viendo
                     la figura \ref{Fig:Vertices_vectorizacion}.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Vertices_vectorizacion.png"
-                            width="85.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Vertices_vectorizacion" src="../img/Vertices_vectorizacion.png" width="85.0%"/>
+<figcaption>
                             Mientras que en la vectorización de líneas (a) se
                             toman las coordenadas del centro de la celda, en el
                             caso de polígonos (b) se deben utilizar las de los
@@ -727,14 +700,14 @@
                         </figcaption>
                         $$\label{Fig:Vertices_vectorizacion}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Los resultados en los dos supuestos representados en la
                     figura son bien distintos, a pesar de que el objeto a
                     vectorizar es el mismo, pero en un caso se interpreta como
                     una línea y en otro como un polígono.
                 </p>
-                <p>
+<p>
                     Un algoritmo para vectorizar el contorno de un polígono debe
                     localizar una celda de dicho contorno e ir avanzando hasta
                     rodear por completo este, almacenando las coordenadas de los
@@ -747,7 +720,7 @@
                     algoritmo de esta forma, parte de cuyos fundamentos pueden
                     emplearse igualmente para la vectorización de líneas.
                 </p>
-                <p>
+<p>
                     Al igual que sucedía con dichas líneas, la complejidad del
                     objeto puede presentar problemas para su vectorización. El
                     algoritmo anterior no contempla, por ejemplo, la presencia
@@ -755,9 +728,8 @@
                     son polígonos internos que han de incorporarse a su vez a la
                     entidad, y por tanto deben ser a su vez vectorizados.
                 </p>
-                <h2 id="Isolíneas">Isolíneas</h2>
-                <a name="Isolineas"> </a>
-                <p>
+<h2 id="Isolíneas">Isolíneas</h2>
+<p id="Isolineas">
                     Otro resultado vectorial que puede generarse a partir de una
                     capa ráster son las
                     <i> isolíneas </i>
@@ -774,7 +746,7 @@
                     ). La forma de obtenerlas a partir de una capa ráster es, no
                     obstante, la misma en todos los casos.
                 </p>
-                <p>
+<p>
                     En un apartado anterior, veíamos cómo vectorizar un mapa
                     escaneado que contiene el trazado de dichas curvas de nivel.
                     En este, veremos cómo hacerlo cuando disponemos de los datos
@@ -787,7 +759,7 @@
                     equidistancia y los valores para los que queremos obtener
                     tales curvas.
                 </p>
-                <p>
+<p>
                     El calculo de curvas de nivel puede realizarse a partir de
                     una capa ráster, pero también a partir de una capa de puntos
                     con datos de elevación. En este ultimo caso, no obstante, ya
@@ -801,7 +773,7 @@
                     esta sección trataremos únicamente la delineación de curvas
                     de nivel a partir de capas ráster.
                 </p>
-                <p>
+<p>
                     Un método basado en triangulación para obtener curvas de
                     nivel a partir de puntos distribuidos irregularmente se
                     detalla en [
@@ -815,7 +787,7 @@
                     </a>
                     ].
                 </p>
-                <p>
+<p>
                     Respecto al cálculo a partir de una estructura regular como
                     una capa ráster, los algoritmos correspondientes no derivan
                     únicamente del trabajo con SIG, sino que se trata de un área
@@ -825,7 +797,7 @@
                     resultar de interés para una mejor interpretación de esta o
                     la automatización de ciertas tareas.
                 </p>
-                <p>
+<p>
                     Existen dos enfoques principales a la hora de trazar curvas
                     de nivel en base a una malla de datos regulares [
                     <a href="../bib.htm#Sutcliffe1980Academic">
@@ -833,19 +805,19 @@
                     </a>
                     ]
                 </p>
-                <p></p>
-                <ul>
-                    <li>Seguimiento de líneas</li>
-                    <li>Análisis por celdas</li>
-                </ul>
-                <p>
+
+<ul>
+<li>Seguimiento de líneas</li>
+<li>Análisis por celdas</li>
+</ul>
+<p>
                     En el seguimiento de líneas, se localiza un punto que
                     pertenezca a la curva de nivel y después se «sigue» esa
                     curva de nivel hasta que se alcanza un borde de la malla
                     ráster, o bien la curva se cierra regresando al punto
                     inicial.
                 </p>
-                <p>
+<p>
                     La localización de un punto de la curva se hace empleando
                     métodos de interpolación, del mismo modo que veíamos en la
                     sección
@@ -861,7 +833,7 @@
                     exactos de las celdas, que por convenio corresponden como
                     sabemos a los centros de estas.
                 </p>
-                <p>
+<p>
                     Dicho de otro modo, las curvas de nivel no pasan por los
                     centros de las celdas, pero sí que atraviesan estas. Los
                     métodos de interpolación se emplean para saber por dónde
@@ -870,7 +842,7 @@
                     circundantes, referidos a sus respectivos centros, pueden
                     estimarse valores en puntos no centrales de estas.
                 </p>
-                <p>
+<p>
                     Cuando una curva de nivel entra en una celda,
                     obligatoriamente debe salir de ella (una curva de nivel, por
                     definición, no puede concluir bruscamente salvo que se
@@ -881,11 +853,11 @@
                     seguimiento de la línea que resulta en el trazado completo
                     de la curva de nivel.
                 </p>
-                <p>
+<p>
                     El resultado de este proceso es un conjunto de puntos que
                     unidos secuencialmente conforman la curva de nivel buscada.
                 </p>
-                <p>
+<p>
                     Estos métodos tienen la ventaja de que, al presentar la
                     línea como un continuo, dan resultados mejores para su
                     representación (esto era especialmente importante cuando se
@@ -900,14 +872,14 @@
                     cada uno de los cuales definido en el interior de una única
                     celda.
                 </p>
-                <p>
+<p>
                     Aunque el resultado visualmente puede ser el mismo, la capa
                     generada mediante un método de seguimiento de curvas va a
                     contener menos entidades y ser más correcta desde un punto
                     de vista semántico, ya que una curva se expresa como una
                     única entidad, no como un conjunto de ellas.
                 </p>
-                <p>
+<p>
                     Entre los métodos de análisis por celdas, uno con gran
                     relevancia (especialmente en el tratamiento digital de
                     imágenes) es el conocido como
@@ -920,7 +892,7 @@
                     </a>
                     ].
                 </p>
-                <p>
+<p>
                     El fundamento de este método es el hecho de que, si una
                     curva de nivel atraviesa una celda, existen únicamente 16
                     posibles configuraciones de los vértices de esa celda en
@@ -931,10 +903,10 @@
                     de la curva de nivel. La figura \ref{Fig:Marching_squares}
                     muestra esas configuraciones.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Marching_squares.png" width="55.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Marching_squares" src="../img/Marching_squares.png" width="55.0%"/>
+<figcaption>
                             Posibles configuraciones de una celda según el
                             algoritmo
                             <i> Marching Squares </i>
@@ -943,8 +915,8 @@
                         </figcaption>
                         $$\label{Fig:Marching_squares}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     En base a esto, se recorren todas las celdas, se analiza en
                     cuál de las configuraciones se encuentra cada una de ellas
                     y, cuando corresponda, se traza una línea entre el punto de
@@ -952,7 +924,7 @@
                     puntos se calculan, al igual que ya veíamos para los métodos
                     de seguimiento, mediante interpolación.
                 </p>
-                <p>
+<p>
                     El algoritmo no establece relación alguna entre las celdas
                     por las que pasa una misma curva de nivel, sino que toma
                     estas separadamente. Por ello, aunque visualmente los tramos
@@ -961,7 +933,7 @@
                     a la hora de su manejo una vez la capa de curvas de nivel ha
                     sido creada.
                 </p>
-                <p>
+<p>
                     Además de este inconveniente, el método presenta algunas
                     ambigüedades, como puede verse en la figura
                     \ref{Fig:Marching_squares} para los casos 6 y 11. En estos
@@ -970,8 +942,8 @@
                     existe esta deficiencia, ya que se sabe desde qué celda
                     llega la curva de nivel.
                 </p>
-                <h2 id="Creación de TIN">Creación de TIN</h2>
-                <p>
+<h2 id="Creación de TIN">Creación de TIN</h2>
+<p>
                     Ya conocemos los TIN como estructuras vectoriales utilizadas
                     para almacenar una variable continua tal como la elevación.
                     Como vimos en el capítulo
@@ -981,24 +953,24 @@
                     de triángulos interconectados que cubren toda la superficie
                     estudiada.
                 </p>
-                <p>
+<p>
                     Estos triángulos aparecen en mayor número en las zonas donde
                     la variable presente una mayor variabilidad (relieve más
                     abrupto) y en menor número cuando no existe una variabilidad
                     tan acusada (relieve llano).
                 </p>
-                <p>
+<p>
                     La creación de un TIN a partir de otro modelo de datos como,
                     por ejemplo, una capa ráster, implica las siguientes
                     operaciones:
                 </p>
-                <p></p>
-                <ul>
-                    <li>Selección de puntos más representativos.</li>
-                    <li>Triangulación de dichos puntos.</li>
-                </ul>
-                <h3 id="Selección de puntos">Selección de puntos</h3>
-                <p>
+
+<ul>
+<li>Selección de puntos más representativos.</li>
+<li>Triangulación de dichos puntos.</li>
+</ul>
+<h3 id="Selección de puntos">Selección de puntos</h3>
+<p>
                     No todas las celdas de la capa ráster son igual de
                     interesantes a efectos de crear un TIN. Si tomásemos todas
                     las celdas y las utilizáramos como vértices, el TIN
@@ -1009,16 +981,16 @@
                     estaríamos teniendo en cuenta esta variabilidad para tomar
                     más o menos puntos según sea necesario.
                 </p>
-                <p>
+<p>
                     Si se debe tomar un número de puntos menor, es necesario un
                     método para eliminar aquellos que aportan menos valor al TIN
                     resultante, de forma que, con los puntos que se consideren,
                     este sea lo más preciso posible.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Significancia_TIN.png" width="75.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Significancia_TIN" src="../img/Significancia_TIN.png" width="75.0%"/>
+<figcaption>
                             La significancia de una celda es la media de las
                             significancias según las cuatro direcciones
                             definidas. Para una dirección definida (en rojo), la
@@ -1028,8 +1000,8 @@
                         </figcaption>
                         $$\label{Fig:Significancia_TIN}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La selección de las celdas que deben considerarse como
                     vértices de la red puede llevarse a cabo mediante diversos
                     algoritmos. El algoritmo conocido como VIP(
@@ -1046,13 +1018,13 @@
                     basarse en un umbral de significancia, de forma que solo se
                     consideren como vértices las celdas que lo superen.
                 </p>
-                <p>
+<p>
                     La significancia de una celda se obtiene mediante un
                     análisis local con una ventana $3\times 3$, estudiando las
                     cuatro posibles direcciones que pasan por la celda central
                     (Figura \ref{Fig:Significancia_TIN}).
                 </p>
-                <p>
+<p>
                     En cada dirección se traza una recta que pasa por dos puntos
                     extremos, teniendo en cuenta la elevación de los mismos. La
                     distancia entre la celda central y dicha recta es la que
@@ -1060,7 +1032,7 @@
                     significancias calculadas según todas las direcciones
                     posible es la significancia global de la celda.
                 </p>
-                <p>
+<p>
                     Otro algoritmo basado en análisis local es el propuesto por
                     [
                     <a href="../bib.htm#Fowler1979CG"> Fowler1979CG </a>
@@ -1076,7 +1048,7 @@
                     </a>
                     .
                 </p>
-                <p>
+<p>
                     Un enfoque distinto a los anteriores es el propuesto por [
                     <a href="../bib.htm#Lee89ACSM"> Lee89ACSM </a>
                     ], denominado
@@ -1085,40 +1057,40 @@
                     iterativamente todos sus vértices, eliminando aquellos que
                     se evalúen como de menor importancia.
                 </p>
-                <h3 id="Triangulación">Triangulación</h3>
-                <p>
+<h3 id="Triangulación">Triangulación</h3>
+<p>
                     Una vez que se tiene el conjunto de puntos significativos,
                     es necesario conectar estos para formar la red de triángulos
                     como tal, existiendo para ello existen diversas
                     metodologías.
                 </p>
-                <p>
+<p>
                     Para un conjunto de puntos $V$, una triangulación es una
                     conjunto de triángulos que cumple las siguientes
                     propiedades[
                     <a href="../bib.htm#Dyn1990IMA"> Dyn1990IMA </a>
                     ]:
                 </p>
-                <p></p>
-                <p></p>
-                <ul>
-                    <li>
+
+
+<ul>
+<li>
                         El conjunto de todos los vértices de esos triángulos es
                         igual a $V$.
                     </li>
-                    <li>
+<li>
                         Cada lado de un triángulo contiene únicamente dos
                         vértices.
                     </li>
-                    <li>
+<li>
                         La intersección de dos triángulos cualesquiera es nula.
                     </li>
-                    <li>
+<li>
                         La unión de todos los triángulos forma la envolvente
                         mínima convexa del conjunto de puntos.}.}
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Los algoritmos de triangulación de un conjunto de puntos se
                     basan la mayoría en considerar la tarea como un problema de
                     optimización, siendo diversos los criterios aplicados. No
@@ -1128,7 +1100,7 @@
                     esta una estructura en la que recogemos en general la forma
                     de un terreno.
                 </p>
-                <p>
+<p>
                     Puesto que dentro del triángulo van a asumirse unas
                     propiedades constantes (pendiente, orientación), la idea es
                     que los triángulos engloben áreas que, efectivamente, sean
@@ -1137,7 +1109,7 @@
                     que dichos triángulos sean lo más homogéneos posibles,
                     evitándose aquellos de formas alargadas.
                 </p>
-                <p>
+<p>
                     La forma más habitual de lograr esto es creando un tipo
                     particular de triangulación conocida como
                     <i> Triangulación de Delaunay </i>
@@ -1145,24 +1117,24 @@
                     <a href="../bib.htm#Delaunay1934OMEN"> Delaunay1934OMEN </a>
                     ]. Esta presenta las siguientes propiedades:
                 </p>
-                <ul>
-                    <li>
+<ul>
+<li>
                         Dado un triángulo cualquiera de dicha triangulación, el
                         círculo que en que se inscribe no contiene a ningún otro
                         punto.
                     </li>
-                    <li>
+<li>
                         Dados cuatro puntos que forman dos triángulos contiguos,
                         la triangulación maximiza el mínimo ángulo interno del
                         cuadrilatero formado.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Esta ultima propiedad es de especial interés para garantizar
                     que los triángulos son óptimos en cuanto a su capacidad de
                     representar fielmente el relieve.
                 </p>
-                <p>
+<p>
                     La triangulación de Delaunay es el dual de otra estructura
                     denominada
                     <i> Teselación de Voronoi </i>
@@ -1174,19 +1146,18 @@
                     interpolación por vecino más cercano, el cual genera, de
                     hecho, una teselación de Voronoi.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Delaunay_voronoi.png" width="50.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Delaunay_voronoi" src="../img/Delaunay_voronoi.png" width="50.0%"/>
+<figcaption>
                             Teselación de Voronoi (en trazo discontinuo) y
                             Triangulación de Delaunay (en trazo continuo) a
                             partir de un conjunto de puntos (en azul)
                         </figcaption>
                         $$\label{Fig:Delaunay_Voronoi}$$.
                     </figure>
-                </p>
-
-                <p>
+</p>
+<p>
                     Los algoritmos para crear una triangulación de Delaunay son
                     abundantes, y existe mucha literatura al respecto.
                     Comparaciones entre los más habituales y descripciones de
@@ -1196,7 +1167,7 @@
                     <a href="../bib.htm#Fortune1992WC"> Fortune1992WC </a>
                     ], donde se tratan con detalle los más importantes.
                 </p>
-                <p>
+<p>
                     Aunque este tipo de triangulaciones son las más
                     recomendables, la propia naturaleza de un TIN puede
                     aprovecharse para crear otras triangulaciones derivadas que,
@@ -1208,7 +1179,7 @@
                     <i> líneas de falla </i>
                     es una de las modificaciones de mayor interés.
                 </p>
-                <p>
+<p>
                     Dentro de un triángulo se asume que la pendiente y la
                     orientación son constantes, y dicho triángulo define un
                     plano en el espacio. Al pasar de un triángulo a otro, el
@@ -1219,7 +1190,7 @@
                     cambio brusco, el modelo obtenido será más fiel a la
                     realidad.
                 </p>
-                <p>
+<p>
                     En base a esta idea, puede forzarse a que dichas fallas
                     naturales coincidan con los lados de los triángulos,
                     definiéndolas explícitamente junto a los puntos que van a
@@ -1228,15 +1199,15 @@
                     verdadera forma del terreno, ya que incorpora información
                     adicional.
                 </p>
-                <h3 id="Simplificación">Simplificación</h3>
-                <p>
+<h3 id="Simplificación">Simplificación</h3>
+<p>
                     Además de los métodos anteriores para seleccionar un
                     conjunto reducido de puntos significativos y los algoritmos
                     para obtener una red de triángulos a partir de estos, otro
                     procedimiento importante es la simplificación de una red ya
                     creada.
                 </p>
-                <p>
+<p>
                     Como se muestra en la figura
                     \ref{Fig:Simplificacion_triangulacion}, pueden eliminarse
                     puntos de una triangulación y rehacer esta con los puntos
@@ -1245,20 +1216,17 @@
                     vez que uno de ellos es eliminado, recalculando la
                     triangulación de la mejor forma posible.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Simplificacion_triangulacion.png"
-                            width="60%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Simplificacion_triangulacion" src="../img/Simplificacion_triangulacion.png" width="60%"/>
+<figcaption>
                             Esquema de la eliminación de un vértice (en rojo) en
                             una triangulación
                         </figcaption>
                         $$\label{Fig:Simplificacion_triangulacion}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Este procedimiento de simplificación es similar al que vimos
                     para el algoritmo de selección de puntos
                     <i> drop heuristic </i>
@@ -1272,17 +1240,17 @@
                     simplificación. Nótese cómo en la imagen, si se eliminan
                     puntos del exterior, varía el contorno de la triangulación.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/TIN_Simplificado.png" width="100%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="TIN_Simplificado" src="../img/TIN_Simplificado.png" width="100%"/>
+<figcaption>
                             TIN original (a) y dos simplificaciones (b, c) en
                             base al anterior.
                         </figcaption>
                         $$\label{Fig:TIN_Simplificado}$$.
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Más detalle sobre algoritmos de simplificación puede
                     encontrarse en [
                     <a href="../bib.htm#andrews96simplifying">
@@ -1290,8 +1258,8 @@
                     </a>
                     ].
                 </p>
-                <h2 id="Resumen">Resumen</h2>
-                <p>
+<h2 id="Resumen">Resumen</h2>
+<p>
                     Las capas ráster pueden convertirse en capas vectoriales
                     empleando algoritmos a tal efecto. Estos algoritmos pueden
                     aplicarse sobre capas ráster de variables continuas o
@@ -1301,7 +1269,7 @@
                     capa ráster. Estas geometrías pueden ser poligonales o
                     lineales.
                 </p>
-                <p>
+<p>
                     En el caso de variables continuas, las capas vectoriales que
                     se generan pueden ser de los tres tipos básicos de
                     geometrías: puntos, líneas o polígonos. Para generar una
@@ -1314,186 +1282,186 @@
                     de la capa ráster, seleccionando los puntos más importantes
                     y después triangulándolos.
                 </p>
-            </div>
-        </div>
-        <div id="toindex">
-            <a href="../index.html"> Portada </a>
-        </div>
-        <div id="slideout_chapter">
+</div>
+</div>
+<div id="toindex">
+<a href="../index.html"> Portada </a>
+</div>
+<div id="slideout_chapter">
             Índice
-            <br />
+            <br/>
             capítulo
             <div id="slideout_inner_chapter">
-                <div id="generated-toc"></div>
-            </div>
-        </div>
-        <div id="slideout_general">
+<div id="generated-toc"></div>
+</div>
+</div>
+<div id="slideout_general">
             Índice
-            <br />
+            <br/>
             general
             <div id="slideout_inner_general">
-                <p>
-                    <b> ÍNDICE GENERAL </b>
-                    <br />
-                </p>
-                <ul>
-                    <li>
-                        <a href="Intro.html"> Introducción </a>
-                    </li>
-                    <li>Parte 1. Fundamentos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_fundamentos.html">
+<p>
+<b> ÍNDICE GENERAL </b>
+<br/>
+</p>
+<ul>
+<li>
+<a href="Intro.html"> Introducción </a>
+</li>
+<li>Parte 1. Fundamentos</li>
+<ul>
+<li>
+<a href="Introduccion_fundamentos.html">
                                 Introducción. ¿Qué es un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Historia.html"> Historia de los SIG </a>
-                        </li>
-                        <li>
-                            <a href="Fundamentos_cartograficos.html">
+</li>
+<li>
+<a href="Historia.html"> Historia de los SIG </a>
+</li>
+<li>
+<a href="Fundamentos_cartograficos.html">
                                 Fundamentos cartográficos y geodésicos
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 2. Datos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_datos.html">
+</li>
+</ul>
+<li>Parte 2. Datos</li>
+<ul>
+<li>
+<a href="Introduccion_datos.html">
                                 Introducción. ¿Con qué trabajo en un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Tipos_datos.html">
+</li>
+<li>
+<a href="Tipos_datos.html">
                                 Modelos para la información geográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Fuentes_datos.html">
+</li>
+<li>
+<a href="Fuentes_datos.html">
                                 Fuentes principales de datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Calidad_datos.html">
+</li>
+<li>
+<a href="Calidad_datos.html">
                                 La calidad de los datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Bases_datos.html"> Bases de datos </a>
-                        </li>
-                        <li>
-                            <a href="Metadatos.html"> Metadatos </a>
-                        </li>
-                    </ul>
-                    <li>Parte 3. Analisis</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_procesos.html">
+</li>
+<li>
+<a href="Bases_datos.html"> Bases de datos </a>
+</li>
+<li>
+<a href="Metadatos.html"> Metadatos </a>
+</li>
+</ul>
+<li>Parte 3. Analisis</li>
+<ul>
+<li>
+<a href="Introduccion_procesos.html">
                                 Introducción. ¿Qué puedo hacer con un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Analisis_espacial.html">
+</li>
+<li>
+<a href="Analisis_espacial.html">
                                 Conceptos básicos para el análisis espacial
                             </a>
-                        </li>
-                        <li>
-                            <a href="Consultas.html">
+</li>
+<li>
+<a href="Consultas.html">
                                 Consultas y operaciones con bases de datos
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_espacial.html">
+</li>
+<li>
+<a href="Estadistica_espacial.html">
                                 Estadísticas espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_raster.html">
+</li>
+<li>
+<a href="Creacion_capas_raster.html">
                                 Creación de capas raster
                             </a>
-                        </li>
-                        <li>
-                            <a href="Algebra_de_mapas.html">
+</li>
+<li>
+<a href="Algebra_de_mapas.html">
                                 Álgebra de mapas
                             </a>
-                        </li>
-                        <li>
-                            <a href="Geomorfometria.html">
+</li>
+<li>
+<a href="Geomorfometria.html">
                                 Geomorfometría y análisis del terreno
                             </a>
-                        </li>
-                        <li>
-                            <a href="Imagenes.html"> Procesado de imágenes </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_vectoriales.html">
+</li>
+<li>
+<a href="Imagenes.html"> Procesado de imágenes </a>
+</li>
+<li>
+<a href="Creacion_capas_vectoriales.html">
                                 Creación de capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Operaciones_geometricas.html">
+</li>
+<li>
+<a href="Operaciones_geometricas.html">
                                 Operaciones geométricas con capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Costes.html">
+</li>
+<li>
+<a href="Costes.html">
                                 Costes, distancias y áreas de influencia
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_avanzada.html">
+</li>
+<li>
+<a href="Estadistica_avanzada.html">
                                 Más estadística espacial
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 4. Tecnología</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_tecnologia.html">
+</li>
+</ul>
+<li>Parte 4. Tecnología</li>
+<ul>
+<li>
+<a href="Introduccion_tecnologia.html">
                                 Introducción. ¿Cómo son las aplicaciones SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIGs_escritorio.html">
+</li>
+<li>
+<a href="SIGs_escritorio.html">
                                 Herramientas de escritorio
                             </a>
-                        </li>
-                        <li>
-                            <a href="Cliente_servidor.html">
+</li>
+<li>
+<a href="Cliente_servidor.html">
                                 Clientes y servidores remotos. Web mapping
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIG_movil.html"> SIG movil </a>
-                        </li>
-                    </ul>
-                    <li>Parte 5. Visualización</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_visualizacion.html">
+</li>
+<li>
+<a href="SIG_movil.html"> SIG movil </a>
+</li>
+</ul>
+<li>Parte 5. Visualización</li>
+<ul>
+<li>
+<a href="Introduccion_visualizacion.html">
                                 Introducción. Los SIG como herramientas de
                                 visualización
                             </a>
-                        </li>
-                        <li>
-                            <a href="Conceptos_basicos.html">
+</li>
+<li>
+<a href="Conceptos_basicos.html">
                                 Conceptos básicos de visualización y
                                 representación
                             </a>
-                        </li>
-                        <li>
-                            <a href="Mapas.html">
+</li>
+<li>
+<a href="Mapas.html">
                                 El mapa y la comunicación cartográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Visualizacion_SIG.html">
+</li>
+<li>
+<a href="Visualizacion_SIG.html">
                                 La visualización en términos SIG
                             </a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </body>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</body>
 </html>

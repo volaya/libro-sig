@@ -1,49 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title> </title>
-        <link
-            href="../reset.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="../typography.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> </title>
+<link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<script type="text/x-mathjax-config">
              MathJax.Hub.Config({
               tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
               TeX: { equationNumbers: {autoNumber: "all"} }
             });
         </script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"
-            type="text/javascript"
-        ></script>
-        <script src="../generated_toc.js"></script>
-    </head>
-    <body lang="es">
-        <div class="main">
-            <div class="g960" id="chapter">
-                <h1>¿Con qué trabajo en un SIG?</h1>
-                <p></p>
-                <p>
-                    <a name="Introduccion_datos"> </a>
-                </p>
-                <h2 id="Introducción">Introducción</h2>
-                <p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="../generated_toc.js"></script>
+</head>
+<body lang="es">
+<div class="main">
+<div class="g960" id="chapter">
+<h1>¿Con qué trabajo en un SIG?</h1>
+
+<h2 id="Introducción">Introducción</h2>
+<p>
                     De todos los subsistemas de SIG, el correspondiente a los
                     datos es el pilar fundamental que pone en marcha los
                     restantes. Los datos son el combustible que alimenta a los
                     restantes subsistemas, y sin los cuales un SIG carece por
                     completo de sentido y utilidad.
                 </p>
-                <p>
+<p>
                     El subsistema de datos es, a su vez, el más
                     interrelacionado, y está conectado de forma inseparable a
                     todos los restantes. Mientras que, por ejemplo, la
@@ -59,18 +45,18 @@
                     estudio y a su mejor manejo será siempre positivo dentro de
                     cualquier trabajo con SIG.
                 </p>
-                <p>
+<p>
                     La forma en que los datos se gestionan en un SIG es un
                     elemento vital para definir la propia naturaleza de este,
                     así como sus prestaciones, limitaciones y características
                     generales.
                 </p>
-                <h2 id="Datos &lt;i&gt;vs&lt;/i&gt; Información">
+<h2 id="Datos &lt;i&gt;vs&lt;/i&gt; Información">
                     Datos
                     <i> vs </i>
                     Información
                 </h2>
-                <p>
+<p>
                     } Existe una importante diferencia entre los conceptos de
                     <i> datos </i>
                     e
@@ -83,7 +69,7 @@
                     <i> datos </i>
                     geográficos, existiendo diferencias entre estos conceptos.
                 </p>
-                <p>
+<p>
                     Entendemos como dato al simple conjunto de valores o
                     elementos que utilizamos para representar algo. Por ejemplo,
                     el código 502132N es un dato. Este código por sí mismo no
@@ -96,7 +82,7 @@
                     sobre él que tengan sentido y resulten coherentes con el
                     significado propio que contiene.
                 </p>
-                <p>
+<p>
                     El dato anterior podemos interpretarlo como si fuera una
                     referencia geográfica, y cuyo significado sería entonces una
                     latitud, en particular 50° $21'$ $32''$ Norte. Si lo
@@ -107,7 +93,7 @@
                     pero la información que da es diferente, ya que lo
                     entendemos e interpretamos de manera distinta.
                 </p>
-                <p>
+<p>
                     La información es, por tanto, el resultado de un dato y una
                     interpretación, y el trabajo con datos es en muchos casos un
                     proceso enfocado a obtener de estos toda la información
@@ -115,7 +101,7 @@
                     primera vista puede apreciarse, y es a través de la
                     interpretación de los datos como se obtiene esta.
                 </p>
-                <p>
+<p>
                     En el capítulo
                     <a href="Geomorfometria.html#Geomorfometria">
                         Geomorfometria
@@ -132,7 +118,7 @@
                     procesos u operaciones de análisis podamos extraer de esos
                     datos.
                 </p>
-                <p>
+<p>
                     Comprender el significado y las diferencias entre datos e
                     información permiten entender, entre otras cosas, que la
                     relación entre los volúmenes de ambos no es necesariamente
@@ -147,7 +133,7 @@
                     algunos de estos planteamientos más adelante dentro de esta
                     parte del libro.
                 </p>
-                <p>
+<p>
                     Aspectos como estos son realmente mucho más complejos, y el
                     estudio de la relación entre datos e información y sus
                     características no es en absoluto sencilla. Existe una
@@ -163,7 +149,7 @@
                     </a>
                     ] para saber más al respecto.
                 </p>
-                <p>
+<p>
                     En este capítulo de introducción a la parte dedicada a los
                     datos, veremos más acerca de la información que de los datos
                     espaciales, pues la manera en que concebimos esta condiciona
@@ -171,11 +157,10 @@
                     tratemos ya los datos, abordando uno de los problemas
                     fundamentales: la creación del dato espacial.
                 </p>
-                <h2 id="Las componentes de la información geográfica">
+<h2 id="Las componentes de la información geográfica">
                     Las componentes de la información geográfica
                 </h2>
-                <a name="ComponenteInformacionGeografica"> </a>
-                <p>
+<p id="ComponenteInformacionGeografica">
                     Comprender la información geográfica es vital para poder
                     capturar dicha información e incorporarla a un SIG. En
                     líneas generales, podemos dividir esta en dos componentes
@@ -183,12 +168,12 @@
                     particular en los procesos posteriores de representación que
                     más adelante veremos.
                 </p>
-                <p></p>
-                <ul>
-                    <li>Componente espacial</li>
-                    <li>Componente temática</li>
-                </ul>
-                <p>
+
+<ul>
+<li>Componente espacial</li>
+<li>Componente temática</li>
+</ul>
+<p>
                     La componente espacial hace referencia a la posición dentro
                     de un sistema de referencia establecido. Esta componente es
                     la que hace que la información pueda calificarse como
@@ -197,8 +182,8 @@
                     el marco geográfico no existe. La componente espacial
                     responde a la pregunta
                     <i> ¿dónde? </i>
-                </p>
-                <p>
+</p>
+<p>
                     Por su parte, la componente temática responde a la pregunta
                     <i> ¿qué? </i>
                     y va invariablemente unida a la anterior. En la localización
@@ -207,13 +192,13 @@
                     dicho fenómeno y sus características particulares quedan
                     establecidas por la componente temática.
                 </p>
-                <p>
+<p>
                     Puede entenderse lo anterior como una variable fundamental
                     (la componente temática), que se sirve de una variable
                     soporte (la componente espacial) para completar su
                     significado.
                 </p>
-                <p>
+<p>
                     Los tipos de división horizontal y vertical de la
                     información que veremos más adelante implican una separación
                     en unidades, que en la práctica puede implicar en un SIG que
@@ -228,22 +213,22 @@
                     forma posible, así como la evolución que se ha seguido al
                     respecto dentro del campo de los SIG.
                 </p>
-                <p>
+<p>
                     Mientras que la componente espacial va a ser generalmente un
                     valor numérico, pues son de esa naturaleza los sistemas de
                     coordenadas que permiten expresar una posición concreta en
                     referencia a un marco dado, la componente temática puede ser
                     de distintos tipos:
                 </p>
-                <p></p>
-                <ul>
-                    <p></p>
-                    <li>
-                        <b> Numérica </b>
+
+<ul>
+
+<li>
+<b> Numérica </b>
                         . A su vez, pueden señalarse los siguientes grupos:
                         <ul>
-                            <li>
-                                <b> Nominal </b>
+<li>
+<b> Nominal </b>
                                 . El valor numérico representa una
                                 identificación. Por ejemplo, el número de un
                                 portal en una calle, o el numero del DNI de una
@@ -252,20 +237,20 @@
                                 frente a las restantes que son de tipo
                                 cuantitativo.
                             </li>
-                            <li>
-                                <b> Ordinal </b>
+<li>
+<b> Ordinal </b>
                                 . El valor numérico establece un orden. Por
                                 ejemplo, una variable que recoja el año de
                                 fundación de una serie de ciudades.
                             </li>
-                            <li>
-                                <b> Intervalos </b>
+<li>
+<b> Intervalos </b>
                                 . Las diferencias entre valores de la variable
                                 tienen un significado. Por ejemplo, entre dos
                                 valores de elevación.
                             </li>
-                            <li>
-                                <b> Razones </b>
+<li>
+<b> Razones </b>
                                 . Las razones entre valores de la variable
                                 tienen un significado. Por ejemplo, podemos
                                 decir que una precipitación media de 1000mm es
@@ -283,13 +268,13 @@
                                 afirmaciones. El valor mínimo de la escala debe
                                 ser cero.
                             </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b> Alfanumérica </b>
-                    </li>
-                </ul>
-                <p>
+</ul>
+</li>
+<li>
+<b> Alfanumérica </b>
+</li>
+</ul>
+<p>
                     El tipo de variable condiciona las operaciones que pueden
                     realizarse con un dato geográfico en función de cómo sea su
                     componente temática. Por ejemplo, carece sentido realizar
@@ -301,7 +286,7 @@
                     , influye en la forma de representarlo a la hora de elaborar
                     cartografía.
                 </p>
-                <p>
+<p>
                     Además de las componentes espacial y temática, Sinton [
                     <a href="../bib.htm#Sinton1978Addison">
                         Sinton1978Addison
@@ -320,7 +305,7 @@
                     momento, en el cual no habíamos citado aún la componente
                     temporal)
                 </p>
-                <p>
+<p>
                     Por ejemplo, si registramos la temperatura a lo largo de un
                     periodo de tiempo para un punto concreto, la componente
                     temporal está controlada (tomamos mediciones de temperatura
@@ -329,13 +314,13 @@
                     componente espacial está fija (el termómetro que registra
                     los valores se encuentra siempre en un punto inmóvil)
                 </p>
-                <p>
+<p>
                     En general, la información geográfica se recoge haciendo
                     fija la componente temporal, y midiendo o controlando las
                     restantes en función del tipo de información de que se
                     trate.
                 </p>
-                <p>
+<p>
                     Un concepto a tener en cuenta en relación con las
                     componentes de la información geográfica es la
                     <i> dimensión </i>
@@ -355,16 +340,16 @@
                     esquemáticamente el concepto de dimensión de los datos
                     dentro de un SIG.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Dimensiones.png" width="95.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Dimensiones" src="../img/Dimensiones.png" width="95.0%"/>
+<figcaption>
                             Dimensión de los datos geográficos
                         </figcaption>
                         $$\label{Fig:Dimensiones}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Por ultimo, un aspecto importante de toda variable estudiada
                     es su
                     <i> continuidad </i>
@@ -378,7 +363,7 @@
                     enteros, existe el valor 1 y el valor 2, pero no los
                     infinitos valores decimales entre ambos.
                 </p>
-                <p>
+<p>
                     La continuidad de la variable temática se puede estudiar
                     igualmente en relación con la componente espacial. Así,
                     existen variables que varían de forma continua en el
@@ -388,7 +373,7 @@
                     recorrido dado, la representación de dicho perfil sería una
                     curva que podría dibujarse sin levantar el lápiz del papel.
                 </p>
-                <p>
+<p>
                     Todas estas ideas referidas a las distintas variables
                     (distintas informaciones que pretendemos recoger de una zona
                     de estudio dada) nos servirán para detallar los diferentes
@@ -396,11 +381,10 @@
                     el próximo capítulo, y escoger en cada caso el más
                     apropiado.
                 </p>
-                <h2 id="División horizontal de la información geográfica">
+<h2 id="División horizontal de la información geográfica">
                     División horizontal de la información geográfica
                 </h2>
-                <a name="divisionHorizontal"> </a>
-                <p>
+<p id="divisionHorizontal">
                     Además de dividir la información geográfica en componentes,
                     también dividimos esta con criterios puramente espaciales,
                     «cortándola» en unidades menores que ocupen una región de
@@ -416,7 +400,7 @@
                     1:25000 todo un país, es obvio que no podemos hacerlo en un
                     único mapa, ya que este sería enorme.
                 </p>
-                <p>
+<p>
                     En el caso de trabajar en un SIG, no tenemos el problema del
                     tamaño físico del mapa, ya que no existe tal tamaño. Los
                     datos no ocupan un espacio físico, pero sí que requieren un
@@ -425,7 +409,7 @@
                     volumen de datos enorme, que es conveniente dividir para
                     poder manejar con fluidez.
                 </p>
-                <p>
+<p>
                     En ambos casos, ya sea dentro de un SIG o no, suele resultar
                     necesario emplear varios bloques de información (varias
                     hojas) para cubrir un área de trabajo. En esta
@@ -433,7 +417,7 @@
                     forma de trabajo con los datos hacen que este proceso sea
                     más sencillo y eficaz.
                 </p>
-                <p>
+<p>
                     La principal cualidad de un SIG para integrar de forma
                     transparente datos correspondientes a zonas distintas y
                     formar un mosaico único es la separación que existe entre
@@ -444,7 +428,7 @@
                     sí mismos no contienen valores relativos a esa
                     visualización.
                 </p>
-                <p>
+<p>
                     De este modo, es posible combinar los datos y después
                     representarlos en su conjunto. Un proceso así no puede
                     realizarse con un mapa ya impreso, pues este contiene ya
@@ -458,7 +442,7 @@
                     cuatro veces más grande que haya sido impreso en un único
                     pliego de papel.
                 </p>
-                <p>
+<p>
                     En un SIG, sin embargo, sí que sucede así, y la
                     visualización de cuatro o más bloques de datos puede ser
                     idéntica a la que obtendría si todos esos datos
@@ -467,7 +451,7 @@
                     almacenado en un fichero, resulta incluso posible unirlos
                     todos y crear un solo fichero que los contenga.
                 </p>
-                <p>
+<p>
                     Una de las razones principales que favorecen esta
                     combinación de datos es el hecho de que la escala nominal es
                     en sí un elemento de representación. Como vimos en el
@@ -481,7 +465,7 @@
                     coherente con la representación que se va a hacer
                     posteriormente al crear el mapa.
                 </p>
-                <p>
+<p>
                     Los datos que manejamos en un SIG tiene una escala de
                     detalle impuesta por la precisión de las mediciones, pero no
                     una escala nominal asignada, ya que no tienen un tamaño fijo
@@ -492,7 +476,7 @@
                     distintas escalas sea complejo, ya que los mapas no «casan»
                     bien entre sí.
                 </p>
-                <p>
+<p>
                     En el caso de un SIG, es el usuario el que decide la escala
                     de representación, y esta será la misma para todos los datos
                     que se visualicen, independientemente de las características
@@ -504,7 +488,7 @@
                     posible trabajar sin problemas con todo el conjunto, sin
                     preocuparse por la integración de sus distintas partes.
                 </p>
-                <p>
+<p>
                     Lógicamente, no debe dejarse de lado nunca el rigor
                     cartográfico y, como se dijo en su momento, no olvidar que,
                     aunque podamos representar cualquiera de esos datos a la
@@ -521,19 +505,16 @@
                     complejidad y simplemente generar las representaciones según
                     los parámetros requeridos en cada momento.
                 </p>
-                <p>
+<p>
                     La figura \ref{Fig:Distintas_escalas_horizontal} muestra un
                     ejemplo de lo anterior en el que puede verse cómo varias
                     fotografías aéreas forman un mosaico que cubre una zona
                     dada, teniendo estas distinto nivel de detalle.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Distintas_escalas_horizontal.png"
-                            width="80.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Distintas_escalas_horizontal" src="../img/Distintas_escalas_horizontal.png" width="80.0%"/>
+<figcaption>
                             Integración de datos en sentido horizontal. A pesar
                             de que la escala de detalle es distinta para las
                             fotografías aéreas de la imagen, estas se combinan
@@ -547,11 +528,11 @@
                         </figcaption>
                         $$\label{Fig:Distintas_escalas_horizontal}$$
                     </figure>
-                </p>
-                <h2 id="División vertical de la información. Capas">
+</p>
+<h2 id="División vertical de la información. Capas">
                     División vertical de la información. Capas
                 </h2>
-                <p>
+<p>
                     Uno de los grandes éxitos de los SIG es su estructura de
                     manejo de información geográfica, que facilita todas las
                     operaciones que se llevan a cabo con esta. El concepto de
@@ -561,7 +542,7 @@
                     Geográfica, ya que favorece la correcta estructuración de la
                     información y el trabajo con ella.
                 </p>
-                <p>
+<p>
                     La división horizontal que ya hemos visto no es algo nuevo,
                     y la gran mayoría de los mapas clásicos cubren una porción
                     relativamente pequeña de la superficie terrestre. Combinando
@@ -571,7 +552,7 @@
                     sencilla, no resulta una operación tan compleja y extraña en
                     el caso de no trabajar en un entorno SIG.
                 </p>
-                <p>
+<p>
                     Más difícil, sin embargo, es combinar distintos tipos de
                     información, como por ejemplo la contenida en un mapa
                     topográfico y la existente en un mapa de tipos de suelo y
@@ -584,7 +565,7 @@
                     por encima de 1000 metros) es difícil y generalmente también
                     impreciso.
                 </p>
-                <p>
+<p>
                     En el caso de un SIG, los distintos tipos de información se
                     pueden combinar de forma sencilla y limpia, y no aparecen
                     los mismos problemas. Esto es así debido a que la idea de
@@ -596,7 +577,7 @@
                     temática se establecen distintos bloques de datos
                     espaciales.
                 </p>
-                <p>
+<p>
                     Para comprender mejor el concepto de capa, pensemos en un
                     mapa topográfico clásico. En él vamos a encontrar elementos
                     como curvas de nivel, carreteras, núcleos urbanos, o
@@ -611,18 +592,18 @@
                     momento, o bien combinarse de modo distinto o emplearse
                     individualmente (Figura \ref{Fig:Concepto_capa}).
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Concepto_capa.png" width="70.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Concepto_capa" src="../img/Concepto_capa.png" width="70.0%"/>
+<figcaption>
                             Concepto de
                             <i> capa </i>
                             de información geográfica dentro de un SIG
                         </figcaption>
                         $$\label{Fig:Concepto_capa}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La figura es lo suficientemente gráfica como para entender
                     la razón de que a este tipo de división la denominemos
                     <i> vertical </i>
@@ -632,14 +613,14 @@
                     se pueden superponer según el criterio particular de cada
                     usuario de SIG.
                 </p>
-                <p>
+<p>
                     Toda la información geográfica con que trabajemos en un SIG
                     va a ser en forma de capas. Cada una de estas capas puede
                     abrirse de forma independiente en un SIG y utilizarse por sí
                     misma o en conjunto con otras en la combinación que se
                     desee.
                 </p>
-                <p>
+<p>
                     Esta forma de proceder no es exclusiva de los SIG, y antes
                     de la aparición de estos ya existían experiencias previas en
                     este sentido, combinándose capas de información geográfica
@@ -652,7 +633,7 @@
                     sistemáticamente dicha estructuración de la información
                     geográfica.
                 </p>
-                <p>
+<p>
                     Así, la visualización, el análisis, y todas las acciones que
                     se realizan sobre la información geográfica dentro de un
                     SIG, se llevan a cabo sobre un conjunto de capas,
@@ -660,7 +641,7 @@
                     de información sobre una zona dada y un tipo de información
                     concreta.
                 </p>
-                <p>
+<p>
                     La relevancia del concepto de capa como elemento fundamental
                     de un SIG es enorme, pues realmente constituye el marco
                     básico sobre el que se van a llevar a cabo gran parte de las
@@ -676,7 +657,7 @@
                     dada, sino también de una escala concreta, y permite una
                     división de los datos óptima a todos los efectos.
                 </p>
-                <p>
+<p>
                     Al igual que veíamos en el apartado anterior, las capas nos
                     van a permitir la combinación de datos a distinta escala, no
                     ya en este caso datos contiguos, sino datos correspondientes
@@ -687,7 +668,7 @@
                     va a ser generalmente mucho mayor que el que cabe esperar
                     para una capa de, digamos, litología.
                 </p>
-                <p>
+<p>
                     En realidad, y en el lenguaje habitual de trabajo con SIG,
                     la capa no define únicamente una división vertical, sino
                     también una horizontal. Es más sencillo visualizar la idea
@@ -705,7 +686,7 @@
                     pueden estudiarse) y un recorte en la horizontal (la de la
                     superficie geográfica).
                 </p>
-                <p>
+<p>
                     Las capas pueden emplearse también para incorporar en cierta
                     forma la variable temporal si se considera que la dimensión
                     vertical es el tiempo. Aunque no es la manera más adecuada,
@@ -718,7 +699,7 @@
                     caso de capas cada elemento de la información se encuentra
                     separado a su vez.
                 </p>
-                <p>
+<p>
                     Por último, es importante el hecho de que la separación de
                     la información en capas evita la redundancia de datos, ya
                     que cada capa contiene un tipo de información concreto. En
@@ -731,7 +712,7 @@
                     nivel, por ejemplo, permitirán una mejor interpretación de
                     esa geología.
                 </p>
-                <p>
+<p>
                     Al dividir toda la información en capas, podemos combinar
                     curvas de nivel y geología, añadir otros elementos, o bien
                     representarlas de forma aislada, algo que no resulta posible
@@ -742,14 +723,14 @@
                     lo largo de gran parte de este libro, también mayores
                     posibilidades de análisis y proceso.
                 </p>
-                <p>
+<p>
                     En resumen, el trabajo con capas permite una estructura más
                     organizada y una mayor atomización de los datos, con las
                     consecuentes ventajas en el almacenamiento, manejo y
                     funcionalidad que esto conlleva.
                 </p>
-                <h2 id="Resumen">Resumen</h2>
-                <p>
+<h2 id="Resumen">Resumen</h2>
+<p>
                     Los datos son una de las piezas más importantes del sistema
                     SIG. Entendemos por dato un conjunto de valores o elementos
                     que representan algo. La interpretación correcta de esos
@@ -757,7 +738,7 @@
                     <i> información </i>
                     .
                 </p>
-                <p>
+<p>
                     La información geográfica tiene dos componentes: una
                     componente temática y una componente geográfica. Estas van
                     unidas y conforman una unidad única de información
@@ -767,7 +748,7 @@
                     puede incluir una o varias variables y estas ser de
                     naturaleza muy variada.
                 </p>
-                <p>
+<p>
                     La información geográfica se divide horizontal y
                     verticalmente. Las unidades mediante las que incorporamos
                     esta información a un SIG se conocen como
@@ -779,186 +760,186 @@
                     es la base para muchas operaciones, algunas de las cuales
                     iremos viendo en capítulos sucesivos.
                 </p>
-            </div>
-        </div>
-        <div id="toindex">
-            <a href="../index.html"> Portada </a>
-        </div>
-        <div id="slideout_chapter">
+</div>
+</div>
+<div id="toindex">
+<a href="../index.html"> Portada </a>
+</div>
+<div id="slideout_chapter">
             Índice
-            <br />
+            <br/>
             capítulo
             <div id="slideout_inner_chapter">
-                <div id="generated-toc"></div>
-            </div>
-        </div>
-        <div id="slideout_general">
+<div id="generated-toc"></div>
+</div>
+</div>
+<div id="slideout_general">
             Índice
-            <br />
+            <br/>
             general
             <div id="slideout_inner_general">
-                <p>
-                    <b> ÍNDICE GENERAL </b>
-                    <br />
-                </p>
-                <ul>
-                    <li>
-                        <a href="Intro.html"> Introducción </a>
-                    </li>
-                    <li>Parte 1. Fundamentos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_fundamentos.html">
+<p>
+<b> ÍNDICE GENERAL </b>
+<br/>
+</p>
+<ul>
+<li>
+<a href="Intro.html"> Introducción </a>
+</li>
+<li>Parte 1. Fundamentos</li>
+<ul>
+<li>
+<a href="Introduccion_fundamentos.html">
                                 Introducción. ¿Qué es un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Historia.html"> Historia de los SIG </a>
-                        </li>
-                        <li>
-                            <a href="Fundamentos_cartograficos.html">
+</li>
+<li>
+<a href="Historia.html"> Historia de los SIG </a>
+</li>
+<li>
+<a href="Fundamentos_cartograficos.html">
                                 Fundamentos cartográficos y geodésicos
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 2. Datos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_datos.html">
+</li>
+</ul>
+<li>Parte 2. Datos</li>
+<ul>
+<li>
+<a href="Introduccion_datos.html">
                                 Introducción. ¿Con qué trabajo en un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Tipos_datos.html">
+</li>
+<li>
+<a href="Tipos_datos.html">
                                 Modelos para la información geográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Fuentes_datos.html">
+</li>
+<li>
+<a href="Fuentes_datos.html">
                                 Fuentes principales de datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Calidad_datos.html">
+</li>
+<li>
+<a href="Calidad_datos.html">
                                 La calidad de los datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Bases_datos.html"> Bases de datos </a>
-                        </li>
-                        <li>
-                            <a href="Metadatos.html"> Metadatos </a>
-                        </li>
-                    </ul>
-                    <li>Parte 3. Analisis</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_procesos.html">
+</li>
+<li>
+<a href="Bases_datos.html"> Bases de datos </a>
+</li>
+<li>
+<a href="Metadatos.html"> Metadatos </a>
+</li>
+</ul>
+<li>Parte 3. Analisis</li>
+<ul>
+<li>
+<a href="Introduccion_procesos.html">
                                 Introducción. ¿Qué puedo hacer con un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Analisis_espacial.html">
+</li>
+<li>
+<a href="Analisis_espacial.html">
                                 Conceptos básicos para el análisis espacial
                             </a>
-                        </li>
-                        <li>
-                            <a href="Consultas.html">
+</li>
+<li>
+<a href="Consultas.html">
                                 Consultas y operaciones con bases de datos
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_espacial.html">
+</li>
+<li>
+<a href="Estadistica_espacial.html">
                                 Estadísticas espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_raster.html">
+</li>
+<li>
+<a href="Creacion_capas_raster.html">
                                 Creación de capas raster
                             </a>
-                        </li>
-                        <li>
-                            <a href="Algebra_de_mapas.html">
+</li>
+<li>
+<a href="Algebra_de_mapas.html">
                                 Álgebra de mapas
                             </a>
-                        </li>
-                        <li>
-                            <a href="Geomorfometria.html">
+</li>
+<li>
+<a href="Geomorfometria.html">
                                 Geomorfometría y análisis del terreno
                             </a>
-                        </li>
-                        <li>
-                            <a href="Imagenes.html"> Procesado de imágenes </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_vectoriales.html">
+</li>
+<li>
+<a href="Imagenes.html"> Procesado de imágenes </a>
+</li>
+<li>
+<a href="Creacion_capas_vectoriales.html">
                                 Creación de capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Operaciones_geometricas.html">
+</li>
+<li>
+<a href="Operaciones_geometricas.html">
                                 Operaciones geométricas con capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Costes.html">
+</li>
+<li>
+<a href="Costes.html">
                                 Costes, distancias y áreas de influencia
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_avanzada.html">
+</li>
+<li>
+<a href="Estadistica_avanzada.html">
                                 Más estadística espacial
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 4. Tecnología</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_tecnologia.html">
+</li>
+</ul>
+<li>Parte 4. Tecnología</li>
+<ul>
+<li>
+<a href="Introduccion_tecnologia.html">
                                 Introducción. ¿Cómo son las aplicaciones SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIGs_escritorio.html">
+</li>
+<li>
+<a href="SIGs_escritorio.html">
                                 Herramientas de escritorio
                             </a>
-                        </li>
-                        <li>
-                            <a href="Cliente_servidor.html">
+</li>
+<li>
+<a href="Cliente_servidor.html">
                                 Clientes y servidores remotos. Web mapping
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIG_movil.html"> SIG movil </a>
-                        </li>
-                    </ul>
-                    <li>Parte 5. Visualización</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_visualizacion.html">
+</li>
+<li>
+<a href="SIG_movil.html"> SIG movil </a>
+</li>
+</ul>
+<li>Parte 5. Visualización</li>
+<ul>
+<li>
+<a href="Introduccion_visualizacion.html">
                                 Introducción. Los SIG como herramientas de
                                 visualización
                             </a>
-                        </li>
-                        <li>
-                            <a href="Conceptos_basicos.html">
+</li>
+<li>
+<a href="Conceptos_basicos.html">
                                 Conceptos básicos de visualización y
                                 representación
                             </a>
-                        </li>
-                        <li>
-                            <a href="Mapas.html">
+</li>
+<li>
+<a href="Mapas.html">
                                 El mapa y la comunicación cartográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Visualizacion_SIG.html">
+</li>
+<li>
+<a href="Visualizacion_SIG.html">
                                 La visualización en términos SIG
                             </a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </body>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</body>
 </html>

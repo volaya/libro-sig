@@ -1,11 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-body { font:1.05em "Open Sans", sans-serif; background-color:#FFFFFF;  
-font-size-adjust:none;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-background: #FFFFFF;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body { font:1.05em "Open Sans", sans-serif; background-color:#FFFFFF;  font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal; background: #FFFFFF; }
 
 p { padding:0 0  1em 0; line-height: 150%;}
 
@@ -118,10 +112,6 @@ img{
     font-weight: normal;
 }
 
-#slideout_chapter:hover {
-    left: 450px;
-    z-index: 99;
-}
 #slideout_chapter:hover #slideout_inner_chapter {
     left: 0;
     z-index: 99;
@@ -142,7 +132,7 @@ img{
     -webkit-border-radius: 0 5px 5px 0;
     -moz-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
-    z-index: 100;   
+    z-index: 100;  
     color: white; 
     font-weight: bold;
 }
@@ -172,12 +162,91 @@ img{
     font-weight: normal;
 }
 
+#slideout_general:hover #slideout_inner_general,
 #slideout_general:hover {
-    left: 450px;
-    z-index: 100;
-}
-#slideout_general:hover #slideout_inner_general {
     left: 0;
     z-index: 100;
 }
 
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 95% !important;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-size: 2em !important;
+    }
+    
+    h2 {
+        font-size: 1.5em !important;
+    }
+    
+    #slideout_chapter,
+    #slideout_general {
+        width: 60px;
+        padding: 8px 0;
+        font-size: 0.7em;
+    }
+    
+    #slideout_inner_chapter,
+    #slideout_inner_general {
+        width: 280px;
+        padding: 15px;
+    }
+    
+    #slideout_chapter:hover #slideout_inner_chapter,
+    #slideout_general:hover #slideout_inner_general,
+    #slideout_general:hover {
+        left: 0;
+    }
+    
+    /* Mejor visibilidad en móviles */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    table {
+        font-size: 0.9em;
+    }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    #slideout_chapter,
+    #slideout_general,
+    #slideout_inner_chapter,
+    #slideout_inner_general {
+        transition-duration: 0s;
+    }
+}
+
+/* Contraste mejorado para accesibilidad */
+@media (prefers-contrast: high) {
+    body {
+        background: #FFFFFF;
+    }
+    
+    a {
+        color: #0000EE;
+    }
+}
+
+/* Focus visible para navegación con teclado */
+a:focus,
+button:focus {
+    outline: 2px solid #005AF2;
+    outline-offset: 2px;
+}
+
+/* Estilos para figuras accesibles */
+figure {
+    margin: 1em 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}

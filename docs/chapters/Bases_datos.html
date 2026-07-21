@@ -1,42 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title> </title>
-        <link
-            href="../reset.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="../typography.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> </title>
+<link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<script type="text/x-mathjax-config">
              MathJax.Hub.Config({
               tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
               TeX: { equationNumbers: {autoNumber: "all"} }
             });
         </script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"
-            type="text/javascript"
-        ></script>
-        <script src="../generated_toc.js"></script>
-    </head>
-    <body lang="es">
-        <div class="main">
-            <div class="g960" id="chapter">
-                <h1>Bases de datos</h1>
-                <p></p>
-                <p>
-                    <a name="Bases_datos"> </a>
-                </p>
-                <h2 id="Introducción">Introducción</h2>
-                <p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="../generated_toc.js"></script>
+</head>
+<body lang="es">
+<div class="main">
+<div class="g960" id="chapter">
+<h1>Bases de datos</h1>
+
+<h2 id="Introducción">Introducción</h2>
+<p>
                     Las bases de datos son un elemento fundamental en el entorno
                     informático hoy en día y tienen aplicación en la práctica
                     totalidad de campos. Concebidas con un propósito general,
@@ -48,7 +34,7 @@
                     necesidad de indexación, etc.) que hacen que sea
                     recomendable el uso de bases de datos.
                 </p>
-                <p>
+<p>
                     Pese a que, como veremos en este mismo capítulo, el uso de
                     las bases de datos en el ámbito SIG no ha sido siempre el
                     actual, hoy en día representan una parte clave para la
@@ -63,10 +49,10 @@
                     cada vez mayor de las bases de datos, y por tanto una mayor
                     necesidad de conocer el funcionamiento de estas.
                 </p>
-                <h2 id="Fundamentos de bases de datos">
+<h2 id="Fundamentos de bases de datos">
                     Fundamentos de bases de datos
                 </h2>
-                <p>
+<p>
                     Aunque las particularidades de los datos espaciales con los
                     que trabajamos en un SIG han hecho necesarias modificaciones
                     y adaptaciones sobre el esquema de trabajo de las bases de
@@ -79,10 +65,10 @@
                     posteriormente poder tratar el caso particular de los datos
                     espaciales.
                 </p>
-                <h3 id="¿Qué es una base de datos?">
+<h3 id="¿Qué es una base de datos?">
                     ¿Qué es una base de datos?
                 </h3>
-                <p>
+<p>
                     Entendemos como
                     <i> Base de Datos </i>
                     un conjunto de datos estructurado y almacenado de forma
@@ -98,7 +84,7 @@
                     características que hacen de la base de datos un enfoque
                     superior a la hora de gestionar datos.
                 </p>
-                <p>
+<p>
                     Podemos ver más claramente las implicaciones de utilizar una
                     base de datos si recurrimos al ejemplo que vimos en el
                     primer capítulo de este libro, relativo a la gestión
@@ -110,7 +96,7 @@
                     mismo área o puedan emplear total o parcialmente esos mismos
                     datos.
                 </p>
-                <p>
+<p>
                     Imaginemos, por ejemplo, el caso de un ingeniero encargado
                     de planear la instalación de un tendido eléctrico a través
                     de nuestra zona forestal de ejemplo. Sin duda, deberá
@@ -128,7 +114,7 @@
                     propio de un uso particular, para concebirse como un
                     conjunto global del que se benefician diversos usuarios.
                 </p>
-                <p>
+<p>
                     Establecer un uso compartido de los datos en una situación
                     como la anterior no parece difícil, ya que simplemente se
                     trata de dos profesionales que realizan tareas relacionadas
@@ -140,7 +126,7 @@
                     lugar a dos copias aisladas que constituyen dos universos
                     distintos.
                 </p>
-                <p>
+<p>
                     La situación real, sin embargo, es habitualmente mucho más
                     compleja, y utilizar un esquema de colaboración como el
                     anterior puede ser imposible, carecer por completo de
@@ -157,7 +143,7 @@
                     complicando enormemente el trabajo coordinado en cuanto el
                     equipo tiene un tamaño medio.
                 </p>
-                <p>
+<p>
                     Es probable además que existan usuarios dentro de una misma
                     organización (por ejemplo, un organismo público) que aunque
                     requieran para su trabajo datos similares, no tengan
@@ -168,7 +154,7 @@
                     lugar de basar su trabajo en un conjunto de datos
                     fragmentado y difícil de gestionar.
                 </p>
-                <p>
+<p>
                     Pensemos en un dato que pueda ser de interés a varios
                     usuarios, como por ejemplo una capa de vías de comunicación.
                     A nuestro gestor forestal le será de interés para, por
@@ -185,7 +171,7 @@
                     geometrías), y una dispersión de la componente temática, que
                     resultaría más conveniente mantenerla agrupada.
                 </p>
-                <p>
+<p>
                     Pensemos ahora que el gestor forestal detecta un error en el
                     trazado de una de las vías y lo corrige. Esa corrección no
                     estará disponible para los restantes usuarios, que pueden a
@@ -205,7 +191,7 @@
                     serlo, no lo hacen en conjunto con datos similares, sino
                     como un dato aislado de los restantes.
                 </p>
-                <p>
+<p>
                     En definitiva, es complejo gestionar de forma adecuada los
                     datos en el momento en que estos alcanzan un ámbito más allá
                     de lo personal, y las prácticas más habituales basadas en
@@ -216,30 +202,30 @@
                     bases de datos, que representan la interfaz entre las bases
                     de datos y los distintos usuarios.
                 </p>
-                <h3 id="¿Por qué interesa usar una base de datos?">
+<h3 id="¿Por qué interesa usar una base de datos?">
                     ¿Por qué interesa usar una base de datos?
                 </h3>
-                <p>
+<p>
                     En base al ejemplo anterior, podemos analizar algo más
                     sistemáticamente las ventajas de una base de datos frente a
                     una gestión no organizada de los datos. Algunas ventajas que
                     afectan directamente a los datos son las siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Mayor independencia </b>
+
+<ul>
+<li>
+<b> Mayor independencia </b>
                         . Los datos son independientes de las aplicaciones que
                         los usan, así como de los usuarios.
                     </li>
-                    <li>
-                        <b> Mayor disponibilidad </b>
+<li>
+<b> Mayor disponibilidad </b>
                         . Se facilita el acceso a los datos desde contextos,
                         aplicaciones y medios distintos, haciéndolos útiles para
                         un mayor número de usuarios.
                     </li>
-                    <li>
-                        <b> Mayor seguridad (protección de los datos) </b>
+<li>
+<b> Mayor seguridad (protección de los datos) </b>
                         . Por ejemplo, resulta más fácil replicar una base de
                         datos para mantener una copia de seguridad que hacerlo
                         con un conjunto de ficheros almacenados de forma no
@@ -249,56 +235,56 @@
                         (modificaciones), con lo que esa copia de seguridad
                         servirá a todos los usuarios.
                     </li>
-                    <li>
-                        <b> Menor redundancia </b>
+<li>
+<b> Menor redundancia </b>
                         . Un mismo dato no se encuentra almacenado en múltiples
                         ficheros o con múltiples esquemas distintos, sino en una
                         única instancia en la base de datos. Esto redunda en
                         menor volumen de datos y mayor rapidez de acceso.
                     </li>
-                    <li>
-                        <b>
+<li>
+<b>
                             Mayor eficiencia en la captura, codificación y
                             entrada de datos
                         </b>
                         .
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Esto tiene una consecuencia directa sobre los resultados que
                     se obtienen de la explotación de la base de datos,
                     presentándose al respecto ventajas como, por ejemplo:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Mayor coherencia </b>
+
+<ul>
+<li>
+<b> Mayor coherencia </b>
                         . La mayor calidad de los datos que se deriva de su
                         mejor gestión deriva en mayor calidad de los resultados.
                     </li>
-                    <li>
-                        <b> Mayor eficiencia </b>
+<li>
+<b> Mayor eficiencia </b>
                         . Facilitando el acceso a los datos y haciendo más
                         sencilla su explotación, la obtención de resultados es
                         más eficiente.
                     </li>
-                    <li>
-                        <b> Mayor valor informativo </b>
+<li>
+<b> Mayor valor informativo </b>
                         . Resulta más sencillo extraer la información que los
                         datos contienen, ya que uno de los cometidos de la base
                         de datos es aumentar el valor de estos como fuente de
                         información.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Por último, los usuarios de la base de datos también
                     obtienen ventajas al trabajar con estas, entre los que cabe
                     citar:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Mayor facilidad y sencillez de acceso </b>
+
+<ul>
+<li>
+<b> Mayor facilidad y sencillez de acceso </b>
                         . El usuario de la base de datos se debe preocupar
                         únicamente de
                         <i> usar </i>
@@ -306,22 +292,22 @@
                         adecuadas y de una estructura solida sobre la que
                         apoyarse.
                     </li>
-                    <li>
-                        <b> Facilidad para reutilización de datos </b>
+<li>
+<b> Facilidad para reutilización de datos </b>
                         . Esto es, facilidad para compartir.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     De forma resumida, puede decirse que la principal bondad de
                     una base de datos es la centralización que supone de todos
                     los datos con los que se trabaja en un contexto determinado,
                     con las consecuencias que ello tiene para una mejor gestión,
                     acceso o estructuración de estos.
                 </p>
-                <h3 id="Modelos de bases de datos">
+<h3 id="Modelos de bases de datos">
                     Modelos de bases de datos
                 </h3>
-                <p>
+<p>
                     En función de la estructura utilizada para construir una
                     base de datos, existen diversos modelos. El modelo de la
                     base de datos define un paradigma de almacenamiento,
@@ -333,10 +319,10 @@
                     de ellos con sus ventajas e inconvenientes particulares.
                     Algunos de los más habituales son los siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Bases de datos jerárquicas </b>
+
+<ul>
+<li>
+<b> Bases de datos jerárquicas </b>
                         . Los datos se recogen mediante una estructura basada en
                         nodos interconectados. Cada nodo tiene un único padre, y
                         cero, uno o varios hijos. De este modo, se crea una
@@ -361,8 +347,8 @@
                         realmente representan una única realidad y debieran ser
                         idénticas entre sí.
                     </li>
-                    <li>
-                        <b> Bases de datos en red </b>
+<li>
+<b> Bases de datos en red </b>
                         . Con objeto de solucionar los problemas de redundancia
                         de las bases de datos jerárquicas, surge el modelo en
                         red. Este modelo permite la aparición de ciclos en la
@@ -374,8 +360,8 @@
                         lo que hace difícil la administración de la base de
                         datos.
                     </li>
-                    <li>
-                        <b> Bases de datos relacionales </b>
+<li>
+<b> Bases de datos relacionales </b>
                         . Constituyen el modelo de bases de datos más utilizado
                         en la actualidad. Solucionan los problemas asociados a
                         las bases de datos jerárquicas y en red, utilizando para
@@ -389,8 +375,8 @@
                         (columnas), lo que da lugar a una correcta
                         estructuración y un acceso eficiente.
                     </li>
-                    <li>
-                        <b> Bases de datos orientadas a objetos </b>
+<li>
+<b> Bases de datos orientadas a objetos </b>
                         . Se trata de uno de los modelos más actuales, derivado
                         directamente de los paradigmas de la programación
                         orientada a objetos. El modelo extiende las capacidades
@@ -404,18 +390,15 @@
                         más ventajosas que el modelo relacional, siendo los SIG
                         una de ellas.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     La figura \ref{Fig:Comparacion_BBDD} muestra una comparación
                     esquemática de los anteriores modelos de bases de datos.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/ComparacionModelos.png"
-                            width="99.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="ComparacionModelos" src="../img/ComparacionModelos.png" width="99.0%"/>
+<figcaption>
                             Comparación entre algunos modelos de base de datos
                             más frecuentes (adaptado de [
                             <a href="../bib.htm#USDT2001"> USDT2001 </a>
@@ -423,11 +406,11 @@
                         </figcaption>
                         $$\label{Fig:Comparacion_BBDD}$$
                     </figure>
-                </p>
-                <h3 id="Bases de datos relacionales">
+</p>
+<h3 id="Bases de datos relacionales">
                     Bases de datos relacionales
                 </h3>
-                <p>
+<p>
                     Aunque, como ya hemos visto, existen diversos tipos de bases
                     de datos, las más utilizadas con diferencia en la actualidad
                     son las relacionales, que han demostrado su idoneidad en la
@@ -437,7 +420,7 @@
                     correcta comprensión no solo de este capítulo, sino también
                     de otros posteriores que desarrollan temas relacionados.
                 </p>
-                <p>
+<p>
                     El modelo relacional fue desarrollado en 1969 por Ted Codd y
                     publicado un año después en un artículo ya clásico [
                     <a href="../bib.htm#Codd1969ACM"> Codd1969ACM </a>
@@ -454,7 +437,7 @@
                     conceptos de la teoría de conjuntos, lo que posibilita un
                     análisis formal del mismo.
                 </p>
-                <p>
+<p>
                     Además de las denominaciones habituales de
                     <i> tabla </i>
                     ,
@@ -481,7 +464,7 @@
                     <i> tupla </i>
                     .
                 </p>
-                <p>
+<p>
                     El
                     <i> esquema de la relación </i>
                     está formado por los nombres de los atributos y un
@@ -512,19 +495,16 @@
                     <i> cardinalidad </i>
                     .
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/ElementosModeloRelacional.png"
-                            width="90.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="ElementosModeloRelacional" src="../img/ElementosModeloRelacional.png" width="90.0%"/>
+<figcaption>
                             Elementos del modelo relacional.
                         </figcaption>
                         $$\label{Fig:ElementosModeloRelacional}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Las relaciones son, por tanto, un conjunto de tuplas
                     asociadas a un esquema. En una relación, tanto el orden de
                     las filas como el de las columnas son irrelevantes
@@ -534,12 +514,12 @@
                     a la que pertenece. Es decir, que sea coherente con el
                     esquema.
                 </p>
-                <p>
+<p>
                     En la figura \ref{Fig:ElementosModeloRelacional} puede verse
                     un esquema de los elementos fundamentales del modelo
                     relacional.
                 </p>
-                <p>
+<p>
                     Una forma abreviada de definir las relaciones que forman
                     parte de una base de datos es mediante su nombre y su
                     esquema expresado como una lista de los atributos que lo
@@ -548,10 +528,10 @@
                     <tt> PERSONAS </tt>
                     como
                 </p>
-                <p>
-                    <tt> PERSONAS(DNI, Nombre, Altura, Edad, Ciudad) </tt>
-                </p>
-                <p>
+<p>
+<tt> PERSONAS(DNI, Nombre, Altura, Edad, Ciudad) </tt>
+</p>
+<p>
                     Una base de datos contiene normalmente más de una tabla, ya
                     que suelen ser muchos los tipos de datos a almacenar y
                     resulta conveniente dividirlos en distintas tablas. Además
@@ -574,21 +554,21 @@
                     . Normalmente, de estas se elige una como representante
                     principal de las tuplas, y se conoce como
                     <i> clave primaria </i>
-                </p>
-                <p>
+</p>
+<p>
                     { Por convención, las claves se escriben subrayadas al
                     definir el esquema de la tabla, de tal modo que el de la
                     tabla \texttt{PERSONAS quedaría de la siguiente forma:
                 </p>
-                <p>
-                    <tt>
+<p>
+<tt>
                         PERSONAS(
                         <u> DNI </u>
                         , Nombre, Altura, Edad, Ciudad)
                     </tt>
-                </p>
-                <p></p>
-                <p>
+</p>
+
+<p>
                     Si no existe ningún atributo que cumpla los requisitos para
                     ser utilizado como clave, este puede incorporarse al esquema
                     de la relación, añadiendo por ejemplo un nuevo atributo con
@@ -599,7 +579,7 @@
                     DNI de estas entre esa información y, por tanto, carece de
                     un atributo adecuado para servir de clave.
                 </p>
-                <p>
+<p>
                     En la definición de clave cabe también la presencia de
                     claves compuestas, es decir, formadas por varios atributos
                     cuya combinación es única para cada tupla. No obstante, la
@@ -607,7 +587,7 @@
                     que simplifica gran parte de las operaciones en las que la
                     presencia de una clave es necesaria.
                 </p>
-                <p>
+<p>
                     Cuando trabajamos con datos espaciales, es habitual emplear
                     la componente espacial como clave, ya que esta suele ser
                     única. En el caso de almacenar información sobre ciudades,
@@ -617,150 +597,150 @@
                     embargo, es única, ya que no puede haber dos ciudades
                     simultáneamente en el mismo lugar.
                 </p>
-                <p></p>
-                <p>
-                    <strong> Tabla a </strong>
-                </p>
-                <table border="1">
-                    <colgroup>
-                        <col width="15%" />
-                        <col width="29%" />
-                        <col width="19%" />
-                        <col width="15%" />
-                        <col width="21%" />
-                    </colgroup>
-                    <thead valign="bottom">
-                        <tr class="row-odd">
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> DNI </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Nombre </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Altura </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Edad </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Ciudad </span>
-                                </tt>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody valign="top">
-                        <tr class="row-even">
-                            <td>50234561</td>
-                            <td>Juan Gómez</td>
-                            <td>1,85</td>
-                            <td>35</td>
-                            <td>Madrid</td>
-                        </tr>
-                        <tr class="row-odd">
-                            <td>13254673</td>
-                            <td>Edurne Montero</td>
-                            <td>1,60</td>
-                            <td>30</td>
-                            <td>Toledo</td>
-                        </tr>
-                        <tr class="row-even">
-                            <td>46576290</td>
-                            <td>Luis Urrutia</td>
-                            <td>1,75</td>
-                            <td>46</td>
-                            <td>Madrid</td>
-                        </tr>
-                        <tr class="row-odd">
-                            <td>38941882</td>
-                            <td>Juan Gómez</td>
-                            <td>1, 71</td>
-                            <td>55</td>
-                            <td>Valencia</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>
-                    <strong> Tabla b </strong>
-                </p>
-                <table border="1">
-                    <colgroup>
-                        <col width="14%" />
-                        <col width="29%" />
-                        <col width="20%" />
-                        <col width="16%" />
-                        <col width="22%" />
-                    </colgroup>
-                    <thead valign="bottom">
-                        <tr class="row-odd">
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> ID </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Nombre </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Altura </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Edad </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Ciudad </span>
-                                </tt>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody valign="top">
-                        <tr class="row-even">
-                            <td>001</td>
-                            <td>Juan Gómez</td>
-                            <td>1,85</td>
-                            <td>35</td>
-                            <td>Madrid</td>
-                        </tr>
-                        <tr class="row-odd">
-                            <td>002</td>
-                            <td>Edurne Montero</td>
-                            <td>1,60</td>
-                            <td>30</td>
-                            <td>Toledo</td>
-                        </tr>
-                        <tr class="row-even">
-                            <td>003</td>
-                            <td>Luis Urrutia</td>
-                            <td>1,75</td>
-                            <td>46</td>
-                            <td>Madrid</td>
-                        </tr>
-                        <tr class="row-odd">
-                            <td>004</td>
-                            <td>Juan Gómez</td>
-                            <td>1, 71</td>
-                            <td>55</td>
-                            <td>Valencia</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <figcaption>
+
+<p>
+<strong> Tabla a </strong>
+</p>
+<table border="1">
+<colgroup>
+<col width="15%"/>
+<col width="29%"/>
+<col width="19%"/>
+<col width="15%"/>
+<col width="21%"/>
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd">
+<th class="head">
+<tt>
+<span class="pre"> DNI </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Nombre </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Altura </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Edad </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Ciudad </span>
+</tt>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even">
+<td>50234561</td>
+<td>Juan Gómez</td>
+<td>1,85</td>
+<td>35</td>
+<td>Madrid</td>
+</tr>
+<tr class="row-odd">
+<td>13254673</td>
+<td>Edurne Montero</td>
+<td>1,60</td>
+<td>30</td>
+<td>Toledo</td>
+</tr>
+<tr class="row-even">
+<td>46576290</td>
+<td>Luis Urrutia</td>
+<td>1,75</td>
+<td>46</td>
+<td>Madrid</td>
+</tr>
+<tr class="row-odd">
+<td>38941882</td>
+<td>Juan Gómez</td>
+<td>1, 71</td>
+<td>55</td>
+<td>Valencia</td>
+</tr>
+</tbody>
+</table>
+<p>
+<strong> Tabla b </strong>
+</p>
+<table border="1">
+<colgroup>
+<col width="14%"/>
+<col width="29%"/>
+<col width="20%"/>
+<col width="16%"/>
+<col width="22%"/>
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd">
+<th class="head">
+<tt>
+<span class="pre"> ID </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Nombre </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Altura </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Edad </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Ciudad </span>
+</tt>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even">
+<td>001</td>
+<td>Juan Gómez</td>
+<td>1,85</td>
+<td>35</td>
+<td>Madrid</td>
+</tr>
+<tr class="row-odd">
+<td>002</td>
+<td>Edurne Montero</td>
+<td>1,60</td>
+<td>30</td>
+<td>Toledo</td>
+</tr>
+<tr class="row-even">
+<td>003</td>
+<td>Luis Urrutia</td>
+<td>1,75</td>
+<td>46</td>
+<td>Madrid</td>
+</tr>
+<tr class="row-odd">
+<td>004</td>
+<td>Juan Gómez</td>
+<td>1, 71</td>
+<td>55</td>
+<td>Valencia</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
                     Adición de un campo para crear una clave. La tabla a)
                     contiene un atributo único (DNI). La tabla b) no contiene un
                     atributo único entre sus datos, pero se añade el campo ID
@@ -775,18 +755,18 @@
                     ejemplo, pensemos en una base de datos que contenga la tabla
                     anterior y junto a esta otra tabla con el siguiente esquema:
                 </p>
-                <p>
-                    <tt>
+<p>
+<tt>
                         CIUDADES(
                         <u> Nombre </u>
                         , Población, Superficie)
                     </tt>
-                </p>
-                <p>
+</p>
+<p>
                     Es decir, la base de datos contiene información sobre
                     personas y sobre ciudades.
                 </p>
-                <p>
+<p>
                     Es sencillo ver que puede vincularse una tabla a la otra a
                     través del atributo que contiene el nombre de la ciudad.
                     Nótese que este atributo no tiene el mismo nombre en ambas
@@ -802,7 +782,7 @@
                     <tt> CIUDAD </tt>
                     podemos saber exactamente cuál es dicha ciudad.
                 </p>
-                <p>
+<p>
                     Las interrelaciones entre tablas pueden ser de distintos
                     tipos en función del número de elementos distintos que se
                     vinculan de cada tabla. En nuestra relación «vive en», una
@@ -817,7 +797,7 @@
                     <i> uno a muchos </i>
                     .
                 </p>
-                <p>
+<p>
                     Existen otros dos tipos de relaciones además de esta: las
                     denominadas de
                     <i> uno a uno </i>
@@ -832,7 +812,7 @@
                     uno, relacionándose una tupla con tan solo otra distinta, y
                     no con varias.
                 </p>
-                <p>
+<p>
                     Es importante reseñar que en algunas relaciones como «nacido
                     en» todos los elementos de una o de las dos tablas se
                     encuentran vinculados de algún modo a través de la relación,
@@ -842,7 +822,7 @@
                     <tt> CIUDADES </tt>
                     , pero no todas las personas están necesariamente casadas.
                 </p>
-                <p>
+<p>
                     Un ejemplo de relación
                     <i> muchos a muchos </i>
                     la podemos plantear si contamos en nuestra base de datos
@@ -853,10 +833,10 @@
                     empresas, con lo que tanto ciudades como empresas pueden
                     estar vinculadas a más de una tupla en la otra tabla.
                 </p>
-                <h3 id="Sistemas gestores de bases de datos">
+<h3 id="Sistemas gestores de bases de datos">
                     Sistemas gestores de bases de datos
                 </h3>
-                <p>
+<p>
                     Junto con las bases de datos, el elemento fundamental para
                     el aprovechamiento de estas son los
                     <i> Sistemas Gestores de Bases de Datos </i>
@@ -869,7 +849,7 @@
                     unir el SIG con la base de datos en la que se almacenan los
                     datos espaciales con los que este va a trabajar.
                 </p>
-                <p>
+<p>
                     Un SGBD es una pieza de software compleja, ya que las
                     situaciones a las que debe responder son diversas y en
                     muchas ocasiones con requerimientos elevados, por ejemplo en
@@ -891,7 +871,7 @@
                     conjunto de datos completo cuanto sea necesario en cada
                     caso.
                 </p>
-                <p>
+<p>
                     Además, el SGBD es la herramienta utilizada no solo por
                     quienes aprovechan los datos, sino también por aquellos que
                     se han de encargar de la propia gestión y mantenimiento de
@@ -900,15 +880,15 @@
                     debe proveer los útiles necesarios para llevar a cabo ese
                     mantenimiento.
                 </p>
-                <p>
+<p>
                     Para ser de verdadera utilidad y responder a todas las
                     necesidades que pueden plantearse en relación con la base de
                     datos, un SGBD debe perseguir los siguientes objetivos:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Acceso transparente a los datos </b>
+
+<ul>
+<li>
+<b> Acceso transparente a los datos </b>
                         . La base de datos ha de poder accederse de forma
                         transparente, sin que sea necesario para el usuario del
                         SGBD preocuparse por aspectos internos relativos a la
@@ -931,8 +911,8 @@
                         el SGBD y deja en manos de este el proceso de consulta
                         en sí.
                     </li>
-                    <li>
-                        <b> Protección de los datos </b>
+<li>
+<b> Protección de los datos </b>
                         . Si la base de datos almacena información sensible, el
                         SGBD debe controlar el acceso a esta, restringiendo el
                         acceso cuando corresponda (por ejemplo, estableciendo
@@ -940,8 +920,8 @@
                         usuarios) e implementando los mecanismos de protección
                         necesarios.
                     </li>
-                    <li>
-                        <b> Eficiencia </b>
+<li>
+<b> Eficiencia </b>
                         . Acceder a los datos no es suficiente en la mayoría de
                         los casos, sino que se requiere un acceso eficiente. El
                         SGBD debe ser capaz de gestionar de forma fluida grandes
@@ -950,8 +930,8 @@
                         respuesta rápida a las peticiones de los usuarios de la
                         base de datos.
                     </li>
-                    <li>
-                        <b> Gestión de transacciones </b>
+<li>
+<b> Gestión de transacciones </b>
                         . Las operaciones sobre la base de datos tales como la
                         adición o borrado de un registro se realizan mediante
                         transacciones. Una transacción es un conjunto de
@@ -973,18 +953,18 @@
                         causa (error en el sistema, fallo eléctrico, etc) no
                         haya podido completarse la transacción.
                     </li>
-                </ul>
-                <p>
-                    <figure>
-                        <img src="../img/SGBD.png" width="90.0%" />
-                        <figcaption>
+</ul>
+<p>
+<figure>
+<img alt="SGBD" src="../img/SGBD.png" width="90.0%"/>
+<figcaption>
                             Representación esquemática del papel de un Sistema
                             Gestor de Base de Datos.
                         </figcaption>
                         $$\label{Fig:SGBD}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La figura \ref{Fig:SGBD} esquematiza el papel que el SGBD
                     juega en el manejo y empleo de los datos. Tanto los
                     distintos usuarios (en el caso de nuestro supuesto de
@@ -994,17 +974,16 @@
                     datos acceden a esta a través del SGBD. No existe acceso
                     directo a la base de datos.
                 </p>
-                <p>
+<p>
                     El SGBD tendrá unas u otras características en función del
                     modelo de base de datos subyacente, ya que debe adaptarse a
                     las características de este para ofrecer las funcionalidades
                     correspondientes en el nivel de usuario.
                 </p>
-                <h3 id="Diseño y creación de una base de datos">
+<h3 id="Diseño y creación de una base de datos">
                     Diseño y creación de una base de datos
                 </h3>
-                <a name="DisenoBaseDatos"> </a>
-                <p>
+<p id="DisenoBaseDatos">
                     Una vez se toma la decisión de emplear una base de datos, el
                     siguiente paso es el diseño y creación de esta. El diseño
                     implica la definición de la estructura que va a tener la
@@ -1021,7 +1000,7 @@
                     vida), así como la de los algoritmos y procesos que van a
                     emplearse sobre ellos.
                 </p>
-                <p>
+<p>
                     Posteriormente al diseño, debe procederse a la
                     implementación de la base de datos, esto es, a la creación
                     propiamente dicha, incorporando los datos según los esquemas
@@ -1029,33 +1008,33 @@
                     la base de datos, debe procurarse un mantenimiento para que
                     esté continuamente en condiciones de ser utilizada.
                 </p>
-                <p>
+<p>
                     Más concretamente, pueden distinguirse las siguientes fases
                     en el proceso global de desarrollo de una base de datos:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Diseño lógico </b>
+
+<ul>
+<li>
+<b> Diseño lógico </b>
                         . Independiente del SGBD empleado, es un diseño
                         conceptual que pretende modelizar el contenido de la
                         base de datos.
                     </li>
-                    <li>
-                        <b> Diseño físico </b>
+<li>
+<b> Diseño físico </b>
                         . Es la adaptación del diseño conceptual a las
                         particularidades del SGBD escogido.
                     </li>
-                    <li>
-                        <b> Implementación </b>
+<li>
+<b> Implementación </b>
                         . Introducción de los datos en la base de datos.
                     </li>
-                    <li>
-                        <b> Mantenimiento </b>
+<li>
+<b> Mantenimiento </b>
                         . Monitorización de la actividad sobre la base de datos.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     La primera fase en el diseño de una base de datos implica un
                     análisis de los datos que se van a recoger. Como resultado
                     de ese análisis debe surgir un modelo conceptual que exprese
@@ -1068,7 +1047,7 @@
                     (relacional, orientado a objetos, etc.) una vez se pase a la
                     fase de diseño físico.
                 </p>
-                <p>
+<p>
                     El modelo conceptual debe estructurar la información de
                     forma que el usuario de la base de datos comprenda de forma
                     sencilla el contenido y forma de esta. Por tanto, debe
@@ -1084,14 +1063,14 @@
                     posteriormente y utilizado en conjunto con el SGBD escogido,
                     ya que de otro modo no presenta utilidad práctica.
                 </p>
-                <p>
+<p>
                     Existen diversas metodologías para desarrollar un modelo
                     conceptual. Una de las más extendidas por su sencillez y
                     potencia es la del
                     <i> modelo entidad--relación </i>
                     (abreviadamente, modelo E-R).
                 </p>
-                <p>
+<p>
                     Denominamos
                     <i> entidad </i>
                     a un objeto o concepto del mundo real acerca del cual se
@@ -1105,7 +1084,7 @@
                     idea abstracta, como un tipo de deporte, una clase de música
                     o una palabra.
                 </p>
-                <p>
+<p>
                     Una entidad se describe mediante una serie de
                     características o atributos, que son las que definen su
                     naturaleza y sus propiedades. Una colección de entidades es
@@ -1120,7 +1099,7 @@
                     <i> procesador </i>
                     .
                 </p>
-                <p>
+<p>
                     Por su parte, una
                     <i> relación </i>
                     expresa la dependencia existente entre entidades y permite
@@ -1135,13 +1114,13 @@
                     base de datos, especialmente si esta utiliza el modelo
                     relacional.
                 </p>
-                <p>
+<p>
                     Para desarrollar el diseño conceptual de una base de datos
                     siguiendo el modelo E-R, estos son los pasos principales:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Partimos de una descripción textual del problema o
                         sistema que queremos recoger. Esta descripción contiene
                         los requisitos necesarios y ha de formular la pregunta a
@@ -1150,35 +1129,35 @@
                         problema podríamos formularlo como «¿qué personas han
                         nacido en cada ciudad?».
                     </li>
-                    <li>
+<li>
                         Se toman los verbos y los sustantivos de la descripción
                         textual. Los sustantivos son posibles entidades o
                         atributos, mientras que los verbos son posibles
                         relaciones. En nuestro caso, «persona» y «ciudad» serán
                         entidades y «nacido en» una relación.
                     </li>
-                    <li>
+<li>
                         Se analizan las frases y determina la cardinalidad de
                         las relaciones y otros detalles.
                     </li>
-                </ul>
-                <p>
-                    <figure>
-                        <img src="../img/SimbolosER.png" width="100%" />
-                        <figcaption>
+</ul>
+<p>
+<figure>
+<img alt="SimbolosER" src="../img/SimbolosER.png" width="100%"/>
+<figcaption>
                             Simbología empleada en el modelo entidad--relación.
                         </figcaption>
                         $$\label{Fig:SimbolosER}$$
                     </figure>
-                </p>
-                <p>
-                    <figure>
-                        <img src="../img/EjemploDiagramaER.png" width="90.0%" />
-                        <figcaption>Ejemplo de diagrama E-R.</figcaption>
+</p>
+<p>
+<figure>
+<img alt="EjemploDiagramaER" src="../img/EjemploDiagramaER.png" width="90.0%"/>
+<figcaption>Ejemplo de diagrama E-R.</figcaption>
                         $$\label{Fig:EjemploDiagramaER}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     El modelo así creado se expresa mediante un diagrama en el
                     que las entidades se representan como cajas rectangulares,
                     las relaciones mediante rombos y los atributos en círculos o
@@ -1188,20 +1167,20 @@
                     definición de esquemas que ya vimos anteriormente (Figura
                     \ref{Fig:SimbolosER}).
                 </p>
-                <p>
+<p>
                     Si el número de atributos es elevado o el diagrama es
                     complejo por existir gran cantidad de tablas e
                     interrelaciones, pueden omitirse los atributos para una
                     mayor legibilidad, describiéndose en un documento adicional.
                 </p>
-                <p>
+<p>
                     Como ejemplo de lo anterior, la información sobre personas y
                     ciudades que venimos manejando, así como la relación «nacido
                     en» existente entre ambas, se expresarían según el modelo
                     entidad-relación con un diagrama tal como el mostrado en la
                     figura \ref{Fig:EjemploDiagramaER}.
                 </p>
-                <p>
+<p>
                     El modelo E-R presenta algunas limitaciones semánticas, y no
                     es suficiente para expresar con detalle la estructura de
                     algunos tipos de información. Por esta razón, surge el
@@ -1215,96 +1194,96 @@
                     sistema de información, sino también su comportamiento
                     dinámico.
                 </p>
-                <p></p>
-                <table border="1">
-                    <colgroup>
-                        <col width="10%" />
-                        <col width="17%" />
-                        <col width="13%" />
-                        <col width="11%" />
-                        <col width="13%" />
-                        <col width="17%" />
-                        <col width="18%" />
-                    </colgroup>
-                    <thead valign="bottom">
-                        <tr class="row-odd">
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> DNI </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Nombre </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Altura </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Edad </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Ciudad </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Población </span>
-                                </tt>
-                            </th>
-                            <th class="head">
-                                <tt>
-                                    <span class="pre"> Superficie </span>
-                                </tt>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody valign="top">
-                        <tr class="row-even">
-                            <td>50234561</td>
-                            <td>Juan Gómez</td>
-                            <td>1,85</td>
-                            <td>35</td>
-                            <td>Madrid</td>
-                            <td>6386932</td>
-                            <td>607</td>
-                        </tr>
-                        <tr class="row-odd">
-                            <td>13254673</td>
-                            <td>Edurne Montero</td>
-                            <td>1,60</td>
-                            <td>30</td>
-                            <td>Toledo</td>
-                            <td>80810</td>
-                            <td>232</td>
-                        </tr>
-                        <tr class="row-even">
-                            <td>46576290</td>
-                            <td>Luis Urrutia</td>
-                            <td>1,75</td>
-                            <td>46</td>
-                            <td>Madrid</td>
-                            <td>6386932</td>
-                            <td>607</td>
-                        </tr>
-                        <tr class="row-odd">
-                            <td>38941882</td>
-                            <td>Juan Gomez</td>
-                            <td>1, 71</td>
-                            <td>55</td>
-                            <td>Valencia</td>
-                            <td>1564145</td>
-                            <td>134</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <figcaption>
+
+<table border="1">
+<colgroup>
+<col width="10%"/>
+<col width="17%"/>
+<col width="13%"/>
+<col width="11%"/>
+<col width="13%"/>
+<col width="17%"/>
+<col width="18%"/>
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd">
+<th class="head">
+<tt>
+<span class="pre"> DNI </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Nombre </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Altura </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Edad </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Ciudad </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Población </span>
+</tt>
+</th>
+<th class="head">
+<tt>
+<span class="pre"> Superficie </span>
+</tt>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even">
+<td>50234561</td>
+<td>Juan Gómez</td>
+<td>1,85</td>
+<td>35</td>
+<td>Madrid</td>
+<td>6386932</td>
+<td>607</td>
+</tr>
+<tr class="row-odd">
+<td>13254673</td>
+<td>Edurne Montero</td>
+<td>1,60</td>
+<td>30</td>
+<td>Toledo</td>
+<td>80810</td>
+<td>232</td>
+</tr>
+<tr class="row-even">
+<td>46576290</td>
+<td>Luis Urrutia</td>
+<td>1,75</td>
+<td>46</td>
+<td>Madrid</td>
+<td>6386932</td>
+<td>607</td>
+</tr>
+<tr class="row-odd">
+<td>38941882</td>
+<td>Juan Gomez</td>
+<td>1, 71</td>
+<td>55</td>
+<td>Valencia</td>
+<td>1564145</td>
+<td>134</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
                     La información de las tablas
                     <tt> PERSONAS </tt>
                     y
@@ -1325,7 +1304,7 @@
                     creación de las correspondientes relaciones y los esquemas
                     asociados a cada una de ellas.
                 </p>
-                <p>
+<p>
                     La tablas que definamos en la base de datos pueden tener
                     consecuencias directas sobre el uso de esta, afectando a
                     aspectos como el rendimiento de las operaciones que
@@ -1347,7 +1326,7 @@
                     mientras que en el otro solo es necesario emplear una tabla,
                     la única que por otra parte contiene nuestra base de datos.
                 </p>
-                <p>
+<p>
                     Aunque la funcionalidad sea la misma, el uso de una única
                     tabla tiene efectos poco deseados que se advierten
                     rápidamente, como por ejemplo la redundancia de datos. La
@@ -1365,7 +1344,7 @@
                     <tt> PERSONAS </tt>
                     la diferencia es realmente importante.
                 </p>
-                <p>
+<p>
                     Otro aspecto a tener en cuenta en el diseño físico de la
                     tabla es elegir nombres adecuados para los atributos y las
                     tablas. Los nombres deben ser inequívocos y dar una idea
@@ -1384,7 +1363,7 @@
                     completamente preciso, ya que no aclara si se trata de la
                     ciudad en la que una persona ha nacido o en la que habita.
                 </p>
-                <p>
+<p>
                     Siempre que pueda existir alguna duda razonable a la hora de
                     interpretar el contenido de una tabla, debe intentarse
                     solventar esta mediante el uso de nombres claros y concisos.
@@ -1409,7 +1388,7 @@
                     de utilizar nombres que informen y no den lugar a
                     confusiones.
                 </p>
-                <p>
+<p>
                     Una vez que se establece un diseño y se implementa en la
                     base de datos, lo normal es que este sea relativamente
                     estable y no varíe a lo largo del tiempo. Las relaciones,
@@ -1423,10 +1402,10 @@
                     pensadas para el mantenimiento de la base de datos por parte
                     de su administrador.
                 </p>
-                <h3 id="Bases de datos espaciales">
+<h3 id="Bases de datos espaciales">
                     Bases de datos espaciales
                 </h3>
-                <p>
+<p>
                     Todo cuanto hemos visto en los puntos anteriores constituye
                     el conjunto de ideas fundamentales sobre las que se asienta
                     la creación y uso de bases de datos de cualquier índole. No
@@ -1441,7 +1420,7 @@
                     ejemplo, un punto que señale el centro de la ciudad o un
                     polígono que recoja su contorno).
                 </p>
-                <p>
+<p>
                     Aunque las ideas anteriores no pierden su validez al
                     incorporar datos espaciales, la inclusión de estos no es en
                     absoluto obvia, y presenta una complejidad adicional que
@@ -1454,7 +1433,7 @@
                     este aproveche la potencia de dicha base de datos de la
                     mejor manera posible.
                 </p>
-                <p>
+<p>
                     En lugar de adentrarnos en la complejidad de las bases de
                     datos espaciales (aunque en el capítulo
                     <a href="Consultas.html#Consultas"> Consultas </a>
@@ -1465,10 +1444,10 @@
                     para de este modo comprender los diversas soluciones que han
                     ido apareciendo.
                 </p>
-                <h2 id="Evolución del uso de bases de datos en los SIG">
+<h2 id="Evolución del uso de bases de datos en los SIG">
                     Evolución del uso de bases de datos en los SIG
                 </h2>
-                <p>
+<p>
                     Como acabamos de decir, los conceptos que hemos visto en las
                     anteriores secciones representan una gran parte de la
                     realidad actual en cuanto al manejo de datos (espaciales o
@@ -1479,10 +1458,10 @@
                     este capítulo veremos con algo más de detalle la evolución
                     que ha seguido esta importante faceta de los SIG.
                 </p>
-                <h3 id="Primera generación. Ficheros">
+<h3 id="Primera generación. Ficheros">
                     Primera generación. Ficheros
                 </h3>
-                <p>
+<p>
                     Los primeros programas, entre los cuales se han de incluir
                     los primeros SIG, se caracterizaban en lo que al
                     almacenamiento de datos respecta por una ausencia completa
@@ -1498,7 +1477,7 @@
                     el uso compartido y el alcance de los datos a otros ámbitos
                     distintos.
                 </p>
-                <p>
+<p>
                     Integrar en el SIG otros datos distintos a aquellos para los
                     que la aplicación se había diseñado no era sencillo, ya que
                     existía una vinculación muy directa entre software y datos.
@@ -1514,7 +1493,7 @@
                     necesario si la aplicación en sí no estaba diseñada para
                     permitir este acceso múltiple.
                 </p>
-                <p>
+<p>
                     Las únicas ventajas que pueden encontrarse en este enfoque
                     son las relacionadas con el rendimiento, que podía en
                     ciertos casos ser mayor que el esperable en caso de utilizar
@@ -1526,10 +1505,10 @@
                     pudieran ser utilizados de forma sencilla para alimentar
                     otras aplicaciones.
                 </p>
-                <h3 id="Segunda generación. Bases de datos relacionales">
+<h3 id="Segunda generación. Bases de datos relacionales">
                     Segunda generación. Bases de datos relacionales
                 </h3>
-                <p>
+<p>
                     Una vez que las bases de datos comienzan a tomar su papel en
                     el panorama del software, no tardan en encontrar su camino
                     dentro de las aplicaciones SIG. Las bases de datos
@@ -1548,8 +1527,8 @@
                     capas en el que se da un pleno almacenamiento de la
                     información espacial en la base de datos.
                 </p>
-                <h4 id="Arquitectura dual">Arquitectura dual</h4>
-                <p>
+<h4 id="Arquitectura dual">Arquitectura dual</h4>
+<p>
                     El primer intento de incorporar las bases de datos lo
                     encontramos en el uso de una arquitectura dual en la cual el
                     SGBD se hace cargo únicamente de la componente temática de
@@ -1562,7 +1541,7 @@
                     datos no espaciales, y no requieren elementos adicionales
                     para trabajar sobre ellos.
                 </p>
-                <p>
+<p>
                     La componente espacial, por su parte, es gestionada por el
                     propio SIG, en el que se implementan las funcionalidades
                     necesarias. Al igual que sucedía anteriormente con los SIG
@@ -1574,7 +1553,7 @@
                     de los datos, mientras que la componente temática queda en
                     manos de un verdadero SGBD.
                 </p>
-                <p>
+<p>
                     Existen, por tanto, dos subsistemas encargados de la gestión
                     de los datos, cada uno de los cuales se encarga de un tipo
                     de información (Figura \ref{Fig:ArquitecturaDual}). Esta
@@ -1591,17 +1570,17 @@
                     suponiendo ya una mejora respecto al enfoque de los SIG de
                     primera generación.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/ArquitecturaDual.png" width="65.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="ArquitecturaDual" src="../img/ArquitecturaDual.png" width="65.0%"/>
+<figcaption>
                             Arquitectura dual con subsistemas distintos para el
                             manejo de datos espaciales y no espaciales.
                         </figcaption>
                         $$\label{Fig:ArquitecturaDual}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La división entre datos espaciales y no espaciales conlleva,
                     no obstante, una serie de inconvenientes. Por un lado,
                     resulta difícil integrar operaciones en las que se empleen
@@ -1619,7 +1598,7 @@
                     funcionalidades, una de ellas en el SGBD externo y otra en
                     el propio SIG.
                 </p>
-                <p>
+<p>
                     Aunque una parte importante del SIG descansa ya sobre un
                     SGBD, otra sigue presentando muchas de las deficiencias que
                     caracterizaban a la primera generación. Mientras que la
@@ -1628,8 +1607,8 @@
                     existe una cierta descompensación que limita las
                     posibilidades y hace más complejo el desarrollo del sistema.
                 </p>
-                <h4 id="Arquitectura en capas">Arquitectura en capas</h4>
-                <p>
+<h4 id="Arquitectura en capas">Arquitectura en capas</h4>
+<p>
                     La otra forma de aprovechar una base de datos relacional
                     para su uso dentro de un SIG consiste en incorporar toda la
                     información dentro de la base de datos, incluyendo la de
@@ -1647,7 +1626,7 @@
                     poder gestionarla por completo a través de un SGBD, con las
                     ventajas que ello conlleva, y que ya conocemos.
                 </p>
-                <p>
+<p>
                     Dos son las alternativas existentes: un almacenamiento
                     <i> transparente </i>
                     y un almacenamiento
@@ -1657,7 +1636,7 @@
                     vienen condicionadas por la estrategia empleada para el
                     almacenamiento de estos.
                 </p>
-                <p>
+<p>
                     En el almacenamiento transparente se emplean los propios
                     tipos de datos del SGBD, y las operaciones se implementan en
                     el lenguaje de consulta de este. Es decir, se intenta
@@ -1672,7 +1651,7 @@
                     de puntos, y dichas coordenadas sí que son un tipo básico
                     susceptible de almacenarse en un SGBD común.
                 </p>
-                <p>
+<p>
                     En el almacenamiento opaco se emplean objetos binarios para
                     almacenar la información y las operaciones se implementan
                     externamente en la herramienta SIG. Al no utilizar los tipos
@@ -1680,7 +1659,7 @@
                     de consulta de este, y es necesario implementar los
                     algoritmos correspondientes en el SIG.
                 </p>
-                <p>
+<p>
                     La ventaja más directa de utilizar una arquitectura en
                     capas, ya sea mediante un almacenamiento transparente o uno
                     opaco, es la facilidad para reutilizar un SGBD existente.
@@ -1693,7 +1672,7 @@
                     con la mayoría de los SGBD de uso habitual fuera del ámbito
                     SIG.
                 </p>
-                <p>
+<p>
                     Existen, aun así, inconvenientes y aspectos mejorables,
                     achacables a la nula especialización de los SGBD para el
                     manejo de información espacial. En el caso del
@@ -1706,16 +1685,16 @@
                     los datos espaciales, por lo que la funcionalidad es
                     limitada.
                 </p>
-                <p>
+<p>
                     Asimismo, la eficacia es menor, ya que en un caso los
                     algoritmos son externos al SGBD y en el otro las consultas
                     suelen ser complejas y operan sobre un elevado número de
                     tuplas, necesario para recoger la información espacial.
                 </p>
-                <h3 id="Tercera generación. Bases de datos extensibles">
+<h3 id="Tercera generación. Bases de datos extensibles">
                     Tercera generación. Bases de datos extensibles
                 </h3>
-                <p>
+<p>
                     En la actualidad, las bases de datos presentan arquitecturas
                     extensibles que permiten adaptarse a la naturaleza de los
                     datos con los que trabajan, de tal forma que enfocan sus
@@ -1724,7 +1703,7 @@
                     datos que pueden ser definidos, y con operaciones
                     específicas para estos.
                 </p>
-                <p>
+<p>
                     Un caso particular de estas bases de datos extensibles son
                     las
                     <i> bases de datos orientadas a objetos </i>
@@ -1745,7 +1724,7 @@
                     aprovechando así las ventajas que un enfoque orientado a
                     objetos proporciona.
                 </p>
-                <p>
+<p>
                     La principal ventaja de una base de datos orientada a
                     objetos es su mayor eficiencia en el acceso a datos, lo que
                     se traduce en consultas más rápidas en comparación con una
@@ -1759,7 +1738,7 @@
                     <a href="../bib.htm#Marques2002BBDD"> Marques2002BBDD </a>
                     ].
                 </p>
-                <p>
+<p>
                     Los SGBD actuales presentan en su gran mayoría extensiones
                     dedicadas al manejo de datos espaciales, los cuales
                     contienen todo lo necesario para el manejo óptimo de estos,
@@ -1772,8 +1751,8 @@
                     valor numérico. La eficiencia que se obtiene de este modo es
                     muy elevada.
                 </p>
-                <h2 id="Resumen">Resumen</h2>
-                <p>
+<h2 id="Resumen">Resumen</h2>
+<p>
                     En este capítulo hemos visto los conceptos básicos sobre
                     bases de datos. Una base de datos constituye un sistema que
                     permite un manejo adecuado de los datos, garantizando la
@@ -1783,7 +1762,7 @@
                     estructurada, mientras que las operaciones las provee el
                     sistema gestor de base de datos (SGBD).
                 </p>
-                <p>
+<p>
                     Existen diversos modelos para el almacenamiento de datos,
                     siendo el modelo relacional el más habitual en la
                     actualidad. En el modelo relacional la información se
@@ -1791,7 +1770,7 @@
                     base de datos conforma una tupla, que contiene la
                     información correspondiente a una entidad dada.
                 </p>
-                <p>
+<p>
                     El diseño de la base de datos es de gran importancia, y
                     conlleva el diseño de un modelo conceptual, el diseño de un
                     modelo físico, la implementación y el mantenimiento.
@@ -1801,7 +1780,7 @@
                     interpretación de la información contenida y permita el
                     máximo aprovechamiento de esta.
                 </p>
-                <p>
+<p>
                     En lo que a los SIG respecta, las bases de datos se han ido
                     incorporando paulatinamente a la gestión de los datos
                     espaciales. Partiendo de una situación inicial en la que no
@@ -1813,186 +1792,186 @@
                     tendencia, y en ellos puede integrarse plenamente la
                     información geográfica de forma óptima.
                 </p>
-            </div>
-        </div>
-        <div id="toindex">
-            <a href="../index.html"> Portada </a>
-        </div>
-        <div id="slideout_chapter">
+</div>
+</div>
+<div id="toindex">
+<a href="../index.html"> Portada </a>
+</div>
+<div id="slideout_chapter">
             Índice
-            <br />
+            <br/>
             capítulo
             <div id="slideout_inner_chapter">
-                <div id="generated-toc"></div>
-            </div>
-        </div>
-        <div id="slideout_general">
+<div id="generated-toc"></div>
+</div>
+</div>
+<div id="slideout_general">
             Índice
-            <br />
+            <br/>
             general
             <div id="slideout_inner_general">
-                <p>
-                    <b> ÍNDICE GENERAL </b>
-                    <br />
-                </p>
-                <ul>
-                    <li>
-                        <a href="Intro.html"> Introducción </a>
-                    </li>
-                    <li>Parte 1. Fundamentos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_fundamentos.html">
+<p>
+<b> ÍNDICE GENERAL </b>
+<br/>
+</p>
+<ul>
+<li>
+<a href="Intro.html"> Introducción </a>
+</li>
+<li>Parte 1. Fundamentos</li>
+<ul>
+<li>
+<a href="Introduccion_fundamentos.html">
                                 Introducción. ¿Qué es un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Historia.html"> Historia de los SIG </a>
-                        </li>
-                        <li>
-                            <a href="Fundamentos_cartograficos.html">
+</li>
+<li>
+<a href="Historia.html"> Historia de los SIG </a>
+</li>
+<li>
+<a href="Fundamentos_cartograficos.html">
                                 Fundamentos cartográficos y geodésicos
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 2. Datos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_datos.html">
+</li>
+</ul>
+<li>Parte 2. Datos</li>
+<ul>
+<li>
+<a href="Introduccion_datos.html">
                                 Introducción. ¿Con qué trabajo en un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Tipos_datos.html">
+</li>
+<li>
+<a href="Tipos_datos.html">
                                 Modelos para la información geográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Fuentes_datos.html">
+</li>
+<li>
+<a href="Fuentes_datos.html">
                                 Fuentes principales de datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Calidad_datos.html">
+</li>
+<li>
+<a href="Calidad_datos.html">
                                 La calidad de los datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Bases_datos.html"> Bases de datos </a>
-                        </li>
-                        <li>
-                            <a href="Metadatos.html"> Metadatos </a>
-                        </li>
-                    </ul>
-                    <li>Parte 3. Analisis</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_procesos.html">
+</li>
+<li>
+<a href="Bases_datos.html"> Bases de datos </a>
+</li>
+<li>
+<a href="Metadatos.html"> Metadatos </a>
+</li>
+</ul>
+<li>Parte 3. Analisis</li>
+<ul>
+<li>
+<a href="Introduccion_procesos.html">
                                 Introducción. ¿Qué puedo hacer con un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Analisis_espacial.html">
+</li>
+<li>
+<a href="Analisis_espacial.html">
                                 Conceptos básicos para el análisis espacial
                             </a>
-                        </li>
-                        <li>
-                            <a href="Consultas.html">
+</li>
+<li>
+<a href="Consultas.html">
                                 Consultas y operaciones con bases de datos
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_espacial.html">
+</li>
+<li>
+<a href="Estadistica_espacial.html">
                                 Estadísticas espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_raster.html">
+</li>
+<li>
+<a href="Creacion_capas_raster.html">
                                 Creación de capas raster
                             </a>
-                        </li>
-                        <li>
-                            <a href="Algebra_de_mapas.html">
+</li>
+<li>
+<a href="Algebra_de_mapas.html">
                                 Álgebra de mapas
                             </a>
-                        </li>
-                        <li>
-                            <a href="Geomorfometria.html">
+</li>
+<li>
+<a href="Geomorfometria.html">
                                 Geomorfometría y análisis del terreno
                             </a>
-                        </li>
-                        <li>
-                            <a href="Imagenes.html"> Procesado de imágenes </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_vectoriales.html">
+</li>
+<li>
+<a href="Imagenes.html"> Procesado de imágenes </a>
+</li>
+<li>
+<a href="Creacion_capas_vectoriales.html">
                                 Creación de capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Operaciones_geometricas.html">
+</li>
+<li>
+<a href="Operaciones_geometricas.html">
                                 Operaciones geométricas con capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Costes.html">
+</li>
+<li>
+<a href="Costes.html">
                                 Costes, distancias y áreas de influencia
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_avanzada.html">
+</li>
+<li>
+<a href="Estadistica_avanzada.html">
                                 Más estadística espacial
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 4. Tecnología</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_tecnologia.html">
+</li>
+</ul>
+<li>Parte 4. Tecnología</li>
+<ul>
+<li>
+<a href="Introduccion_tecnologia.html">
                                 Introducción. ¿Cómo son las aplicaciones SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIGs_escritorio.html">
+</li>
+<li>
+<a href="SIGs_escritorio.html">
                                 Herramientas de escritorio
                             </a>
-                        </li>
-                        <li>
-                            <a href="Cliente_servidor.html">
+</li>
+<li>
+<a href="Cliente_servidor.html">
                                 Clientes y servidores remotos. Web mapping
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIG_movil.html"> SIG movil </a>
-                        </li>
-                    </ul>
-                    <li>Parte 5. Visualización</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_visualizacion.html">
+</li>
+<li>
+<a href="SIG_movil.html"> SIG movil </a>
+</li>
+</ul>
+<li>Parte 5. Visualización</li>
+<ul>
+<li>
+<a href="Introduccion_visualizacion.html">
                                 Introducción. Los SIG como herramientas de
                                 visualización
                             </a>
-                        </li>
-                        <li>
-                            <a href="Conceptos_basicos.html">
+</li>
+<li>
+<a href="Conceptos_basicos.html">
                                 Conceptos básicos de visualización y
                                 representación
                             </a>
-                        </li>
-                        <li>
-                            <a href="Mapas.html">
+</li>
+<li>
+<a href="Mapas.html">
                                 El mapa y la comunicación cartográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Visualizacion_SIG.html">
+</li>
+<li>
+<a href="Visualizacion_SIG.html">
                                 La visualización en términos SIG
                             </a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </body>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</body>
 </html>

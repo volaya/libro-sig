@@ -1,43 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title> </title>
-        <link
-            href="../reset.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="../typography.css"
-            media="screen, projection"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> </title>
+<link href="../reset.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<link href="../typography.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+<script type="text/x-mathjax-config">
              MathJax.Hub.Config({
               tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
               TeX: { equationNumbers: {autoNumber: "all"} }
             });
         </script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"
-            type="text/javascript"
-        ></script>
-        <script src="../generated_toc.js"></script>
-    </head>
-    <body lang="es">
-        <div class="main">
-            <div class="g960" id="chapter">
-                <h1>Álgebra de mapas</h1>
-                <p></p>
-                <p>
-                    <a name="Algebra_de_mapas"> </a>
-                </p>
-                <h2 id="Introducción">Introducción</h2>
-                <a name="Introduccion_algebra_de_mapas"> </a>
-                <p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="../generated_toc.js"></script>
+</head>
+<body lang="es">
+<div class="main">
+<div class="g960" id="chapter">
+<h1>Álgebra de mapas</h1>
+
+<h2 id="Introducción">Introducción</h2>
+<p id="Introduccion_algebra_de_mapas">
                     Se entiende por
                     <i> álgebra de mapas </i>
                     el conjunto de técnicas y procedimientos que, operando sobre
@@ -55,14 +40,12 @@
                     de las operaciones geométricas (incluidas dentro de la
                     geometría computacional), cuyos procesos se tratarán en el
                     capítulo
-                    <a
-                        href="Operaciones_geometricas.html#Operaciones_geometricas"
-                    >
+                    <a href="Operaciones_geometricas.html#Operaciones_geometricas">
                         Operaciones_geometricas
                     </a>
                     .
                 </p>
-                <p>
+<p>
                     Conviene aclarar que, en la práctica y el uso diario de los
                     SIG, el término
                     <i> álgebra de mapas </i>
@@ -77,7 +60,7 @@
                     <i> calculadora de mapas </i>
                     .
                 </p>
-                <p>
+<p>
                     La gran utilidad de esta funcionalidad y su uso habitual
                     hacen que se asocie casi exclusivamente con ella el concepto
                     de álgebra de mapas, olvidando —o desconociendo—, que
@@ -90,7 +73,7 @@
                     propios del álgebra de mapas, no es la única, y no debe
                     pensarse que todo él es expresable de ese modo.
                 </p>
-                <p>
+<p>
                     Como tal, el álgebra de mapas lo forman un conjunto de
                     variables (los mapas), expresiones y funciones, los cuales,
                     a través de una sintaxis adecuada, permiten la obtención de
@@ -105,7 +88,7 @@
                     ráster y, muy especialmente, su análisis encaminado a la
                     obtención de nuevos resultados.
                 </p>
-                <p>
+<p>
                     Si analizamos las practicas geográficas hasta nuestros días,
                     vemos que el álgebra de mapas como proceso de análisis no es
                     algo nuevo. La idea de utilizar mapas existentes para
@@ -118,7 +101,7 @@
                     formalismo a estos planteamientos y se define con rigor el
                     conjunto de herramientas de análisis.
                 </p>
-                <p>
+<p>
                     La definición actual del álgebra de mapas la debemos a Dana
                     Tomlin [
                     <a href="../bib.htm#Tomlin1990Prentice">
@@ -133,14 +116,14 @@
                     práctico, cubren la mayor parte de casos posibles y resultan
                     de utilidad directa para el análisis habitual.
                 </p>
-                <p>
+<p>
                     Más allá de lo que se desarrolla en este capítulo, las ideas
                     que veremos a continuación se van a repetir de forma
                     continua en la mayoría de capítulos de esta parte, pues
                     constituyen la base formal y conceptual de los análisis que
                     siguen en dichos capítulos.
                 </p>
-                <p>
+<p>
                     Para comenzar el estudio del álgebra de mapas, veamos unos
                     casos prácticos que nos servirán para introducir con
                     posterioridad los elementos básicos. En primer lugar,
@@ -149,11 +132,11 @@
                     <a href="../bib.htm#Wischmeier78USDA"> Wischmeier78USDA </a>
                     ]
                 </p>
-                <p>
+<p>
                     \begin{equation} \label{Eq:USLE} A = R\cdot K \cdot LS \cdot
                     C \cdot P \end{equation}
                 </p>
-                <p>
+<p>
                     donde $A$ representa las pérdidas totales en toneladas por
                     hectárea y año, y los factores $R, K, LS, C$ y $P$
                     representan la influencia de los diversos factores
@@ -168,10 +151,10 @@
                     una de las celdas de esas capas ráster (Figura
                     \ref{Fig:USLE}).
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/USLE.png" width="70.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="USLE" src="../img/USLE.png" width="70.0%"/>
+<figcaption>
                             Puede extenderse una formula algebraica tal como la
                             de la Ecuación Universal de Pérdidas de Suelo (USLE)
                             a un conjunto de capas. Basta operar celda a celda
@@ -181,8 +164,8 @@
                         </figcaption>
                         $$\label{Fig:USLE}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La discretización del espacio que implica la representación
                     en formato ráster de un parámetro sobre una superficie dada,
                     hace que ese análisis de «todos los puntos» se materialice
@@ -193,14 +176,14 @@
                     modelos no se apliquen en un emplazamiento concreto, sino en
                     toda una región de interés a tratar.
                 </p>
-                <p>
+<p>
                     En este caso, basta con aplicar la expresión mostrada en la
                     figura \ref{Fig:USLE} celda a celda, y obtener tantos
                     valores resultantes como celdas haya, que conformarán una
                     nueva capa con la distribución espacial de las pérdidas de
                     suelo correspondientes.
                 </p>
-                <p>
+<p>
                     Consideremos ahora que, junto con el mapa de pérdidas de
                     suelo obtenido según lo anterior, disponemos de una división
                     en subcuencas de la zona de estudio. Puede resultar
@@ -214,19 +197,16 @@
                     mayores problemas de erosión (Figura
                     \ref{Fig:USLE_por_subcuencas}).
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/USLE_por_subcuencas.png"
-                            width="100%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="USLE_por_subcuencas" src="../img/USLE_por_subcuencas.png" width="100%"/>
+<figcaption>
                             Valores de pérdidas de suelo por subcuencas.
                         </figcaption>
                         $$\label{Fig:USLE_por_subcuencas}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     La base conceptual en este caso vemos que es distinta al
                     primer supuesto, ya que no extendemos ningún modelo puntual
                     aplicándolo en todas las celdas con distintos valores de
@@ -243,7 +223,7 @@
                     como veremos, este tipo de funciones también forman parte
                     del álgebra de mapas.
                 </p>
-                <p>
+<p>
                     Por último, supongamos que es de interés estudiar la
                     distribución de valores de esas pérdidas de suelo. Un
                     histograma de frecuencias resultaría de gran utilidad. En
@@ -253,49 +233,49 @@
                     una condición básica del álgebra de mapas, ya que sus
                     procesos pueden tener como resultado elementos muy diversos.
                 </p>
-                <p>
+<p>
                     Todos estos ejemplos son parte de los resultados que pueden
                     obtenerse utilizando los distintos componentes del álgebra
                     de mapas, que a continuación detallaremos.
                 </p>
-                <h2 id="Tipos de funciones en el álgebra de mapas">
+<h2 id="Tipos de funciones en el álgebra de mapas">
                     Tipos de funciones en el álgebra de mapas
                 </h2>
-                <p>
+<p>
                     Las funciones son el elemento principal del álgebra de
                     mapas. Cuatro son los tipos principales de funciones que
                     podemos definir, agrupadas según la forma en que toman la
                     información necesaria para su cálculo de entre la contenida
                     en todas las celdas de las capas de origen.
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Local </b>
+
+<ul>
+<li>
+<b> Local </b>
                         . El valor en cada celda de la capa resultante es
                         función únicamente de los valores en esa misma celda en
                         las capas de partida.
                     </li>
-                    <li>
-                        <b> Focal </b>
+<li>
+<b> Focal </b>
                         . El valor en cada celda de la capa resultante es
                         función del valor en dicha celda y en las situadas en un
                         entorno definido alrededor de la misma.
                     </li>
-                    <li>
-                        <b> Zonal o regional </b>
+<li>
+<b> Zonal o regional </b>
                         . El valor en cada celda de la capa resultante es
                         función del valor de todas las celdas conectadas a esta
                         que presentan un mismo valor para una de las capas de
                         entrada (pertenecen a la misma clase que esta).
                     </li>
-                    <li>
-                        <b> Global </b>
+<li>
+<b> Global </b>
                         . El valor resultante de la función es obtenido a partir
                         de todas las celdas de la capa.
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     La combinación de distintas funciones y de enfoques variados
                     da lugar a un enorme conjunto de operaciones de análisis
                     basadas en el álgebra de mapas así definido. Este conjunto
@@ -304,12 +284,11 @@
                     datos geográficos en formato ráster toda la información que
                     realmente contienen.
                 </p>
-                <h3 id="Funciones locales">Funciones locales</h3>
-                <a name="Funciones_locales"> </a>
-                <p>
-                    <figure>
-                        <img src="../img/Funciones_locales.png" width="50.0%" />
-                        <figcaption>
+<h3 id="Funciones locales">Funciones locales</h3>
+<p id="Funciones_locales">
+<figure>
+<img alt="Funciones_locales" src="../img/Funciones_locales.png" width="50.0%"/>
+<figcaption>
                             Las funciones de análisis local analizan los valores
                             de una celda concreta en una serie de capas para
                             obtener el valor resultante. En rojo, celdas de
@@ -318,8 +297,8 @@
                         </figcaption>
                         $$\label{Fig:Funciones_locales}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Las funciones locales asignan valores a una celda en base a
                     los valores que esa misma celda presenta para cada una de
                     las capas de entrada, operando con estos de una forma u
@@ -329,7 +308,7 @@
                     localizaciones (otras celdas) (Figura
                     \ref{Fig:Funciones_locales}).
                 </p>
-                <p>
+<p>
                     Las funciones locales son las que utilizamos cuando
                     empleamos esa anteriormente citada
                     <i> aritmética de mapas </i>
@@ -343,7 +322,7 @@
                     pueden elaborarse funciones más complejas utilizando todos
                     los operadores disponibles, que estudiaremos más adelante.
                 </p>
-                <p>
+<p>
                     Una función de tipo local puede ser también aplicada sin
                     necesidad de tener una serie de capas, sino con una única
                     capa de partida. Por ejemplo, un cambio de unidades es una
@@ -355,12 +334,12 @@
                     de elevación en centímetros, habiendo aplicado una función
                     local para realizar la conversión.
                 </p>
-                <p>
+<p>
                     De igual modo, convertir los valores de una capa de
                     pendientes de radianes a grados requiere multiplicar sus
                     valores por $180/\pi$.
                 </p>
-                <p>
+<p>
                     Además de operar con escalares, podemos aplicar también
                     funciones matemáticas. Por ejemplo, las capas que presentan
                     un gran coeficiente de variación (elevada varianza en
@@ -379,13 +358,10 @@
                     transformación logarítmica es una función local dentro del
                     álgebra de mapas.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Transformacion_logaritmica.png"
-                            width="90.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Transformacion_logaritmica" src="../img/Transformacion_logaritmica.png" width="90.0%"/>
+<figcaption>
                             La aplicación de una transformación logarítmica
                             modifica la representación visual de una capa. a)
                             Capa original, b) capa tras trasformación
@@ -393,8 +369,8 @@
                         </figcaption>
                         $$\label{Fig:Transformacion_logaritmica}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Una aplicación común de una función local con una sola capa
                     la encontramos en la normalización de valores. En ocasiones,
                     antes de efectuar un proceso que englobe a varias capas (por
@@ -406,17 +382,17 @@
                     para lo cual se aplica a cada capa la función local definida
                     por la siguiente expresión:
                 </p>
-                <p>
+<p>
                     \begin{equation} y_{ij} = \frac{x_{ij} - x_{min}}{x_{max} -
                     x_{min}} \end{equation}
                 </p>
-                <p>
+<p>
                     donde $y_{ij}$ es el valor normalizado en la celda $ij$, $x$
                     el valor de esa celda en la capa inicial y $x_{min}$ y
                     $x_{max}$, respectivamente, los valores mínimo y máximo de
                     la variable en el conjunto de celdas de la capa.
                 </p>
-                <p>
+<p>
                     Si en vez de aplicar una función matemática sobre el valor
                     de cada celda, aplicamos una serie de criterios referidos a
                     dicho valor mediante operadores de comparación, podemos
@@ -431,35 +407,35 @@
                     trabajar con este parámetro. Para ello se ha utilizado el
                     siguiente criterio.
                 </p>
-                <p>
+<p>
                     \begin{equation} s' = \left\{ \begin{array}{ll} 1 &amp;
                     \textrm{si } s \leq 5 \\ 2 &amp; \textrm{si } 5\lt s \leq 10
                     \\ 3 &amp; \textrm{si } 10 \lt s \leq 20 \\ 4 &amp;
                     \textrm{si } s\gt20 \end{array} \right. \end{equation}
                 </p>
-                <p>
+<p>
                     donde $s'$ es la clase de pendiente, y $s$ el valor de la
                     pendiente en porcentaje.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Clases_pdte.png" width="100%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Clases_pdte" src="../img/Clases_pdte.png" width="100%"/>
+<figcaption>
                             Mediante una función local de reclasificación,
                             podemos convertir una capa de valores continuos en
                             una capa de clases con información discreta.
                         </figcaption>
                         $$\label{Fig:Clases_pdte}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     También es posible reclasificar capas que ya contienen
                     información categórica, sustituyendo los valores de una
                     clase por un nuevo valor. Puede utilizarse para crear
                     clasificaciones menos detalladas, agrupando clases similares
                     en una única.
                 </p>
-                <p>
+<p>
                     Dentro de las funciones locales sobre una única capa,
                     podemos considerar como un caso particular la generación de
                     nuevas capas «desde cero», es decir, sin basarnos en los
@@ -470,30 +446,30 @@
                     los valores son generados sin basarse en los existentes en
                     ella.
                 </p>
-                <p>
+<p>
                     Cuando las funciones locales se aplican a varias capas, la
                     forma de combinar estas es muy variable. Junto a las
                     operaciones que ya hemos visto, podemos utilizar algunas
                     otras, y de modos igualmente variados. El conjunto de ellas
                     lo dividimos en los siguientes grupos:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Operadores aritméticos </b>
+
+<ul>
+<li>
+<b> Operadores aritméticos </b>
                         . Para formar expresiones con las distintas capas tales
                         como la ecuación USLE que ya conocemos.
                     </li>
-                    <li>
-                        <b> Operadores lógicos </b>
+<li>
+<b> Operadores lógicos </b>
                         . Pueden tomarse los valores de las capas como valores
                         booleanos (1 o 0, verdadero o falso), o aplicar
                         expresiones lógicas de tipo
                         <i> pertenece al conjunto </i>
                         u operadores de comparación, entre otros.
                     </li>
-                    <li>
-                        <b> Parámetros estadísticos </b>
+<li>
+<b> Parámetros estadísticos </b>
                         . Por ejemplo, el valor mayor de entre las todas las
                         capas. También pueden recogerse otros como el orden del
                         valor de una capa dentro de la serie ordenada de valores
@@ -503,14 +479,11 @@
                         \ref{Fig:Analisis_local_estadistico} muestra algunos
                         ejemplos simples basados en estas ideas.
                     </li>
-                </ul>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Analisis_local_estadistico.png"
-                            width="60.0%"
-                        />
-                        <figcaption>
+</ul>
+<p>
+<figure>
+<img alt="Analisis_local_estadistico" src="../img/Analisis_local_estadistico.png" width="60.0%"/>
+<figcaption>
                             Algunos ejemplos sencillos de análisis local
                             estadístico con múltiples capas. En la fila
                             superior, capas de origen y su numeración
@@ -524,8 +497,8 @@
                         </figcaption>
                         $$\label{Fig:Analisis_local_estadistico}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Comenzando por el supuesto más sencillo de utilizar
                     únicamente dos capas, podemos aplicar operadores lógicos
                     tales como $, \neq, =, \leq$ o $\geq$. Por ejemplo, con dos
@@ -535,7 +508,7 @@
                     resultante aquellas celdas donde el uso de suelo haya
                     cambiado.
                 </p>
-                <p>
+<p>
                     Cuando tenemos un conjunto mayor de capas, podemos aplicar
                     los operadores anteriores, e incluso combinar operadores de
                     varios grupos distintos de entre los anteriores. Por
@@ -545,11 +518,11 @@
                     <a href="../bib.htm#Yager1988IEEESMC"> Yager1988IEEESMC </a>
                     ], aplica una media ponderada de las capas de la forma
                 </p>
-                <p>
+<p>
                     \begin{equation} y=\sum_{i=1}^n z_i k_i \ ; \ k_i \in
                     \mathbb{N} \end{equation}
                 </p>
-                <p>
+<p>
                     siendo $n$ el número de capas y $z_i$ el valor i--esimo de
                     los de las distintas capas, ordenados estos en orden
                     ascendente. El valor $i_1$ sería el más pequeño de todas las
@@ -559,7 +532,7 @@
                     sino a una posición dentro de la lista ordenada formada por
                     los valores de todas las capas para cada celda.
                 </p>
-                <p>
+<p>
                     La aplicación del OWA puede verse como un uso combinado de
                     una función de análisis local de tipo estadístico que se
                     encarga de generar nuevas capas con los valores i-esimos, y
@@ -568,7 +541,7 @@
                     capas provenientes de la primera operación, no sobre las
                     originales.
                 </p>
-                <p>
+<p>
                     Aunque si trabajamos con capas de tipo categórico carece de
                     sentido desde un punto de vista conceptual el operar
                     aritméticamente con valores que identifican una clase, las
@@ -578,7 +551,7 @@
                     tareas, entre ellas una habitual como es combinar en una
                     sola capa dos clasificaciones distintas.
                 </p>
-                <p>
+<p>
                     Partiendo de una capa de usos de suelo y una de tipos de
                     suelo, podemos obtener una nueva clasificación que combine
                     ambas (Figura \ref{Fig:Combinacion_capas_categoricas}). Un
@@ -591,20 +564,17 @@
                     uso y el tipo de suelo. El proceso es, en realidad, una
                     intersección de las zonas definidas por cada capa.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Combinacion_capas_categoricas.png"
-                            width="95.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Combinacion_capas_categoricas" src="../img/Combinacion_capas_categoricas.png" width="95.0%"/>
+<figcaption>
                             Combinación de dos capas categóricas para crear una
                             nueva clasificación que une ambas.
                         </figcaption>
                         $$\label{Fig:Combinacion_capas_categoricas}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Para efectuar esta intersección, debemos en primer lugar
                     reclasificar las capas de inicio de tal modo que un valor en
                     la capa resultante defina unívocamente una única combinación
@@ -613,53 +583,50 @@
                     correspondencia biunívoca entre pares de valores de origen y
                     valor resultante.
                 </p>
-                <p>
+<p>
                     Una forma de hacer esto, suponiendo un número de clases $m$
                     en la primera clase y $n$ en la segunda, es reclasificar la
                     primera de ellas mediante la expresión
                 </p>
-                <p>
+<p>
                     \begin{equation} c'_i = k^i \ ; \ k \in \mathbb{N}, i=1… m
                     \end{equation}
                 </p>
-                <p>
+<p>
                     donde $c'_i$ es el nuevo valor a asignar a la clase
                     i--ésima. Es decir, se asignan potencias sucesivas de un
                     valor natural. De igual modo, se asignan los nuevos valores
                     a la segunda capa siguiendo la progresión de potencias, de
                     la forma
                 </p>
-                <p>
+<p>
                     \begin{equation} c'_i = k^{i + m} \ ; \ k \in \mathbb{N},
                     i=1… n \end{equation}
                 </p>
-                <p>
+<p>
                     Con las capas anteriores, basta sumarlas para obtener una
                     nueva en la que el valor de cada celda nos define
                     inequívocamente a partir de qué valores originales se ha
                     calculado.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Combinacion_capas_categoricas_peq.png"
-                            width="90.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Combinacion_capas_categoricas_peq" src="../img/Combinacion_capas_categoricas_peq.png" width="90.0%"/>
+<figcaption>
                             Ejemplo de combinación de dos capas categóricas. a)
                             capas originales, b) capas reclasificadas, c)
                             resultado.
                         </figcaption>
                         $$\label{Fig:Combinacion_capas_categoricas_peq}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Para ver un ejemplo que sea manejable, en la figura
                     \ref{Fig:Combinacion_capas_categoricas_peq} se muestran dos
                     capas con su valores originales, las capas reclasificadas
                     según el esquema anterior, y la capa resultante.
                 </p>
-                <p>
+<p>
                     Los SIG más comunes incorporan entre sus elementos funciones
                     que simplifican este proceso y hacen innecesario operar de
                     este modo, por lo que no es corriente tener que aplicar
@@ -669,7 +636,7 @@
                     en base a los conceptos del álgebra de mapas, conociendo
                     estos con detalle.
                 </p>
-                <p>
+<p>
                     Por ultimo, para concluir esta sección es interesante
                     señalar que la gestión de valores que representan la
                     ausencia de datos es un aspecto importante en el empleo de
@@ -683,7 +650,7 @@
                     automáticamente también valor de sin datos, particularmente
                     el establecido para la capa resultante.
                 </p>
-                <p>
+<p>
                     Esta forma de proceder, además de dar un resultado coherente
                     con los datos de entrada, puede utilizarse como herramienta
                     para, aplicando inteligentemente capas con zonas sin datos,
@@ -697,7 +664,7 @@
                     en este caso todas las celdas situadas a más de 180 metros
                     de elevación.
                 </p>
-                <p>
+<p>
                     Para realizar el recorte, la capa que define la zona de
                     interés contiene valor 1 en las celdas interiores y el valor
                     de sin datos correspondiente en las exteriores. Al
@@ -707,10 +674,10 @@
                     capas no tiene datos suficientes para poder generar otro
                     resultado.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Mascara.png" width="90.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Mascara" src="../img/Mascara.png" width="90.0%"/>
+<figcaption>
                             Recorte de una capa empleando una mascara con celdas
                             sin datos. La rampa de colores se ha variado en la
                             capa recortada para ajustarse al nuevo rango de
@@ -718,15 +685,14 @@
                         </figcaption>
                         $$\label{Fig:Mascara}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     También veremos más adelante que ese uso de mascaras tiene
                     su equivalente vectorial, existiendo una operación de
                     recorte para capas de datos vectoriales.
                 </p>
-                <h3 id="Funciones focales">Funciones focales</h3>
-                <a name="Funciones_focales"> </a>
-                <p>
+<h3 id="Funciones focales">Funciones focales</h3>
+<p id="Funciones_focales">
                     Las funciones de análisis focal operan sobre una sola capa
                     de datos, asignando a cada celda un valor que deriva de su
                     valor en la capa de partida, así como de los valores de las
@@ -736,10 +702,10 @@
                     considerar, así como por la función a aplicar sobre los
                     valores recogidos en este.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Funciones_focales.png" width="50.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Funciones_focales" src="../img/Funciones_focales.png" width="50.0%"/>
+<figcaption>
                             Las funciones de análisis focal analizan los valores
                             de una celda y las situadas en un entorno de esta
                             para obtener el valor resultante. En rojo, celdas de
@@ -748,14 +714,14 @@
                         </figcaption>
                         $$\label{Fig:Funciones_focales}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     A diferencia de las funciones locales, las focales no se
                     aplican sobre varias capas, ya que la información necesaria
                     se extrae de la vecindad de cada celda, dentro de la propia
                     capa de partida.
                 </p>
-                <p>
+<p>
                     Las funciones focales más habituales emplean un entorno
                     cuadrado $3 \times 3$ centrado en la celda, que se va
                     desplazando por la capa de tal modo que todas las celdas van
@@ -765,25 +731,25 @@
                     <i> ventana de análisis </i>
                     .
                 </p>
-                <p>
+<p>
                     Para definir las operaciones sobre esta ventana, es
                     frecuente introducir una notación como la siguiente con el
                     fin de simplificar las expresiones.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Notacion_ventana.png" width="15.0%" />
+<p>
+<figure>
+<img alt="Notacion_ventana" src="../img/Notacion_ventana.png" width="15.0%"/>
                         $$\label{Fig:Notacion_ventana}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     siendo $z_5$ la celda central, la cual recibirá el valor
                     resultante de la operación efectuada. Puesto que los
                     análisis focales basados en esta ventana tipo son
                     habituales, haremos uso de esta notación en diversos puntos
                     dentro de esta parte del libro.
                 </p>
-                <p>
+<p>
                     Aunque menos frecuentes, pueden utilizarse ventanas de
                     tamaño mayor, $n\times n$, siendo $n$ un valor impar para
                     que de este modo exista un celda central. De otro modo, la
@@ -794,42 +760,42 @@
                     algunas de las más comunes, todas ellas también aplicables a
                     distintos tamaños.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Tipos_ventana.png" width="65.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Tipos_ventana" src="../img/Tipos_ventana.png" width="65.0%"/>
+<figcaption>
                             Algunos de los tipos de ventana de análisis más
                             comunes en distintos tamaños. a) cuadrada, b)
                             circular
                         </figcaption>
                         $$\label{Fig:Tipos_ventana}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Con los valores de las celdas contenidas en la ventana de
                     análisis pueden realizarse operaciones muy diversas, entre
                     las que cabe citar las siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Cálculo de descriptores estadísticos </b>
+
+<ul>
+<li>
+<b> Cálculo de descriptores estadísticos </b>
                         . Los más habituales son la media, la mediana, los
                         valores extremos o el rango de valores. Para el caso de
                         valores discretos, son comunes parámetros como el número
                         de clases (número de celdas con distinto valor) dentro
                         de la ventana de análisis.
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Combinaciones lineales </b>
+                        
+</li>
+<li>
+<b> Combinaciones lineales </b>
                         . De acuerdo con expresiones de la siguiente forma:
                         <p>
                             \begin{equation} \label{Eq:VentanaConvolucion}
                             y=\frac{\sum_{i=1}^n z_i k_i}{\sum_{i=1}^n k_i} \ ;
                             \ k_i \in \mathbb{R} \end{equation}
                         </p>
-                        <p>
+<p>
                             Este grupo particular de operaciones se conocen como
                             <i> convoluciones </i>
                             , y son la base para una larga serie de
@@ -840,10 +806,8 @@
                             con la de análisis. Por ejemplo, como en el
                             siguiente caso:
                         </p>
-                        <p>
-                            <img src="../img/Kernel.png" width="15.0%" />
-                        </p>
-                        <p>
+
+<p>
                             Este conjunto de valores de $k_i$ así expresados se
                             conoce comúnmente como
                             <i> núcleo </i>
@@ -855,16 +819,16 @@
                             una combinación lineal de los valores de la ventana,
                             a través de un núcleo.
                         </p>
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Operaciones matemáticas de forma general </b>
+
+</li>
+<li>
+<b> Operaciones matemáticas de forma general </b>
                         . No necesariamente combinaciones lineales, aplican
                         operadores más complejos a los valores de la ventana.
-                        <p></p>
-                    </li>
-                    <li>
-                        <b> Clasificaciones </b>
+                        
+</li>
+<li>
+<b> Clasificaciones </b>
                         . En función de la configuración de los valores dentro
                         de la ventana clasifican la celda en una serie de
                         posibles grupos, de acuerdo con unas reglas definidas.
@@ -882,8 +846,8 @@
                         </a>
                         ).
                     </li>
-                </ul>
-                <p>
+</ul>
+<p>
                     Algunas de las funciones anteriores se han de definir de
                     forma específica para un tamaño y forma de ventana dado,
                     mientras que otras, como el caso de los descriptores
@@ -892,7 +856,7 @@
                     dentro de la ventana de análisis no es relevante, mientras
                     que para otras funciones sí lo es.
                 </p>
-                <p>
+<p>
                     El resultado de un operador de análisis focal no ha de ser
                     necesariamente un valor que se sitúa en la celda central de
                     la capa resultante una vez ha sido calculado. Por ejemplo, y
@@ -907,7 +871,7 @@
                     entre todas las de la ventana. Lo importante en este caso no
                     es el valor, sino sobre qué celda se sitúa.
                 </p>
-                <p>
+<p>
                     Con respecto al tamaño de la ventana de análisis, debe
                     mencionarse que la utilización de uno u otro tiene dos
                     consecuencias directas: por un lado el proceso es más
@@ -922,7 +886,7 @@
                     produce un desenfoque de la imagen, se hace más patente a
                     medida que empleamos ventanas de análisis mayores.
                 </p>
-                <p>
+<p>
                     En [
                     <a href="../bib.htm#Wood1996PhD"> Wood1996PhD </a>
                     ] puede encontrarse información adicional sobre la noción de
@@ -935,21 +899,18 @@
                     veremos un análisis particular en el que la elección del
                     tamaño de ventana es particularmente importante.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Comparacion_tamanos_ventana.png"
-                            width="80.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Comparacion_tamanos_ventana" src="../img/Comparacion_tamanos_ventana.png" width="80.0%"/>
+<figcaption>
                             Resultados de un filtro de mediana sobre una imagen
                             para distintos tamaños de ventana. a) $5\times5$, b)
                             $10\times10$ c) $20\times20$
                         </figcaption>
                         $$\label{Fig:Comparacion_tamanos_ventana}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Con independencia de dicho tamaño de ventana, siempre vamos
                     a tener algunas celdas para las que esta no va a poder
                     definirse en su totalidad. Estas celdas son las situadas en
@@ -965,13 +926,10 @@
                     será función, como ya vimos antes, de si el valor resultante
                     depende o no de la posición de los valores de partida.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Analisis_focal_bordes.png"
-                            width="50.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Analisis_focal_bordes" src="../img/Analisis_focal_bordes.png" width="50.0%"/>
+<figcaption>
                             En las celdas de borde la ventana de análisis no
                             puede definirse en su totalidad. Las celdas en rojo
                             representan celdas fuera de la capa para las cuales
@@ -979,10 +937,10 @@
                         </figcaption>
                         $$\label{Fig:Analisis_focal_bordes}$$
                     </figure>
-                </p>
-                <p></p>
-                <p></p>
-                <p>
+</p>
+
+
+<p>
                     Para el caso de una media aritmética, si de los nueve
                     valores de la ventana habitual solo tenemos, por ejemplo,
                     seis, podemos operar con ellos y asumir que el resultado
@@ -997,10 +955,10 @@
                     que estos efectos de borde no tengan influencia sobre
                     nuestro estudio.
                 </p>
-                <h3 id="Funciones zonales o regionales">
+<h3 id="Funciones zonales o regionales">
                     Funciones zonales o regionales
                 </h3>
-                <p>
+<p>
                     Las funciones de análisis zonal asocian a cada celda valores
                     relativos no a ella misma ni a un entorno fijo alrededor,
                     sino a la clase a la que dicha celda pertenece (Figura
@@ -1012,9 +970,9 @@
                     representa una teselación del territorio en un número
                     definido de clases.
                 </p>
-                <figure>
-                    <img src="../img/Funciones_zonales.png" width="50%" />
-                    <figcaption>
+<figure>
+<img alt="Funciones_zonales" src="../img/Funciones_zonales.png" width="50%"/>
+<figcaption>
                         Las funciones de análisis zonal analizan los valores de
                         todas las celdas asociadas a una misma clase cada para
                         obtener el valor resultante. En rojo, celdas de partida
@@ -1022,7 +980,7 @@
                     </figcaption>
                     $$\label{Fig:Funciones_zonales}$$
                 </figure>
-                <p>
+<p>
                     Lo habitual es emplear esta capa de clases en conjunción con
                     otra, ya sea de valores continuos o discretos, y extraer de
                     esta segunda los valores a utilizar para definir el valor
@@ -1032,27 +990,27 @@
                     correspondientes a cada subcuenca. En este caso, las clases
                     vienen definidas por las subcuencas.
                 </p>
-                <p>
+<p>
                     La definición del conjunto de celdas relacionadas con una
                     dada puede realizarse de dos formas distintas (Figura
                     \ref{Fig:Definicion_clases}):
                 </p>
-                <p></p>
-                <ul>
-                    <li>
+
+<ul>
+<li>
                         Todas las celdas con el mismo valor que la celda
                         problema, conectadas por contigüidad con esta.
                     </li>
-                    <li>
+<li>
                         Todas las celdas con el mismo valor que la celda
                         problema presentes en la capa, con independencia de su
                         conexión.
                     </li>
-                </ul>
-                <p>
-                    <figure>
-                        <img src="../img/Definicion_clases.png" width="65.0%" />
-                        <figcaption>
+</ul>
+<p>
+<figure>
+<img alt="Definicion_clases" src="../img/Definicion_clases.png" width="65.0%"/>
+<figcaption>
                             Formas de definir las clases para el análisis zonal.
                             En verde, celda de análisis. En rojo, celdas a
                             considerar en su misma clase para ser empleadas en
@@ -1061,8 +1019,8 @@
                         </figcaption>
                         $$\label{Fig:Definicion_clases}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     En el caso de las pérdidas por subcuencas, calculábamos con
                     los valores del conjunto de celdas pertenecientes a cada
                     clase su media aritmética, pero pueden aplicarse igualmente
@@ -1070,7 +1028,7 @@
                     complejas, al igual que ya vimos en los otros tipos de
                     funciones.
                 </p>
-                <p>
+<p>
                     Los valores a asignar a cada clase pueden extraerse también
                     de la propia capa de clases, no siendo necesaria otra capa.
                     En este caso, estos valores resultantes suelen tener
@@ -1079,7 +1037,7 @@
                     perímetro de cada tesela pueden recogerse como valores
                     asociados a esta.
                 </p>
-                <p>
+<p>
                     Este es un tipo de análisis muy frecuente en el estudio del
                     paisaje, y el número de parámetros que pueden obtenerse por
                     análisis zonal a partir de una única capa de clases es muy
@@ -1093,9 +1051,8 @@
                     </a>
                     ].
                 </p>
-                <h3 id="Funciones globales">Funciones globales</h3>
-                <a name="Funciones_globales"> </a>
-                <p>
+<h3 id="Funciones globales">Funciones globales</h3>
+<p id="Funciones_globales">
                     Las funciones globales son aquellas que utilizan la
                     totalidad de valores de la capa para la obtención del
                     resultado (Figura \ref{Fig:Funciones_globales}). Por su
@@ -1103,13 +1060,10 @@
                     las anteriores funciones, sino tanto valores concretos como
                     objetos geográficos de diversa índole.
                 </p>
-                <p>
-                    <figure>
-                        <img
-                            src="../img/Funciones_globales.png"
-                            width="90.0%"
-                        />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Funciones_globales" src="../img/Funciones_globales.png" width="90.0%"/>
+<figcaption>
                             Las funciones de análisis global analizan el
                             conjunto de valores de una capa para obtener un
                             valor resultante, que puede ser tanto un objeto
@@ -1119,8 +1073,8 @@
                         </figcaption>
                         $$\label{Fig:Funciones_globales}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     Por ejemplo, los valores máximo y mínimo de la capa que son
                     necesarios para normalizar esta se obtienen mediante una
                     función global. Asimismo, el cálculo de un perfil entre dos
@@ -1131,18 +1085,18 @@
                     ) son ejemplos de funciones globales que generan un
                     resultado distinto de un mero valor numérico.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Perfil.png" width="90.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Perfil" src="../img/Perfil.png" width="90.0%"/>
+<figcaption>
                             Dada una ruta y una capa, podemos obtener un perfil
                             de valores a lo largo de la ruta mediante una
                             función global.
                         </figcaption>
                         $$\label{Fig:Perfil}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     En el apartado dedicado a las funciones locales veíamos cómo
                     la aplicación del operador
                     <i> distinto de </i>
@@ -1162,7 +1116,7 @@
                     de tiempo comprendido entre las dos fechas representadas por
                     las capas de entrada.
                 </p>
-                <p>
+<p>
                     Puesto que los operadores globales operan sobre la totalidad
                     de la capa, a veces resulta conveniente o incluso necesario
                     «eliminar» de esta los valores que no son de interés para el
@@ -1175,7 +1129,7 @@
                     </a>
                     es muy práctico a estos efectos.
                 </p>
-                <p>
+<p>
                     Considérese, por ejemplo, que una curva hipsográfica que
                     representa la distribución de alturas dentro de un área dada
                     (habitualmente una unidad hidrológica), no tiene mucho
@@ -1187,16 +1141,15 @@
                     interés. Estas celdas tendrán asociado un valor de sin datos
                     tras la aplicación de dicha máscara.
                 </p>
-                <h2 id="Preparación de capas">Preparación de capas</h2>
-                <a name="Variables_algebra_mapas"> </a>
-                <p>
+<h2 id="Preparación de capas">Preparación de capas</h2>
+<p id="Variables_algebra_mapas">
                     Las variables que manejamos en el álgebra de mapas son, como
                     hemos visto en los ejemplos precedentes, capas ráster y
                     valores escalares que podemos combinar con los anteriores.
                     Para algunas de las funciones resulta necesaria únicamente
                     una capa, mientras que para otras son necesarias varias.
                 </p>
-                <p>
+<p>
                     En los ejemplos que hemos visto de combinación de varias
                     capas, hemos dado siempre por supuesto que todas ellas
                     tienen una estructura común. Es decir, que cubren una misma
@@ -1208,7 +1161,7 @@
                     valores directamente para obtener un resultado
                     correspondiente a dicho emplazamiento.
                 </p>
-                <p>
+<p>
                     No obstante, a la hora de combinar capas es muy frecuente
                     que estas tengan procedencias distintas y esta circunstancia
                     no se dé. En tal caso, hay que preparar las capas para
@@ -1223,7 +1176,7 @@
                     <i> remuestreo </i>
                     .
                 </p>
-                <p>
+<p>
                     El remuestreo en realidad es una interpolación similar a la
                     que veíamos en el capítulo
                     <a href="Creacion_capas_raster.html#Creacion_capas_raster">
@@ -1237,20 +1190,20 @@
                     calcular el nuevo valor (la del centro de cada celda en la
                     capa remuestreada).
                 </p>
-                <p>
+<p>
                     Los métodos más habituales de remuestreo son los siguientes:
                 </p>
-                <p></p>
-                <ul>
-                    <li>
-                        <b> Por vecindad </b>
+
+<ul>
+<li>
+<b> Por vecindad </b>
                         . Como ya vimos, no se trata en realidad de una
                         interpolación como tal, pues simplemente crea la nueva
                         malla situando nuevas celdas cuyos valores se calculan
                         por mera vecindad, tomando el de la celda más cercana.
                     </li>
-                    <li>
-                        <b> Bilineal </b>
+<li>
+<b> Bilineal </b>
                         . Para una celda $(i',j')$ en la nueva malla
                         interpolada, su valor en función de los de las $4$
                         celdas más cercanas a la misma en la malla original
@@ -1263,18 +1216,18 @@
                             &amp; &amp; +z_{(i+1,j+1)}R(1-a)R(-(1-b))\nonumber\\
                             \end{eqnarray}
                         </p>
-                        <p>
+<p>
                             donde $R(x)$ es una función triangular de la forma
                         </p>
-                        <p>
+<p>
                             \begin{equation} R(x) = \left \{ \begin{array}{ll}
                             x+1 &amp; \textrm{ si } -1\leq x \leq 0 \\ 1-x &amp;
                             \textrm{ si } -0\leq x \leq 1 \\ \end{array}\right.
                             \end{equation}
                         </p>
-                    </li>
-                    <li>
-                        <b> Interpolación bicúbica </b>
+</li>
+<li>
+<b> Interpolación bicúbica </b>
                         . La interpolación bicúbica es un método de
                         interpolación multivariante bidimensional que emplea un
                         polinomio de tercer grado para cada una de las
@@ -1293,9 +1246,9 @@
                             &gt; 0 \\ 0 &amp; \textrm{ si } x \leq 0 \\
                             \end{array}\right. \end{equation}
                         </p>
-                    </li>
-                </ul>
-                <p>
+</li>
+</ul>
+<p>
                     Los métodos de remuestreo son un área muy desarrollada en el
                     tratamiento de imágenes digitales, aunque, en la práctica,
                     la mayoría de algoritmos existentes no presentan una
@@ -1310,10 +1263,10 @@
                     ] puede encontrarse una buena introducción a otro tipo de
                     funciones utilizadas para el remuestreo de imágenes.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Tipos_remuestreo.png" width="75.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Tipos_remuestreo" src="../img/Tipos_remuestreo.png" width="75.0%"/>
+<figcaption>
                             El remuestreo de capas categóricas solo puede
                             llevarse a cabo por vecindad. a) capa original, b)
                             remuestreo por vecindad, c) remuestreo mediante
@@ -1321,8 +1274,8 @@
                         </figcaption>
                         $$\label{Fig:Tipos_remuestreo}$$
                     </figure>
-                </p>
-                <p>
+</p>
+<p>
                     A la hora de elegir uno u otro de los métodos anteriores,
                     debe tenerse en cuenta, fundamentalmente, el tipo de
                     información que contenga la capa. Una diferencia fundamental
@@ -1340,7 +1293,7 @@
                     carecen de sentido, y hacen así que la capa remuestreada no
                     sea válida.
                 </p>
-                <p>
+<p>
                     Incluso si no apareciesen valores decimales, el remuestreo
                     de capas categóricas por métodos distintos del vecino más
                     cercano es conceptualmente incorrecto, ya que la realización
@@ -1348,7 +1301,7 @@
                     asignados a las distintas categorías carece por completo de
                     sentido.
                 </p>
-                <p>
+<p>
                     Cuando se trabaje con imágenes directamente, es de interés
                     el considerar esta misma circunstancia referente a los
                     métodos de remuestreo aplicables en relación con la
@@ -1357,7 +1310,7 @@
                     los casos la opción a elegir, en especial cuando se va a
                     proceder a un análisis de la imagen con posterioridad.
                 </p>
-                <p>
+<p>
                     Aun en los casos de variables no categóricas, y aunque la
                     elección del método de remuestreo no conduce de por sí a un
                     resultado necesariamente erróneo, el proceso de remuestreo
@@ -1366,7 +1319,7 @@
                     claramente en el ejemplo de la figura
                     \ref{Fig:Remuestreo_conteo}.
                 </p>
-                <p>
+<p>
                     La capa original contiene información sobre el número de
                     individuos de una especie que han sido encontrados en cada
                     celda, de tal modo que representa la densidad de dicha
@@ -1380,10 +1333,10 @@
                     del remuestreo con el tamaño después del mismo, para así
                     mantener la coherencia en el significado de la variable.
                 </p>
-                <p>
-                    <figure>
-                        <img src="../img/Remuestreo_conteo.png" width="75.0%" />
-                        <figcaption>
+<p>
+<figure>
+<img alt="Remuestreo_conteo" src="../img/Remuestreo_conteo.png" width="75.0%"/>
+<figcaption>
                             Dependiendo de la variable recogida en la capa, el
                             proceso de remuestreo puede requerir operaciones
                             adicionales para obtener un resultado correcto. a)
@@ -1394,12 +1347,12 @@
                         </figcaption>
                         $$\label{Fig:Remuestreo_conteo}$$
                     </figure>
-                </p>
-                <p></p>
-                <h2 id="Extensión del álgebra de mapas">
+</p>
+
+<h2 id="Extensión del álgebra de mapas">
                     Extensión del álgebra de mapas
                 </h2>
-                <p>
+<p>
                     Aunque en la práctica los conceptos definidos por Tomlin son
                     la base para la implementación genérica de algoritmos,
                     diversos autores han intentado extender estos conceptos y
@@ -1407,7 +1360,7 @@
                     sistemas escapa al alcance de este texto, resulta de interés
                     mencionar algunas de las propuestas.
                 </p>
-                <p>
+<p>
                     [
                     <a href="../bib.htm#Camara2005SimpoBras">
                         Camara2005SimpoBras
@@ -1418,7 +1371,7 @@
                     Tomlin no contempla, ya que, como demuestran, es un caso
                     particular del anterior.
                 </p>
-                <p>
+<p>
                     La propuesta de [
                     <a href="../bib.htm#Takeyama1997IJGIS">
                         Takeyama1997IJGIS
@@ -1438,7 +1391,7 @@
                     autómatas celulares, es posible dentro del marco de este
                     geo--álgebra
                 </p>
-                <p>
+<p>
                     Por último, y aunque no relacionada directamente con la
                     información geográfica, el
                     <i> álgebra de imágenes </i>
@@ -1458,8 +1411,8 @@
                     </a>
                     .
                 </p>
-                <h2 id="Resumen">Resumen</h2>
-                <p>
+<h2 id="Resumen">Resumen</h2>
+<p>
                     El álgebra de mapas nos proporciona las herramientas
                     necesarias para analizar capas ráster y obtener de ellas
                     resultados derivados. Bien sea a partir de una capa, de dos,
@@ -1469,7 +1422,7 @@
                     tipos básicos de funciones: locales, focales, zonales y
                     globales.
                 </p>
-                <p>
+<p>
                     De cada uno de ellos veremos numerosos ejemplos de aquí en
                     adelante, ya que constituyen la base conceptual sobre la que
                     se construyen la práctica totalidad de algoritmos de
@@ -1479,186 +1432,186 @@
                     sobre las celdas que cada función define como objeto de
                     análisis.
                 </p>
-            </div>
-        </div>
-        <div id="toindex">
-            <a href="../index.html"> Portada </a>
-        </div>
-        <div id="slideout_chapter">
+</div>
+</div>
+<div id="toindex">
+<a href="../index.html"> Portada </a>
+</div>
+<div id="slideout_chapter">
             Índice
-            <br />
+            <br/>
             capítulo
             <div id="slideout_inner_chapter">
-                <div id="generated-toc"></div>
-            </div>
-        </div>
-        <div id="slideout_general">
+<div id="generated-toc"></div>
+</div>
+</div>
+<div id="slideout_general">
             Índice
-            <br />
+            <br/>
             general
             <div id="slideout_inner_general">
-                <p>
-                    <b> ÍNDICE GENERAL </b>
-                    <br />
-                </p>
-                <ul>
-                    <li>
-                        <a href="Intro.html"> Introducción </a>
-                    </li>
-                    <li>Parte 1. Fundamentos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_fundamentos.html">
+<p>
+<b> ÍNDICE GENERAL </b>
+<br/>
+</p>
+<ul>
+<li>
+<a href="Intro.html"> Introducción </a>
+</li>
+<li>Parte 1. Fundamentos</li>
+<ul>
+<li>
+<a href="Introduccion_fundamentos.html">
                                 Introducción. ¿Qué es un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Historia.html"> Historia de los SIG </a>
-                        </li>
-                        <li>
-                            <a href="Fundamentos_cartograficos.html">
+</li>
+<li>
+<a href="Historia.html"> Historia de los SIG </a>
+</li>
+<li>
+<a href="Fundamentos_cartograficos.html">
                                 Fundamentos cartográficos y geodésicos
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 2. Datos</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_datos.html">
+</li>
+</ul>
+<li>Parte 2. Datos</li>
+<ul>
+<li>
+<a href="Introduccion_datos.html">
                                 Introducción. ¿Con qué trabajo en un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Tipos_datos.html">
+</li>
+<li>
+<a href="Tipos_datos.html">
                                 Modelos para la información geográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Fuentes_datos.html">
+</li>
+<li>
+<a href="Fuentes_datos.html">
                                 Fuentes principales de datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Calidad_datos.html">
+</li>
+<li>
+<a href="Calidad_datos.html">
                                 La calidad de los datos espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Bases_datos.html"> Bases de datos </a>
-                        </li>
-                        <li>
-                            <a href="Metadatos.html"> Metadatos </a>
-                        </li>
-                    </ul>
-                    <li>Parte 3. Analisis</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_procesos.html">
+</li>
+<li>
+<a href="Bases_datos.html"> Bases de datos </a>
+</li>
+<li>
+<a href="Metadatos.html"> Metadatos </a>
+</li>
+</ul>
+<li>Parte 3. Analisis</li>
+<ul>
+<li>
+<a href="Introduccion_procesos.html">
                                 Introducción. ¿Qué puedo hacer con un SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="Analisis_espacial.html">
+</li>
+<li>
+<a href="Analisis_espacial.html">
                                 Conceptos básicos para el análisis espacial
                             </a>
-                        </li>
-                        <li>
-                            <a href="Consultas.html">
+</li>
+<li>
+<a href="Consultas.html">
                                 Consultas y operaciones con bases de datos
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_espacial.html">
+</li>
+<li>
+<a href="Estadistica_espacial.html">
                                 Estadísticas espaciales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_raster.html">
+</li>
+<li>
+<a href="Creacion_capas_raster.html">
                                 Creación de capas raster
                             </a>
-                        </li>
-                        <li>
-                            <a href="Algebra_de_mapas.html">
+</li>
+<li>
+<a href="Algebra_de_mapas.html">
                                 Álgebra de mapas
                             </a>
-                        </li>
-                        <li>
-                            <a href="Geomorfometria.html">
+</li>
+<li>
+<a href="Geomorfometria.html">
                                 Geomorfometría y análisis del terreno
                             </a>
-                        </li>
-                        <li>
-                            <a href="Imagenes.html"> Procesado de imágenes </a>
-                        </li>
-                        <li>
-                            <a href="Creacion_capas_vectoriales.html">
+</li>
+<li>
+<a href="Imagenes.html"> Procesado de imágenes </a>
+</li>
+<li>
+<a href="Creacion_capas_vectoriales.html">
                                 Creación de capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Operaciones_geometricas.html">
+</li>
+<li>
+<a href="Operaciones_geometricas.html">
                                 Operaciones geométricas con capas vectoriales
                             </a>
-                        </li>
-                        <li>
-                            <a href="Costes.html">
+</li>
+<li>
+<a href="Costes.html">
                                 Costes, distancias y áreas de influencia
                             </a>
-                        </li>
-                        <li>
-                            <a href="Estadistica_avanzada.html">
+</li>
+<li>
+<a href="Estadistica_avanzada.html">
                                 Más estadística espacial
                             </a>
-                        </li>
-                    </ul>
-                    <li>Parte 4. Tecnología</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_tecnologia.html">
+</li>
+</ul>
+<li>Parte 4. Tecnología</li>
+<ul>
+<li>
+<a href="Introduccion_tecnologia.html">
                                 Introducción. ¿Cómo son las aplicaciones SIG?
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIGs_escritorio.html">
+</li>
+<li>
+<a href="SIGs_escritorio.html">
                                 Herramientas de escritorio
                             </a>
-                        </li>
-                        <li>
-                            <a href="Cliente_servidor.html">
+</li>
+<li>
+<a href="Cliente_servidor.html">
                                 Clientes y servidores remotos. Web mapping
                             </a>
-                        </li>
-                        <li>
-                            <a href="SIG_movil.html"> SIG movil </a>
-                        </li>
-                    </ul>
-                    <li>Parte 5. Visualización</li>
-                    <ul>
-                        <li>
-                            <a href="Introduccion_visualizacion.html">
+</li>
+<li>
+<a href="SIG_movil.html"> SIG movil </a>
+</li>
+</ul>
+<li>Parte 5. Visualización</li>
+<ul>
+<li>
+<a href="Introduccion_visualizacion.html">
                                 Introducción. Los SIG como herramientas de
                                 visualización
                             </a>
-                        </li>
-                        <li>
-                            <a href="Conceptos_basicos.html">
+</li>
+<li>
+<a href="Conceptos_basicos.html">
                                 Conceptos básicos de visualización y
                                 representación
                             </a>
-                        </li>
-                        <li>
-                            <a href="Mapas.html">
+</li>
+<li>
+<a href="Mapas.html">
                                 El mapa y la comunicación cartográfica
                             </a>
-                        </li>
-                        <li>
-                            <a href="Visualizacion_SIG.html">
+</li>
+<li>
+<a href="Visualizacion_SIG.html">
                                 La visualización en términos SIG
                             </a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </body>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</body>
 </html>
